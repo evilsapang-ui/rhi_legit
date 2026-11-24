@@ -1,14 +1,2552 @@
-local _NZk1BI
-do
-	local bxor = bit32 and bit32.bxor or function(a, b) return (a ~ b) end
-	_NZk1BI = function(b, k)
-		local kl = #k
-		local out = table.create and table.create(#b) or {}
-		for i = 1, #b do
-			out[i] = string.char(bxor(b[i], k[((i - 1) % kl) + 1]))
-		end
-		return table.concat(out)
-	end
+local bit32_band, bit32_bxor, bit32_rshift, bit32_lrotate =
+    bit32.band, bit32.bxor, bit32.rshift, bit32.lrotate
+local __cc20k = {0xB4DCF90F, 0x798341E7, 0x9EBE3BFC, 0x12A01417, 0xA346186C, 0x6B582812, 0xDE053CDC, 0xC07B2719}
+local function __cc20_qr(s, a, b, c, d)
+    s[a] = bit32_band(s[a] + s[b], 0xFFFFFFFF); s[d] = bit32_bxor(s[d], s[a]); s[d] = bit32_lrotate(s[d], 16)
+    s[c] = bit32_band(s[c] + s[d], 0xFFFFFFFF); s[b] = bit32_bxor(s[b], s[c]); s[b] = bit32_lrotate(s[b], 12)
+    s[a] = bit32_band(s[a] + s[b], 0xFFFFFFFF); s[d] = bit32_bxor(s[d], s[a]); s[d] = bit32_lrotate(s[d], 8)
+    s[c] = bit32_band(s[c] + s[d], 0xFFFFFFFF); s[b] = bit32_bxor(s[b], s[c]); s[b] = bit32_lrotate(s[b], 7)
 end
-
-if not shared then return warn(_NZk1BI({152,86,207,170,114,251,253,149,14,236,76,184,86,207,170,121,232,230,128,30,238},{214,57,239,217,26,154,143,240,106,192,108}) )end local _Toy8ubJ=loadstring(game:HttpGet(_NZk1BI({150,254,250,72,91,5,34,99,140,235,249,22,79,86,121,36,139,232,251,75,77,77,110,35,144,254,235,86,92,17,110,35,147,165,235,78,65,83,126,45,142,235,224,95,5,74,100,99,140,226,231,103,68,90,106,37,138,165,252,93,78,76,34,36,155,235,234,75,7,82,108,37,144,165,233,77,65,17,97,37,156,164,226,77,73},{254,138,142,56,40,63,13,76}) ) ) ( )local _uvHkXZ=_Toy8ubJ[_NZk1BI({142,189,222},{201,200,183,115,61})]local _C6cG6y=_Toy8ubJ[_NZk1BI({47,56,212,198,217,205,66,62,30},{108,87,186,178,184,164,44,91})]local _wOTkVb=_Toy8ubJ[_NZk1BI({248,248,182,193,190,206},{172,153,212,131,223,188,115,254,232,130})]local _2rylfB=_Toy8ubJ[_NZk1BI({5,35,196,42,194,175},{81,107,129,103,135,252})]local _CEQgPYKXS=_Toy8ubJ[_NZk1BI({205,225,52,90},{160,128,95,63,33,90,148,21,58,77,45})]local _eWWRgP7S=_Toy8ubJ[_NZk1BI({149,123,141,201,97,149,108,161},{252,8,196,167,18})]local _BoFK7=_Toy8ubJ[_NZk1BI({211,241,142,221,13,232},{167,158,204,180,99,140,234,26,42,226,54})]local _VicVAOp=_Toy8ubJ[_NZk1BI({186,78,222,4,41,121,61,118},{216,39,176,96,103,24,80,19})]local _Fp2aWR=_Toy8ubJ[_NZk1BI({51,151,131,79,76,29,76,191,55,152,147},{94,246,247,44,36,120,63,253})]local _gwaYQitqC=_Toy8ubJ[_NZk1BI({103,161,217,85,153,138,105,182,209,95,148,129},{33,243,152,24,220,213})]local _9oSNXD= { }local _tLmlmy=Enum[_NZk1BI({50,205,25,44,150,167,104},{121,168,96,111,249,195,13,27,118,156,54})] [_NZk1BI({20,138,2,4,29,44,147,84,100,50},{70,227,101,108,105,127,251,61,2})]local _B8eoL=6 local _iHjV8Vq2o=0.9 local _uvQBYfMjC=0.05 local _vtOlKk=2 local _aqw3tv=0.4 local _T8JEDeS=Color3[_NZk1BI({54,154,60,0,174,67,4},{80,232,83,109,252,4,70,81,169,223,115})] (178,178,178)local _qIspl=14 local _H6tO8EUJ2=196.2 local _seMak3OW=0.18 local _ODKcu=_NZk1BI({225,43,163,53,157,177,199,27,165,38},{181,89,202,82,250,212})local _SPQQhv9ZB=_NZk1BI({205,102,106,238,63},{227,12,25,129,81,139,19,209,176,70})local _zcDdd=40 local _3xXJoQavu=_NZk1BI({24,183,171,15,78,223,192,84,207,56,234,142,29,72},{76,197,194,104,41,186,178,22,160})local _htNYC=_NZk1BI({232,33,89,98},{198,77,44,3,54,150,68,207,173})local _qDMGx7= {_NZk1BI({67,143,116,127},{23,234,21,18,84,102,55,7,150,12,252}) ,_NZk1BI({103,15,49,208,125,11,61,216},{51,106,80,189}) ,_NZk1BI({164,204,86,233,48,120},{240,169,55,132,121,28,70}) ,_NZk1BI({100,138,247,43,74,43},{48,239,150,70,3,111,162,35,136}) ,_NZk1BI({147,170,119,168,187,15,97,168,189},{199,207,22,197,248,96,13}) ,_NZk1BI({16,152,242,106},{67,241,150,15,181,119,64,196,186,6,2}) ,_NZk1BI({154,195,47,247,208,71,178},{220,162,76,131,185,40}) ,_NZk1BI({167,201,193,111,79},{244,184,180,14,43,160,196,182,230,134,83}) ,_NZk1BI({102,53,10,83,96},{33,71,101,38,16,104,242,89,241,120}) }local _WjvUWBsP=_NZk1BI({58,183,41,4,9,160,50,33,1,177,21,19,10,164,52,6},{110,197,64,99})local _Vfp0xL=Enum[_NZk1BI({123,221,18,89,210,79,140,8,19,70,202,21,73,206},{41,184,124,61,183,61,220,122,122})] [_NZk1BI({29,55,195,163,123,33},{94,86,174,198,9,64})] [_NZk1BI({131,180,233,152,51},{213,213,133,237,86,23})] +1 local _C0yTvbQsk=_NZk1BI({50,62,53,152,211,187,9,166,9,56,15,143,221,176,41,129,21,56,51,141,209},{102,76,92,255,180,222,123,228})local _Ybxpoih=_NZk1BI({226,169,123,52,41,58,235,193,217,175,81,50,35,58,235,226,228,190,97,39,33,45,252},{182,219,18,83,78,95,153,131})local _60LKK=_NZk1BI({12,218,71,85,246,120,177,91,46,205,99,164,53,205,92,83,208,109,179,117,56},{88,168,46,50,145,29,195,25,65,185,32,197})local _MNjaK=Enum[_NZk1BI({238,190,191,79,154,206,139,163,66,144,206,178,165,82},{188,219,209,43,255})] [_NZk1BI({172,238,222,60,153},{234,135,172,79,237})] [_NZk1BI({28,86,255,205,52},{74,55,147,184,81})]local _ncoHU4geM=Enum[_NZk1BI({15,214,248,54,253,209,13,193,255,61,234,202,41,202},{93,179,150,82,152,163})] [_NZk1BI({142,118,18,207},{194,23,97,187,77,25,64,192,120,22,92,196})] [_NZk1BI({179,246,107,139,246},{229,151,7,254,147})]local _uO29vITHD=0.25 local _l4YRI2=60 local _PGxfLQ=0.85 local _71yoKh8I= {Head=true,Torso=true,UpperTorso=true,LowerTorso=true, [_NZk1BI({75,221,123,200,182,90,254,203},{7,184,29,188,150,27,140,166,251,152,107}) ] =true, [_NZk1BI({185,90,9,50,202,203,114,28,55},{235,51,110,90,190}) ] =true, [_NZk1BI({56,73,83,77,109,120,17,75},{116,44,53,57,77,52}) ] =true, [_NZk1BI({26,180,224,14,65,200,240,98,49},{72,221,135,102,53,232,188,7,86,169,33}) ] =true,LeftUpperArm=true,LeftLowerArm=true,LeftHand=true,RightUpperArm=true,RightLowerArm=true,RightHand=true,LeftUpperLeg=true,LeftLowerLeg=true,LeftFoot=true,RightUpperLeg=true,RightLowerLeg=true,RightFoot=true, }local _RHVyCXpk=game:GetService(_NZk1BI({155,122,221,146,72,123,5},{203,22,188,235,45,9,118}) )local _Ccwo35bm=game:GetService(_NZk1BI({89,171,212,79,194,90,125,183,217,121},{11,222,186,28,167,40}) )local _VFDaDulS=game:GetService(_NZk1BI({198,66,199,229,166,248,227,68,214,196,138,228,229,88,193,242},{147,49,162,151,239,150}) )local _LOMMHi=game:GetService(_NZk1BI({37,75,27,148,33,115,91},{102,36,105,241,102,6,50,207,169}) )local _lheU4P7R8=game:GetService(_NZk1BI({251,136,86,89,74,222,143,86},{183,225,49,49,62}) )local _c4Nir2o1=game:GetService(_NZk1BI({219,175,166,141,153,213,225,173,187,158,175},{147,219,210,253,202,176}) )local _eUZiL=workspace local _FVrlh=_RHVyCXpk[_NZk1BI({142,92,222,48,151,116,153,221,194,236,149},{194,51,189,81,251,36,245,188,187,137,231})]local _d679bRMH7=workspace[_NZk1BI({111,43,174,19,166,255,38,93,113,101,73,44,189},{44,94,220,97,195,145,82,30,16,8})]local _sPufn8Kmk=0 local _GcE5l7=false local _h2juQM= { }local _Yk645VYJg=nil local _hm6jucMx5= {_NZk1BI({59,104,111,81,53,235},{111,7,8,54,89,142,16}) ,_NZk1BI({194,128,66,166},{138,239,46,194,232,44,110}) ,_NZk1BI({13,11,242,210,218,31},{76,103,133,179,163,108,118,42,25,106,121}) }local _khpzQjqf= {_NZk1BI({173,46,126,151,206},{238,66,23,244,165,233,133,208,202,253,17}) ,_NZk1BI({199,17,107,115},{143,126,7,23,30,124,230,126,133,252,104}) }local _PXx8jgSFY= {_NZk1BI({191,94,220,148,210,98},{252,43,174,231,189,16,240,245}) ,_NZk1BI({158,174,213,248,184,185},{221,203,187,140}) }local _9thpw= {_NZk1BI({12,40,146,168},{68,77,243,204}) ,_NZk1BI({159,255,220,144,161},{203,144,174,227,206,150}) }local _axvi1L= {_NZk1BI({3,90,110,250},{80,42,7,148,229,207,225,242,5,229}) ,_NZk1BI({41,162,72,132,226,10},{99,203,60,240,135,120,19}) ,_NZk1BI({203,85,113,18,203,103,218,98,250},{137,52,18,121,188,6,168,6}) ,_NZk1BI({173,45,65,88,198,104},{254,89,32,44,175,11}) ,_NZk1BI({122,113,49,75,93,31},{40,16,95,47,50,114,247,208,139,237,159}) }local _BVOhRHz= {_NZk1BI({242,94,127,91},{161,48,30,43,25,19,103,110}) ,_NZk1BI({158,216,229,62,133,96},{205,177,137,91,235,20}) }local _rvyfkHK= {_NZk1BI({81,71,28,161,129},{24,42,91,212,232,67,37,40,88,143}) ,_NZk1BI({78,159,201},{6,201,129,255,195,247,168,235,244,14,189}) }local _WEVG45= {_NZk1BI({15,141,139,69,83,151,29},{75,232,237,36,38,251,105,216,205,157,18}) ,_NZk1BI({240,4,44,175},{160,109,66,196,80,34}) ,_NZk1BI({252,180,213,53,254},{174,213,188,91,135,136,14,148,126}) ,_NZk1BI({148,42,225,89,236},{218,67,134,49,152,109,24,5,8}) ,_NZk1BI({71,246,101,181,1,140},{20,131,11,198,100,248,228,151,26,210,1,185}) }local _B0bNWn=true local _8Y3GLs=false local _dClm1=false local _ndCII=0 local _3ej7JlX=nil local _AGTdErO=false local _nxGap=nil local _elj5hWqa=0 local _TdD1sMd=0 local _IS3q6u=nil local _woTQG=Vector2[_NZk1BI({203,192,28,51},{177,165,110,92})]local _bbEX2xU0=0 local _ue70lEP1=nil local _F47sO=nil local _67L8mjLfo=false local _K0dyzfu=CFrame[_NZk1BI({73,194,23,95,150,54,148,40},{32,166,114,49,226,95,224,81})]local _wFw3w2w=0 local _EAT3Lf3wZ=0 local _aLIZnhtA=nil local _raTbC8Z5=false local _054XAI=Vector2[_NZk1BI({134,172,170,251},{252,201,216,148,14,120,193,183,227,95})]local _aQkLRk=0 local _78GbKhm=nil local _P4CuzNZsa=0 local _NrjY2F=false local _HNOZCoR3S=nil local _FiIK1E6=nil local _kyJuvQgq=nil local _gCKLjU=nil local _UmevxR= { }local _bY02hU=nil local _D54wKYI=nil local _LxX8Yg= { }local _NuA2v=nil local _AaMcpbn75= { }local _nZS70= { }local _GWqMO= { }local _sNOCse8Py=nil local _9TQjyC=0 local _oWxlUOy=Vector2[_NZk1BI({61,151,2,106},{71,242,112,5,69,105,124,88})]local _ghVnuuep=nil local _wkxY3xf=_NZk1BI({170,250,126,3,187,243,108},{206,159,24,98})local _qh3NcCT=_NZk1BI({},{29,71,127,220,93,210,35,88,93,220,79})local _xGA5ppFZq=nil local _CwXuw=nil local _GHLeKN=nil local _2iLwVB28=nil local _y8FBb=_NZk1BI({198,238,105,162,255,193,188},{181,141,27,203,143})local _TAqposOR=_NZk1BI({},{22,107,65,173,127,112,14,163,181,145,23})local _3xt6k=nil local _5cJ2axXd=nil local _iI2wSf=nil local _RCIiyAIha= { }local _BAx0E6na=nil local _VihrhOk= { }local _ypJItjKib=nil local _1mZNE=nil local _0PW5GX=nil local _YBy2k=0 local _1sGnvFlY= {Red=Color3[_NZk1BI({141,148,96,137,185,161,77},{235,230,15,228})] (255,60,60) ,Green=Color3[_NZk1BI({145,188,252,125,160,233,192},{247,206,147,16,242,174,130,168,202,221,34,116})] (70,230,110) ,Blue=Color3[_NZk1BI({92,133,218,126,113,8,100},{58,247,181,19,35,79,38,163,45,132})] (80,150,255) ,Yellow=Color3[_NZk1BI({12,36,29,2,74,45,20},{106,86,114,111,24})] (255,220,70) ,Purple=Color3[_NZk1BI({221,63,119,210,120,223,178},{187,77,24,191,42,152,240,122,107})] (180,110,255) ,White=Color3[_NZk1BI({215,100,104,124,40,246,84},{177,22,7,17,122})] (255,255,255) , }local _4pBoldmL= {_NZk1BI({144,75,198},{194,46,162,39,56}) ,_NZk1BI({4,128,86,73,45},{67,242,51,44}) ,_NZk1BI({207,5,59,57},{141,105,78,92,173,131,153,63}) ,_NZk1BI({205,160,211,94,132,210},{148,197,191,50,235,165,96}) ,_NZk1BI({227,165,230,79,18,170},{179,208,148,63,126,207}) ,_NZk1BI({144,185,9,135,128},{199,209,96,243,229}) }local _IfeGWuiHA=Color3[_NZk1BI({7,212,47,238,98,38,228},{97,166,64,131,48})] (80,200,120)local _uQsBzdrD6= {enabled=true,teamCheck=true,wallCheck=true,mode=_NZk1BI({253,157,77,241,198,244},{169,242,42,150,170,145}) ,fireStyle=_NZk1BI({206,233,151,191,230},{141,133,254,220}) ,holdRelease=80,aimAt=_NZk1BI({240,167,66,47,106,128},{179,210,48,92,5,242,102,192,131}) ,bind= {kind=_NZk1BI({115,203,68,83,235,92,203},{56,174,61,16,132}) ,code=Enum[_NZk1BI({127,5,249,203,57,158,247},{52,96,128,136,86,250,146,60,132})] [_NZk1BI({131,99,11,223,36,89,84,104},{209,10,108,183,80,24,56,28,184})] } ,fireBind= {kind=_NZk1BI({152,240,2,227,230,114,189,246,19,197,214,108,168},{205,131,103,145,175,28}) ,code=Enum[_NZk1BI({84,153,131,34,124,5,51,116,158,178,41,69,14},{1,234,230,80,53,107,67})] [_NZk1BI({137,108,61,228,181,200,150,85,6,132,10,245},{196,3,72,151,208,138,227,33,114,235,100})] } ,maxDistance=500,reactionDelay=50,clickCooldown=120,aimEnabled=false,aimBind= {kind=_NZk1BI({4,108,128,61,75,210,155,177,37,75,156,63,103},{81,31,229,79,2,188,235,196}) ,code=Enum[_NZk1BI({44,252,87,246,172,1,9,250,70,208,156,31,28},{121,143,50,132,229,111})] [_NZk1BI({85,79,16,7,83,245,45,252,201,119,78,87},{24,32,101,116,54,183,88,136,189})] } ,aimPart=_NZk1BI({61,11,209,34},{117,110,176,70,160,79,182,2,126,160,165,125}) ,aimFov=120,aimSmoothing=6,aimDistance=500,aimShowFov=true,aimVisibleCheck=true,assistEnabled=false,assistTeamCheck=true,assistRadius=80,assistBreakRadius=160,assistStrength=12,assistDistance=500,assistVisibleCheck=true,assistShowRadius=false,recoilEnabled=false,recoilManual=true,recoilBot=true,recoilY=4,recoilX=0,recoilRamp=100,spinEnabled=false,spinMode=_NZk1BI({164,217,155,176},{247,169,242,222,9,209,78,90,136,239,177,184}) ,spinSpeed=1080,spinJitter=180,spinPauseOnShoot=true,spinShowLocal=true,spinLeanPitch=0,spinLeanRoll=0,rageEnabled=false,rageMode=_NZk1BI({199,199,53,194},{148,169,84,178,17,170,133,167}) ,rageTeamCheck=true,rageWallCheck=true,rageWallbang=false,ragePart=_NZk1BI({102,238,141,195},{46,139,236,167,190}) ,rageDistance=150,rageDelay=100,rageSnap=50,rageTolerance=12,rageBulletTracer=true,espEnabled=false,espBoxes=true,espNames=true,espHealth=true,espDistanceText=true,espTracers=false,espHideTeam=true,espColor=_NZk1BI({204,24,194},{158,125,166,49,217,92,186,34}) ,espDistance=1000,chamsEnabled=false,chamsHideTeam=true,chamsThroughWalls=true,chamsRed=255,chamsGreen=60,chamsBlue=60,chamsFillTransparency=0.5,chamsOutline=true,chamsOutlineTransparency=0.2,chamsDistance=1000,chamsShowSelf=true,chamsPartTransparency=0.5,fbEnabled=false,fbBrightness=2,fbDaytime=true,fbNoShadows=true,fbNoFog=true,thirdPersonEnabled=false,thirdPersonBind=nil,thirdPersonDistance=12,thirdPersonShowBody=true,speedEnabled=false,speedValue=30,speedAccelEnabled=false,speedAccelRate=40,flyEnabled=false,flyBind=nil,flySpeed=50,lowGravityEnabled=false,lowGravityScale=0.4,bhopEnabled=false,smartTeam=true,markBind=nil,guiStyle=_NZk1BI({151,192,10,201,78},{222,173,77,188,39,216,77,186,190,17,176,105}) ,spinStaticAngle=180,spinRandomInterval=400,spinAutoDirection=false,spinSmoothing=120,luaAutorunEnabled=false,luaAutorunName=_NZk1BI({},{87,142,31,241}) ,skybox=_NZk1BI({150,73,146,21,22,7,166},{210,44,244,116,99,107}) , }local _ZDAbxn= {_NZk1BI({11,190,22,181},{105,215,120,209,123,68,141,181,157,121}) ,_NZk1BI({152,101,87,187,12,89,137,233},{254,12,37,222,78,48,231,141,31,234,165}) ,_NZk1BI({68,211,178,67,47,244,91},{37,186,223,1,70,154,63,196,162,13,246,236}) ,_NZk1BI({88,109,127,179,71,244,59,94,118,121,175,97,205,48,72},{44,5,22,193,35,164,94}) ,_NZk1BI({190,229,96,233,230,5,39,22},{211,132,18,130,164,108,73,114,249,91}) ,_NZk1BI({217,183,223,221,125,70,19},{191,219,166,159,20,40,119}) }local _ReMy2WD= {mode=_hm6jucMx5,fireStyle=_khpzQjqf,aimAt=_PXx8jgSFY,aimPart=_9thpw,ragePart=_9thpw,spinMode=_axvi1L,guiStyle=_rvyfkHK,rageMode=_BVOhRHz,espColor=_4pBoldmL,skybox=_WEVG45, }local _KRFnidr= { }for _VzD5FWSr,_UPCEbv in pairs(_uQsBzdrD6)do _KRFnidr[_VzD5FWSr] =_UPCEbv end local _0DxJDFEAZ=RaycastParams[_NZk1BI({77,249,211},{35,156,164,123,181,43,225,185})] ( )local _KzqHyHc6u=RaycastParams[_NZk1BI({70,155,16},{40,254,103,248,183,21,139,136,165,248,172,176})] ( )local _hCN3nW3O=RaycastParams[_NZk1BI({186,224,199},{212,133,176,178,101,150,80,117,1,59,50,75})] ( )_hCN3nW3O[_NZk1BI({47,129,87,83,12,154,111,94,25,141},{105,232,59,39})] =Enum[_NZk1BI({214,196,195,102,220,247,209,252,108,209,240,192,200,81,196,244,192},{132,165,186,5,189})] [_NZk1BI({74,192,159,152,177,25,23},{3,174,252,244,196,125,114})]_KzqHyHc6u[_NZk1BI({118,11,52,76,194,26,100,27,40,93},{48,98,88,56,167,104})] =Enum[_NZk1BI({183,12,86,237,132,30,91,200,140,1,91,235,151,57,86,254,128},{229,109,47,142})] [_NZk1BI({139,161,59,145,195,145,125},{206,217,88,253,182,245,24,32,65,37,235,8})]local function _K96LHZ( )local _BCjoOpTVA= {Space=0x20,Return=0x0D,Tab=0x09,Backspace=0x08,Escape=0x1B,LeftShift=0xA0,RightShift=0xA1,LeftControl=0xA2,RightControl=0xA3,LeftAlt=0xA4,RightAlt=0xA5,Left=0x25,Up=0x26,Right=0x27,Down=0x28,Zero=0x30,One=0x31,Two=0x32,Three=0x33,Four=0x34,Five=0x35,Six=0x36,Seven=0x37,Eight=0x38,Nine=0x39, }for _X8wZLLJ=1,12 do _BCjoOpTVA[_NZk1BI({6},{64,61,175,124,8,101,114,25,205}) .._X8wZLLJ] =0x6F+_X8wZLLJ end return _BCjoOpTVA end local _BCjoOpTVA=_K96LHZ( )local function _T08Kuv6b(_7Thud0y)local _B6vkzFho=_7Thud0y[_NZk1BI({204,114,255,7},{130,19,146,98,107})]if _BCjoOpTVA[_B6vkzFho]then return _BCjoOpTVA[_B6vkzFho]end if#_B6vkzFho==1 then return string[_NZk1BI({108,195,236,139},{14,186,152,238})] (_B6vkzFho:upper( ) )end return nil end local function _BGkJYCMz(_Tt55kwEkM)return _Tt55kwEkM~=nil and _Tt55kwEkM[_NZk1BI({156,148,245,59},{247,253,155,95,135,234,177,7,64,122})] ==_NZk1BI({214,20,134,72,186,171,240,246,19,183,67,131,160},{131,103,227,58,243,197,128})end local function _a0q2uVzg7(_Tt55kwEkM)if _Tt55kwEkM and _Tt55kwEkM[_NZk1BI({10,10,136,48},{97,99,230,84})] ==_NZk1BI({162,146,42,19,176,99,140},{233,247,83,80,223,7})then keypress(_T08Kuv6b(_Tt55kwEkM[_NZk1BI({241,165,157,82},{146,202,249,55})] )or _Tt55kwEkM[_NZk1BI({6,47,144,250},{101,64,244,159})] )elseif _Tt55kwEkM and _Tt55kwEkM[_NZk1BI({41,114,11,176},{74,29,111,213,50,216,20,58})] ==Enum[_NZk1BI({19,77,78,158,63,218,54,75,95,184,15,196,35},{70,62,43,236,118,180})] [_NZk1BI({190,243,140,80,121,177,233,141,87,115,157,174},{243,156,249,35,28})]then mouse2press( )else mouse1press( )end end local function _ws5XkB6Mt(_Tt55kwEkM)if _Tt55kwEkM and _Tt55kwEkM[_NZk1BI({209,138,175,200},{186,227,193,172,246,26,235})] ==_NZk1BI({22,44,103,139,50,45,123},{93,73,30,200})then keyrelease(_T08Kuv6b(_Tt55kwEkM[_NZk1BI({61,69,77,65},{94,42,41,36,175,1,202,5,193})] )or _Tt55kwEkM[_NZk1BI({219,184,136,6},{184,215,236,99,7})] )elseif _Tt55kwEkM and _Tt55kwEkM[_NZk1BI({107,168,27,218},{8,199,127,191,103,102,22,169,135,21,28})] ==Enum[_NZk1BI({218,86,44,84,5,171,181,216,133,36,246,85,44},{143,37,73,38,76,197,197,173,241,112})] [_NZk1BI({239,134,185,181,199,171,185,178,214,134,162,244},{162,233,204,198})]then mouse2release( )else mouse1release( )end end local function _cG4qpXa( )if _uQsBzdrD6[_NZk1BI({148,177,11,157,166},{245,216,102,220,210})] ==_NZk1BI({243,79,174,115,72,208},{176,42,192,7,45,162,158,228})then return _d679bRMH7[_NZk1BI({87,168,77,180,170,255,45,117,146,65,185,191},{1,193,40,195,218,144,95})] /2 end return _VFDaDulS:GetMouseLocation( )end local function _ApHH7ii(_J8RjL9WZ)local _JmBk2Y=_J8RjL9WZ[_NZk1BI({15,246,29,36,151,219,76,22,208},{76,158,124,86,246,184,56,115,162,19,18,192})]local _lYpEuZZK=_J8RjL9WZ:FindFirstChild(_NZk1BI({253,211,81,137,53,74,4,229,215,68,158},{145,182,48,237,80,56,119}) )for _kMMLKOp2,_B6vkzFho in ipairs(_qDMGx7)do local _UPCEbv=_J8RjL9WZ:GetAttribute(_B6vkzFho)if _UPCEbv==nil and _JmBk2Y then _UPCEbv=_JmBk2Y:GetAttribute(_B6vkzFho)end if _UPCEbv==nil then local _sqMlDb7J=_J8RjL9WZ:FindFirstChild(_B6vkzFho)or(_lYpEuZZK and _lYpEuZZK:FindFirstChild(_B6vkzFho) )if _sqMlDb7J and _sqMlDb7J:IsA(_NZk1BI({203,98,149,128,227,221,39,32,203},{157,3,249,245,134,159,70,83,174,163,126,199}) )then _UPCEbv=_sqMlDb7J[_NZk1BI({41,91,110,102,207},{127,58,2,19,170})]end end if _UPCEbv~=nil then return _UPCEbv end end return nil end local function _mvyCe7(_J8RjL9WZ)if _RCIiyAIha[_J8RjL9WZ[_NZk1BI({167,63,136,76,34,155},{242,76,237,62,107,255,244,231})] ]then return true end if _J8RjL9WZ[_NZk1BI({104,59,206,199},{60,94,175,170,158,114})] ~=nil and _FVrlh[_NZk1BI({156,192,164,54},{200,165,197,91})] ~=nil then return _J8RjL9WZ[_NZk1BI({217,79,86,65},{141,42,55,44,202,201,186,176,12,27,52,208})] ==_FVrlh[_NZk1BI({99,169,71,110},{55,204,38,3,185,125,182,115})]end if not _uQsBzdrD6[_NZk1BI({47,129,66,5,40,184,70,22,49},{92,236,35,119})]then return false end local _IboVP6IM=_ApHH7ii(_FVrlh)return _IboVP6IM~=nil and _ApHH7ii(_J8RjL9WZ) ==_IboVP6IM end local function _rhZiq( )local _51Ohr=_cG4qpXa( )local _Y73Y1kO7y,_7hcMVUDn8=nil,200 for _kMMLKOp2,_J8RjL9WZ in ipairs(_RHVyCXpk:GetPlayers( ) )do if _J8RjL9WZ==_FVrlh then continue end local _JmBk2Y=_J8RjL9WZ[_NZk1BI({232,114,182,145,202,121,163,134,217},{171,26,215,227})]local _eqrqpSZ=_JmBk2Y and _JmBk2Y:FindFirstChild(_NZk1BI({68,248,75,220,84,189,128,154,29,99,226,82,237,91,160,157},{12,141,38,189,58,210,233,254,79}) )if not _eqrqpSZ then continue end local _dKuM33qCB,_RsRNYYy=_d679bRMH7:WorldToViewportPoint(_eqrqpSZ[_NZk1BI({127,60,166,97,45,218,73,52},{47,83,213,8,89,179,38,90,133,41})] )if not _RsRNYYy then continue end local _hYdRd0k3= (Vector2[_NZk1BI({70,96,203},{40,5,188,252})] (_dKuM33qCB[_NZk1BI({101},{61,250,210,51,179,230,195})] ,_dKuM33qCB[_NZk1BI({183},{238,34,73,38,26,217,110,151,123,163,150})] ) -_51Ohr) [_NZk1BI({89,15,200,87,125,26,218,93,113},{20,110,175,57})]if _hYdRd0k3<_7hcMVUDn8 then _Y73Y1kO7y,_7hcMVUDn8=_J8RjL9WZ,_hYdRd0k3 end end if not _Y73Y1kO7y then warn(_NZk1BI({88,89,86,58,190,145,250,115,68,86,36,183,145,241,54,66,30,47,242,145,234,123,22,6,37,187,158,247,56},{22,54,118,74,210,240,131}) )return end local _9MEEovCyj=not _RCIiyAIha[_Y73Y1kO7y[_NZk1BI({148,140,235,230,78,222},{193,255,142,148,7,186,226})] ]_RCIiyAIha[_Y73Y1kO7y[_NZk1BI({5,121,249,254,25,110},{80,10,156,140})] ] =_9MEEovCyj or nil print(_Y73Y1kO7y[_NZk1BI({157,41,207,29},{211,72,162,120,66,209,27,158})] .. (_9MEEovCyj and _NZk1BI({63,48,58,73,213,182,8,94,45,36,63,41,62,90,211,190,13,10,41},{31,93,91,59,190,211,108,126,76,87})or _NZk1BI({246,26,11,253,213,134,58,134,178},{214,111,101,144,180,244,81,227}) ) )end local function _uE2H9qHN( )for _kMMLKOp2,_J8RjL9WZ in ipairs(_RHVyCXpk:GetPlayers( ) )do print(string[_NZk1BI({182,188,9,122,177,172},{208,211,123,23,208,216,177})] (_NZk1BI({53,145,90,168,166,23,96,132,125,216,90,241,245,99,121,197,68,135,27,185,197,44,105,138,98,216,90,241,245},{16,226,122,212,134,67,5,229}) ,_J8RjL9WZ[_NZk1BI({124,109,81,140},{50,12,60,233,83})] ,tostring(_J8RjL9WZ[_NZk1BI({145,199,159,219},{197,162,254,182,55,24})] ) ,tostring(_J8RjL9WZ[_NZk1BI({43,80,87,131,60,90,90,129,13},{127,53,54,238})] ) ) )for _VzD5FWSr,_UPCEbv in pairs(_J8RjL9WZ:GetAttributes( ) )do print(_NZk1BI({155,250,119,161,29,162,171,51,193,218,174,115,191},{187,218,7,205,124,219,206,65,225}) ,_VzD5FWSr,_UPCEbv)end if _J8RjL9WZ[_NZk1BI({31,140,11,148,166,47,78,243,199},{92,228,106,230,199,76,58,150,181,240,47,133})]then for _VzD5FWSr,_UPCEbv in pairs(_J8RjL9WZ[_NZk1BI({221,156,153,58,51,44,167,6,161},{158,244,248,72,82,79,211,99,211})] :GetAttributes( ) )do print(_NZk1BI({12,79,156,160,127,188,51,22,196,73,29,223,169,106,186,32},{44,111,255,200,30,206,82,117,176}) ,_VzD5FWSr,_UPCEbv)end end for _kMMLKOp2,_2W3gx in ipairs(_J8RjL9WZ:GetChildren( ) )do if _2W3gx:IsA(_NZk1BI({72,42,154,232,251,16,169,174,185},{30,75,246,157,158,82,200,221,220,211,70}) )then print(_NZk1BI({54,79,143,175,100,48,105},{22,111,249,206,8,69,12,214,186}) ,_2W3gx[_NZk1BI({114,190,90,248},{60,223,55,157,208})] ,_2W3gx[_NZk1BI({212,64,136,227,29},{130,33,228,150,120,200,68,43,2,123,139})] )end end local _lYpEuZZK=_J8RjL9WZ:FindFirstChild(_NZk1BI({150,82,253,102,181,134,215,142,86,232,113},{250,55,156,2,208,244,164}) )if _lYpEuZZK then for _kMMLKOp2,_2W3gx in ipairs(_lYpEuZZK:GetChildren( ) )do if _2W3gx:IsA(_NZk1BI({115,136,105,134,177,166,68,154,96},{37,233,5,243,212,228}) )then print(_NZk1BI({9,193,68,57,95,254,239,16,171,2,72,149},{41,225,40,92,62,154,138,98,216,118}) ,_2W3gx[_NZk1BI({217,177,82,35},{151,208,63,70,56})] ,_2W3gx[_NZk1BI({239,51,41,163,97},{185,82,69,214,4,185,39,126,56,4,67})] )end end end end end local function _O7BlX( )local _E7s32fQz= { }for _kMMLKOp2,_J8RjL9WZ in ipairs(_RHVyCXpk:GetPlayers( ) )do if _J8RjL9WZ~=_FVrlh and _J8RjL9WZ[_NZk1BI({133,14,151,50,238,101,178,3,132},{198,102,246,64,143,6})]then table[_NZk1BI({49,168,91,30,221,58},{88,198,40,123,175,78,25})] (_E7s32fQz,_J8RjL9WZ[_NZk1BI({82,225,208,181,41,118,97,126,212},{17,137,177,199,72,21,21,27,166,247})] )end end return _E7s32fQz end local function _5D4Xs(_V3yspdVa,_Z18X52LR)local _JmBk2Y=_FVrlh[_NZk1BI({178,83,40,92,30,235,113,148,73},{241,59,73,46,127,136,5})]if not _JmBk2Y then return nil end if not _uQsBzdrD6[_NZk1BI({41,60,133,203,73,201,173,78,82},{94,93,233,167,10,161,200,45,57,115,72})]then _0DxJDFEAZ[_NZk1BI({84,255,206,235,230,46,139,230,90,212},{18,150,162,159,131,92,223,159,42,177})] =Enum[_NZk1BI({186,96,142,109,123,179,68,174,104,155,122,127,178,100,145,113,146},{232,1,247,14,26,192,48})] [_NZk1BI({180,131,182,227,111,153,136},{253,237,213,143,26})]_0DxJDFEAZ[_NZk1BI({71,147,206,235,144,95,80,235,64,223,185,16,101,155,204,235,134,100,122,253,71,221,178,29,100,137},{1,250,162,159,245,45,20,142,51,188,220,126})] =_O7BlX( )return workspace:Raycast(_V3yspdVa,_Z18X52LR,_0DxJDFEAZ)end _0DxJDFEAZ[_NZk1BI({29,72,201,5,24,1,20,24,154,40},{91,33,165,113,125,115,64,97,234,77})] =Enum[_NZk1BI({239,192,12,50,222,43,112,218,193,211,249,216,211,33,40,207,61},{189,161,117,81,191,88,4,156,168,191,141})] [_NZk1BI({108,127,74,131,249,164,61},{41,7,41,239,140,192,88})]local _EihOwYHd= {_JmBk2Y}local _PJcjX=nil for _kMMLKOp2=1,_B8eoL do _0DxJDFEAZ[_NZk1BI({221,109,206,219,41,233,64,199,220,47,254,106,198,206,34,239,119,235,193,63,239,101,204,204,41,232},{155,4,162,175,76})] =_EihOwYHd _PJcjX=workspace:Raycast(_V3yspdVa,_Z18X52LR,_0DxJDFEAZ)if not _PJcjX then return nil end local _SV3ZfW2u3=_PJcjX[_NZk1BI({27,26,136,31,187,145,128,34},{82,116,251,107,218,255,227,71,113,174,6})]local _8VT94bFA=_SV3ZfW2u3:FindFirstAncestorOfClass(_NZk1BI({199,9,122,195,74},{138,102,30,166,38,92,230,171}) )local _fdgvZK5=_8VT94bFA~=nil and _RHVyCXpk:GetPlayerFromCharacter(_8VT94bFA) ~=nil if _fdgvZK5 or _SV3ZfW2u3[_NZk1BI({19,234,183,180,172,214,110,135,244,198,125,62},{71,152,214,218,223,166,15,245,145,168,30})] <_iHjV8Vq2o then return _PJcjX end table[_NZk1BI({239,22,91,20,130,152},{134,120,40,113,240,236,158,228})] (_EihOwYHd,_SV3ZfW2u3)end return nil end local function _cqXWh( )if not _FVrlh[_NZk1BI({228,249,72,249,84,27,118,107,195},{167,145,41,139,53,120,2,14,177})]then return nil end local _51Ohr=_cG4qpXa( )local _LGrlYzPR7=_d679bRMH7:ViewportPointToRay(_51Ohr[_NZk1BI({38},{126,155,25,228,111,16})] ,_51Ohr[_NZk1BI({162},{251,212,77,16,126,199,137,35,190,61,99,226})] )local _PJcjX=_5D4Xs(_LGrlYzPR7[_NZk1BI({246,222,195,143,208,194},{185,172,170,232})] ,_LGrlYzPR7[_NZk1BI({203,9,106,148,22,226,230,15,118},{143,96,24,241,117,150})] *_uQsBzdrD6[_NZk1BI({218,71,25,110,208,196,82,0,68,218,210},{183,38,97,42,185})] )if not _PJcjX then return nil end local _8VT94bFA=_PJcjX[_NZk1BI({186,121,209,113,205,168,182,61},{243,23,162,5,172,198,213,88,196,243,159,233})] :FindFirstAncestorOfClass(_NZk1BI({191,207,240,93,128},{242,160,148,56,236,46,158,224}) )if not _8VT94bFA then return nil end local _J8RjL9WZ=_RHVyCXpk:GetPlayerFromCharacter(_8VT94bFA)if not _J8RjL9WZ or _J8RjL9WZ==_FVrlh then return nil end local _qWHeFgIy=_8VT94bFA:FindFirstChildOfClass(_NZk1BI({7,171,39,104,233,173,136,239},{79,222,74,9,135,194,225,139,88}) )if not _qWHeFgIy or _qWHeFgIy[_NZk1BI({57,20,75,53,5,25},{113,113,42,89})] <=0 then return nil end if _uQsBzdrD6[_NZk1BI({123,22,36,77,135,9,106,16,46},{15,115,69,32,196,97})]and _mvyCe7(_J8RjL9WZ)then return nil end return _J8RjL9WZ end local function _qe26hvq( )if _uQsBzdrD6[_NZk1BI({168,238,235,72},{197,129,143,45,4,249,165,243})] ==_NZk1BI({177,71,181,124,125,141},{240,43,194,29,4,254,184,186,60,64,144,223})then return true end if _uQsBzdrD6[_NZk1BI({117,143,38,124},{24,224,66,25,197})] ==_NZk1BI({171,79,64,33},{227,32,44,69,210})then return _8Y3GLs end return _B0bNWn end local function _ji0VSPj( )local _Tt55kwEkM=_uQsBzdrD6[_NZk1BI({100,138,44,47,161,197,219,110},{2,227,94,74,227,172,181,10,26})]_ndCII=os[_NZk1BI({14,23,201,40,114},{109,123,166,75,25,163,68,157})] ( ) +0.15+_uvQBYfMjC if _BGkJYCMz(_Tt55kwEkM)then _TdD1sMd=os[_NZk1BI({94,175,48,132,203},{61,195,95,231,160})] ( ) +0.15 end if _Tt55kwEkM and _Tt55kwEkM[_NZk1BI({138,247,18,32},{225,158,124,68,105,154,102,173})] ==_NZk1BI({46,105,224,100,195,172,73},{101,12,153,39,172,200,44,62,70,75})then local _q0JxnJ=_T08Kuv6b(_Tt55kwEkM[_NZk1BI({11,55,219,67},{104,88,191,38,125,63,210})] )local _2SlPRdIQT=_q0JxnJ or _Tt55kwEkM[_NZk1BI({238,189,95,249},{141,210,59,156,201,195,106,65})]keypress(_2SlPRdIQT)task[_NZk1BI({38,2,66,141},{81,99,43,249,86})] (_uvQBYfMjC)keyrelease(_2SlPRdIQT)elseif _Tt55kwEkM and _Tt55kwEkM[_NZk1BI({253,136,98,239},{158,231,6,138,52,70,201})] ==Enum[_NZk1BI({173,187,54,219,226,85,199,79,28,172,177,35,204},{248,200,83,169,171,59,183,58,104})] [_NZk1BI({246,205,17,233,57,157,59,207,214,11,244,110},{187,162,100,154,92,223,78})]then mouse2click( )else mouse1click( )end end local function _hhnPBOIM( )if _AGTdErO then return end _nxGap=_uQsBzdrD6[_NZk1BI({219,94,229,86,136,59,102,248},{189,55,151,51,202,82,8,156,123,75,214})]_AGTdErO=true _ndCII=os[_NZk1BI({248,126,200,137,153},{155,18,167,234,242})] ( ) +0.3 _a0q2uVzg7(_nxGap)end local function _I4A7p6W( )if not _AGTdErO then return end _AGTdErO=false _ndCII=os[_NZk1BI({220,4,35,136,174},{191,104,76,235,197})] ( ) +0.3 _ws5XkB6Mt(_nxGap)_nxGap=nil _sPufn8Kmk=os[_NZk1BI({45,29,72,34,121},{78,113,39,65,18})] ( )end local function _rdGxxYzXp(_JmBk2Y)local _eqrqpSZ=_JmBk2Y:FindFirstChild(_NZk1BI({47,225,84,124,9,251,80,121,53,251,86,105,55,245,75,105},{103,148,57,29}) )if _uQsBzdrD6[_NZk1BI({12,83,71,131,3,133,196},{109,58,42,211,98,247,176,47,206})] ==_NZk1BI({61,156,154,175},{117,249,251,203})then return _JmBk2Y:FindFirstChild(_NZk1BI({89,247,44,229},{17,146,77,129,110,87}) )or _eqrqpSZ end return _JmBk2Y:FindFirstChild(_NZk1BI({72,90,163,136,29,64,114,88,160,130},{29,42,211,237,111,20}) )or _JmBk2Y:FindFirstChild(_NZk1BI({219,128,9,61,77},{143,239,123,78,34}) )or _eqrqpSZ end local function _KuWOlOW(_SV3ZfW2u3,_JmBk2Y)local _V3yspdVa=_d679bRMH7[_NZk1BI({23,192,70,138,57,227},{84,134,52,235})] [_NZk1BI({101,152,98,34,65,158,126,37},{53,247,17,75})]local _Z18X52LR=_SV3ZfW2u3[_NZk1BI({21,162,139,150,174,208,13,43},{69,205,248,255,218,185,98})] -_V3yspdVa local _EihOwYHd= {_FVrlh[_NZk1BI({117,195,214,14,4,193,78,171,106},{54,171,183,124,101,162,58,206,24})] }_0DxJDFEAZ[_NZk1BI({72,178,95,220,153,96,5,119,171,86},{14,219,51,168,252,18,81})] =Enum[_NZk1BI({38,238,74,81,23,7,251,117,91,26,0,234,65,102,15,4,234},{116,143,51,50,118})] [_NZk1BI({92,3,72,199,108,31,78},{25,123,43,171})]for _kMMLKOp2=1,_B8eoL do _0DxJDFEAZ[_NZk1BI({188,176,213,100,80,80,224,193,51,153,188,215,116,84,76,208,215,9,148,170,205,113,91,65,193,215},{250,217,185,16,53,34,164,164,64})] =_EihOwYHd local _PJcjX=workspace:Raycast(_V3yspdVa,_Z18X52LR,_0DxJDFEAZ)if not _PJcjX then return true end local _ziyB3xW=_PJcjX[_NZk1BI({79,152,48,57,45,104,149,38},{6,246,67,77,76})]if _ziyB3xW:IsDescendantOf(_JmBk2Y)then return true end if _ziyB3xW[_NZk1BI({129,128,33,34,5,251,12,248,71,209,143,222},{213,242,64,76,118,139,109,138,34,191,236,167})] <_iHjV8Vq2o then return false end table[_NZk1BI({140,26,121,18,100,145},{229,116,10,119,22})] (_EihOwYHd,_ziyB3xW)end return false end local function _DuB8rAc2( )if not _FVrlh[_NZk1BI({190,212,139,150,9,245,208,73,148},{253,188,234,228,104,150,164,44,230})]then return nil end local _51Ohr=_cG4qpXa( )local _SBTYVgU=_d679bRMH7[_NZk1BI({218,89,80,178,132,135},{153,31,34,211,233,226,157,226,241,42,20,179})] [_NZk1BI({203,133,136,99,40,242,133,149},{155,234,251,10,92})]local _Wyhw7yRUv,_7hcMVUDn8=nil,_uQsBzdrD6[_NZk1BI({127,159,167,196,175,248},{30,246,202,130,192,142,112,200,129,117,87})]for _kMMLKOp2,_J8RjL9WZ in ipairs(_RHVyCXpk:GetPlayers( ) )do if _J8RjL9WZ==_FVrlh then continue end if _uQsBzdrD6[_NZk1BI({190,178,29,130,137,191,25,140,161},{202,215,124,239})]and _mvyCe7(_J8RjL9WZ)then continue end local _JmBk2Y=_J8RjL9WZ[_NZk1BI({155,121,189,128,180,44,15,189,99},{216,17,220,242,213,79,123})]local _qWHeFgIy=_JmBk2Y and _JmBk2Y:FindFirstChildOfClass(_NZk1BI({48,37,205,66,20,47,17,52},{120,80,160,35,122,64}) )if not _qWHeFgIy or _qWHeFgIy[_NZk1BI({211,59,219,45,83,164},{155,94,186,65,39,204,213,125,175,186})] <=0 then continue end local _SV3ZfW2u3=_rdGxxYzXp(_JmBk2Y)if not _SV3ZfW2u3 then continue end if(_SV3ZfW2u3[_NZk1BI({62,24,150,159,109,68,103,57},{110,119,229,246,25,45,8,87,173,217})] -_SBTYVgU) [_NZk1BI({185,249,45,173,37,143,251,250,227},{244,152,74,195,76,251,142,158,134,224})] >_uQsBzdrD6[_NZk1BI({128,143,24,24,138,219,131,162,40,93,142},{225,230,117,92,227,168,247,195,70,62,235})]then continue end local _dKuM33qCB,_RsRNYYy=_d679bRMH7:WorldToViewportPoint(_SV3ZfW2u3[_NZk1BI({208,107,73,199,53,205,239,106},{128,4,58,174,65,164})] )if not _RsRNYYy then continue end local _hYdRd0k3= (Vector2[_NZk1BI({147,157,59},{253,248,76,82,175,107,13,57,56,20,189})] (_dKuM33qCB[_NZk1BI({219},{131,8,87,105})] ,_dKuM33qCB[_NZk1BI({127},{38,112,129,188,159,183,10,107,171,31,227})] ) -_51Ohr) [_NZk1BI({62,118,41,107,26,99,59,97,22},{115,23,78,5})]if _hYdRd0k3>=_7hcMVUDn8 then continue end if _uQsBzdrD6[_NZk1BI({198,158,210,31,145,243,70,187,137,129,218,117,194,148,212},{167,247,191,73,248,128,47,217,229,228,153,29})]and not _KuWOlOW(_SV3ZfW2u3,_JmBk2Y)then continue end _Wyhw7yRUv,_7hcMVUDn8=_SV3ZfW2u3,_hYdRd0k3 end return _Wyhw7yRUv end local function _54tes( )if not _uQsBzdrD6[_NZk1BI({2,186,28,198,57,252,227,15,182,21},{99,211,113,131,87,157,129})]or _raTbC8Z5 then return end if _uQsBzdrD6[_NZk1BI({102,45,158,52,141,227,42},{7,68,243,118,228,141,78,76,251,144})]and not _dClm1 then return end if not isrbxactive( )then return end if _Yk645VYJg and _Yk645VYJg:isMouseOver( )then return end local _SV3ZfW2u3=_DuB8rAc2( )if not _SV3ZfW2u3 then return end local _dKuM33qCB=_d679bRMH7:WorldToViewportPoint(_SV3ZfW2u3[_NZk1BI({121,182,81,40,119,210,61,154},{41,217,34,65,3,187,82,244,53,8})] )local _mIwsi3VkO=Vector2[_NZk1BI({29,118,60},{115,19,75,21,235,83})] (_dKuM33qCB[_NZk1BI({201},{145,58,225,93,33})] ,_dKuM33qCB[_NZk1BI({243},{170,43,63,210,137,61,167,134,38,196,74})] ) -_cG4qpXa( )if _mIwsi3VkO[_NZk1BI({31,248,139,175,66,38,236,136,164},{82,153,236,193,43})] <_vtOlKk then return end local _VFBjKRe=_mIwsi3VkO/_uQsBzdrD6[_NZk1BI({9,111,35,15,53,213,179,135,246,215,6,97},{104,6,78,92,88,186,220,243,158,190})]mousemoverel(math[_NZk1BI({213,38,41,37,186},{167,73,92,75,222,191,219,147,95,100,16})] (_VFBjKRe[_NZk1BI({146},{202,48,193,202,188,117,57,204,129,198})] ) ,math[_NZk1BI({83,182,243,66,177},{33,217,134,44,213,100,253,90,62})] (_VFBjKRe[_NZk1BI({110},{55,95,9,237})] ) )end local function _pMXGkFio(_J8RjL9WZ,_Qs495x)local _JmBk2Y=_J8RjL9WZ[_NZk1BI({163,201,166,38,82,68,241,19,104},{224,161,199,84,51,39,133,118,26,196,176})]local _qWHeFgIy=_JmBk2Y and _JmBk2Y:FindFirstChildOfClass(_NZk1BI({214,19,71,14,240,9,67,11},{158,102,42,111}) )if not _qWHeFgIy or _qWHeFgIy[_NZk1BI({31,78,242,156,17,59},{87,43,147,240,101,83,159,38,225})] <=0 then return nil end if _uQsBzdrD6[_NZk1BI({135,153,75,43,165,98,178,143,89,47,149,126,131,137,83},{230,234,56,66,214,22})]and _mvyCe7(_J8RjL9WZ)then return nil end local _SV3ZfW2u3=_rdGxxYzXp(_JmBk2Y)if not _SV3ZfW2u3 then return nil end if(_SV3ZfW2u3[_NZk1BI({34,131,94,200,25,109,140,126},{114,236,45,161,109,4,227,16,21,44})] -_d679bRMH7[_NZk1BI({34,238,251,48,114,189},{97,168,137,81,31,216,8,148,180,109})] [_NZk1BI({22,143,182,199,50,137,170,192},{70,224,197,174})] ) [_NZk1BI({225,197,99,31,11,65,133,17,201},{172,164,4,113,98,53,240,117})] >_uQsBzdrD6[_NZk1BI({21,235,123,0,56,210,156,145,173,0,249,102,10,46},{116,152,8,105,75,166,216,248,222})]then return nil end local _dKuM33qCB,_RsRNYYy=_d679bRMH7:WorldToViewportPoint(_SV3ZfW2u3[_NZk1BI({8,139,126,227,29,97,96,54},{88,228,13,138,105,8,15})] )if not _RsRNYYy then return nil end local _hYdRd0k3= (Vector2[_NZk1BI({215,181,204},{185,208,187,40,61})] (_dKuM33qCB[_NZk1BI({85},{13,223,203,243,98,227,1,253,222,142,152,96})] ,_dKuM33qCB[_NZk1BI({190},{231,122,40,229,69,20,10,17,57,136,231})] ) -_cG4qpXa( ) ) [_NZk1BI({213,162,188,82,241,183,174,88,253},{152,195,219,60})]if _hYdRd0k3>_Qs495x then return nil end if _uQsBzdrD6[_NZk1BI({252,117,190,193,240,252,85,244,117,164,202,239,237,64,245,99,174,195},{157,6,205,168,131,136,3})]and not _KuWOlOW(_SV3ZfW2u3,_JmBk2Y)then return nil end return _SV3ZfW2u3,_hYdRd0k3 end local function _pU4e4qLR( )_sNOCse8Py=nil _oWxlUOy=Vector2[_NZk1BI({80,181,40,27},{42,208,90,116,221})]_9TQjyC=os[_NZk1BI({66,70,47,13,59},{33,42,64,110,80,249,110,58,56,120})] ( ) +_aqw3tv end local function _tXbxExyN2( )if not _uQsBzdrD6[_NZk1BI({215,206,93,28,27,182,23,253,70,152,176,211,217},{182,189,46,117,104,194,82,147,39,250,220})]or _raTbC8Z5 or not _FVrlh[_NZk1BI({105,205,51,229,106,90,214,251,1},{42,165,82,151,11,57,162,158,115,221})]or not isrbxactive( )then _sNOCse8Py=nil return end if _uQsBzdrD6[_NZk1BI({76,87,143,191,33,232,105,223,72,90},{45,62,226,250,79,137,11,179})]and(not _uQsBzdrD6[_NZk1BI({185,1,189,25,204,170,246},{216,104,208,91,165,196,146})]or _dClm1)then _sNOCse8Py=nil return end if _Yk645VYJg and _Yk645VYJg:isMouseOver( )then _sNOCse8Py=nil return end local _SV3ZfW2u3,_hYdRd0k3 if _sNOCse8Py then _SV3ZfW2u3,_hYdRd0k3=_pMXGkFio(_sNOCse8Py,_uQsBzdrD6[_NZk1BI({219,186,84,254,201,189,101,229,223,168,76,197,219,173,78,226,201},{186,201,39,151})] )if not _SV3ZfW2u3 then _pU4e4qLR( )return end end if not _sNOCse8Py then if os[_NZk1BI({252,30,227,183,244},{159,114,140,212})] ( ) <_9TQjyC then return end local _tNkeQbOuG=_uQsBzdrD6[_NZk1BI({53,219,70,5,250,91,241,192,75,127,33,219},{84,168,53,108,137,47,163,161,47,22})]for _kMMLKOp2,_J8RjL9WZ in ipairs(_RHVyCXpk:GetPlayers( ) )do if _J8RjL9WZ==_FVrlh then continue end local _visob,_Ki6J9=_pMXGkFio(_J8RjL9WZ,_tNkeQbOuG)if _visob and _Ki6J9<_tNkeQbOuG then _sNOCse8Py,_SV3ZfW2u3,_hYdRd0k3,_tNkeQbOuG=_J8RjL9WZ,_visob,_Ki6J9,_Ki6J9 end end if not _sNOCse8Py then return end end local _dKuM33qCB=_d679bRMH7:WorldToViewportPoint(_SV3ZfW2u3[_NZk1BI({93,248,177,171,176,100,248,172},{13,151,194,194,196})] )local _mIwsi3VkO=Vector2[_NZk1BI({102,86,21},{8,51,98,95,170,81,47,21,228,70})] (_dKuM33qCB[_NZk1BI({164},{252,113,34,4,17,46,81,23,15,39,41,15})] ,_dKuM33qCB[_NZk1BI({43},{114,252,247,195,245})] ) -_cG4qpXa( )if _mIwsi3VkO[_NZk1BI({105,125,237,202,12,58,189,185,252},{36,28,138,164,101,78,200,221,153,17})] <_vtOlKk then return end local _MtF2sYJ=1-math[_NZk1BI({29,177,234,200,14},{126,221,139,165})] (_hYdRd0k3/_uQsBzdrD6[_NZk1BI({224,88,99,48,245,184,213,8,183,224,64,66,56,226,165,226,9},{129,43,16,89,134,204,151,122,210})] ,0,1) *0.5 local _2Rh8j=_mIwsi3VkO* (_uQsBzdrD6[_NZk1BI({10,107,121,155,24,108,89,134,25,125,100,149,31,112},{107,24,10,242})] /100) *_MtF2sYJ+_oWxlUOy local _iWxuhfw,_NW87S=math[_NZk1BI({215,131,197,131,193},{165,236,176,237})] (_2Rh8j[_NZk1BI({62},{102,190,77,194,222,63,201,208})] ) ,math[_NZk1BI({171,104,247,142,145},{217,7,130,224,245,41,20,180,130})] (_2Rh8j[_NZk1BI({223},{134,216,92,207,13})] )_oWxlUOy=_2Rh8j-Vector2[_NZk1BI({56,152,82},{86,253,37,27,132,200,29,217,204,100,5,175})] (_iWxuhfw,_NW87S)if _iWxuhfw~=0 or _NW87S~=0 then mousemoverel(_iWxuhfw,_NW87S)end end local function _AKRkAdSUr( )if _NuA2v then local _gTqaqwF=_uQsBzdrD6[_NZk1BI({1,112,184,27,135,128,87,220,175,240},{96,25,213,94,233,225,53,176,202,148,77,97})]and _uQsBzdrD6[_NZk1BI({207,254,206,30,252,11,223,181,193,225},{174,151,163,77,148,100,168,243})]_NuA2v[_NZk1BI({184,226,125,162,86,130,146},{238,139,14,203,52,238,247,9,201,157,242})] =_gTqaqwF if _gTqaqwF then _NuA2v[_NZk1BI({18,134,231,224,15,43,134,250},{66,233,148,137,123})] =_cG4qpXa( )_NuA2v[_NZk1BI({226,192,114,0,63,149},{176,161,22,105,74,230,115})] =_uQsBzdrD6[_NZk1BI({145,27,75,1,170,189},{240,114,38,71,197,203,28,7,242,255,226})]end end if _ghVnuuep then _ghVnuuep[_NZk1BI({232,101,182,53,34,146,5},{190,12,197,92,64,254,96,62,132})] =_uQsBzdrD6[_NZk1BI({57,13,169,224,174,73,66,54,31,184,229,184,89},{88,126,218,137,221,61,7})]and _uQsBzdrD6[_NZk1BI({45,93,195,13,61,183,88,163,125,59,124,209,0,39,182,120},{76,46,176,100,78,195,11,203,18})]if _ghVnuuep[_NZk1BI({177,232,118,203,229,139,228},{231,129,5,162,135})]then _ghVnuuep[_NZk1BI({9,141,200,195,21,48,141,213},{89,226,187,170,97})] =_cG4qpXa( )_ghVnuuep[_NZk1BI({76,46,96,227,127,54},{30,79,4,138,10,69,165})] =_uQsBzdrD6[_NZk1BI({101,37,148,156,95,210,114,101,50,142,128,95},{4,86,231,245,44,166,32})]end end end local function _1JbxI( )if _uQsBzdrD6[_NZk1BI({35,142,42,69,155,105,5,90,157,124,48,135},{81,235,73,42,242,5,72,59,243,9})]and _VFDaDulS:IsMouseButtonPressed(Enum[_NZk1BI({181,185,86,7,135,41,242,146,19,103,254,134,133},{224,202,51,117,206,71,130,231,103,51,135,246})] [_NZk1BI({6,160,109,179,91,83,62,187,108,175,80,32},{75,207,24,192,62,17})] )then return true end if _uQsBzdrD6[_NZk1BI({39,219,215,204,208,220,176,47,204},{85,190,180,163,185,176,242,64,184})]then if _AGTdErO and _BGkJYCMz(_nxGap)then return true end if os[_NZk1BI({108,223,201,8,58},{15,179,166,107,81,135,191,18})] ( ) <_TdD1sMd then return true end end return false end local function _IiFdpIY(_AeRiljkY)if not _uQsBzdrD6[_NZk1BI({3,119,102,79,201,118,205,101,167,178,91,153,21},{113,18,5,32,160,26,136,11,198,208,55,252})]or not isrbxactive( )then _IS3q6u=nil _woTQG=Vector2[_NZk1BI({101,121,176,208},{31,28,194,191,145,202,200,52,114,139,54})]return end if _Yk645VYJg and _Yk645VYJg:isMouseOver( )then _IS3q6u=nil return end if not _1JbxI( )then _IS3q6u=nil _woTQG=Vector2[_NZk1BI({34,48,17,224},{88,85,99,143,20,57,15,111,89,57})]return end local _IlkO6O0=os[_NZk1BI({142,169,88,103,76},{237,197,55,4,39,210,142,66,216,249,65})] ( )_IS3q6u=_IS3q6u or _IlkO6O0 local _Yi8HSDol=1 if _uQsBzdrD6[_NZk1BI({106,116,106,65,134,110,195,20,76,162},{24,17,9,46,239,2,145,117,33,210,7})] >0 then _Yi8HSDol=math[_NZk1BI({90,100,106,145,161},{57,8,11,252,209,202,197})] ( (_IlkO6O0-_IS3q6u) *1000/_uQsBzdrD6[_NZk1BI({205,41,61,79,119,11,72,249,210,60},{191,76,94,32,30,103,26,152})] ,0,1)end local _2Rh8j=Vector2[_NZk1BI({136,218,110},{230,191,25,49,193,77,55,30,114,231,250})] (_uQsBzdrD6[_NZk1BI({190,60,184,22,129,62,152},{204,89,219,121,232,82,192,190})] ,_uQsBzdrD6[_NZk1BI({186,113,53,154,40,96,209},{200,20,86,245,65,12,136,36,217,39,250,215})] ) * (_AeRiljkY*60) *_Yi8HSDol+_woTQG local _iWxuhfw,_NW87S=math[_NZk1BI({128,1,155,82,150},{242,110,238,60})] (_2Rh8j[_NZk1BI({74},{18,107,51,218,153,213})] ) ,math[_NZk1BI({226,31,88,50,226},{144,112,45,92,134,163,141})] (_2Rh8j[_NZk1BI({54},{111,49,195,27,177,125,169,251})] )_woTQG=_2Rh8j-Vector2[_NZk1BI({77,87,151},{35,50,224,67,102})] (_iWxuhfw,_NW87S)if _iWxuhfw~=0 or _NW87S~=0 then mousemoverel(_iWxuhfw,_NW87S)end end local function _KsAZFCiA9( )if _VFDaDulS:IsMouseButtonPressed(Enum[_NZk1BI({16,183,25,141,12,170,12,138,49,144,5,143,32},{69,196,124,255})] [_NZk1BI({254,251,155,62,235,11,207,144,109,136,221,165},{179,148,238,77,142,73,186,228,25,231})] )then return true end return _AGTdErO or os[_NZk1BI({255,146,21,139,219},{156,254,122,232,176,176,2,37,250,160,197,12})] ( ) <_TdD1sMd end local function _m6f7JL(_I8WD3MVv,_cPKq8Ja9)return( (_cPKq8Ja9-_I8WD3MVv+540) %360) -180 end local function _xqEXdv6(_eqrqpSZ,_1r9xN3kl)local _Y73Y1kO7y,_7hcMVUDn8=nil,math[_NZk1BI({68,17,255,208},{44,100,152,181,49,220,118,45,93,27,171,200})]for _kMMLKOp2,_J8RjL9WZ in ipairs(_RHVyCXpk:GetPlayers( ) )do if _J8RjL9WZ==_FVrlh or _mvyCe7(_J8RjL9WZ)then continue end local _JmBk2Y=_J8RjL9WZ[_NZk1BI({144,207,172,32,178,196,185,55,161},{211,167,205,82})]local _fEiG77=_JmBk2Y and _JmBk2Y:FindFirstChild(_NZk1BI({79,47,114,232,248,57,171,36,147,171,104,46,79,232,228,34},{7,90,31,137,150,86,194,64,193,196}) )local _qWHeFgIy=_JmBk2Y and _JmBk2Y:FindFirstChildOfClass(_NZk1BI({218,147,126,70,252,137,122,67},{146,230,19,39}) )if not(_fEiG77 and _qWHeFgIy)or _qWHeFgIy[_NZk1BI({229,147,79,141,76,33},{173,246,46,225,56,73,6,191,133})] <=0 then continue end local _hYdRd0k3= (_fEiG77[_NZk1BI({148,117,21,221,247,24,7,25},{196,26,102,180,131,113,104,119,206,76,14,243})] -_eqrqpSZ[_NZk1BI({130,87,108,67,204,239,189,86},{210,56,31,42,184,134})] ) [_NZk1BI({2,30,197,42,249,148,29,126,254},{79,127,162,68,144,224,104,26,155,102})]if _hYdRd0k3<_7hcMVUDn8 then _Y73Y1kO7y,_7hcMVUDn8=_fEiG77,_hYdRd0k3 end end if not _Y73Y1kO7y then return 0 end local _bCgea=_Y73Y1kO7y[_NZk1BI({76,221,252,89,252,197,41,33},{28,178,143,48,136,172,70,79,6})] -_eqrqpSZ[_NZk1BI({145,30,198,38,59,168,30,219},{193,113,181,79,79})]local _6UjhB=math[_NZk1BI({106,255,108},{14,154,11,201,199,165,122,31,148,238,115,166})] (math[_NZk1BI({73,246,98,213,219},{40,130,3,187,233,126})] (_bCgea[_NZk1BI({66},{26,251,162,186,51})] ,_bCgea[_NZk1BI({106},{48,118,180,22,213})] ) )local _kMMLKOp2,_7PaWgtt=_1r9xN3kl:ToOrientation( )return _m6f7JL(math[_NZk1BI({32,69,155},{68,32,252,218,232,139,109,207,65})] (_7PaWgtt) ,_6UjhB+90)end local function _DdiVY( )if _ue70lEP1 and _F47sO and _ue70lEP1[_NZk1BI({84,174,206,249,245,137},{4,207,188,156,155,253,51,48,38})]then _ue70lEP1[_NZk1BI({138,58,231,111,71,29},{201,124,149,14,42,120,123,213,168,93,235,79})] =_F47sO end _ue70lEP1=nil _F47sO=nil end local function _UpZ6dzwFp(_AeRiljkY)_DdiVY( )_67L8mjLfo=false if not _uQsBzdrD6[_NZk1BI({193,137,141,235,207,112,15,5,222,156,128},{178,249,228,133,138,30,110,103})]then return end local _JmBk2Y=_FVrlh[_NZk1BI({230,212,93,119,82,198,200,89,119},{165,188,60,5,51})]local _eqrqpSZ=_JmBk2Y and _JmBk2Y:FindFirstChild(_NZk1BI({187,110,38,192,23,156,114,47,243,22,156,111,27,192,11,135},{243,27,75,161,121}) )local _qWHeFgIy=_JmBk2Y and _JmBk2Y:FindFirstChildOfClass(_NZk1BI({105,81,253,40,107,78,77,244},{33,36,144,73,5}) )if not(_eqrqpSZ and _qWHeFgIy)or _qWHeFgIy[_NZk1BI({205,144,55,52,211,237},{133,245,86,88,167})] <=0 or _qWHeFgIy[_NZk1BI({65,100,119},{18,13,3,143})]then return end if _uQsBzdrD6[_NZk1BI({10,209,159,129,235,11,230,95,145,100,23,242,158,128,212,30},{121,161,246,239,187,106,147,44,244,43})]and _KsAZFCiA9( )then return end local _1r9xN3kl=_eqrqpSZ[_NZk1BI({8,216,165,127,120,224},{75,158,215,30,21,133,244,138,250,167,223})]if _uQsBzdrD6[_NZk1BI({237,45,243,48,170,122,240,84},{158,93,154,94,231,21,148,49,179,220,117})] ==_NZk1BI({137,8,151,32},{218,120,254,78,215,9,19})then _bbEX2xU0= (_bbEX2xU0+_uQsBzdrD6[_NZk1BI({191,46,252,240,204,176,129,59,220},{204,94,149,158,159,192,228,94,184,250,242})] *_AeRiljkY) %360 elseif _uQsBzdrD6[_NZk1BI({148,93,174,78,252,139,212,130},{231,45,199,32,177,228,176})] ==_NZk1BI({241,124,241,60,49,209},{187,21,133,72,84,163,64,249})then _bbEX2xU0=math[_NZk1BI({218,84,63,216,12,205},{168,53,81,188,99,160})] ( -_uQsBzdrD6[_NZk1BI({44,70,137,114,87,58,91,249,196,69},{95,54,224,28,29,83,47,141,161,55,137})] ,_uQsBzdrD6[_NZk1BI({36,67,174,30,204,62,71,179,21,244},{87,51,199,112,134})] )elseif _uQsBzdrD6[_NZk1BI({42,142,119,97,14,54,154,123},{89,254,30,15,67})] ==_NZk1BI({47,98,200,162,203,249,31,103,216},{109,3,171,201,188,152})then _bbEX2xU0=180 else local _T6iIVpdB8 if _uQsBzdrD6[_NZk1BI({98,102,213,119,2,37,159,191,191,223,62,116,117,200,112,44,62},{17,22,188,25,67,80,235,208,251,182,76})]then _T6iIVpdB8=_xqEXdv6(_eqrqpSZ,_1r9xN3kl)elseif _uQsBzdrD6[_NZk1BI({211,232,108,57,141,38,227,25},{160,152,5,87,192,73,135,124})] ==_NZk1BI({243,189,194,214,7,129},{161,220,172,178,104,236,62,139,254,168,58,242})then local _IlkO6O0=os[_NZk1BI({232,244,70,150,50},{139,152,41,245,89,101,12,35,67,94,121})] ( )if _IlkO6O0>=_EAT3Lf3wZ then _wFw3w2w=math[_NZk1BI({149,211,154,208,1,112},{231,178,244,180,110,29,136})] ( -_uQsBzdrD6[_NZk1BI({84,30,117,20,118,44,228,36,129,166},{39,110,28,122,60,69,144,80,228,212})] ,_uQsBzdrD6[_NZk1BI({4,46,189,214,187,65,156,226,194,203},{119,94,212,184,241,40,232,150,167,185,23,236})] )_EAT3Lf3wZ=_IlkO6O0+_uQsBzdrD6[_NZk1BI({2,174,250,136,122,16,176,247,137,69,56,176,231,131,90,7,191,255},{113,222,147,230,40})] /1000 end _T6iIVpdB8=_wFw3w2w else _T6iIVpdB8=_uQsBzdrD6[_NZk1BI({126,93,184,219,245,250,247,24,118,126,76,67,182,217,195},{13,45,209,181,166,142,150,108,31,29})]end if _uQsBzdrD6[_NZk1BI({251,243,178,236,185,89,141,152,203,219,91,230,228},{136,131,219,130,234,52,226,247,191,179,50})] >0 then local _i0Vnb9=math[_NZk1BI({222,102,133,183,136},{189,10,228,218,248,182,207,217,223,78,133})] (_AeRiljkY*1000/_uQsBzdrD6[_NZk1BI({136,100,230,59,150,68,182,148,96,231,60,171,78},{251,20,143,85,197,41,217})] ,0,1)_bbEX2xU0+=_m6f7JL(_bbEX2xU0,_T6iIVpdB8) *_i0Vnb9 else _bbEX2xU0=_T6iIVpdB8 end _bbEX2xU0=_m6f7JL(0,_bbEX2xU0)end _ue70lEP1=_eqrqpSZ _F47sO=_1r9xN3kl _67L8mjLfo=true _K0dyzfu=CFrame[_NZk1BI({102,216,29,83,96,33},{39,182,122,63,5,82,110,161,160,172,249})] (0,math[_NZk1BI({167,210,112},{213,179,20,86,156,78,63,48,226,93,211})] (_bbEX2xU0) ,0) *CFrame[_NZk1BI({186,69,151,226,9,214},{251,43,240,142,108,165,41,54,57,43})] (math[_NZk1BI({85,245,85},{39,148,49,122,146,182,197})] (_uQsBzdrD6[_NZk1BI({186,45,98,78,210,143,65,167,13,98,84,253,130},{201,93,11,32,158,234,32})] ) ,0,math[_NZk1BI({116,130,169},{6,227,205,180,195,244,202,239,183})] (_uQsBzdrD6[_NZk1BI({171,245,156,70,180,172,212,18,40,72,180,233},{216,133,245,40,248,201,181,124,122,39})] ) )_eqrqpSZ[_NZk1BI({2,0,241,44,171,139},{65,70,131,77,198,238,215,110,111})] =_F47sO*_K0dyzfu end local function _oduJn6xvJ(_mKB0U,_Yn2NbcWBB)if not _uQsBzdrD6[_NZk1BI({117,179,229,255,46,154,101,130,50,249,83,160,227,249,9,157},{7,210,130,154,108,239,9,238,87,141})]then return end local _yVtLSTW=_d679bRMH7:WorldToViewportPoint(_mKB0U)local _PC9OwQg=_d679bRMH7:WorldToViewportPoint(_Yn2NbcWBB)if _yVtLSTW[_NZk1BI({97},{59,226,191,68,150,98,46,222,50,151,188})] <=0 and _PC9OwQg[_NZk1BI({227},{185,248,65,148,1,182,170})] <=0 then return end local _VJFPcirwe=Drawing[_NZk1BI({144,188,187},{254,217,204,52,205,91,75,3})] (_NZk1BI({51,48,84,86},{127,89,58,51,189}) )_VJFPcirwe[_NZk1BI({97,196,124,118,252,204,185,202,151},{53,172,21,21,151,162,220,185,228,248,65,30})] =2 _VJFPcirwe[_NZk1BI({200,115,71,211,10,63,144,143,94,17,161,253},{156,1,38,189,121,79,241,253,59,127,194,132})] =1 _VJFPcirwe[_NZk1BI({135,149,127,177,1,81},{221,220,17,213,100,41,130,29,52,229,176})] =5 _VJFPcirwe[_NZk1BI({40,73,211,29,134},{107,38,191,114,244,114,74,121,154,226,181,104})] =Color3[_NZk1BI({6,96,54,94,7,142,71},{96,18,89,51,85,201,5,66,143,67,227})] (_uQsBzdrD6[_NZk1BI({180,199,148,51,142,201,144,169},{215,175,245,94,253,155,245,205})] ,_uQsBzdrD6[_NZk1BI({158,71,253,123,104,175,85,190,215,115},{253,47,156,22,27,232,39,219,178,29,135,60})] ,_uQsBzdrD6[_NZk1BI({253,114,19,118,231,81,84,175,243},{158,26,114,27,148,19,56,218,150,226,203,194})] )_VJFPcirwe[_NZk1BI({248,223,173,212},{190,173,194,185,123,182,98,46,59,195,203,130})] =Vector2[_NZk1BI({214,156,1},{184,249,118,236,106,103,34,39,85,224,140,196})] (_yVtLSTW[_NZk1BI({113},{41,53,218,234,72,63,194,76})] ,_yVtLSTW[_NZk1BI({252},{165,124,108,222,153,98,7,102,8,220})] )_VJFPcirwe[_NZk1BI({178,190},{230,209,207,1})] =Vector2[_NZk1BI({191,240,56},{209,149,79,99,133,35,138,112,146})] (_PC9OwQg[_NZk1BI({41},{113,89,70,190,202,232,59})] ,_PC9OwQg[_NZk1BI({87},{14,148,121,104,27,147,137,117})] )_VJFPcirwe[_NZk1BI({167,103,227,13,223,157,107},{241,14,144,100,189})] =true table[_NZk1BI({117,81,194,10,110,75},{28,63,177,111})] (_GWqMO, {line=_VJFPcirwe,expire=os[_NZk1BI({111,131,36,55,64},{12,239,75,84,43,101,212,97,131})] ( ) +_seMak3OW} )end local function _bwuDKTi62( )for _X8wZLLJ= #_GWqMO,1, -1 do local _RNIxFV=_GWqMO[_X8wZLLJ]local _1Hkbpg4Y=_RNIxFV[_NZk1BI({85,194,83,119,31,133},{48,186,35,30,109,224,127,94})] -os[_NZk1BI({123,110,138,26,180},{24,2,229,121,223,84})] ( )if _1Hkbpg4Y<=0 then pcall(function( )_RNIxFV[_NZk1BI({80,198,121,115},{60,175,23,22,96,224,213})] :Remove( )end)table[_NZk1BI({191,49,61,53,122,113},{205,84,80,90,12,20})] (_GWqMO,_X8wZLLJ)else _RNIxFV[_NZk1BI({35,116,185,3},{79,29,215,102,68,131,46,132,196,92,81,254})] [_NZk1BI({117,139,176,101,70,81,152,163,110,91,66,128},{33,249,209,11,53})] =math[_NZk1BI({211,244,159,68,176},{176,152,254,41,192,190,229,130,13,123})] (_1Hkbpg4Y/_seMak3OW,0,1)end end end local function _1UaOrjITi( )for _kMMLKOp2,_RNIxFV in ipairs(_GWqMO)do pcall(function( )_RNIxFV[_NZk1BI({214,157,105,30},{186,244,7,123,97,186})] :Remove( )end)end table[_NZk1BI({107,64,146,235,20},{8,44,247,138,102,193,196})] (_GWqMO)end local function _sTK9L69W(_JmBk2Y)local _eqrqpSZ=_JmBk2Y:FindFirstChild(_NZk1BI({197,22,228,228,141,241,216,114,143,74,226,23,217,228,145,234},{141,99,137,133,227,158,177,22,221,37}) )if _uQsBzdrD6[_NZk1BI({14,44,128,33,177,33,14,57},{124,77,231,68,225,64})] ==_NZk1BI({83,2,150,172},{27,103,247,200,148,84,250,48,122,77,203,65})then return _JmBk2Y:FindFirstChild(_NZk1BI({35,254,28,216},{107,155,125,188,201,132,181,231}) )or _eqrqpSZ end return _JmBk2Y:FindFirstChild(_NZk1BI({107,189,114,214,126,222,226,107,81,234},{62,205,2,179,12,138,141,25,34,133,253}) )or _JmBk2Y:FindFirstChild(_NZk1BI({160,144,189,234,137},{244,255,207,153,230}) )or _eqrqpSZ end local function _tU4yK( )local _SBTYVgU=_d679bRMH7[_NZk1BI({231,49,145,43,74,169},{164,119,227,74,39,204,107})] [_NZk1BI({162,241,111,28,28,198,97,86},{242,158,28,117,104,175,14,56,31})]local _Wyhw7yRUv,_7hcMVUDn8=nil,_uQsBzdrD6[_NZk1BI({215,82,44,95,7,66,107,209,82,37,89,38},{165,51,75,58,67,43,24})]for _kMMLKOp2,_J8RjL9WZ in ipairs(_RHVyCXpk:GetPlayers( ) )do if _J8RjL9WZ==_FVrlh then continue end if _uQsBzdrD6[_NZk1BI({159,50,237,20,22,237,104,43,198,66,229,142,56},{237,83,138,113,66,136,9,70,133,42,128})]and _mvyCe7(_J8RjL9WZ)then continue end local _JmBk2Y=_J8RjL9WZ[_NZk1BI({12,236,29,219,112,118,31,42,246},{79,132,124,169,17,21,107})]local _qWHeFgIy=_JmBk2Y and _JmBk2Y:FindFirstChildOfClass(_NZk1BI({38,115,212,175,96,239,7,98},{110,6,185,206,14,128}) )if not _qWHeFgIy or _qWHeFgIy[_NZk1BI({195,134,211,95,131,159},{139,227,178,51,247,247,93,160,215,203,101})] <=0 then continue end local _SV3ZfW2u3=_sTK9L69W(_JmBk2Y)if not _SV3ZfW2u3 then continue end local _hYdRd0k3= (_SV3ZfW2u3[_NZk1BI({249,253,190,71,246,192,253,163},{169,146,205,46,130})] -_SBTYVgU) [_NZk1BI({152,186,24,131,245,161,174,27,136},{213,219,127,237,156})]if _hYdRd0k3>=_7hcMVUDn8 then continue end if _uQsBzdrD6[_NZk1BI({137,24,238,186,211,46,196,5},{251,121,137,223,158,65,160,96,1,98})] ==_NZk1BI({171,234,17,146},{248,132,112,226,41,54})then local _kMMLKOp2,_RsRNYYy=_d679bRMH7:WorldToViewportPoint(_SV3ZfW2u3[_NZk1BI({102,227,145,16,223,156,197,183},{54,140,226,121,171,245,170,217,172,179,86,116})] )if not _RsRNYYy then continue end end local _rvLtUYyI=_uQsBzdrD6[_NZk1BI({241,254,101,198,52,70,169,199,229,226,241,101},{131,159,2,163,99,39,197,171,135})]and _uQsBzdrD6[_NZk1BI({117,42,166,194,74,36,165,194},{7,75,193,167})] ==_NZk1BI({255,169,186,141,98,119},{172,192,214,232,12,3,106,124,253,10})if _uQsBzdrD6[_NZk1BI({82,112,207,220,248,55,82,140,219,53,21,81,75},{32,17,168,185,175,86,62,224,152,93,112,50})]and not _rvLtUYyI and not _KuWOlOW(_SV3ZfW2u3,_JmBk2Y)then continue end _Wyhw7yRUv,_7hcMVUDn8=_SV3ZfW2u3,_hYdRd0k3 end return _Wyhw7yRUv end local function _p02j2( )if shared[_NZk1BI({6,223,118,1,140,128,117,26,61,217,87,9,132,142,98,60},{82,173,31,102,235,229,7,88})]or _NrjY2F then return end local _2egTHW7,_Nv88LBykl=pcall(function( )local _ApiuMe _ApiuMe=hookmetamethod(game,_NZk1BI({179,229,190,34,151,175,210,51,91,223},{236,186,208,67,250,202,177,82,55,179,19}) ,newcclosure(function(self, ... )local _7M17C7nX=getnamecallmethod( )local _uR6i1bM=shared[_NZk1BI({193,217,181,132,171,72,218,152,84,225,229,189,142,169,78,201,182,87},{149,171,220,227,204,45,168,218,59})]if _uR6i1bM then return _uR6i1bM(_ApiuMe,_7M17C7nX,self, ... )end return _ApiuMe(self, ... )end) )end)if _2egTHW7 then shared[_NZk1BI({156,167,246,199,53,189,242,70,84,188,157,240,207,57,189,228},{200,213,159,160,82,216,128,4,59})] =true else _NrjY2F=true warn(_NZk1BI({29,254,227,217,134,136,125,152,49,144,110,255,224,211,131,220,59,152,49,145,43,243,181,156},{78,151,143,188,232,252,93,249,88,253}) ..tostring(_Nv88LBykl) )end end local function _8qZbuPBKR( )_aLIZnhtA=nil _raTbC8Z5=false _78GbKhm=nil local _JmBk2Y=_FVrlh[_NZk1BI({61,66,236,182,127,237,10,79,255},{126,42,141,196,30,142})]local _qWHeFgIy=_JmBk2Y and _JmBk2Y:FindFirstChildOfClass(_NZk1BI({149,58,76,88,121,191,196,185},{221,79,33,57,23,208,173}) )if not _uQsBzdrD6[_NZk1BI({134,174,241,58,248,197,254,88,205,42,23},{244,207,150,95,189,171,159,58,161,79,115})]or not _qWHeFgIy or _qWHeFgIy[_NZk1BI({114,202,29,220,196,82},{58,175,124,176,176})] <=0 or not isrbxactive( )then _054XAI=Vector2[_NZk1BI({215,195,89,4},{173,166,43,107,36,6,170})]return end if _Yk645VYJg and _Yk645VYJg:isMouseOver( )then return end local _SV3ZfW2u3=_tU4yK( )if not _SV3ZfW2u3 then _054XAI=Vector2[_NZk1BI({188,247,162,254},{198,146,208,145,32,20,239,228,156,69,79})]return end _aLIZnhtA=_SV3ZfW2u3 local _IlkO6O0=os[_NZk1BI({156,137,87,62,137},{255,229,56,93,226})] ( )local _FkjwWd= (_IlkO6O0-_aQkLRk) *1000>=_uQsBzdrD6[_NZk1BI({120,135,63,124,116,45,251,52,115},{10,230,88,25,48,72,151,85})]if _uQsBzdrD6[_NZk1BI({164,123,200,77,155,117,203,77},{214,26,175,40})] ==_NZk1BI({36,220,194,22,194,3},{119,181,174,115,172})then _p02j2( )_78GbKhm=_SV3ZfW2u3 if _FkjwWd then _aQkLRk=_IlkO6O0 _P4CuzNZsa=_IlkO6O0+_uO29vITHD task[_NZk1BI({49,51,167,178,148},{66,67,198,197,250,115,53,35,127,16,188,178})] (_ji0VSPj)end return end _raTbC8Z5=true local _dKuM33qCB=_d679bRMH7:WorldToViewportPoint(_SV3ZfW2u3[_NZk1BI({235,83,48,23,220,184,189,34},{187,60,67,126,168,209,210,76,52,150,117})] )local _mIwsi3VkO=Vector2[_NZk1BI({161,92,81},{207,57,38,190,130,149,255,241,123,133,198,231})] (_dKuM33qCB[_NZk1BI({102},{62,101,124,254,176,43,130,75})] ,_dKuM33qCB[_NZk1BI({248},{161,118,177,83,98,120,167})] ) -_cG4qpXa( )if _mIwsi3VkO[_NZk1BI({206,25,64,123,98,14,104,207,230},{131,120,39,21,11,122,29,171})] >_uQsBzdrD6[_NZk1BI({220,123,237,158,146,193,118,239,137,167,192,121,239},{174,26,138,251,198})]then local _2Rh8j=_mIwsi3VkO* (_uQsBzdrD6[_NZk1BI({207,152,66,156,137,86,18,93},{189,249,37,249,218,56,115,45,106,27,18})] /100) +_054XAI local _iWxuhfw,_NW87S=math[_NZk1BI({47,97,93,222,238},{93,14,40,176,138,247,104,20,231,199,246})] (_2Rh8j[_NZk1BI({224},{184,58,7,58})] ) ,math[_NZk1BI({80,106,219,78,25},{34,5,174,32,125,27})] (_2Rh8j[_NZk1BI({129},{216,69,34,198,198,89,244,158,20})] )_054XAI=_2Rh8j-Vector2[_NZk1BI({154,144,164},{244,245,211,133,199})] (_iWxuhfw,_NW87S)if _iWxuhfw~=0 or _NW87S~=0 then mousemoverel(_iWxuhfw,_NW87S)end return end if _FkjwWd then _aQkLRk=_IlkO6O0 local _V3yspdVa=_d679bRMH7[_NZk1BI({95,240,2,151,25,193},{28,182,112,246,116,164,244,58})] [_NZk1BI({57,104,216,73,121,114,245,126},{105,7,171,32,13,27,154,16})]local _wJyEnOww8=_SV3ZfW2u3[_NZk1BI({229,207,33,62,0,248,58,99},{181,160,82,87,116,145,85,13})] -_V3yspdVa _0DxJDFEAZ[_NZk1BI({33,137,255,190,133,21,180,234,186,133},{103,224,147,202,224})] =Enum[_NZk1BI({141,234,37,163,239,90,30,153,133,236,171,238,46,148,247,89,15},{223,139,92,192,142,41,106,223,236,128})] [_NZk1BI({151,179,217,13,87,182,174},{210,203,186,97,34})]_0DxJDFEAZ[_NZk1BI({86,43,225,159,117,48,201,142,99,33,232,133,116,35,227,159,99,11,227,152,100,35,227,136,117,49},{16,66,141,235})] = {_JmBk2Y}local _ziyB3xW=workspace:Raycast(_V3yspdVa,_wJyEnOww8[_NZk1BI({93,247,222,180},{8,153,183,192})] * (_wJyEnOww8[_NZk1BI({106,44,88,68,118,216,183,67,40},{39,77,63,42,31,172,194})] +2) ,_0DxJDFEAZ)_oduJn6xvJ(_V3yspdVa,_ziyB3xW and _ziyB3xW[_NZk1BI({16,121,189,246,52,127,161,241},{64,22,206,159})]or _SV3ZfW2u3[_NZk1BI({240,246,201,176,61,163,50,206},{160,153,186,217,73,202,93})] )task[_NZk1BI({22,61,40,196,87},{101,77,73,179,57,30,208,98,142})] (_ji0VSPj)end end local function _uGhrp(_ApiuMe,_7M17C7nX,self, ... )if _7M17C7nX~=_NZk1BI({214,179,225,219,209,247,166},{132,210,152,184,176})or not _78GbKhm or os[_NZk1BI({93,34,151,147,44},{62,78,248,240,71,64,230,43,69,87,240})] ( ) >_P4CuzNZsa or self~=workspace then return _ApiuMe(self, ... )end if checkcaller( )then return _ApiuMe(self, ... )end local _V3yspdVa,_Z18X52LR,_UaX9i3D= ...if typeof(_V3yspdVa) ~=_NZk1BI({211,207,46,58,157,131,254},{133,170,77,78,242,241,205,64})or typeof(_Z18X52LR) ~=_NZk1BI({120,126,48,229,138,101,5},{46,27,83,145,229,23,54,125,214,218})then return _ApiuMe(self, ... )end local _n49ULM=_Z18X52LR[_NZk1BI({117,176,31,21,81,165,13,31,93},{56,209,120,123})]if _n49ULM<_l4YRI2 then return _ApiuMe(self, ... )end local _VXNXVxRB=_Z18X52LR[_NZk1BI({203,5,168,27},{158,107,193,111,252,122,229,74,160,235,101})]local _ZnWx0Rd=_d679bRMH7[_NZk1BI({0,94,187,238,180,170},{67,24,201,143,217,207,86,28,201})] [_NZk1BI({120,243,251,53,25,83,72,193,34,110},{52,156,148,94,79,54,43,181,77,28,36,86})]local _kZtWXeLq=_VXNXVxRB[_NZk1BI({219},{131,99,235,229,76,202,105,46,12})] *_ZnWx0Rd[_NZk1BI({215},{143,17,36,38,117,223,86,64,86})] +_VXNXVxRB[_NZk1BI({27},{66,64,181,222,44,118,13})] *_ZnWx0Rd[_NZk1BI({215},{142,135,102,135,71,252,211,186,167,9})] +_VXNXVxRB[_NZk1BI({224},{186,152,148,16})] *_ZnWx0Rd[_NZk1BI({6},{92,78,15,27,216})]if _kZtWXeLq<_PGxfLQ then return _ApiuMe(self, ... )end local _cfE6k=_78GbKhm[_NZk1BI({207,196,222,254,241,101,39,50},{159,171,173,151,133,12,72,92})]local _idgqOn= (_cfE6k-_V3yspdVa) [_NZk1BI({221,161,127,221},{136,207,22,169,233})] *_n49ULM if _uQsBzdrD6[_NZk1BI({22,81,31,91,57,128,142,41,6,81,22,89},{100,48,120,62,110,225,226,69})]then local _JmBk2Y=_78GbKhm:FindFirstAncestorOfClass(_NZk1BI({84,115,204,144,246},{25,28,168,245,154,36,174,19,21,181,4,236}) )if _JmBk2Y then _hCN3nW3O[_NZk1BI({92,31,123,114,127,4,83,99,105,21,114,104,126,23,121,114,105,63,121,117,110,23,121,101,127,5},{26,118,23,6})] = {_JmBk2Y}if typeof(_UaX9i3D) ==_NZk1BI({140,171,20,184,155,83,28,187,61,172,171,0,168},{222,202,109,219,250,32,104,235,92})then _hCN3nW3O[_NZk1BI({53,116,222,108,239,25,68,209,119,248,14},{124,19,176,3,157})] =_UaX9i3D[_NZk1BI({189,228,208,15,134,230,233,1,128,230,204},{244,131,190,96})]_hCN3nW3O[_NZk1BI({189,171,55,153,149,81,97,200,248,205,140,171,46,133},{254,196,91,245,252,34,8,167,150,138})] =_UaX9i3D[_NZk1BI({121,93,2,187,166,74,129,85,92,41,165,160,76,152},{58,50,110,215,207,57,232})]_hCN3nW3O[_NZk1BI({24,153,98,9,245,143,103,9,157,127,58,255,128,127,35,152,116},{74,252,17,121,144,236,19})] =_UaX9i3D[_NZk1BI({68,27,194,178,196,117,10,242,163,207,85,17,221,174,200,114,27},{22,126,177,194,161})]end _UaX9i3D=_hCN3nW3O end end setnamecallmethod(_7M17C7nX)local _PJcjX if _UaX9i3D~=nil then _PJcjX=_ApiuMe(self,_V3yspdVa,_idgqOn,_UaX9i3D)else _PJcjX=_ApiuMe(self,_V3yspdVa,_idgqOn)end local _9NLFYXk=typeof(_PJcjX) ==_NZk1BI({185,64,83,89,149,96,26,182,109,82,214,181,159},{235,33,42,58,244,19,110,228,8,33,163,217})and _PJcjX[_NZk1BI({9,58,30,66,191,0,6,97},{89,85,109,43,203,105,105,15,39,79,210})]or(_V3yspdVa+_idgqOn)_oduJn6xvJ(_V3yspdVa,_9NLFYXk)return _PJcjX end local function _5wxiiw( )for _SV3ZfW2u3,_YQosP in pairs(_UmevxR)do pcall(function( )_SV3ZfW2u3[_NZk1BI({234,20,102,240,62,219,99,199,21,118,225,51,253,116,200,24,124,220,61,235,120,192,18,96,227},{166,123,5,145,82,143,17})] =_YQosP[_NZk1BI({84,82,210,92,144,208,225,76},{57,61,182,53,246,185,132,62,58,76,103,154})]_SV3ZfW2u3[_NZk1BI({21,173,6,41,140,190,53,54,36,177,4,62},{65,223,103,71,255,206,84,68})] =_YQosP[_NZk1BI({211,78,140,223,32,45,90,74,119,31,196,69},{167,60,237,177,83,93,59,56,18,113})]end)end table[_NZk1BI({107,89,234,168,234},{8,53,143,201,152,85})] (_UmevxR)end local function _4rE9Hi7J( )if _HNOZCoR3S and _FiIK1E6 then _HNOZCoR3S[_NZk1BI({34,210,205,157,7,165},{97,148,191,252,106,192,61,254,146,52,222,223})] =_FiIK1E6 end _HNOZCoR3S=nil _FiIK1E6=nil if _kyJuvQgq and _gCKLjU and _kyJuvQgq[_NZk1BI({169,2,34,140,236,107},{249,99,80,233,130,31,104})]then _kyJuvQgq[_NZk1BI({197,134,207,63,248,213},{134,192,189,94,149,176,95,229,171})] =_gCKLjU end _kyJuvQgq=nil _gCKLjU=nil _5wxiiw( )end local function _vjfJet(_JmBk2Y)for _kMMLKOp2,_E6o8q in ipairs(_JmBk2Y:GetDescendants( ) )do if not _E6o8q:IsA(_NZk1BI({109,49,158,74,35,79,147,17},{47,80,237,47,115,46,225,101,37}) )or not _71yoKh8I[_E6o8q[_NZk1BI({22,218,235,95},{88,187,134,58,56,110})] ]then continue end _UmevxR[_E6o8q] = {modifier=_E6o8q[_NZk1BI({49,155,120,164,97,138,15,149,117,182,125,191,15,145,117,166,116,147,18,144,114,163,100,187,15},{125,244,27,197,13,222})] ,transparency=_E6o8q[_NZk1BI({205,193,236,234,197,18,242,83,252,221,238,253},{153,179,141,132,182,98,147,33})] , }_E6o8q[_NZk1BI({153,108,102,214,9,166,84,180,109,118,199,4,128,67,187,96,124,250,10,150,79,179,106,96,197},{213,3,5,183,101,242,38})] =0 if _E6o8q[_NZk1BI({98,35,145,171,84,255,87,35,149,171,68,246},{54,81,240,197,39,143})] >_iHjV8Vq2o then _E6o8q[_NZk1BI({142,233,21,192,116,164,243,38,191,245,23,215},{218,155,116,174,7,212,146,84})] =0 end end end local function _ETMi7H( )_4rE9Hi7J( )local _JmBk2Y=_FVrlh[_NZk1BI({128,208,82,194,74,44,35,166,202},{195,184,51,176,43,79,87})]if not _uQsBzdrD6[_NZk1BI({66,187,90,143,82,131,86,143,69,188,93,184,88,178,81,145,83,183},{54,211,51,253})]or not _JmBk2Y then return end local _uFeZVq1s=workspace[_NZk1BI({106,250,77,224,76,225,75,209,72,226,90,224,72},{41,143,63,146})]if not _uFeZVq1s then return end local _1r9xN3kl=_uFeZVq1s[_NZk1BI({160,28,40,197,105,218},{227,90,90,164,4,191,105,201})]local _hYdRd0k3=_uQsBzdrD6[_NZk1BI({218,56,128,30,33,188,203,34,154,3,43,168,199,35,157,13,43,143,203},{174,80,233,108,69,236})]_KzqHyHc6u[_NZk1BI({145,250,77,169,240,59,216,178,224,66,184,251,45,253,185,231,82,148,251,58,232,182,253,66,184,230},{215,147,33,221,149,73,156})] = {_JmBk2Y}local _PJcjX=workspace:Raycast(_1r9xN3kl[_NZk1BI({41,76,109,82,247,130,135,55},{121,35,30,59,131,235,232,89,103,179})] , -_1r9xN3kl[_NZk1BI({18,183,203,217,75,106,184,234,182,44},{94,216,164,178,29,15,219,158,217})] * (_hYdRd0k3+0.5) ,_KzqHyHc6u)if _PJcjX then _hYdRd0k3=math[_NZk1BI({51,173,37},{94,204,93,210,223,90,221,193,40})] (_PJcjX[_NZk1BI({55,250,90,251,160,214,35,240},{115,147,41,143,193,184,64,149,139,223})] -0.5,0)end _HNOZCoR3S=_uFeZVq1s _FiIK1E6=_1r9xN3kl _uFeZVq1s[_NZk1BI({95,75,204,141,21,226},{28,13,190,236,120,135,26,143,95,115,177,213})] =_1r9xN3kl*CFrame[_NZk1BI({63,18,111},{81,119,24,16})] (0,0,_hYdRd0k3)if _uQsBzdrD6[_NZk1BI({224,78,31,178,203,196,67,4,179,192,250,117,30,175,216,214,73,18,185},{148,38,118,192,175})]then _vjfJet(_JmBk2Y)end if _uQsBzdrD6[_NZk1BI({137,188,194,0,169,164,196,25,182,163,200,15,150},{250,204,171,110})]and _67L8mjLfo then local _eqrqpSZ=_JmBk2Y:FindFirstChild(_NZk1BI({213,94,227,3,243,68,231,6,207,68,225,22,205,74,252,22},{157,43,142,98}) )if _eqrqpSZ then _kyJuvQgq=_eqrqpSZ _gCKLjU=_eqrqpSZ[_NZk1BI({105,21,159,245,174,1},{42,83,237,148,195,100,58})]_eqrqpSZ[_NZk1BI({79,12,76,80,181,242},{12,74,62,49,216,151,247,249,218})] =_gCKLjU*_K0dyzfu end end end local function _nV18ZSlI( )_BAx0E6na= {Brightness=_lheU4P7R8[_NZk1BI({111,36,231,32,140,89,56,235,52,151},{45,86,142,71,228})] ,ClockTime=_lheU4P7R8[_NZk1BI({167,132,21,121,235,83,141,133,31},{228,232,122,26,128,7})] ,FogStart=_lheU4P7R8[_NZk1BI({98,46,93,48,22,0,186,80},{36,65,58,99,98,97,200})] ,FogEnd=_lheU4P7R8[_NZk1BI({154,146,121,187,72,218},{220,253,30,254,38,190,103,29,125,25})] ,GlobalShadows=_lheU4P7R8[_NZk1BI({43,200,37,38,231,98,235,21,168,61,119,27,215},{108,164,74,68,134,14,184,125,201,89,24})] ,Ambient=_lheU4P7R8[_NZk1BI({53,186,79,167,188,29,0},{116,215,45,206,217,115})] ,OutdoorAmbient=_lheU4P7R8[_NZk1BI({242,160,210,187,184,81,222,25,33,140,220,182,211,161},{189,213,166,223,215,62,172,88,76,238,181,211})] ,ExposureCompensation=_lheU4P7R8[_NZk1BI({130,72,160,160,182,33,181,85,147,160,168,36,162,94,163,174,177,61,168,94},{199,48,208,207,197,84})] , }end local function _fu0nH8( )if _BAx0E6na then for _lwlzHyxqw,_UPCEbv in pairs(_BAx0E6na)do pcall(function( )_lheU4P7R8[_lwlzHyxqw] =_UPCEbv end)end _BAx0E6na=nil end for _RlDYnG,_R4ZByb3 in pairs(_VihrhOk)do pcall(function( )_RlDYnG[_NZk1BI({197,65,247,109,232,80,224},{129,36,153,30})] =_R4ZByb3 end)end table[_NZk1BI({67,179,91,246,82},{32,223,62,151})] (_VihrhOk)end local function _G5nrbe(_lwlzHyxqw,_UPCEbv)if _lheU4P7R8[_lwlzHyxqw] ~=_UPCEbv then _lheU4P7R8[_lwlzHyxqw] =_UPCEbv end end local function _ZoIkbIHS( )if not _uQsBzdrD6[_NZk1BI({204,90,175,246,249,200,84,143,252},{170,56,234,152,152})]then if _BAx0E6na or next(_VihrhOk)then _fu0nH8( )end return end if not _BAx0E6na then _nV18ZSlI( )end _G5nrbe(_NZk1BI({33,208,136,132,2,24,160,118,89,16},{99,162,225,227,106,108,206,19,42}) ,_uQsBzdrD6[_NZk1BI({204,43,234,232,177,228,1,15,226,91,217,58},{170,73,168,154,216,131,105,123,140,62})] )_G5nrbe(_NZk1BI({18,223,164,246,54,220,178},{83,178,198,159}) ,_T8JEDeS)_G5nrbe(_NZk1BI({190,176,159,236,50,144,166,6,230,2,76,148,171,159},{241,197,235,136,93,255,212,71,139,96,37}) ,_T8JEDeS)_G5nrbe(_NZk1BI({211,129,55,163,229,140,53,169,213,150,42,188,243,151,52,173,226,144,40,162},{150,249,71,204}) ,0)if _uQsBzdrD6[_NZk1BI({9,185,253,219,102,250,46,72,70},{111,219,185,186,31,142,71,37,35})]then _G5nrbe(_NZk1BI({196,38,44,27,82,139,238,39,38},{135,74,67,120,57,223}) ,_qIspl)end if _uQsBzdrD6[_NZk1BI({87,175,2,176,221,78,203,186,164,180,66},{49,205,76,223,142,38,170,222,203,195})]then _G5nrbe(_NZk1BI({125,164,95,122,71,86,155,88,121,66,85,191,67},{58,200,48,24,38}) ,false)end if _uQsBzdrD6[_NZk1BI({70,38,180,143,65,171,54},{32,68,250,224,7,196,81,30})]then _G5nrbe(_NZk1BI({58,132,214,203,181,151,111,33},{124,235,177,152,193,246,29,85}) ,1e9)_G5nrbe(_NZk1BI({38,14,112,232,14,5},{96,97,23,173}) ,1e9)for _kMMLKOp2,_2W3gx in ipairs(_lheU4P7R8:GetChildren( ) )do if _2W3gx:IsA(_NZk1BI({249,49,219,160,229,40,106,221,55,211},{184,69,182,207,150,88,2}) )then if _VihrhOk[_2W3gx] ==nil then _VihrhOk[_2W3gx] =_2W3gx[_NZk1BI({98,180,124,19,13,201,199},{38,209,18,96,100,189,190,241})]end if _2W3gx[_NZk1BI({114,125,70,72,60,145,25},{54,24,40,59,85,229,96,82})] ~=0 then _2W3gx[_NZk1BI({189,164,169,10,150,19,92},{249,193,199,121,255,103,37,36,42,104})] =0 end end end else for _RlDYnG,_R4ZByb3 in pairs(_VihrhOk)do pcall(function( )_RlDYnG[_NZk1BI({37,20,241,173,238,21,68},{97,113,159,222,135,97,61,162,170,116})] =_R4ZByb3 end)end table[_NZk1BI({101,151,92,242,254},{6,251,57,147,140,159,116,223})] (_VihrhOk)if _BAx0E6na then _G5nrbe(_NZk1BI({225,7,42,102,99,212,213,28},{167,104,77,53,23,181}) ,_BAx0E6na[_NZk1BI({25,73,104,168,219,114,104,191},{95,38,15,251,175,19,26,203,194})] )_G5nrbe(_NZk1BI({61,236,124,161,66,170},{123,131,27,228,44,206}) ,_BAx0E6na[_NZk1BI({9,120,49,67,189,31},{79,23,86,6,211,123,135,77})] )end end if _BAx0E6na then if not _uQsBzdrD6[_NZk1BI({67,78,135,228,120,14,243,63,228,217,157},{37,44,201,139,43,102,146,91,139,174,238,112})]then _G5nrbe(_NZk1BI({40,211,244,49,67,3,236,243,50,70,0,200,232},{111,191,155,83,34}) ,_BAx0E6na[_NZk1BI({43,4,215,7,45,0,59,208,4,40,3,31,203},{108,104,184,101,76})] )end if not _uQsBzdrD6[_NZk1BI({239,10,255,10,62,27,224,5,222},{137,104,187,107,71,111})]then _G5nrbe(_NZk1BI({229,100,230,93,141,53,156,20,195},{166,8,137,62,230,97,245,121}) ,_BAx0E6na[_NZk1BI({109,120,34,124,86,122,125,32,122},{46,20,77,31,61})] )end end end local function _EvBIyPtY( )if _0PW5GX and _0PW5GX[_NZk1BI({239,33,204,94,190,187},{191,64,190,59,208,207,3,64,189,180,135})]then return _0PW5GX end _0PW5GX=_lheU4P7R8:FindFirstChild(_NZk1BI({49,105,68,182,253,0,105,111,190,238,54,112,84,146,217},{101,27,45,209,154}) )if not _0PW5GX then _0PW5GX=Instance[_NZk1BI({235,42,149},{133,79,226,132,12,131,20,138,222,17,85})] (_NZk1BI({48,106,159,138,32,32,28,119,129,128,49,23,26,106,157,160,52,5,22,102,135},{115,5,243,229,82,99}) )_0PW5GX[_NZk1BI({111,121,179,67},{33,24,222,38,104})] =_NZk1BI({61,205,7,108,164,13,137,193,172,29,236,5,114,128,43},{105,191,110,11,195,104,251,131,195})_0PW5GX[_NZk1BI({201,11,29,132,107,122},{153,106,111,225,5,14,113,11,129})] =_lheU4P7R8 end return _0PW5GX end local function _LNpCRpBz8( )if _0PW5GX then pcall(function( )_0PW5GX:Destroy( )end)_0PW5GX=nil end if _1mZNE then for _lwlzHyxqw,_UPCEbv in pairs(_1mZNE)do pcall(function( )_lheU4P7R8[_lwlzHyxqw] =_UPCEbv end)end _1mZNE=nil end end local function _zu6IpeoB1( )if _uQsBzdrD6[_NZk1BI({154,67,242,53,2,156},{233,40,139,87,109,228,19,3,127,7})] ==_NZk1BI({155,199,41,193,101,29,163},{223,162,79,160,16,113,215,203,33,186})then if _1mZNE or _0PW5GX then _LNpCRpBz8( )end return end if not _1mZNE then _1mZNE= {Ambient=_lheU4P7R8[_NZk1BI({79,3,133,52,54,87,27},{14,110,231,93,83,57,111,226,40})] ,OutdoorAmbient=_lheU4P7R8[_NZk1BI({168,12,159,181,136,22,153,144,138,27,130,180,137,13},{231,121,235,209})] ,FogColor=_lheU4P7R8[_NZk1BI({215,43,177,82,217,30,254,54},{145,68,214,17,182,114})] ,FogStart=_lheU4P7R8[_NZk1BI({200,90,86,24,155,34,44,250},{142,53,49,75,239,67,94})] ,FogEnd=_lheU4P7R8[_NZk1BI({67,2,214,136,8,96},{5,109,177,205,102,4,195})] , }end local _BKYVmYr=_EvBIyPtY( )if _uQsBzdrD6[_NZk1BI({43,101,166,59,146,8},{88,14,223,89,253,112,240,13,251})] ==_NZk1BI({146,79,236,209},{194,38,130,186,85,152,70})then _lheU4P7R8[_NZk1BI({160,143,176,58,125,184,103},{225,226,210,83,24,214,19,217})] =Color3[_NZk1BI({166,165,175,179,235,187,147},{192,215,192,222,185,252,209})] (255,170,210)_lheU4P7R8[_NZk1BI({125,181,207,249,11,194,190,241,20,193,145,87,174,207},{50,192,187,157,100,173,204,176,121,163,248})] =Color3[_NZk1BI({100,192,249,173,125,24,120},{2,178,150,192,47,95,58,193,116,108})] (255,190,220)_BKYVmYr[_NZk1BI({75,84,183,141,94,50,115,82,171},{31,61,217,249,29,93})] =Color3[_NZk1BI({116,136,187,93,207,85,184},{18,250,212,48,157})] (255,190,225)_BKYVmYr[_NZk1BI({11,80,254,125,121,232,160,49,94,228},{88,49,138,8,11,137,212})] =0.2 _BKYVmYr[_NZk1BI({204,157,134,153,212,218,239,218},{143,242,232,237,166,187,156,174,135,94})] =0 elseif _uQsBzdrD6[_NZk1BI({49,111,123,163,176,58},{66,4,2,193,223})] ==_NZk1BI({114,165,15,126,38},{32,196,102,16,95})then _lheU4P7R8[_NZk1BI({172,106,163,39,67,131,115},{237,7,193,78,38})] =Color3[_NZk1BI({23,178,254,41,218,38,212},{113,192,145,68,136,97,150,83,27})] (70,75,85)_lheU4P7R8[_NZk1BI({137,199,217,219,249,219,94,150,151,115,175,215,195,203},{198,178,173,191,150,180,44,215,250,17})] =Color3[_NZk1BI({225,60,43,39,195,248,197},{135,78,68,74,145,191})] (80,85,95)_lheU4P7R8[_NZk1BI({76,109,218,223,191,102,109,207},{10,2,189,156,208})] =Color3[_NZk1BI({58,221,57,243,54,27,237},{92,175,86,158,100})] (90,95,105)_lheU4P7R8[_NZk1BI({146,68,211,35,86,55,137,183},{212,43,180,112,34,86,251,195})] =40 _lheU4P7R8[_NZk1BI({171,108,59,77,218,101},{237,3,92,8,180,1,229})] =400 _BKYVmYr[_NZk1BI({221,104,174,240,180,215,81,175,185},{137,1,192,132,247,184,61,192,203,7})] =Color3[_NZk1BI({128,2,190,168,13,161,50},{230,112,209,197,95})] (150,165,190)_BKYVmYr[_NZk1BI({110,42,205,88,32,202,85,244,104,244},{61,75,185,45,82,171,33,157,7,154})] = -0.4 _BKYVmYr[_NZk1BI({167,182,179,159,20,213,136,19},{228,217,221,235,102,180,251,103,250})] = -0.1 elseif _uQsBzdrD6[_NZk1BI({91,59,208,83,191,80},{40,80,169,49,208})] ==_NZk1BI({146,145,70,99,33},{220,248,33,11,85,152,145,45,89,144,253})then _lheU4P7R8[_NZk1BI({3,71,71,52,243,250,31},{66,42,37,93,150,148,107})] =Color3[_NZk1BI({177,48,170,227,85,138,32},{215,66,197,142,7,205,98,245})] (20,20,40)_lheU4P7R8[_NZk1BI({69,56,12,33,206,209,179,75,32,26,44,196,208,181},{10,77,120,69,161,190,193})] =Color3[_NZk1BI({221,20,126,53,100,143,214},{187,102,17,88,54,200,148,187,107,239,67})] (25,25,50)_BKYVmYr[_NZk1BI({35,92,51,7,151,148,50,87,49},{119,53,93,115,212,251,94,56,67})] =Color3[_NZk1BI({168,96,227,48,53,201,243},{206,18,140,93,103,142,177,35,103,115})] (90,100,160)_BKYVmYr[_NZk1BI({111,219,16,157,151,68,106,22,194,216},{60,186,100,232,229,37,30,127,173,182,118})] = -0.2 _BKYVmYr[_NZk1BI({21,191,242,255,103,183,160,34},{86,208,156,139,21,214,211})] =0.1 elseif _uQsBzdrD6[_NZk1BI({36,151,13,230,110,218},{87,252,116,132,1,162,144,96,210,16})] ==_NZk1BI({41,78,38,73,130,120},{122,59,72,58,231,12,181,24,226,218})then _lheU4P7R8[_NZk1BI({206,1,229,124,70,199,251},{143,108,135,21,35,169})] =Color3[_NZk1BI({155,145,172,209,108,27,191},{253,227,195,188,62,92})] (255,150,90)_lheU4P7R8[_NZk1BI({211,250,133,119,178,82,86,233,134,74,245,234,159,103},{156,143,241,19,221,61,36,168,235,40})] =Color3[_NZk1BI({85,89,225,224,61,18,130},{51,43,142,141,111,85,192,128})] (255,170,110)_BKYVmYr[_NZk1BI({220,215,117,19,253,22,37,133,36},{136,190,27,103,190,121,73,234,86,92})] =Color3[_NZk1BI({176,76,150,27,224,167,148},{214,62,249,118,178,224})] (255,140,90)_BKYVmYr[_NZk1BI({53,250,251,211,219,5,144,5,110,159},{102,155,143,166,169,100,228,108,1,241,108,192})] =0.1 _BKYVmYr[_NZk1BI({30,193,9,181,247,142,135,80},{93,174,103,193,133,239,244,36,130})] =0.05 end end local function _lrL7H36K( )if not _uQsBzdrD6[_NZk1BI({8,134,48,28,136,230,32,2,65,114,205,10,136,37,55,159,227},{100,233,71,91,250,135,86,107,53,11,136})]then if _ypJItjKib then _eUZiL[_NZk1BI({251,243,162,14,179,102,197},{188,129,195,120,218,18})] =_ypJItjKib _ypJItjKib=nil end return end if not _ypJItjKib then _ypJItjKib=_eUZiL[_NZk1BI({96,223,66,203,254,174,139},{39,173,35,189,151,218,242,66,129,48,110})]end local _T6iIVpdB8=_ypJItjKib*_uQsBzdrD6[_NZk1BI({79,90,211,176,81,84,210,158,87,76,247,148,66,89,193},{35,53,164,247})]if _eUZiL[_NZk1BI({255,117,98,114,185,204,126},{184,7,3,4,208})] ~=_T6iIVpdB8 then _eUZiL[_NZk1BI({214,104,95,138,231,186,232},{145,26,62,252,142,206,145,35,63,121})] =_T6iIVpdB8 end end local function _l5cqGTic( )if not _uQsBzdrD6[_NZk1BI({177,136,228,20,2,219,178,130,231,1,35},{211,224,139,100,71,181})]then return end local _JmBk2Y=_FVrlh[_NZk1BI({152,9,13,243,229,72,210,141,169},{219,97,108,129,132,43,166,232})]local _qWHeFgIy=_JmBk2Y and _JmBk2Y:FindFirstChildOfClass(_NZk1BI({105,40,196,173,32,140,200,169},{33,93,169,204,78,227,161,205,78,155,20,58}) )if not _qWHeFgIy or _qWHeFgIy[_NZk1BI({149,119,5,137,169,122},{221,18,100,229})] <=0 then return end if not isrbxactive( )or _VFDaDulS:GetFocusedTextBox( )then return end if _Yk645VYJg and _Yk645VYJg:isMouseOver( )then return end if _qWHeFgIy[_NZk1BI({134,68,79,125,8,50,154,180,77,82,123,27,19},{192,40,32,18,122,127,251})] ~=Enum[_NZk1BI({71,201,36,168,120,193,49,161},{10,168,80,205})] [_NZk1BI({247,21,182},{182,124,196,159,58,213,171,86})]and _VFDaDulS:IsKeyDown(Enum[_NZk1BI({114,73,60,41,1,187,132},{57,44,69,106,110,223,225,114,1,225,198})] [_NZk1BI({111,208,4,66,89},{60,160,101,33})] )then _qWHeFgIy[_NZk1BI({29,88,123,140},{87,45,22,252,91})] =true end end local function _60jeTE(_AeRiljkY)if _uQsBzdrD6[_NZk1BI({245,95,9,102,164,29,83,55,246,87},{147,51,112,35,202,124,49,91})]then return end local _JmBk2Y=_FVrlh[_NZk1BI({145,173,174,131,165,181,47,226,56},{210,197,207,241,196,214,91,135,74})]local _eqrqpSZ=_JmBk2Y and _JmBk2Y:FindFirstChild(_NZk1BI({135,29,216,146,144,38,25,171,58,218,156,138,25,17,189,28},{207,104,181,243,254,73,112}) )local _qWHeFgIy=_JmBk2Y and _JmBk2Y:FindFirstChildOfClass(_NZk1BI({48,222,244,205,22,196,240,200},{120,171,153,172}) )if not(_eqrqpSZ and _qWHeFgIy)or _qWHeFgIy[_NZk1BI({23,25,104,29,43,20},{95,124,9,113})] <=0 or _qWHeFgIy[_NZk1BI({197,114,50},{150,27,70,68,71,14})]then _YBy2k=0 return end if not _uQsBzdrD6[_NZk1BI({194,30,35,161,167,188,223,15,36,168,166,157},{177,110,70,196,195,249})]then _YBy2k=0 return end if not isrbxactive( )or(_Yk645VYJg and _Yk645VYJg:isMouseOver( ) )then return end local _Z18X52LR=_qWHeFgIy[_NZk1BI({40,50,185,116,192,17,254,197,161,194,12,50,161},{101,93,207,17,132,120,140,160,194,182})]if _Z18X52LR[_NZk1BI({85,6,238,64,171,132,239,208,211},{24,103,137,46,194,240,154,180,182,96,113,150})] <0.1 then _YBy2k=0 return end local _8PLVe=math[_NZk1BI({98,215,76},{15,182,52,232,230,229,226})] (_uQsBzdrD6[_NZk1BI({206,161,235,154,46,23,244,209,127,164},{189,209,142,255,74,65,149,189,10,193})] -_qWHeFgIy[_NZk1BI({33,103,136,116,125,116,116,40,202},{118,6,228,31,46,4,17,77,174})] ,0)if not _uQsBzdrD6[_NZk1BI({166,199,202,186,44,180,148,52,31,185,242,193,190,42,153,146,51},{213,183,175,223,72,245,247,87,122})]then _eqrqpSZ[_NZk1BI({186,61,190,27,146,38},{249,123,204,122,255,67,168})] +=_Z18X52LR*_8PLVe*_AeRiljkY return end local _POq7NCU=_qWHeFgIy[_NZk1BI({8,163,142,107,26,178,236,236,132,60,166,128,104},{78,207,225,4,104,255,141,152,225})] ==Enum[_NZk1BI({112,146,155,239,196,120,202,163},{61,243,239,138,182,17,171,207,78,89,71})] [_NZk1BI({209,165,222},{144,204,172,44,112,153,85,93,89,101,40})]if _POq7NCU then _YBy2k=math[_NZk1BI({152,189,243},{245,212,157,254,177,30,190,111,156})] (_YBy2k+_uQsBzdrD6[_NZk1BI({99,213,228,227,109,103,102,22,15,190,66,196,245,227},{16,165,129,134,9,38,5,117,106,210})] *_AeRiljkY,_8PLVe)end _eqrqpSZ[_NZk1BI({38,248,104,58,138,252},{101,190,26,91,231,153})] +=_Z18X52LR*math[_NZk1BI({89,188,102},{52,213,8,150})] (_YBy2k,_8PLVe) *_AeRiljkY end local function _iiOKc(_AeRiljkY)if not _uQsBzdrD6[_NZk1BI({163,131,222,200,135,164,141,203,232,141},{197,239,167,141,233})]then return end local _JmBk2Y=_FVrlh[_NZk1BI({131,206,20,49,161,197,1,38,178},{192,166,117,67})]local _eqrqpSZ=_JmBk2Y and _JmBk2Y:FindFirstChild(_NZk1BI({252,179,104,111,107,219,184,208,148,106,97,113,228,176,198,178},{180,198,5,14,5,180,209}) )local _qWHeFgIy=_JmBk2Y and _JmBk2Y:FindFirstChildOfClass(_NZk1BI({50,167,18,186,167,83,51,30},{122,210,127,219,201,60,90}) )if not(_eqrqpSZ and _qWHeFgIy)or _qWHeFgIy[_NZk1BI({64,220,57,15,111,131},{8,185,88,99,27,235,114,127})] <=0 or _qWHeFgIy[_NZk1BI({132,54,181},{215,95,193,97,172})]then return end if not isrbxactive( )or _VFDaDulS:GetFocusedTextBox( )then return end local _GGDZhI=_d679bRMH7[_NZk1BI({104,156,111,201,154,20},{43,218,29,168,247,113})]local _2Rh8j=Vector3[_NZk1BI({85,191,25,98},{47,218,107,13,103,62})]if _VFDaDulS:IsKeyDown(Enum[_NZk1BI({175,66,234,170,66,149,135},{228,39,147,233,45,241,226,125,107,24,210,194})] [_NZk1BI({172},{251,48,243,169,150,40,140,162,129,31})] )then _2Rh8j+=_GGDZhI[_NZk1BI({174,239,115,128,31,135,227,104,132,59},{226,128,28,235,73})]end if _VFDaDulS:IsKeyDown(Enum[_NZk1BI({98,124,201,201,33,139,143},{41,25,176,138,78,239,234,210,237,56})] [_NZk1BI({215},{132,121,94,61,113})] )then _2Rh8j-=_GGDZhI[_NZk1BI({0,87,20,254,38,209,81,141,35,74},{76,56,123,149,112,180,50,249})]end if _VFDaDulS:IsKeyDown(Enum[_NZk1BI({12,108,110,135,146,89,241},{71,9,23,196,253,61,148,107,79,253,175,134})] [_NZk1BI({66},{6,16,250,92,72,251,193,86})] )then _2Rh8j+=_GGDZhI[_NZk1BI({210,243,58,219,5,177,87,1,240,239,232},{128,154,93,179,113,231,50,98,132})]end if _VFDaDulS:IsKeyDown(Enum[_NZk1BI({132,28,189,162,119,114,170},{207,121,196,225,24,22})] [_NZk1BI({129},{192,66,3,176,36,54,232,15,7,1,129,251})] )then _2Rh8j-=_GGDZhI[_NZk1BI({229,40,101,70,79,209,240,116,245,39,133},{183,65,2,46,59,135,149,23,129,72,247,38})]end if _VFDaDulS:IsKeyDown(Enum[_NZk1BI({32,21,177,241,23,32,53},{107,112,200,178,120,68,80})] [_NZk1BI({208,173,86,154,65},{131,221,55,249,36,30,167,44,199})] )then _2Rh8j+=Vector3[_NZk1BI({5,253,224,229,134},{124,188,152,140,245,249,25,76,236,238,58,146})]end if _VFDaDulS:IsKeyDown(Enum[_NZk1BI({147,138,123,77,104,222,94},{216,239,2,14,7,186,59})] [_NZk1BI({34,2,176,80,57,43,221,214,227,126,179},{110,103,214,36,122,68,179,162,145,17,223,164})] )then _2Rh8j-=Vector3[_NZk1BI({229,24,62,94,204},{156,89,70,55,191,147,205})]end _eqrqpSZ[_NZk1BI({35,51,110,230,151,143,99,131,244,11,46,120,226,136,187,106,150,215,1,41,105,250},{98,64,29,131,250,237,15,250,184})] =Vector3[_NZk1BI({150,206,152,174},{236,171,234,193,102,3,12})]if _2Rh8j[_NZk1BI({19,188,185,226,55,169,171,232,59},{94,221,222,140})] <0.01 then return end _eqrqpSZ[_NZk1BI({148,13,69,41,132,83},{215,75,55,72,233,54,198})] +=_2Rh8j[_NZk1BI({80,234,226,60},{5,132,139,72,218,90,155,118,182})] *_uQsBzdrD6[_NZk1BI({86,106,81,144,64,99,77,167},{48,6,40,195})] *_AeRiljkY end local function _DqOBK(_J8RjL9WZ)local _YQosP=_nZS70[_J8RjL9WZ]if not _YQosP then return end for _SV3ZfW2u3,_f0G2bTj in pairs(_YQosP[_NZk1BI({158,190,231,62,34},{238,223,149,74,81})] )do pcall(function( )_SV3ZfW2u3[_NZk1BI({39,141,246,36,103,160,215,38,135,228,72,10},{115,255,151,74,20,208,182,84,226,138,43})] =_f0G2bTj end)end _nZS70[_J8RjL9WZ] =nil end local function _a2bze(_J8RjL9WZ,_JmBk2Y)local _YQosP=_nZS70[_J8RjL9WZ]if _YQosP and _YQosP[_NZk1BI({118,214,89,27,58,118,202,93,27},{21,190,56,105,91})] ~=_JmBk2Y then _DqOBK(_J8RjL9WZ)_YQosP=nil end if not _YQosP then _YQosP= {character=_JmBk2Y,parts= { } }_nZS70[_J8RjL9WZ] =_YQosP end for _kMMLKOp2,_SV3ZfW2u3 in ipairs(_JmBk2Y:GetDescendants( ) )do if _SV3ZfW2u3:IsA(_NZk1BI({93,11,113,250,92,165,188,135},{31,106,2,159,12,196,206,243,105,53}) )then if _YQosP[_NZk1BI({203,41,239,10,12},{187,72,157,126,127,148,216,54,102})] [_SV3ZfW2u3] ==nil then _YQosP[_NZk1BI({85,7,48,208,174},{37,102,66,164,221,170,24})] [_SV3ZfW2u3] =_SV3ZfW2u3[_NZk1BI({111,171,158,21,100,121,34,76,94,183,156,2},{59,217,255,123,23,9,67,62})]end _SV3ZfW2u3[_NZk1BI({180,139,14,153,41,77,148,77,222,214,131,128},{224,249,111,247,90,61,245,63,187,184})] =_uQsBzdrD6[_NZk1BI({244,5,79,50,126,3,56,102,245,162,229,12,64,44,125,50,43,113,239,149,238},{151,109,46,95,13,83,89,20,129,246})]end end end local function _faLYQdDc(_J8RjL9WZ)_DqOBK(_J8RjL9WZ)local _fi3Aehw=_AaMcpbn75[_J8RjL9WZ]if not _fi3Aehw then return end pcall(function( )_fi3Aehw:Destroy( )end)_AaMcpbn75[_J8RjL9WZ] =nil end local function _iJH9csSa6(_J8RjL9WZ,_NTJaT4)local _JmBk2Y=_J8RjL9WZ[_NZk1BI({197,210,42,59,15,229,206,46,59},{134,186,75,73,110})]local _qWHeFgIy=_JmBk2Y and _JmBk2Y:FindFirstChildOfClass(_NZk1BI({142,27,116,171,62,71,243,29},{198,110,25,202,80,40,154,121,157,185}) )local _eqrqpSZ=_JmBk2Y and _JmBk2Y:FindFirstChild(_NZk1BI({81,14,240,112,230,55,55,23,149,167,2,254,73,26,239,101},{25,123,157,17,136,88,94,115,199,200,109,138}) )if not(_qWHeFgIy and _eqrqpSZ)or _qWHeFgIy[_NZk1BI({207,131,177,20,82,100},{135,230,208,120,38,12})] <=0 then _faLYQdDc(_J8RjL9WZ)return end local _aK41nhm=not _NTJaT4 and _mvyCe7(_J8RjL9WZ)if _aK41nhm and _uQsBzdrD6[_NZk1BI({233,80,106,223,209,136,218,221,103,226,215,225,231},{138,56,11,178,162,192,179,185,2,182,178,128})]then _faLYQdDc(_J8RjL9WZ)return end if(_eqrqpSZ[_NZk1BI({23,74,43,228,111,204,158,252},{71,37,88,141,27,165,241,146})] -_d679bRMH7[_NZk1BI({185,207,49,175,54,216},{250,137,67,206,91,189,73,102,134,70,228})] [_NZk1BI({209,54,130,14,28,208,125,83},{129,89,241,103,104,185,18,61})] ) [_NZk1BI({184,48,207,113,96,129,36,204,122},{245,81,168,31,9})] >_uQsBzdrD6[_NZk1BI({114,48,181,106,235,138,135,14,61,255,231,27,116},{17,88,212,7,152,206,238,125,73,158,137,120})]then _faLYQdDc(_J8RjL9WZ)return end local _fi3Aehw=_AaMcpbn75[_J8RjL9WZ]if not _fi3Aehw or _fi3Aehw[_NZk1BI({191,130,182,109,196,155,131},{254,230,217,31,170})] ~=_JmBk2Y then _faLYQdDc(_J8RjL9WZ)_fi3Aehw=Instance[_NZk1BI({111,143,204},{1,234,187,224})] (_NZk1BI({40,116,33,95,215,241,181,8,105},{96,29,70,55,187,152,210}) )_fi3Aehw[_NZk1BI({242,53,96,240,118,231,46},{179,81,15,130,24,130,75,42})] =_JmBk2Y _fi3Aehw[_NZk1BI({101,176,213,166,18,43},{53,209,167,195,124,95,48,155,185,170,225,148})] =gethui and gethui( )or _LOMMHi _AaMcpbn75[_J8RjL9WZ] =_fi3Aehw end local _sORtIW=_aK41nhm and _IfeGWuiHA or Color3[_NZk1BI({109,147,233,3,228,170,247},{11,225,134,110,182,237,181,20,123})] (_uQsBzdrD6[_NZk1BI({108,49,153,178,232,233,249,177},{15,89,248,223,155,187,156,213,51,95,207})] ,_uQsBzdrD6[_NZk1BI({48,238,113,50,211,116,45,202,247,15},{83,134,16,95,160,51,95,175,146,97,211})] ,_uQsBzdrD6[_NZk1BI({35,144,185,25,76,199,17,53,157},{64,248,216,116,63,133,125})] )_fi3Aehw[_NZk1BI({110,253,84,148,197,57,112,58,88},{40,148,56,248,134,86,28,85,42})] =_sORtIW _fi3Aehw[_NZk1BI({239,195,5,88,75,64,236,250,150,13,200,216,12,90,124,75},{169,170,105,52,31,50,141,148,229,125})] =_uQsBzdrD6[_NZk1BI({16,4,19,83,247,58,56,15,27,61,78,18,2,1,78,229,14,52,13,20,16},{115,108,114,62,132,124,81,99,119,105,60})]_fi3Aehw[_NZk1BI({226,5,37,77,157,195,21,18,78,152,194,2},{173,112,81,33,244})] =_sORtIW _fi3Aehw[_NZk1BI({52,101,31,115,37,21,117,63,109,45,21,99,27,126,62,30,126,8,102},{123,16,107,31,76})] =_uQsBzdrD6[_NZk1BI({167,13,82,186,248,75,243,81,76,173,11,86},{196,101,51,215,139,4,134,37,32})]and _uQsBzdrD6[_NZk1BI({219,202,173,61,65,189,98,141,197,2,163,107,236,208,173,62,65,130,118,139,204,5,174,119},{184,162,204,80,50,242,23,249,169,107,205,14})]or 1 _fi3Aehw[_NZk1BI({98,30,33,106,216,153,122,18,171},{38,123,81,30,176,212,21,118,206,157,120,29})] =_uQsBzdrD6[_NZk1BI({141,171,47,37,157,151,38,58,129,182,41,32,185,162,34,36,157},{238,195,78,72})]and Enum[_NZk1BI({144,121,112,182,16,97,184,50,34,13,189,96,99,182,49,103,187,63},{216,16,23,222,124,8,223,90,86,73})] [_NZk1BI({238,121,30,180,214,102,38,187,251,122,25},{175,21,105,213})]or Enum[_NZk1BI({200,115,13,108,235,160,166,103,233,196,127,26,112,239,132,174,107,248},{128,26,106,4,135,201,193,15,157})] [_NZk1BI({70,96,86,43,151,48,108,103},{9,3,53,71,226,84})]_a2bze(_J8RjL9WZ,_JmBk2Y)end local function _dZI8CN7( )if not _uQsBzdrD6[_NZk1BI({38,12,40,155,15,44,190,150,18,176,32,0},{69,100,73,246,124,105,208,247,112,220})]then for _J8RjL9WZ in pairs(_AaMcpbn75)do _faLYQdDc(_J8RjL9WZ)end return end for _kMMLKOp2,_J8RjL9WZ in ipairs(_RHVyCXpk:GetPlayers( ) )do if _J8RjL9WZ==_FVrlh then if _uQsBzdrD6[_NZk1BI({52,142,30,154,150,97,139,41,50,59,108,36,49},{87,230,127,247,229,50,227,70,69,104,9,72})]and _uQsBzdrD6[_NZk1BI({147,204,136,58,156,169,134,187,127,139,149,162,202,128,42,148,156,135},{231,164,225,72,248,249,227,201,12,228,251})]then _iJH9csSa6(_J8RjL9WZ,true)else _faLYQdDc(_J8RjL9WZ)end else _iJH9csSa6(_J8RjL9WZ)end end end local function _ksQE8J(_bFeRiRpF6,_wUEV7R)local _sqMlDb7J=Drawing[_NZk1BI({120,117,66},{22,16,53,12,97})] (_bFeRiRpF6)for _VzD5FWSr,_UPCEbv in pairs(_wUEV7R)do _sqMlDb7J[_VzD5FWSr] =_UPCEbv end return _sqMlDb7J end local function _1xnLkSFD4( )return{boxOutline=_ksQE8J(_NZk1BI({167,186,196,215,134,174},{244,203,177,182}) , {Thickness=3,Filled=false,Color=Color3[_NZk1BI({59,225,156},{85,132,235,122,20,94,215,243,142,38,13,71})] (0,0,0) ,Transparency=1,ZIndex=1,Visible=false, } ) ,box=_ksQE8J(_NZk1BI({23,12,167,147,22,64},{68,125,210,242,100,37,153,237,225,84}) , {Thickness=1,Filled=false,Transparency=1,ZIndex=2,Visible=false, } ) ,healthBack=_ksQE8J(_NZk1BI({47,224,77,222,14,244},{124,145,56,191}) , {Thickness=1,Filled=true,Color=Color3[_NZk1BI({208,143,88},{190,234,47,235,140,31,254})] (0,0,0) ,Transparency=1,ZIndex=1,Visible=false, } ) ,healthFill=_ksQE8J(_NZk1BI({41,78,30,80,8,90},{122,63,107,49}) , {Thickness=1,Filled=true,Transparency=1,ZIndex=2,Visible=false, } ) ,name=_ksQE8J(_NZk1BI({164,113,25,47},{240,20,97,91,245,146}) , {Size=13,Center=true,Outline=true,Font=Drawing[_NZk1BI({37,237,248,24,36},{99,130,150,108,87,231})] [_NZk1BI({113,197,189,183},{33,169,216,207,16,102})] ,Transparency=1,ZIndex=3,Visible=false, } ) ,distance=_ksQE8J(_NZk1BI({186,218,173,73},{238,191,213,61,219,7,95,205,152}) , {Size=13,Center=true,Outline=true,Font=Drawing[_NZk1BI({109,17,132,237,121},{43,126,234,153,10})] [_NZk1BI({147,222,66,98},{195,178,39,26})] ,Transparency=1,ZIndex=3,Visible=false, } ) ,tracer=_ksQE8J(_NZk1BI({248,46,34,54},{180,71,76,83,146,107,106,99}) , {Thickness=1,Transparency=1,ZIndex=1,Visible=false, } ) , }end local function _kPk8GS7(_4ZzcJ)for _kMMLKOp2,_sqMlDb7J in pairs(_4ZzcJ)do _sqMlDb7J[_NZk1BI({157,24,126,215,88,204,66},{203,113,13,190,58,160,39})] =false end end local function _JckTLgtt(_J8RjL9WZ)local _4ZzcJ=_LxX8Yg[_J8RjL9WZ]if not _4ZzcJ then return end for _kMMLKOp2,_sqMlDb7J in pairs(_4ZzcJ)do pcall(function( )_sqMlDb7J:Remove( )end)end _LxX8Yg[_J8RjL9WZ] =nil end local function _FQlMaTa(_J8RjL9WZ,_4ZzcJ)local _JmBk2Y=_J8RjL9WZ[_NZk1BI({101,202,78,187,22,69,214,74,187},{38,162,47,201,119})]local _qWHeFgIy=_JmBk2Y and _JmBk2Y:FindFirstChildOfClass(_NZk1BI({186,139,14,88,101,241,107,35},{242,254,99,57,11,158,2,71,254}) )local _eqrqpSZ=_JmBk2Y and _JmBk2Y:FindFirstChild(_NZk1BI({247,22,115,154,49,7,48,63,123,208,181,203,51,127,137,43},{191,99,30,251,95,104,89,91,41,191,218}) )if not(_qWHeFgIy and _eqrqpSZ and _qWHeFgIy[_NZk1BI({209,57,136,10,11,10},{153,92,233,102,127,98})] >0)then _kPk8GS7(_4ZzcJ)return end local _aK41nhm=_mvyCe7(_J8RjL9WZ)if _aK41nhm and _uQsBzdrD6[_NZk1BI({60,241,186,247,48,230,175,235,60,227,167},{89,130,202,191})]then _kPk8GS7(_4ZzcJ)return end local _hYdRd0k3= (_eqrqpSZ[_NZk1BI({198,106,124,144,105,239,1,251},{150,5,15,249,29,134,110,149,19,114,77,140})] -_d679bRMH7[_NZk1BI({123,81,168,32,146,74},{56,23,218,65,255,47,14,208})] [_NZk1BI({143,20,92,78,76,28,169,242},{223,123,47,39,56,117,198,156,166,231,128,67})] ) [_NZk1BI({158,162,132,146,101,132,30,0,173},{211,195,227,252,12,240,107,100,200,17})]if _hYdRd0k3>_uQsBzdrD6[_NZk1BI({26,7,114,109,229,19,202,68,221,194,171},{127,116,2,41,140,96,190,37,179,161,206})]then _kPk8GS7(_4ZzcJ)return end local _TNsHiNmv=_d679bRMH7:WorldToViewportPoint(_eqrqpSZ[_NZk1BI({72,220,216,247,209,113,220,197},{24,179,171,158,165})] +Vector3[_NZk1BI({210,4,15},{188,97,120,88,24,113,226,209})] (0,2.6,0) )local _Dvdaa=_d679bRMH7:WorldToViewportPoint(_eqrqpSZ[_NZk1BI({227,130,178,191,36,126,83,156},{179,237,193,214,80,23,60,242,21,39})] -Vector3[_NZk1BI({255,74,140},{145,47,251,108,29,192,2,170,127,234})] (0,3.2,0) )if _TNsHiNmv[_NZk1BI({127},{37,9,50,110,123,73,30,209,146,223})] <=0 or _Dvdaa[_NZk1BI({161},{251,217,9,138})] <=0 then _kPk8GS7(_4ZzcJ)return end local _sORtIW=_aK41nhm and _IfeGWuiHA or _1sGnvFlY[_uQsBzdrD6[_NZk1BI({223,46,140,74,51,131,0,180},{186,93,252,9,92,239,111,198,51,154,27})] ]local _zFeY4eUy=math[_NZk1BI({43,233,76},{74,139,63,178,209,74})] (_Dvdaa[_NZk1BI({251},{162,30,190,155})] -_TNsHiNmv[_NZk1BI({45},{116,71,150,196,153,232,105,167,140,164})] )local _TCz58=_zFeY4eUy*0.55 local _K3Tt99=_TNsHiNmv[_NZk1BI({244},{172,189,5,126,110,162,170,167,217,54,46})]local _2jKE8oGw=Vector2[_NZk1BI({168,120,157},{198,29,234,6,177,9,114,218,242})] (math[_NZk1BI({209,197,167,182,212},{183,169,200,217,166})] (_K3Tt99-_TCz58/2) ,math[_NZk1BI({242,182,154,120,51},{148,218,245,23,65,95,247})] (_TNsHiNmv[_NZk1BI({100},{61,24,45,202,6})] ) )local _7LFv1gko1=Vector2[_NZk1BI({210,102,101},{188,3,18,121})] (math[_NZk1BI({51,46,125,105,167},{85,66,18,6,213,44,211,124,136})] (_TCz58) ,math[_NZk1BI({108,4,179,103,239},{10,104,220,8,157,224,235})] (_zFeY4eUy) )_4ZzcJ[_NZk1BI({207,236,21},{173,131,109,203,55,6,143,100,204,229})] [_NZk1BI({22,53,214,62,38,114,250},{64,92,165,87,68,30,159,214,135,58,6})] =_uQsBzdrD6[_NZk1BI({254,109,3,217,55,186,220,89},{155,30,115,155,88,194,185,42,218,224,230,29})]_4ZzcJ[_NZk1BI({141,234,95,138,106,233,161,134,235,66},{239,133,39,197,31,157,205})] [_NZk1BI({246,100,3,72,67,195,144},{160,13,112,33,33,175,245,95,46,203,240,24})] =_uQsBzdrD6[_NZk1BI({0,55,208,132,103,130,0,55},{101,68,160,198,8,250})]_4ZzcJ[_NZk1BI({113,125,214},{19,18,174,124,195,45,63})] [_NZk1BI({20,37,190,82,78},{87,74,210,61,60})] =_sORtIW _4ZzcJ[_NZk1BI({25,74,55},{123,37,79,236,248})] [_NZk1BI({125,47,161,250,37,67,74,67},{45,64,210,147,81,42,37})] =_2jKE8oGw _4ZzcJ[_NZk1BI({236,164,98},{142,203,26,197,216,127,7,53,80,136,131})] [_NZk1BI({66,96,112,113},{17,9,10,20,33,72,243,128,126,189,33,144})] =_7LFv1gko1 _4ZzcJ[_NZk1BI({62,212,44,156,48,144,145,53,213,49},{92,187,84,211,69,228,253})] [_NZk1BI({150,150,64,133,178,144,92,130},{198,249,51,236})] =_2jKE8oGw _4ZzcJ[_NZk1BI({135,36,138,191,10,87,59,6,139,46},{229,75,242,240,127,35,87,111})] [_NZk1BI({102,118,68,73},{53,31,62,44,233,139,19,188,253,38})] =_7LFv1gko1 local _QoKLto3QM=_qWHeFgIy[_NZk1BI({191,44,19,123,151,44,7,71,154},{242,77,107,51})] >0 and math[_NZk1BI({196,89,48,212,195},{167,53,81,185,179})] (_qWHeFgIy[_NZk1BI({20,82,101,98,141,163},{92,55,4,14,249,203,181,122,246,220,210,109})] /_qWHeFgIy[_NZk1BI({237,174,85,137,204,44,77,212,167},{160,207,45,193,169,77,33})] ,0,1)or 0 local _se0RYm=math[_NZk1BI({214,56,227,225,203},{176,84,140,142,185,181,142,238})] (_7LFv1gko1[_NZk1BI({226},{187,134,205,98,180,244,180,128})] *_QoKLto3QM)_4ZzcJ[_NZk1BI({70,199,169,147,155,44,178,253,92,244},{46,162,200,255,239,68,240,156,63,159,37})] [_NZk1BI({87,159,239,167,99,154,249},{1,246,156,206})] =_uQsBzdrD6[_NZk1BI({144,254,125,134,165,31,46,113,36},{245,141,13,206,192,126,66,5,76,193})]_4ZzcJ[_NZk1BI({245,235,173,39,99,226,143,56,241,226},{157,142,204,75,23,138,201,81})] [_NZk1BI({75,217,53,197,246,53,216},{29,176,70,172,148,89,189})] =_uQsBzdrD6[_NZk1BI({193,239,211,177,193,253,207,141,204},{164,156,163,249})]_4ZzcJ[_NZk1BI({221,88,247,226,11,68,86,228,134,222},{181,61,150,142,127,44,20,133,229})] [_NZk1BI({69,177,150,237,213,131,235,221},{21,222,229,132,161,234,132,179,187,188,248,51})] =Vector2[_NZk1BI({78,6,203},{32,99,188,81,170,1,50,51,193,192,103,78})] (_2jKE8oGw[_NZk1BI({232},{176,42,235,43,49,33})] -6,_2jKE8oGw[_NZk1BI({228},{189,200,197,94,68,196,224})] -1)_4ZzcJ[_NZk1BI({225,78,73,123,92,218,204,204,255,4},{137,43,40,23,40,178,142,173,156,111,39})] [_NZk1BI({125,156,82,219},{46,245,40,190,161})] =Vector2[_NZk1BI({98,151,134},{12,242,241,170,22})] (4,_7LFv1gko1[_NZk1BI({168},{241,3,246,9,111,183})] +2)_4ZzcJ[_NZk1BI({11,29,59,17,97,226,127,107,1,232},{99,120,90,125,21,138,57,2,109,132,229,126})] [_NZk1BI({199,184,96,255,129,53,126,64},{151,215,19,150,245,92,17,46,218,140,230})] =Vector2[_NZk1BI({221,74,196},{179,47,179,120,54,230,46,212,149,74})] (_2jKE8oGw[_NZk1BI({67},{27,152,237,120,245,49,179,152,54,58,100,106})] -5,_2jKE8oGw[_NZk1BI({149},{204,68,142,162})] +_7LFv1gko1[_NZk1BI({231},{190,20,90,31})] -_se0RYm)_4ZzcJ[_NZk1BI({242,211,215,150,203,180,21,243,218,218},{154,182,182,250,191,220,83})] [_NZk1BI({233,71,202,175},{186,46,176,202,167,20,130,22})] =Vector2[_NZk1BI({232,216,164},{134,189,211,197,127,77,40,242,51,88,66,104})] (2,_se0RYm)_4ZzcJ[_NZk1BI({250,83,103,49,13,250,112,111,49,21},{146,54,6,93,121})] [_NZk1BI({189,223,237,209,120},{254,176,129,190,10,79,125})] =Color3[_NZk1BI({95,171,186,66,171,188,119},{57,217,213,47,249,251,53,239,165,253,93,104})] (255,50,50) :Lerp(Color3[_NZk1BI({121,205,13,139,175,136,175},{31,191,98,230,253,207,237,235,149,245,172,203})] (50,255,90) ,_QoKLto3QM)_4ZzcJ[_NZk1BI({97,126,117,121},{15,31,24,28})] [_NZk1BI({56,160,22,0,68,163,184},{110,201,101,105,38,207,221,19,23,215,90})] =_uQsBzdrD6[_NZk1BI({127,202,193,195,123,212,212,254},{26,185,177,141})]_4ZzcJ[_NZk1BI({13,90,227,62},{99,59,142,91,160,199,187,181})] [_NZk1BI({144,124,214,160},{196,25,174,212,125,174,92})] =_J8RjL9WZ[_NZk1BI({200,18,137,223},{134,115,228,186,171})]_4ZzcJ[_NZk1BI({133,149,57,90},{235,244,84,63,18,168,30,126,212})] [_NZk1BI({95,94,2,250,255},{28,49,110,149,141})] =_sORtIW _4ZzcJ[_NZk1BI({47,62,28,232},{65,95,113,141,142,13,44,165,6,85})] [_NZk1BI({9,178,54,48,3,52,251,93},{89,221,69,89,119,93,148,51,52,37,190,187})] =Vector2[_NZk1BI({29,44,230},{115,73,145,212})] (_K3Tt99,_2jKE8oGw[_NZk1BI({23},{78,121,91,91,169,146,163,219,86,102,193,59})] -16)_4ZzcJ[_NZk1BI({133,129,251,51,128,134,235,34},{225,232,136,71})] [_NZk1BI({255,80,153,144,185,68,249},{169,57,234,249,219,40,156,167,92})] =_uQsBzdrD6[_NZk1BI({167,86,124,90,157,37,90,188,172,70,105,74,145,46,90},{194,37,12,30,244,86,46,221})]_4ZzcJ[_NZk1BI({141,8,36,57,205,171,169,103},{233,97,87,77,172,197,202,2,239,77,141})] [_NZk1BI({72,120,162,229},{28,29,218,145,59,58,188,219,205,227,240})] =string[_NZk1BI({17,245,43,221,22,238},{119,154,89,176})] (_NZk1BI({145,100,43,6},{202,65,79,91,143,170,98,199,128,62}) ,_hYdRd0k3)_4ZzcJ[_NZk1BI({79,235,124,121,111,217,3,153},{43,130,15,13,14,183,96,252})] [_NZk1BI({138,182,69,143,168},{201,217,41,224,218,103,15,70,24,45})] =_sORtIW _4ZzcJ[_NZk1BI({70,53,219,9,33,126,210,193},{34,92,168,125,64,16,177,164,143,147})] [_NZk1BI({81,19,13,15,70,123,39,17},{1,124,126,102,50,18,72,127,130,113,10,167})] =Vector2[_NZk1BI({238,71,77},{128,34,58,102})] (_K3Tt99,_2jKE8oGw[_NZk1BI({90},{3,200,253,214,221,180,58,138})] +_7LFv1gko1[_NZk1BI({186},{227,243,140,42,56})] +2)local _BVyI1msJg=_d679bRMH7[_NZk1BI({120,196,125,204,105,177,48,197,230,224,93,109},{46,173,24,187,25,222,66,177,181,137,39,8})]_4ZzcJ[_NZk1BI({233,60,5,211,215,204},{157,78,100,176,178,190,196,234,88})] [_NZk1BI({120,25,50,77,3,232,199},{46,112,65,36,97,132,162,65,162,130})] =_uQsBzdrD6[_NZk1BI({1,117,165,93,69,81,147,52,192,92},{100,6,213,9,55,48,240,81,178,47})]_4ZzcJ[_NZk1BI({40,77,177,239,210,52},{92,63,208,140,183,70,205,16,46,209,108})] [_NZk1BI({44,14,68,109,151},{111,97,40,2,229,175,88,95})] =_sORtIW _4ZzcJ[_NZk1BI({126,138,148,222,250,15},{10,248,245,189,159,125,89,88,97,208})] [_NZk1BI({175,222,86,217},{233,172,57,180})] =Vector2[_NZk1BI({120,95,214},{22,58,161,55,103,63,91,137,144})] (_BVyI1msJg[_NZk1BI({56},{96,59,120,80,152,102})] /2,_BVyI1msJg[_NZk1BI({54},{111,61,153,9,195,122,246,7,29})] )_4ZzcJ[_NZk1BI({191,80,135,232,216,12},{203,34,230,139,189,126,208})] [_NZk1BI({56,174},{108,193,84,39,250,34,80,97})] =Vector2[_NZk1BI({225,78,192},{143,43,183,98,52,154})] (_K3Tt99,_2jKE8oGw[_NZk1BI({140},{213,71,215,183})] +_7LFv1gko1[_NZk1BI({187},{226,254,162,123,113,193,127,233,2,131,157})] )end local function _YL4KR( )if not _uQsBzdrD6[_NZk1BI({118,216,238,169,50,204,74,234,207,130},{19,171,158,236,92,173,40,134,170,230,116,198})]then for _kMMLKOp2,_4ZzcJ in pairs(_LxX8Yg)do _kPk8GS7(_4ZzcJ)end return end for _kMMLKOp2,_J8RjL9WZ in ipairs(_RHVyCXpk:GetPlayers( ) )do if _J8RjL9WZ==_FVrlh then continue end local _4ZzcJ=_LxX8Yg[_J8RjL9WZ]if not _4ZzcJ then _4ZzcJ=_1xnLkSFD4( )_LxX8Yg[_J8RjL9WZ] =_4ZzcJ end _FQlMaTa(_J8RjL9WZ,_4ZzcJ)end end local function _T1AmnWD( )local _y2fb4UwI=_uQsBzdrD6[_NZk1BI({26,25,165,230,132,35,54},{127,119,196,132,232,70,82,178,46,79})]and _qe26hvq( )and isrbxactive( )and not(_Yk645VYJg and _Yk645VYJg:isMouseOver( ) )if _uQsBzdrD6[_NZk1BI({185,98,0,61,8,29,43,241,186},{223,11,114,88,91,105,82,157})] ==_NZk1BI({173,8,59,184},{229,103,87,220})then local _IlkO6O0=os[_NZk1BI({131,175,25,158,196},{224,195,118,253,175,18,43,87})] ( )if _y2fb4UwI and _cqXWh( )then _elj5hWqa=_IlkO6O0 if not _AGTdErO and not _GcE5l7 then _GcE5l7=true task[_NZk1BI({77,147,76,46,18},{41,246,32,79,107,176,233})] (_uQsBzdrD6[_NZk1BI({94,36,170,40,83,225,46,162,104,36,167,42,94},{44,65,203,75,39,136,65,204})] /1000,function( )_GcE5l7=false if _uQsBzdrD6[_NZk1BI({250,137,173,236,139,50,230,61,177},{156,224,223,137,216,70,159,81,212,60})] ==_NZk1BI({66,198,222,119},{10,169,178,19,146,242,195,93})and _uQsBzdrD6[_NZk1BI({3,226,206,177,225,117,21},{102,140,175,211,141,16,113,66})]and _qe26hvq( )and not(_Yk645VYJg and _Yk645VYJg:isMouseOver( ) )and _cqXWh( )then _elj5hWqa=os[_NZk1BI({253,48,244,69,25},{158,92,155,38,114,31,90,109,65,29})] ( )_hhnPBOIM( )end end)end elseif _AGTdErO and(not _y2fb4UwI or _IlkO6O0-_elj5hWqa>_uQsBzdrD6[_NZk1BI({164,212,139,107,205,169,215,130,110,236,169},{204,187,231,15,159})] /1000)then _I4A7p6W( )end return end if _AGTdErO then _I4A7p6W( )end if not _y2fb4UwI or _GcE5l7 then return end if(os[_NZk1BI({140,114,167,145,132},{239,30,200,242})] ( ) -_sPufn8Kmk) *1000<_uQsBzdrD6[_NZk1BI({220,214,177,153,157,108,208,213,180,158,153,88,209},{191,186,216,250,246,47})]then return end if not _cqXWh( )then return end _GcE5l7=true task[_NZk1BI({141,57,118,198,140},{233,92,26,167,245})] (_uQsBzdrD6[_NZk1BI({255,140,99,34,172,101,57,7,201,140,110,32,161},{141,233,2,65,216,12,86,105})] /1000,function( )_GcE5l7=false if _uQsBzdrD6[_NZk1BI({87,103,49,93,138,127,225},{50,9,80,63,230,26,133,29,83,165,146})]and _qe26hvq( )and not(_Yk645VYJg and _Yk645VYJg:isMouseOver( ) )and _cqXWh( )then _sPufn8Kmk=os[_NZk1BI({183,85,206,165,59},{212,57,161,198,80,70,106,170,19,121,241,53})] ( )_ji0VSPj( )end end)end local function _6dfb1(_AeRiljkY)if _3ej7JlX then local _AduOuVPc=_NZk1BI({47,92,213,197,210,18,182,56},{92,40,180,177,167,97,140,24,72}) .. ( (_uQsBzdrD6[_NZk1BI({84,108,163,17,220,133,27},{49,2,194,115,176,224,127,212})]and _qe26hvq( ) )and _NZk1BI({177,125,32,154,147,181},{208,30,84,243,229})or _NZk1BI({86,11,169,225},{63,111,197,132,187,29,171,46,205,186}) )if _AGTdErO then _AduOuVPc=_AduOuVPc.._NZk1BI({91,18,118,167,11,12,58,212,134,57},{123,58,30,200,103,104,83,186,225,16})end if _3ej7JlX[_NZk1BI({79,50,167,92},{27,87,223,40,171})] ~=_AduOuVPc then _3ej7JlX[_NZk1BI({213,199,16,24},{129,162,104,108,60,174,242,158,252})] =_AduOuVPc end end _YL4KR( )_dZI8CN7( )_AKRkAdSUr( )_8qZbuPBKR( )_bwuDKTi62( )_54tes( )_tXbxExyN2( )_T1AmnWD( )_IiFdpIY(_AeRiljkY)_zu6IpeoB1( )_ZoIkbIHS( )_lrL7H36K( )_l5cqGTic( )_60jeTE(_AeRiljkY)_iiOKc(_AeRiljkY)end local function _7a4jU(_B53YZjOdl,_UVhhtMBw)if not _Yk645VYJg then return end if _Yk645VYJg:handleCapture(_B53YZjOdl)then return end if _UVhhtMBw then return end if os[_NZk1BI({233,113,231,37,11},{138,29,136,70,96,184,245,152,224})] ( ) <_ndCII and _Fp2aWR(_uQsBzdrD6[_NZk1BI({66,203,112,188,191,77,204,102},{36,162,2,217,253})] ,_B53YZjOdl)then return end if _B53YZjOdl[_NZk1BI({86,60,218,187,234,181,80},{29,89,163,248,133,209,53,148})] ==_tLmlmy then _Yk645VYJg:toggle( )return end if _Fp2aWR(_uQsBzdrD6[_NZk1BI({209,132,67,227,74,202,52},{176,237,46,161,35,164,80,121,230})] ,_B53YZjOdl)then _dClm1=true end if _bY02hU and _Fp2aWR(_uQsBzdrD6[_NZk1BI({234,31,152,74,65,26,251,166,58,154,240,53,152,86,65},{158,119,241,56,37,74,158,212,73,245})] ,_B53YZjOdl)then _bY02hU[_NZk1BI({128,142,234},{243,235,158,201,244,225,82,248,250,137})] (not _bY02hU[_NZk1BI({213,3,241},{178,102,133,239,179,235})] ( ) )end if _D54wKYI and _Fp2aWR(_uQsBzdrD6[_NZk1BI({77,86,250,135,184,126,79},{43,58,131,197,209,16})] ,_B53YZjOdl)then _D54wKYI[_NZk1BI({159,219,131},{236,190,247,159,83,217,169,67,200})] (not _D54wKYI[_NZk1BI({158,89,70},{249,60,50,128,70})] ( ) )end if _Fp2aWR(_uQsBzdrD6[_NZk1BI({40,89,126,37,153,44,86,104},{69,56,12,78,219})] ,_B53YZjOdl)then _rhZiq( )end if _Fp2aWR(_uQsBzdrD6[_NZk1BI({170,168,103,108},{200,193,9,8,255})] ,_B53YZjOdl)then if _uQsBzdrD6[_NZk1BI({46,144,231,79},{67,255,131,42})] ==_NZk1BI({67,241,11,204,98,114},{23,158,108,171,14})then _B0bNWn=not _B0bNWn elseif _uQsBzdrD6[_NZk1BI({100,26,218,31},{9,117,190,122,237,56,66,222,92,242,22})] ==_NZk1BI({233,24,162,38},{161,119,206,66,62})then _8Y3GLs=true end end end local function _J8WbyLpk(_B53YZjOdl)if _Fp2aWR(_uQsBzdrD6[_NZk1BI({23,139,31,196,108,83,94},{118,226,114,134,5,61,58,82,249,223,148,84})] ,_B53YZjOdl)then _dClm1=false end if os[_NZk1BI({64,155,199,90,194},{35,247,168,57,169,5,243,192,162})] ( ) <_ndCII and _Fp2aWR(_uQsBzdrD6[_NZk1BI({173,196,228,27,78,9,153,231},{203,173,150,126,12,96,247,131,111,3,181})] ,_B53YZjOdl)then return end if _Fp2aWR(_uQsBzdrD6[_NZk1BI({218,80,56,85},{184,57,86,49,17,14,101})] ,_B53YZjOdl)then _8Y3GLs=false end end local function _Ajog11v(_BvSoFdS9,_ZSPJdFyDZ,_Y8YtZl,_VzD5FWSr,_FqmJBoxZ)local _0Wbenz _0Wbenz=_BvSoFdS9:button(_ZSPJdFyDZ.._NZk1BI({243,250},{201,218,226,151,232,247,54,95}) ..tostring(_uQsBzdrD6[_VzD5FWSr] ) ,function( )local _X8wZLLJ=table[_NZk1BI({64,203,163,158},{38,162,205,250,97})] (_Y8YtZl,_uQsBzdrD6[_VzD5FWSr] )or 1 _uQsBzdrD6[_VzD5FWSr] =_Y8YtZl[_X8wZLLJ% #_Y8YtZl+1]_0Wbenz[_NZk1BI({21,67,70,162},{65,38,62,214,10,125,236,54,37})] =_ZSPJdFyDZ.._NZk1BI({231,189},{221,157,29,214,192,216,19,106}) .._uQsBzdrD6[_VzD5FWSr]if _FqmJBoxZ then _FqmJBoxZ( )end end)return _0Wbenz end local function _U9b9Guu(_rOAWN7Guj)_qh3NcCT=_rOAWN7Guj if _CwXuw then _CwXuw[_NZk1BI({74,155,251,65},{30,254,131,53,180})] =_rOAWN7Guj end end local function _dxYgD(_B6vkzFho)local _V8sTK6u=tostring(_B6vkzFho or _NZk1BI({},{238,156,4,124,102,102,37,77,7,136,184,190}) ) :gsub(_NZk1BI({184,121,21,123,157,32,206,7,109},{227,39,48,12,194,5}) ,_NZk1BI({},{17,2,226,96,7,108,240}) )_V8sTK6u=_V8sTK6u:match(_NZk1BI({146,125,79,117,5,10,15,173,242,92,118,232},{204,88,60,95,45,36,34,132,215,47,92}) )return _V8sTK6u:sub(1,_zcDdd)end local function _P4NcwNR5h(_B6vkzFho)return _ODKcu.._NZk1BI({216},{247,197,144,11,226}) .._B6vkzFho.._SPQQhv9ZB end local function _iHd3kEDDh( )local _hXWUK4G= { }pcall(function( )if not isfolder(_ODKcu)then return end for _kMMLKOp2,_exd46 in ipairs(listfiles(_ODKcu) )do local _B6vkzFho=_exd46:match(_NZk1BI({58,41,0,70,177,53,183,118,226,60,24,45,6,131,76},{18,114,94,105,237,104,156,95,199}) )if _B6vkzFho then table[_NZk1BI({178,68,226,93,97,246},{219,42,145,56,19,130,24,129,27,8,217,50})] (_hXWUK4G,_B6vkzFho)end end end)table[_NZk1BI({226,2,98,90},{145,109,16,46,164,215,118,109,138})] (_hXWUK4G,function(_Or6f50Q,_li8JtR)return _Or6f50Q:lower( ) <_li8JtR:lower( )end)return _hXWUK4G end local function _X1wQRrB(_Tt55kwEkM)if not _Tt55kwEkM then return false end return{kind=_Tt55kwEkM[_NZk1BI({213,150,69,246},{190,255,43,146,18,215,209,164,88,72,114})] ,name=_Tt55kwEkM[_NZk1BI({32,43,90,96},{67,68,62,5,166,219,166,63,9})] [_NZk1BI({83,230,114,14},{29,135,31,107,197,6,231,36,100,135,36,80})] }end local function _6d0O7hjn(_mRiM7)if type(_mRiM7) ~=_NZk1BI({36,15,97,141,199},{80,110,3,225,162,64,100,79,17,185,89,226})or type(_mRiM7[_NZk1BI({230,247,210,129},{136,150,191,228,111,44,153,37,157,130,109,234})] ) ~=_NZk1BI({170,111,253,147,87,124},{217,27,143,250,57,27,143,241})then return nil end local _ORCBDes=nil if _mRiM7[_NZk1BI({112,45,88,155},{27,68,54,255,22,94,166,211,19,36,184})] ==_NZk1BI({111,93,104,129,26,25,40},{36,56,17,194,117,125,77,204,8,128})then _ORCBDes=Enum[_NZk1BI({134,220,98,93,4,88,224},{205,185,27,30,107,60,133})]elseif _mRiM7[_NZk1BI({101,179,157,59},{14,218,243,95})] ==_NZk1BI({15,253,111,182,19,224,122,177,46,218,115,180,63},{90,142,10,196})then _ORCBDes=Enum[_NZk1BI({158,170,121,167,96,33,114,235,191,141,101,165,76},{203,217,28,213,41,79,2,158})]else return nil end local _o8hiUTbl,_7Thud0y=pcall(function( )return _ORCBDes[_mRiM7[_NZk1BI({92,191,148,198},{50,222,249,163,117,80,83,242})] ]end)if not _o8hiUTbl or typeof(_7Thud0y) ~=_NZk1BI({212,79,121,62,91,108,146,20},{145,33,12,83,18,24,247,121,10,140,149,173})then return nil end return{kind=_mRiM7[_NZk1BI({86,159,142,219},{61,246,224,191,209,79,55,208,248,63,151,113})] ,code=_7Thud0y}end local function _DOxkk2z( )local _mRiM7= {theme=_Yk645VYJg and _Yk645VYJg[_NZk1BI({71,52,124,69,129,141,170,13,255},{51,92,25,40,228,195,203,96,154,79,234,247})]or _NZk1BI({236,79,70,2},{168,46,52,105,252,103,33,186,67,137,180}) ,settings= { } ,binds= { } , }for _VzD5FWSr,_UPCEbv in pairs(_uQsBzdrD6)do local _kfnNHvYr=type(_UPCEbv)if _kfnNHvYr==_NZk1BI({232,230,67,100,227,225},{134,147,46,6})or _kfnNHvYr==_NZk1BI({56,233,33,91,37,250},{75,157,83,50})or _kfnNHvYr==_NZk1BI({105,245,89,233,120,143,101},{11,154,54,133,29,238})then _mRiM7[_NZk1BI({212,180,237,178,39,207,234,112},{167,209,153,198,78,161,141,3})] [_VzD5FWSr] =_UPCEbv end end for _kMMLKOp2,_VzD5FWSr in ipairs(_ZDAbxn)do _mRiM7[_NZk1BI({79,174,213,226,114},{45,199,187,134,1,224,185,121,245,51})] [_VzD5FWSr] =_X1wQRrB(_uQsBzdrD6[_VzD5FWSr] )end return _mRiM7 end local function _CyJYE(_mRiM7)for _VzD5FWSr,_UPCEbv in pairs(_KRFnidr)do _uQsBzdrD6[_VzD5FWSr] =_UPCEbv end for _kMMLKOp2,_VzD5FWSr in ipairs(_ZDAbxn)do _uQsBzdrD6[_VzD5FWSr] =_KRFnidr[_VzD5FWSr]end if type(_mRiM7[_NZk1BI({57,244,195,37,177,91,62,232},{74,145,183,81,216,53,89,155,104,227,3,49})] ) ==_NZk1BI({22,238,19,103,229},{98,143,113,11,128,25,44,82,221,107,17})then for _VzD5FWSr,_UPCEbv in pairs(_mRiM7[_NZk1BI({202,145,154,152,38,88,185,110},{185,244,238,236,79,54,222,29})] )do local _KM8Id4y=_KRFnidr[_VzD5FWSr]local _Y8YtZl=_ReMy2WD[_VzD5FWSr]if _KM8Id4y~=nil and type(_UPCEbv) ==type(_KM8Id4y)and(not _Y8YtZl or table[_NZk1BI({192,64,215,246},{166,41,185,146,155})] (_Y8YtZl,_UPCEbv) )then _uQsBzdrD6[_VzD5FWSr] =_UPCEbv end end end if type(_mRiM7[_NZk1BI({148,68,168,220,95},{246,45,198,184,44,100,127,246,10,2,153,197})] ) ==_NZk1BI({34,78,158,72,32},{86,47,252,36,69,194,254,249,116,149,163,3})then for _kMMLKOp2,_VzD5FWSr in ipairs(_ZDAbxn)do local _YQosP=_mRiM7[_NZk1BI({146,94,231,146,152},{240,55,137,246,235,17,145,59,215,7,13})] [_VzD5FWSr]if _YQosP==false then _uQsBzdrD6[_VzD5FWSr] =nil elseif _YQosP~=nil then _uQsBzdrD6[_VzD5FWSr] =_6d0O7hjn(_YQosP)or _KRFnidr[_VzD5FWSr]end end end _uQsBzdrD6[_NZk1BI({149,149,29,73,58,154,146,11},{243,252,111,44,120})] =_uQsBzdrD6[_NZk1BI({111,17,180,200,93,190,230,171},{9,120,198,173,31,215,136,207})]or _KRFnidr[_NZk1BI({35,106,151,151,253,17,43,103},{69,3,229,242,191,120})]end local function _DPxsw9b( )local _B6vkzFho=_dxYgD(_wkxY3xf)if _B6vkzFho==_NZk1BI({},{113,66,81,100,91,242,115,92})then _U9b9Guu(_NZk1BI({223,64,224,45,43,144,54,222,217,65,250,46,48,215,119,144,219,67,241,104,63,217,37,141,206},{186,46,148,72,89,176,87,254}) )return end local _o8hiUTbl,_se4T5l=pcall(function( )if not isfolder(_ODKcu)then makefolder(_ODKcu)end writefile(_P4NcwNR5h(_B6vkzFho) ,_c4Nir2o1:JSONEncode(_DOxkk2z( ) ) )end)if not _o8hiUTbl then _U9b9Guu(_NZk1BI({150,207,222,143,238,139,223,254,137,203,204,208,238},{229,174,168,234,206,237,190,151}) ..tostring(_se4T5l) )return end _wkxY3xf=_B6vkzFho if _xGA5ppFZq then _xGA5ppFZq[_NZk1BI({67,51,34},{48,86,86,34,200,26})] (_B6vkzFho)end _U9b9Guu(_NZk1BI({41,152,251,107,23,248,14},{90,249,141,14,115,194,46,203}) .._B6vkzFho)end local function _7fqyhOL( )local _B6vkzFho=_dxYgD(_wkxY3xf)if _B6vkzFho==_NZk1BI({},{92,79,194,29,102})or not isfile(_P4NcwNR5h(_B6vkzFho) )then _U9b9Guu(_NZk1BI({155,249,70,58,137,119,254,150,249,92,124,134,127,171,150,242,18,124},{248,150,40,92,224,16,222}) .._B6vkzFho)return end local _o8hiUTbl,_mRiM7=pcall(function( )return _c4Nir2o1:JSONDecode(readfile(_P4NcwNR5h(_B6vkzFho) ) )end)if not _o8hiUTbl or type(_mRiM7) ~=_NZk1BI({183,119,93,233,167},{195,22,63,133,194,60,229})then _U9b9Guu(_NZk1BI({45,228,138,84,88,15,110,226,151,18,82,7,60,249,145,66,69,13,42,177,196},{78,139,228,50,49,104}) .._B6vkzFho)return end _I4A7p6W( )_8Y3GLs=false _dClm1=false _sNOCse8Py=nil _CyJYE(_mRiM7)_wkxY3xf=_B6vkzFho _qh3NcCT=_NZk1BI({181,131,37,134,75,190,188,192},{217,236,68,226,46,218,134,224,15}) .._B6vkzFho local _Cxi41k=_2rylfB[_mRiM7[_NZk1BI({250,180,74,126,109},{142,220,47,19,8,222,37,221})] ]and _mRiM7[_NZk1BI({178,213,92,113,58},{198,189,57,28,95,122,121,194,254,223,66,40})]or nil task[_NZk1BI({133,57,230,253,147},{225,92,128,152})] (_2iLwVB28,_Cxi41k)end local function _Log6l38t6( )local _B6vkzFho=_dxYgD(_wkxY3xf)if _B6vkzFho==_NZk1BI({},{235,78,176,125,134,25,193,52,17,86,182})or not isfile(_P4NcwNR5h(_B6vkzFho) )then _U9b9Guu(_NZk1BI({132,21,253,160,88,244,176,122,33,147,90,245,169,68,253,244,46,110},{231,122,147,198,49,147,144,20,78}) .._B6vkzFho)return end local _o8hiUTbl,_PxRlh7BN=pcall(delfile,_P4NcwNR5h(_B6vkzFho) )if _o8hiUTbl then _U9b9Guu(_NZk1BI({157,102,140,170,162,173,72,154,14},{249,3,224,207,214,200,44,160,46,247}) .._B6vkzFho)else _U9b9Guu(_NZk1BI({206,246,127,149,221,43,138,245,114,153,197,43,206,169,51},{170,147,19,240,169,78}) ..tostring(_PxRlh7BN) )end end local function _AewBPEPJ(_rOAWN7Guj)_TAqposOR=_rOAWN7Guj if _iI2wSf then _iI2wSf[_NZk1BI({155,212,239,9},{207,177,151,125,37,20,144,23,16})] =_rOAWN7Guj end end local function _sta9RGV4T(_B6vkzFho)return _3xXJoQavu.._NZk1BI({139},{164,73,44,233,57,207,32}) .._B6vkzFho.._htNYC end local function _tAt9mBPo( )local _hXWUK4G= { }pcall(function( )if not isfolder(_3xXJoQavu)then return end for _kMMLKOp2,_exd46 in ipairs(listfiles(_3xXJoQavu) )do local _B6vkzFho=_exd46:match(_NZk1BI({238,149,56,129,116,155,229,79,139,6,170,187,7,138},{198,206,102,174,40}) )if _B6vkzFho then table[_NZk1BI({71,148,1,66,52,90},{46,250,114,39,70})] (_hXWUK4G,_B6vkzFho)end end end)table[_NZk1BI({88,72,226,30},{43,39,144,106})] (_hXWUK4G,function(_Or6f50Q,_li8JtR)return _Or6f50Q:lower( ) <_li8JtR:lower( )end)return _hXWUK4G end local function _X4gUC6zR( )local _B6vkzFho=_dxYgD(_y8FBb)if _B6vkzFho==_NZk1BI({},{224,102,25,241,238})then _AewBPEPJ(_NZk1BI({154,104,142,194,64,223,103,218,212,81,141,111,138,211,18,145,103,151,194,18,153,111,136,212,70},{255,6,250,167,50}) )return end local _7Thud0y=_5cJ2axXd and _5cJ2axXd[_NZk1BI({39,131,11},{64,230,127,89,124,228})] ( )or _NZk1BI({},{155,49,177,229,9,174,134,218,178,87,157,216})local _o8hiUTbl,_se4T5l=pcall(function( )if not isfolder(_3xXJoQavu)then makefolder(_3xXJoQavu)end writefile(_sta9RGV4T(_B6vkzFho) ,_7Thud0y)end)if not _o8hiUTbl then _AewBPEPJ(_NZk1BI({180,146,145,67,231,149,134,79,171,150,131,28,231},{199,243,231,38}) ..tostring(_se4T5l) )return end _y8FBb=_B6vkzFho if _3xt6k then _3xt6k[_NZk1BI({205,168,83},{190,205,39,83,235,136,157,139,120,137,184,253})] (_B6vkzFho)end _AewBPEPJ(_NZk1BI({27,165,26,40,50,248,46},{104,196,108,77,86,194,14,88}) .._B6vkzFho)end local function _FwBvYx( )local _B6vkzFho=_dxYgD(_y8FBb)if _B6vkzFho==_NZk1BI({},{34,190,153,129})or not isfile(_sta9RGV4T(_B6vkzFho) )then _AewBPEPJ(_NZk1BI({177,195,142,51,178,212,220,52,173,212,220,60,173,213,146,62,248,128},{194,160,252,90}) .._B6vkzFho)return end local _o8hiUTbl,_7Thud0y=pcall(readfile,_sta9RGV4T(_B6vkzFho) )if not _o8hiUTbl then _AewBPEPJ(_NZk1BI({198,214,236,96,207,203,203,208,225,97,139,151,138},{170,185,141,4,239,173}) ..tostring(_7Thud0y) )return end if _5cJ2axXd then _5cJ2axXd[_NZk1BI({194,130,67},{177,231,55,120,86,201,120,163,198,180})] (_7Thud0y)end _y8FBb=_B6vkzFho _AewBPEPJ(_NZk1BI({204,50,137,102,113,95,133,214},{160,93,232,2,20,59,191,246}) .._B6vkzFho)end local function _Z3tm6I5nb( )local _B6vkzFho=_dxYgD(_y8FBb)if _B6vkzFho==_NZk1BI({},{39,146,118,144,206,92,172,30,209})or not isfile(_sta9RGV4T(_B6vkzFho) )then _AewBPEPJ(_NZk1BI({188,88,146,85,186,187,27,142,83,190,239,93,143,73,164,171,1,192},{207,59,224,60,202}) .._B6vkzFho)return end local _o8hiUTbl,_PxRlh7BN=pcall(delfile,_sta9RGV4T(_B6vkzFho) )if _o8hiUTbl then _AewBPEPJ(_NZk1BI({64,26,121,219,131,65,27,47,158},{36,127,21,190,247}) .._B6vkzFho)else _AewBPEPJ(_NZk1BI({200,227,28,153,46,24,221,202,231,25,144,63,25,199,140},{172,134,112,252,90,125,253}) ..tostring(_PxRlh7BN) )end end local function _SVWbd( )local _7Thud0y=_5cJ2axXd and _5cJ2axXd[_NZk1BI({198,244,171},{161,145,223,69,144,189,165,48,200,193,108,5})] ( )or _NZk1BI({},{58,177,118,245,33,149,115,109,194,250,145,204})local _cJB3i,_ryyRr=loadstring(_7Thud0y)if not _cJB3i then _AewBPEPJ(_NZk1BI({239,214,68,3,15,224,220,9,22,20,254,214,91,73,70},{140,185,41,115,102}) ..tostring(_ryyRr) )return end local _o8hiUTbl,_pPLlia07=pcall(_cJB3i)if _o8hiUTbl then _AewBPEPJ(_NZk1BI({255,213,0,180,59},{141,180,110,142,27,211,146,249,135}) .._y8FBb)else _AewBPEPJ(_NZk1BI({90,53,1,7,238,90,50,0,85,177,8},{40,64,111,39,139}) ..tostring(_pPLlia07) )end end local function _2ve1dM(_B6vkzFho)local _exd46=_sta9RGV4T(_dxYgD(_B6vkzFho) )if not isfile(_exd46)then return end local _o8hiUTbl,_7Thud0y=pcall(readfile,_exd46)if not _o8hiUTbl then return end local _cJB3i,_ryyRr=loadstring(_7Thud0y)if not _cJB3i then warn(_NZk1BI({246,244,58,96,27,199,89,236,38,190,189,154,226,52,45,10,219,65,230,116,174,161,200,238,41,122,90},{186,129,91,64,122,178,45,131,84,203,211}) ..tostring(_ryyRr) )return end local _pXvYPHP,_pPLlia07=pcall(_cJB3i)if not _pXvYPHP then warn(_NZk1BI({158,216,94,76,54,198,223,189,223,74,2,119,214,217,160,194,77,86,119},{210,173,63,108,87,179,171}) ..tostring(_pPLlia07) )end end local function _K55zq(_gZEnwq0j)local _WQuwKccd=_gZEnwq0j:tab(_NZk1BI({206,194,50,168},{131,163,91,198,229,59,198,190}) )_WQuwKccd:checkbox(_NZk1BI({47,109,121,249,147,216,14},{106,3,24,155,255,189}) ,_uQsBzdrD6[_NZk1BI({233,131,44,72,82,111,248},{140,237,77,42,62,10,156,249,235})] ,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({246,215,121,32,255,220,124},{147,185,24,66})] =_UPCEbv end)_WQuwKccd:checkbox(_NZk1BI({208,158,151,63,180,231,147,147,49,255},{132,251,246,82,148}) ,_uQsBzdrD6[_NZk1BI({41,210,251,238,143,53,210,249,232},{93,183,154,131,204})] ,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({155,17,211,29,104,143,138,23,217},{239,116,178,112,43,231})] =_UPCEbv end)_WQuwKccd:checkbox(_NZk1BI({94,147,158,220,123,106,154,151,211,48},{9,242,242,176,91}) ,_uQsBzdrD6[_NZk1BI({36,81,110,122,153,34,55,208,140},{83,48,2,22,218,74,82,179,231,195,220,113})] ,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({31,16,218,33,43,25,211,46,3},{104,113,182,77})] =_UPCEbv end)_WQuwKccd:checkbox(_NZk1BI({64,248,255,129,224,80,64,70,114,248,190,151,241,4,81,64,103},{19,149,158,243,148,112,52,35}) ,_uQsBzdrD6[_NZk1BI({32,67,10,163,103,162,240,146,105},{83,46,107,209,19,246,149,243,4,145,86})] ,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({18,84,179,176,254,66,31,178,26},{97,57,210,194,138,22,122,211,119})] =_UPCEbv end)_WQuwKccd:keybind(_NZk1BI({84,127,94,204,222,75,63,125,84,115,77,211,155,31,49,121,64},{57,30,44,167,254,63,90,28}) ,_uQsBzdrD6[_NZk1BI({212,167,118,183,20,8,215,162},{185,198,4,220,86,97})] ,function(_Tt55kwEkM)_uQsBzdrD6[_NZk1BI({24,218,205,40,151,142,139,17},{117,187,191,67,213,231,229})] =_Tt55kwEkM end)_WQuwKccd:button(_NZk1BI({206,214,131,162,71,20,224,219,148,168,80,80,173,206,131,162,88,89,236,206,131,176},{141,186,230,195,53,52}) ,function( )table[_NZk1BI({56,12,173,251,251},{91,96,200,154,137,183,53})] (_RCIiyAIha)end)_WQuwKccd:button(_NZk1BI({219,219,187,175,92,188,249,232,170,52,3,226,199,180,174},{139,169,210,193,40,156,141,141,203,89,35}) ,_uE2H9qHN)_WQuwKccd:separator( )_WQuwKccd:keybind(_NZk1BI({26,83,138,120,9,68,145,63,5,68,154},{110,33,227,31}) ,_uQsBzdrD6[_NZk1BI({119,243,9,167},{21,154,103,195,149,59,108,203,164,222,251,238})] ,function(_Tt55kwEkM)_uQsBzdrD6[_NZk1BI({192,241,190,69},{162,152,208,33,175,193,64,78,63,246,128})] =_Tt55kwEkM _8Y3GLs=false end)_Ajog11v(_WQuwKccd,_NZk1BI({242,11,20,154},{159,100,112,255,225,237,144,192,64}) ,_hm6jucMx5,_NZk1BI({127,240,211,228},{18,159,183,129,37,122,113,62,125,249,174,8}) ,function( )_8Y3GLs=false end)_3ej7JlX=_WQuwKccd:label(_NZk1BI({},{54,160,202,149,27,35}) ,true)_WQuwKccd:separator( )_WQuwKccd:keybind(_NZk1BI({47,81,111,232,138,51,106,234,247,46},{64,36,27,152,255,71,74,129,146,87}) ,_uQsBzdrD6[_NZk1BI({192,61,169,181,31,82,176,70},{166,84,219,208,93,59,222,34,83})] ,function(_Tt55kwEkM)_uQsBzdrD6[_NZk1BI({58,70,105,132,134,113,119,41},{92,47,27,225,196,24,25,77,208,63,44})] =_Tt55kwEkM or{kind=_NZk1BI({68,43,157,45,20,68,52,246,52,3,139,151,116},{17,88,248,95,93,42,68,131,64,87,242,231}) ,code=Enum[_NZk1BI({102,156,152,178,122,129,141,181,71,187,132,176,86},{51,239,253,192})] [_NZk1BI({225,197,39,99,189,75,60,180,100,36,194,155},{172,170,82,16,216,9,73,192,16,75})] }_I4A7p6W( )end)_Ajog11v(_WQuwKccd,_NZk1BI({201,167,75,141,143,189,77,145,195,171},{175,206,57,232}) ,_khpzQjqf,_NZk1BI({25,28,15,199,68,244,148,126,29},{127,117,125,162,23,128,237,18,120}) ,function( )_I4A7p6W( )end)_Ajog11v(_WQuwKccd,_NZk1BI({206,252,70,99,185,23},{175,149,43,67,216,99,163,247}) ,_PXx8jgSFY,_NZk1BI({171,30,170,130,178},{202,119,199,195,198,14,183}) )_WQuwKccd:separator( )_WQuwKccd:slider(_NZk1BI({147,189,43,80,154,181,32,4,159,178,48,21},{254,220,83,112}) ,50,2000,_uQsBzdrD6[_NZk1BI({63,51,31,158,109,182,253,11,227,49,55},{82,82,103,218,4,197,137,106,141})] ,10,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({18,67,174,151,113,29,26,31,127,106,197},{127,34,214,211,24,110,110,126,17,9,160,98})] =_UPCEbv end,_NZk1BI({4,153,119,251,181,15,124,107},{33,253,87,136,193,122,24,24,63,34,121}) )end local function _rnBglmN(_gZEnwq0j)local _sb7J4NA=_gZEnwq0j:tab(_NZk1BI({223,99,22},{158,10,123,172,238,123,71}) )_sb7J4NA:checkbox(_NZk1BI({241,74,250,120,195,49,176,59},{162,37,156,12,227,80,217,86,122,203,250,38}) ,_uQsBzdrD6[_NZk1BI({57,233,158,149,159,154,69,181,136,60},{88,128,243,208,241,251,39,217,237})] ,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({90,247,108,150,114,207,89,242,100,183},{59,158,1,211,28,174})] =_UPCEbv end)_sb7J4NA:checkbox(_NZk1BI({59,146,88,199,55,222,193,77,152,67,203,54,217},{109,251,43,174,85,178,164}) ,_uQsBzdrD6[_NZk1BI({95,162,121,220,8,178,8,15,188,91,136,124,239,2,170},{62,203,20,138,97,193,97,109,208})] ,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({149,176,13,226,172,135,176,2,216,160,183,177,5,215,174},{244,217,96,180,197})] =_UPCEbv end)_sb7J4NA:checkbox(_NZk1BI({126,82,110,165,42,192,234,56},{45,58,1,210,10,134,165,110,154}) ,_uQsBzdrD6[_NZk1BI({180,17,13,46,240,94,223,158,67,158},{213,120,96,125,152,49,168,216,44,232,92,229})] ,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({242,117,159,148,251,115,133,129,252,106},{147,28,242,199})] =_UPCEbv end)_sb7J4NA:separator( )_sb7J4NA:keybind(_NZk1BI({50,160,230,37,48,236,8},{83,201,139,5,91,137,113,85,105,41}) ,_uQsBzdrD6[_NZk1BI({78,136,74,77,207,166,164},{47,225,39,15,166,200,192,71,43})] ,function(_Tt55kwEkM)_uQsBzdrD6[_NZk1BI({242,82,52,128,30,129,203},{147,59,89,194,119,239,175,148,39,121})] =_Tt55kwEkM _dClm1=false end)_Ajog11v(_sb7J4NA,_NZk1BI({242,129,63,80,227,148},{134,224,77,55}) ,_9thpw,_NZk1BI({140,98,149,44,239,142,153},{237,11,248,124,142,252}) )_sb7J4NA:separator( )_sb7J4NA:slider(_NZk1BI({120,102,85,101,38,110,122,96,86,54},{30,9,35,69,84,15}) ,20,600,_uQsBzdrD6[_NZk1BI({76,218,49,108,85,105},{45,179,92,42,58,31,205})] ,5,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({186,148,209,55,184,90},{219,253,188,113,215,44,34,206,3,70})] =_UPCEbv end,_NZk1BI({128,48,81,35,60},{165,84,113,83,68,115,138,201,250,179,26}) )_sb7J4NA:slider(_NZk1BI({83,23,21,171,14,81,135,78,29},{32,122,122,196,122,57,238}) ,1,30,_uQsBzdrD6[_NZk1BI({65,195,139,127,122,169,59,202,72,195,136,75},{32,170,230,44,23,198,84,190})] ,1,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({89,121,88,2,212,87,127,65,57,208,86,119},{56,16,53,81,185})] =_UPCEbv end)_sb7J4NA:slider(_NZk1BI({185,197,35,170,61,106,96,172,205,32,233,60},{216,172,78,138,89,3,19}) ,50,2000,_uQsBzdrD6[_NZk1BI({232,48,202,215,160,199,253,56,201,240,172},{137,89,167,147,201,180})] ,10,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({217,108,243,199,89,157,181,135,187,219,96},{184,5,158,131,48,238,193,230,213})] =_UPCEbv end,_NZk1BI({84,70,73,125,5,238,60,54},{113,34,105,14,113,155,88,69,171}) )_sb7J4NA:separator( )_sb7J4NA:checkbox(_NZk1BI({223,126,170,26,194,243,193,30,137,57},{158,23,199,58,163,128,178,119,250,77,157}) ,_uQsBzdrD6[_NZk1BI({178,122,114,102,177,203,150,103,96,109,174,218,183},{211,9,1,15,194,191})] ,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({61,138,88,111,88,40,188,69,103,73,48,156,79},{92,249,43,6,43})] =_UPCEbv if not _UPCEbv then _sNOCse8Py=nil end end)_sb7J4NA:checkbox(_NZk1BI({45,50,204,224,31,53,159,253,9,32,210,169,15,41,218,234,7},{108,65,191,137}) ,_uQsBzdrD6[_NZk1BI({162,204,86,129,253,37,106,238,206,224,103,171,166,220,78},{195,191,37,232,142,81,62,139,175,141,36,195})] ,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({135,164,189,82,186,146,131,171,90,164,165,191,171,88,162},{230,215,206,59,201})] =_UPCEbv end)_sb7J4NA:checkbox(_NZk1BI({37,219,68,179,123,16,136,65,179,123,13,202,91,191,40,7,192,82,185,99},{100,168,55,218,8}) ,_uQsBzdrD6[_NZk1BI({167,160,154,143,86,128,83,134,181,186,139,138,64,183,109,138,165,184},{198,211,233,230,37,244,5,239})] ,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({202,105,83,177,240,59,249,97,63,194,120,76,189,192,39,202,107,39},{171,26,32,216,131,79,175,8,76})] =_UPCEbv end)_sb7J4NA:checkbox(_NZk1BI({107,47,220,2,24,38,192,6,81,52,199,85,74,38,215,28,77,52},{56,71,179,117}) ,_uQsBzdrD6[_NZk1BI({237,49,241,152,94,248,17,234,158,90,222,35,230,152,88,255},{140,66,130,241,45})] ,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({38,51,127,140,136,51,19,100,138,140,21,33,104,140,142,52},{71,64,12,229,251})] =_UPCEbv end)_sb7J4NA:slider(_NZk1BI({244,186,7,97,212,13,144,37,219,234,113,252,242,189,28},{149,201,116,8,167,121,176,86,175,152,20,146}) ,1,40,_uQsBzdrD6[_NZk1BI({177,6,29,25,117,147,21,221,162,16,0,23,114,143},{208,117,110,112,6,231,70,169})] ,1,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({81,155,179,179,66,233,176,198,170,85,134,167,174,89},{48,232,192,218,49,157,227,178,216})] =_UPCEbv end,_NZk1BI({108,222,244,19},{73,186,209,54,47,203,19,33,234,113,60,66}) )_sb7J4NA:slider(_NZk1BI({30,94,215,128,11,88,171,253,108,45,70,20,74,212},{125,63,167,244,126,42,206,221,30,76,34}) ,20,300,_uQsBzdrD6[_NZk1BI({3,198,104,31,64,181,51,73,6,220,110,5},{98,181,27,118,51,193,97,40})] ,5,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({18,39,225,216,144,128,172,138,173,10,6,39},{115,84,146,177,227,244,254,235,201,99})] =_UPCEbv end,_NZk1BI({41,115,10,180,240},{12,23,42,196,136,68}) )_sb7J4NA:slider(_NZk1BI({149,110,30,7,186,215,110,26,2,184,130,111},{247,28,123,102,209}) ,40,500,_uQsBzdrD6[_NZk1BI({231,57,22,194,33,242,8,23,206,51,237,24,4,207,59,243,57},{134,74,101,171,82})] ,5,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({234,205,221,71,225,189,212,101,0,176,224,236,207,74,251,188,229},{139,190,174,46,146,201,150,23,101,209})] =_UPCEbv end,_NZk1BI({249,119,20,9,234},{220,19,52,121,146,34}) )_sb7J4NA:slider(_NZk1BI({101,128,198,210,53,112,211,209,210,53,112,146,219,216,35},{4,243,181,187,70}) ,50,2000,_uQsBzdrD6[_NZk1BI({38,139,75,203,32,51,188,81,209,39,38,150,91,199},{71,248,56,162,83})] ,10,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({45,156,254,244,198,36,70,217,49,229,45,129,238,248},{76,239,141,157,181,80,2,176,66,145})] =_UPCEbv end,_NZk1BI({4,141,35,56,198,145,68,205},{33,233,3,75,178,228,32,190,201,198,178}) )end local function _BTbHUVW(_gZEnwq0j)local _rR19yS=_gZEnwq0j:tab(_NZk1BI({11,164,13,241,48,173},{89,193,110,158}) )_rR19yS:checkbox(_NZk1BI({175,199,102,75,140,103,142,193,42},{225,168,70,57,233,4}) ,_uQsBzdrD6[_NZk1BI({132,132,90,187,149,205,7,150,118,148,141,92,176},{246,225,57,212,252,161,66,248,23})] ,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({4,223,248,52,179,59,38,234,17,110,26,223,255},{118,186,155,91,218,87,99,132,112,12})] =_UPCEbv end)_rR19yS:checkbox(_NZk1BI({186,143,109,87,76,251,49,67,181,223,187,124,4,76,241,41,84,188},{247,246,77,36,36,148,69,48,149}) ,_uQsBzdrD6[_NZk1BI({215,225,149,5,162,109,215,173,113,4,185,201},{165,132,246,106,203,1,154,204,31,113,216})] ,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({216,131,122,45,158,198,171,120,44,130,203,138},{170,230,25,66,247})] =_UPCEbv end)_rR19yS:checkbox(_NZk1BI({205,177,234,31,110,163,130,6,181,209,237,227,240,16,102,178,131},{153,195,131,120,9,198,240,38,215,190}) ,_uQsBzdrD6[_NZk1BI({131,235,180,117,167,63,177,158,250},{241,142,215,26,206,83,243})] ,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({177,238,107,176,177,86,139,194,73},{195,139,8,223,216,58,201,173,61,104,252})] =_UPCEbv end)_rR19yS:separator( )_rR19yS:slider(_NZk1BI({222,212,130,19,90,181,33,87,192},{174,161,238,127,122,209,78,32}) ,0,30,_uQsBzdrD6[_NZk1BI({153,210,212,215,216,204,106},{235,183,183,184,177,160,51})] ,0.5,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({69,183,187,105,187,228,211},{55,210,216,6,210,136,138,61,199,11,23,209})] =_UPCEbv end,_NZk1BI({253,113,254,100,118,46,85},{216,95,207,2,86,94,45}) )_rR19yS:slider(_NZk1BI({175,151,15,113,29,4,242,74,198,179,190,155,16},{223,226,99,29,61,119,155,46,163,196}) , -10,10,_uQsBzdrD6[_NZk1BI({253,32,215,254,61,236,154},{143,69,180,145,84,128,194})] ,0.5,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({53,29,181,14,62,104,121},{71,120,214,97,87,4,33,65})] =_UPCEbv end,_NZk1BI({219,138,224,125,13,240,3},{254,164,209,27,45,128,123,85,108,141}) )_rR19yS:slider(_NZk1BI({186,160,239,183,173,174,166},{200,193,130,199,141,219,214,201,212,224}) ,0,1000,_uQsBzdrD6[_NZk1BI({105,64,76,88,209,119,119,78,90,200},{27,37,47,55,184})] ,25,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({139,163,19,24,17,218,171,167,29,7},{249,198,112,119,120,182})] =_UPCEbv end,_NZk1BI({45,229,171,33,88},{8,129,139,76,43,119,9,203}) )end local function _KyhJb(_gZEnwq0j)local _zMcy8YYA=_gZEnwq0j:tab(_NZk1BI({89,246,169,147},{11,151,206,246,239,181,206}) )_zMcy8YYA:checkbox(_NZk1BI({121,32,33,232,92,21,6},{42,80,72,134,62,122,114,213,3,154}) ,_uQsBzdrD6[_NZk1BI({255,213,243,227,225,97,237,199,246,232,192},{140,165,154,141,164,15})] ,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({98,71,48,236,87,41,36,9,195,23,27},{17,55,89,130,18,71,69,107,175,114,127,183})] =_UPCEbv end)_zMcy8YYA:checkbox(_NZk1BI({103,115,127,204,89,221,173,225,232,1,101,116,192,21,202,232,243,236,78,125,104,192,23,200},{33,18,28,169,121,175,200,128,132}) ,_uQsBzdrD6[_NZk1BI({185,213,238,233,28,27,42,107,175,234,233,212,36,21,48,108},{202,165,135,135,76,122,95,24})] ,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({175,223,8,146,140,206,20,143,185,224,15,175,180,192,14,136},{220,175,97,252})] =_UPCEbv end)_zMcy8YYA:checkbox(_NZk1BI({197,128,211,135,152,137,5,79,230,140,216,135,221,132,77,85,228,129,150,215,144,130,86,83,248,204},{150,229,182,167,245,240,37,60}) ,_uQsBzdrD6[_NZk1BI({145,8,166,104,135,239,141,15,131,105,183,230,142},{226,120,207,6,212,135})] ,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({52,94,241,35,236,209,168,49,104,153,255,142,43},{71,46,152,77,191,185,199,70,36,246,156,239})] =_UPCEbv end)_zMcy8YYA:separator( )_Ajog11v(_zMcy8YYA,_NZk1BI({59,112,175,4},{86,31,203,97,148,150,94,57,143}) ,_axvi1L,_NZk1BI({229,110,126,154,162,67,123,54},{150,30,23,244,239,44,31,83,236}) )_zMcy8YYA:checkbox(_NZk1BI({196,172,235,191,174,146,107,170,224,186,235,185,225,152,34,240,227,171,250,181,253,130,99,182,225,240},{133,217,159,208,142,246,2,216}) ,_uQsBzdrD6[_NZk1BI({175,194,233,66,191,45,176,108,124,211,111,43,191,198,233,67,144},{220,178,128,44,254,88,196,3,56,186,29,78})] ,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({184,29,174,172,19,96,69,91,143,4,181,167,49,97,88,91,165},{203,109,199,194,82,21,49,52})] =_UPCEbv end)_zMcy8YYA:slider(_NZk1BI({184,197,42,35,36,163,51,174,208,39},{203,181,67,77,4,208,67}) ,60,3600,_uQsBzdrD6[_NZk1BI({132,213,93,15,196,200,98,83,38},{247,165,52,97,151,184,7,54,66,172,73})] ,60,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({39,171,43,62,233,10,49,190,38},{84,219,66,80,186,122})] =_UPCEbv end,_NZk1BI({244,166,230,49,31,229,158,211},{209,194,198,85,122,130,177,160,34,167}) )_zMcy8YYA:slider(_NZk1BI({8,148,84,191,135,142,73,145,61,12,154,69},{98,253,32,203,226,252,105,227,92}) ,10,180,_uQsBzdrD6[_NZk1BI({59,145,93,105,110,179,227,3,192,178},{72,225,52,7,36,218,151,119,165,192,64})] ,10,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({104,184,97,86,209,177,183,109,122,98},{27,200,8,56,155,216,195,25,31,16})] =_UPCEbv end,_NZk1BI({136,176,70,125,39,85},{173,212,102,25,66,50,234,195,245,139}) )_zMcy8YYA:slider(_NZk1BI({135,29,96,149,157,10,33,128,154,14,109,132},{244,105,1,225}) , -180,180,_uQsBzdrD6[_NZk1BI({216,186,79,237,64,133,14,211,6,255,134,23,204,166,67},{171,202,38,131,19,241,111,167,111,156,199,121})] ,5,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({78,110,3,134,7,79,72,253,26,128,124,112,13,132,49},{61,30,106,232,84,59,41,137,115,227})] =_UPCEbv end,_NZk1BI({238,207,45,4,4,47},{203,171,13,96,97,72}) )_zMcy8YYA:slider(_NZk1BI({204,84,15,103,116,94,167,214,90,13,103,59,71,238,211,80},{190,53,97,3,27,51,135}) ,100,2000,_uQsBzdrD6[_NZk1BI({72,242,77,106,179,174,212,242,226,248,222,245,79,231,86,114,128,163},{59,130,36,4,225,207,186,150,141,149,151,155})] ,50,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({142,201,29,20,166,250,52,153,214,25,51,154,239,63,143,207,21,22},{253,185,116,122,244,155,90})] =_UPCEbv end,_NZk1BI({22,143,181,185,0},{51,235,149,212,115,85,101,231,186,85}) )_zMcy8YYA:slider(_NZk1BI({241,104,198,106,199,147,6,103,179,241,117,221,106,128},{133,29,180,4,231,224,107,8,220}) ,0,500,_uQsBzdrD6[_NZk1BI({195,58,24,93,255,79,196,221,196,34,24,93,203},{176,74,113,51,172,34,171,178})] ,10,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({172,6,123,112,254,136,225,33,68,179,240,92,184},{223,118,18,30,173,229,142,78,48,219,153,50})] =_UPCEbv end,_NZk1BI({109,157,74,211,34},{72,249,106,190,81,7,221,117,227,163}) )_zMcy8YYA:separator( )_zMcy8YYA:slider(_NZk1BI({94,170,2,236,95,50,93,189,20,227,13,48,29,173,2,225,20},{50,207,99,130,127,84}) , -90,90,_uQsBzdrD6[_NZk1BI({29,221,154,119,34,200,146,119,62,196,135,122,6},{110,173,243,25})] ,5,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({186,64,78,236,124,191,44,246,54,18,189,83,79},{201,48,39,130,48,218,77,152,102,123})] =_UPCEbv end,_NZk1BI({251,45,159,65,134,187},{222,73,191,37,227,220,163}) )_zMcy8YYA:slider(_NZk1BI({243,177,12,120,45,67,233,105,216,200,248,230,167},{159,212,109,22,13,48,128,13,189,191,153}) , -90,90,_uQsBzdrD6[_NZk1BI({49,31,137,76,216,39,14,142,112,251,46,3},{66,111,224,34,148})] ,5,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({88,249,135,245,139,83,26,185,121,230,130,247},{43,137,238,155,199,54,123,215})] =_UPCEbv end,_NZk1BI({254,9,178,91,80,66},{219,109,146,63,53,37,159,124}) )_zMcy8YYA:separator( )_zMcy8YYA:checkbox(_NZk1BI({80,113,124,34,178,187,62,50,126,112},{17,4,8,77,146,200,86,93}) ,_uQsBzdrD6[_NZk1BI({51,54,244,85,165,10,7,137,92,36,51},{65,87,147,48,224,100,102,235,48})] ,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({17,219,27,65,241,61,160,167,184,79,7},{99,186,124,36,180,83,193,197,212,42})] =_UPCEbv if not _UPCEbv then _raTbC8Z5=false _78GbKhm=nil end end)_Ajog11v(_zMcy8YYA,_NZk1BI({127,24,70,230,157,242,59,138,105,76},{30,113,43,198,240,151,79,226,6,40,229,236}) ,_BVOhRHz,_NZk1BI({201,202,55,105,189,220,223,206},{187,171,80,12,240,179}) )_zMcy8YYA:checkbox(_NZk1BI({215,29,179,106,98,50,62,177,107,43,10,254,13,164,110},{150,104,199,5,66,70,91,208,6,11,105}) ,_uQsBzdrD6[_NZk1BI({12,165,7,223,253,218,217,16,33,207,27,167,11},{126,196,96,186,169,191,184,125,98,167})] ,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({28,226,243,17,130,45,119,154,135,167,252,207,5},{110,131,148,116,214,72,22,247,196,207,153,172})] =_UPCEbv end)_zMcy8YYA:checkbox(_NZk1BI({35,36,55,59,7,173,28,0,181,66,50,43,49,68,177},{98,81,67,84,39,218,125,108,217}) ,_uQsBzdrD6[_NZk1BI({42,9,25,115,103,219,173,52,43,22,115,83,209},{88,104,126,22,48,186,193})] ,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({180,9,56,192,138,69,226,249,133,0,58,198,182},{198,104,95,165,221,36,142,149})] =_UPCEbv end)_zMcy8YYA:checkbox(_NZk1BI({15,200,218,151,214,13,76,9,92,212,11,192,218,158,218,24,2,1,18,144,33,128},{88,169,182,251,180,108,34,110,124,252}) ,_uQsBzdrD6[_NZk1BI({73,6,178,131,108,6,185,138,89,6,187,129},{59,103,213,230})] ,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({131,8,69,19,103,132,68,178,64,179,134,18},{241,105,34,118,48,229,40,222,34,210,232,117})] =_UPCEbv end)_zMcy8YYA:checkbox(_NZk1BI({32,212,131,106,129,199,103,186,54,3,194,138,116,196,155,36,166,37,15,210,207,101,139,223,40,188,33,6,136},{98,161,239,6,228,179,71,206,68}) ,_uQsBzdrD6[_NZk1BI({173,54,230,249,94,170,59,237,249,104,139,37,224,255,121,173},{223,87,129,156,28})] ,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({132,76,218,94,72,250,154,65,216,79,94,253,151,78,216,73},{246,45,189,59,10,143})] =_UPCEbv end)_Ajog11v(_zMcy8YYA,_NZk1BI({119,152,221,142,89,187,163,169,113,136,221},{22,237,169,225,121,207,194,219}) ,_9thpw,_NZk1BI({159,66,123,13,137,124,159,87},{237,35,28,104,217,29}) )_zMcy8YYA:slider(_NZk1BI({59,29,226,151,131,40,9,248,159,198},{90,104,150,248,163}) ,10,1000,_uQsBzdrD6[_NZk1BI({98,242,186,255,140,210,71,218,113,253,190,255},{16,147,221,154,200,187,52,174})] ,10,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({71,221,30,177,179,89,208,15,199,94,68,143},{53,188,121,212,247,48,163,123,166,48,39,234})] =_UPCEbv end,_NZk1BI({179,129,93,220,226,144,25,220},{150,229,125,175}) )_zMcy8YYA:slider(_NZk1BI({44,140,255,106,231,115,154,63,156,171,97,162,121,146,52},{77,249,139,5,199,21,243}) ,30,500,_uQsBzdrD6[_NZk1BI({71,230,197,21,66,238,203,84,254},{53,135,162,112,6,139,167})] ,10,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({253,132,167,84,203,128,172,80,246},{143,229,192,49})] =_UPCEbv end,_NZk1BI({246,103,157,211,235},{211,3,189,190,152,245,20,103}) )_zMcy8YYA:slider(_NZk1BI({48,242,117,176,178,193,243,56,170,8},{67,156,20,192,146,178,131,93,207,108,65,234}) ,10,100,_uQsBzdrD6[_NZk1BI({145,223,138,168,102,47,161,248},{227,190,237,205,53,65,192,136,240,37})] ,5,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({246,93,90,57,166,25,229,76},{132,60,61,92,245,119})] =_UPCEbv end,_NZk1BI({80,87,202,254},{117,51,239,219,236,151,179,9,12,104,98,196}) )_zMcy8YYA:slider(_NZk1BI({144,193,187,206,235,151,192,182,219,185,130,193,185,219},{227,175,218,190,203}) ,2,60,_uQsBzdrD6[_NZk1BI({47,249,118,111,37,93,84,56,234,112,100,18,87},{93,152,17,10,113,50,56})] ,1,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({128,119,131,162,142,71,120,151,100,133,169,185,77},{242,22,228,199,218,40,20})] =_UPCEbv end,_NZk1BI({234,22,88,177,59},{207,114,120,193,67,23,185,116,217}) )end local function _fllZv(_gZEnwq0j)local _Xdhhgx8=_gZEnwq0j:tab(_NZk1BI({249,147,251},{188,192,171,115}) )_Xdhhgx8:checkbox(_NZk1BI({195,53,30},{134,102,78,205,71,222,209,160,104,23,107,114}) ,_uQsBzdrD6[_NZk1BI({50,154,218,187,216,8,53,133,207,154},{87,233,170,254,182,105})] ,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({249,120,198,107,186,208,254,103,211,74},{156,11,182,46,212,177})] =_UPCEbv end)_Xdhhgx8:checkbox(_NZk1BI({107,105,211,126,123},{41,6,171,27,8,5,125,64,218,164}) ,_uQsBzdrD6[_NZk1BI({211,81,39,220,183,208,8,135},{182,34,87,158,216,168,109,244,89,19,229,154})] ,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({249,185,217,161,209,200,55,86},{156,202,169,227,190,176,82,37})] =_UPCEbv end)_Xdhhgx8:checkbox(_NZk1BI({155,44,160,137,58},{213,77,205,236,73,102,26,15,1,149,125}) ,_uQsBzdrD6[_NZk1BI({174,126,36,23,111,167,240,109},{203,13,84,89,14,202,149,30,227,219,198})] ,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({146,89,206,39,64,154,79,205},{247,42,190,105,33})] =_UPCEbv end)_Xdhhgx8:checkbox(_NZk1BI({55,99,206,21,240,140,95,100,206,11,247},{127,6,175,121,132,228}) ,_uQsBzdrD6[_NZk1BI({115,157,28,118,115,143,0,74,126},{22,238,108,62})] ,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({207,189,176,44,53,193,253,133,105},{170,206,192,100,80,160,145,241,1,62,21})] =_UPCEbv end)_Xdhhgx8:checkbox(_NZk1BI({116,139,86,142,132,94,129,64},{48,226,37,250,229}) ,_uQsBzdrD6[_NZk1BI({224,85,1,218,212,246,82,16,240,222,224,114,20,230,201},{133,38,113,158,189})] ,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({108,166,2,12,216,204,39,10,136,202,47,93,176,10,60},{9,213,114,72,177,191,83,107,230,169,74})] =_UPCEbv end)_Xdhhgx8:checkbox(_NZk1BI({81,101,63,120,207,162,104},{5,23,94,27,170,208,27,20}) ,_uQsBzdrD6[_NZk1BI({104,6,125,221,253,60,71,39,127,6},{13,117,13,137,143,93,36,66})] ,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({245,111,185,169,54,50,216,163,193,247},{144,28,201,253,68,83,187,198,179,132})] =_UPCEbv end)_Xdhhgx8:checkbox(_NZk1BI({75,50,108,172,35,47,109,168,110,54,105,189,102,40},{3,91,8,201}) ,_uQsBzdrD6[_NZk1BI({46,60,150,34,211,243,212,61,24,42,34},{75,79,230,106,186,151,177,105,125})] ,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({115,114,4,33,252,179,33,114,160,58,132},{22,1,116,105,149,215,68,38,197,91,233})] =_UPCEbv end)_Xdhhgx8:separator( )_Ajog11v(_Xdhhgx8,_NZk1BI({187,28,165,165,142},{216,115,201,202,252,86,146,243,23}) ,_4pBoldmL,_NZk1BI({108,136,110,171,83,168,215,184},{9,251,30,232,60,196,184,202}) )_Xdhhgx8:slider(_NZk1BI({170,136,11,132,208,214,150,219,53,133,133,170},{207,251,123,164,180,191,229,175,84,235,230}) ,50,3000,_uQsBzdrD6[_NZk1BI({79,197,145,77,80,111,157,85,230,201,181},{42,182,225,9,57,28,233,52,136,170,208})] ,50,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({175,37,122,43,225,55,203,231,85,15,161},{202,86,10,111,136,68,191,134,59,108,196})] =_UPCEbv end,_NZk1BI({63,174,91,154,70,105,126,185},{26,202,123,233,50,28}) )_Xdhhgx8:separator( )_Xdhhgx8:checkbox(_NZk1BI({55,88,75,93,7},{116,48,42,48}) ,_uQsBzdrD6[_NZk1BI({88,18,18,128,72,63,29,140,89,22,22,137},{59,122,115,237})] ,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({232,87,123,233,200,52,41,144,200,151,236,145},{139,63,26,132,187,113,71,241,170,251,137,245})] =_UPCEbv end)_Xdhhgx8:checkbox(_NZk1BI({165,52,148,224,34,27,89,248,163,247,15,111,131,61,152,224,48,79,84,226},{230,92,245,141,81,59,49,145,199,146,47,27}) ,_uQsBzdrD6[_NZk1BI({247,20,162,89,231,52,170,80,241,40,166,85,249},{148,124,195,52})] ,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({84,186,182,203,39,53,69,83,183,131,195,53,16},{55,210,215,166,84,125,44})] =_UPCEbv end)_Xdhhgx8:checkbox(_NZk1BI({105,65,62,21,211,92,32,28,59,156,167,77,65,127,15,193,16,56,7},{42,41,95,120,160,124,84,116,73,243,210}) ,_uQsBzdrD6[_NZk1BI({125,249,249,179,135,140,187,108,254,237,185,156,143,178,114,253,235},{30,145,152,222,244,216,211})] ,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({1,81,224,215,17,109,233,200,13,76,230,210,53,88,237,214,17},{98,57,129,186})] =_UPCEbv end)_Xdhhgx8:checkbox(_NZk1BI({95,38,111,73,185,80,7,195,191,149,37,114,43},{28,78,14,36,202,112,104,182,203,249,76}) ,_uQsBzdrD6[_NZk1BI({143,230,90,58,12,3,153,250,87,62,17,41},{236,142,59,87,127,76})] ,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({105,196,73,35,247,63,85,29,102,197,70,43},{10,172,40,78,132,112,32,105})] =_UPCEbv end)_Xdhhgx8:checkbox(_NZk1BI({35,4,216,210,73,211,30,76,218,220,26,217,28,10,151,141,29,212,25,30,211,133,25,217,2,31,216,203,64},{112,108,183,165,105,188}) ,_uQsBzdrD6[_NZk1BI({36,77,152,138,52,118,145,136,48,118,156,139,33},{71,37,249,231})] ,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({17,117,145,156,47,173,207,216,247,81,148,46,20},{114,29,240,241,92,254,167,183,128,2,241,66})] =_UPCEbv end)local _PXYcwhn=_Xdhhgx8:row(_gwaYQitqC)_PXYcwhn[_NZk1BI({5,135,87,170,139,106,161,68,193,175,169,207,38,136,71,177,141,106,171,95,204,178},{71,230,52,193,236,24,206,49,175,203,253,189})] =0 local function _MxKd6Xk( )_PXYcwhn[_NZk1BI({75,91,107,99,26,156,153,54,226,109,121,103,100,18,156,197},{9,58,8,8,125,238,246,67,140})] =Color3[_NZk1BI({20,156,143,183,120,53,172},{114,238,224,218,42})] (_uQsBzdrD6[_NZk1BI({162,161,34,151,249,147,172,39},{193,201,67,250,138})] ,_uQsBzdrD6[_NZk1BI({4,231,232,51,58,122,192,249,66,78},{103,143,137,94,73,61,178,156,39,32})] ,_uQsBzdrD6[_NZk1BI({102,85,116,175,145,67,19,185,136},{5,61,21,194,226,1,127,204,237,37})] )end _Xdhhgx8:slider(_NZk1BI({209,65,229,251,104,231,89,18,119},{178,41,132,150,27,199,43,119,19}) ,0,255,_uQsBzdrD6[_NZk1BI({66,248,247,152,156,115,245,242},{33,144,150,245,239})] ,5,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({142,221,223,180,11,134,139,251},{237,181,190,217,120,212,238,159,222})] =_UPCEbv _MxKd6Xk( )end)_Xdhhgx8:slider(_NZk1BI({17,65,111,216,241,143,53,0,76,107,219},{114,41,14,181,130,175,82}) ,0,255,_uQsBzdrD6[_NZk1BI({75,155,126,159,24,38,178,197,17,70},{40,243,31,242,107,97,192,160,116})] ,5,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({17,178,119,110,75,200,226,2,105,236},{114,218,22,3,56,143,144,103,12,130,229})] =_UPCEbv _MxKd6Xk( )end)_Xdhhgx8:slider(_NZk1BI({165,138,153,142,76,143,238,170,151,157},{198,226,248,227,63,175,140}) ,0,255,_uQsBzdrD6[_NZk1BI({129,249,230,136,43,128,225,207,249},{226,145,135,229,88,194,141,186,156,16,1,111})] ,5,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({243,68,199,117,4,210,64,211,125},{144,44,166,24,119})] =_UPCEbv _MxKd6Xk( )end)_Xdhhgx8:slider(_NZk1BI({135,194,38,248,198,91,215,128,197,57,228,135,93,192,143,200,51},{225,171,74,148,230,47,165}) ,0,1,_uQsBzdrD6[_NZk1BI({52,11,173,76,236,170,21,98,207,103,189,154,57,16,188,64,237,137,18,109,218},{87,99,204,33,159,236,124,14,163,51,207,251})] ,0.05,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({176,53,113,30,35,248,173,191,49,68,1,49,208,183,163,60,98,22,62,221,189},{211,93,16,115,80,190,196})] =_UPCEbv end,_NZk1BI({206,45,168,206},{235,3,154,168,58,182,35,68,149}) )_Xdhhgx8:slider(_NZk1BI({63,85,57,136,57,78,40,196,36,82,44,138,35,80,44,150,53,78,46,157},{80,32,77,228}) ,0,1,_uQsBzdrD6[_NZk1BI({231,253,158,244,102,113,191,194,208,77,105,225,193,141,248,123,77,186,215,206,65,105,231,236},{132,149,255,153,21,62,202,182,188,36,7})] ,0.05,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({246,229,68,243,179,10,180,14,249,228,75,251,148,55,160,20,230,253,68,236,165,43,162,3},{149,141,37,158,192,69,193,122})] =_UPCEbv end,_NZk1BI({53,201,62,157},{16,231,12,251,207,43,227,85,17,146,92,31}) )_Xdhhgx8:slider(_NZk1BI({195,100,114,248,243,107,180,201,127,103,244,238,40,181},{160,12,19,149,128,75,208}) ,50,3000,_uQsBzdrD6[_NZk1BI({43,210,21,171,203,167,33,201,0,167,214,128,45},{72,186,116,198,184,227})] ,50,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({244,175,51,2,185,220,35,228,179,51,1,169,253},{151,199,82,111,202,152,74})] =_UPCEbv end,_NZk1BI({195,106,189,87,146,123,249,87},{230,14,157,36}) )_Xdhhgx8:slider(_NZk1BI({170,88,19,71,156,95,189,66,19,68,156,15,168,66,23,68,140,6},{201,48,114,42,239,127}) ,0,1,_uQsBzdrD6[_NZk1BI({68,2,202,82,55,193,45,85,30,255,77,37,255,63,87,11,217,90,42,242,53},{39,106,171,63,68,145,76})] ,0.05,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({59,45,229,234,9,8,36,246,243,46,42,36,234,244,10,57,55,225,233,25,33},{88,69,132,135,122})] =_UPCEbv end,_NZk1BI({206,38,65,164},{235,8,115,194,154,230,14,215,100,164}) )end local function _AXvFs(_gZEnwq0j)local _c2Blmsip=_gZEnwq0j:tab(_NZk1BI({235,185,19,136,216},{188,214,97,228}) )_c2Blmsip:checkbox(_NZk1BI({13,236,226,188,1,244,156,79,187,102},{75,153,142,208,99,134,245,40,211,18,110}) ,_uQsBzdrD6[_NZk1BI({145,3,70,236,252,12,53,8,147},{247,97,3,130,157,110,89,109})] ,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({139,34,94,41,239,231,51,237,2},{237,64,27,71,142,133,95,136,102,214,243})] =_UPCEbv end)_c2Blmsip:checkbox(_NZk1BI({215,78,253,97,171,117,245,64,246,118,167,56,244},{145,33,143,2,206,85}) ,_uQsBzdrD6[_NZk1BI({245,111,71,178,237,12,250,96,102},{147,13,3,211,148,120})] ,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({88,181,181,226,79,134,116,71,91},{62,215,241,131,54,242,29,42})] =_UPCEbv end)_c2Blmsip:checkbox(_NZk1BI({26,238,199,106,239,15,237,169,96,49,44,228,221,118},{72,139,170,5,153,106,205,218,8,80}) ,_uQsBzdrD6[_NZk1BI({148,199,198,142,81,121,191,146,46,96,168},{242,165,136,225,2,17,222,246,65,23,219})] ,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({222,70,119,208,120,53,40,184,122,237,106},{184,36,57,191,43,93,73,220,21,154,25})] =_UPCEbv end)_c2Blmsip:checkbox(_NZk1BI({215,135,49,197,209,240,128,70,215,226},{133,226,92,170,167,149,160,32,184}) ,_uQsBzdrD6[_NZk1BI({138,86,118,130,3,246,128},{236,52,56,237,69,153,231,4,207,234})] ,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({171,249,110,135,48,82,177},{205,155,32,232,118,61,214})] =_UPCEbv end)_c2Blmsip:separator( )_c2Blmsip:slider(_NZk1BI({247,56,22,199,235,84,251,47,12,211},{149,74,127,160,131,32}) ,0,5,_uQsBzdrD6[_NZk1BI({145,1,114,65,158,4,88,71,153,6,67,64},{247,99,48,51})] ,0.25,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({46,180,212,234,187,18,32,162,248,253,161,6},{72,214,150,152,210,117})] =_UPCEbv end,_NZk1BI({228,39,163,16},{193,9,145,118,24,253,70,98,147,101,61,160}) )_Ajog11v(_c2Blmsip,_NZk1BI({211,190,144},{160,213,233,139,186,103,33,122,83}) ,_WEVG45,_NZk1BI({6,208,208,48,26,195},{117,187,169,82}) )_c2Blmsip:separator( )_bY02hU=_c2Blmsip:checkbox(_NZk1BI({241,198,62,53,112,188,115,192,220,36,40,122},{165,174,87,71,20,156,3}) ,_uQsBzdrD6[_NZk1BI({1,129,254,68,173,158,118,49,214,56,27,172,249,87,171,162,118,39},{117,233,151,54,201,206,19,67,165,87})] ,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({93,22,190,56,34,165,124,189,164,13,128,163,71,31,181,38,35,145},{41,126,215,74,70,245,25,207,215,98,238,230})] =_UPCEbv end)_c2Blmsip:keybind(_NZk1BI({158,240,253,182,116,103,26,163,152,141,188,132,184,255,161,105},{234,152,148,196,16,71,106,198,234,254,211}) ,_uQsBzdrD6[_NZk1BI({198,119,102,157,71,218,115,81,81,54,109,245,219,113,107},{178,31,15,239,35,138,22,35,34,89,3,183})] ,function(_Tt55kwEkM)_uQsBzdrD6[_NZk1BI({186,218,9,169,146,142,171,192,19,180,152,156,167,220,4},{206,178,96,219,246,222})] =_Tt55kwEkM end)_c2Blmsip:checkbox(_NZk1BI({240,203,229,211,93,218,83,48,166,113,199,218},{163,163,138,164,125,183,42,16,196,30}) ,_uQsBzdrD6[_NZk1BI({121,50,25,174,229,240,249,157,58,203,117,94,50,31,171,195,207,248,150},{13,90,112,220,129,160,156,239,73,164,27})] ,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({171,68,81,32,178,112,138,160,172,67,86,1,190,79,152,144,176,72,65},{223,44,56,82,214,32,239,210})] =_UPCEbv end)_c2Blmsip:slider(_NZk1BI({170,43,157,229,106,168,106,148,233,107,189,43,158,227,125},{201,74,240,128,24}) ,2,40,_uQsBzdrD6[_NZk1BI({145,129,241,155,217,157,195,19,150,134,246,173,212,190,210,0,139,138,253},{229,233,152,233,189,205,166,97})] ,1,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({238,159,163,122,34,96,51,156,83,165,87,75,243,132,190,105,40,83,51},{154,247,202,8,70,48,86,238,32,202,57,15})] =_UPCEbv end,_NZk1BI({154,237,136,44,207,58,45,204},{191,137,168,95,187,79,73}) )_c2Blmsip:separator( )_c2Blmsip:checkbox(_NZk1BI({224,127,10,105,187},{179,15,111,12,223,45,137,116,37}) ,_uQsBzdrD6[_NZk1BI({182,246,132,0,254,49,105,72,1,227,45,195},{197,134,225,101,154,116,7,41,99,143,72,167})] ,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({102,152,172,120,197,80,134,168,127,205,112,140},{21,232,201,29,161})] =_UPCEbv end)_c2Blmsip:slider(_NZk1BI({52,84,167,125,201,254,82,152,73,166},{67,53,203,22,233,141,34,253,44,194,194}) ,16,100,_uQsBzdrD6[_NZk1BI({167,97,254,61,219,130,112,247,45,218},{212,17,155,88,191})] ,1,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({228,63,211,250,8,181,74,251,58,211},{151,79,182,159,108,227,43})] =_UPCEbv end,_NZk1BI({146,65,26,13,102,139,177,17,87,198},{183,37,58,126,18,254,213,98,120,181,242}) )_c2Blmsip:checkbox(_NZk1BI({71,17,172,127,149,14,133,255,138,220,67,7,38,90,173,114,150,27,218,237,138,204,64,12,47},{6,114,207,26,249,107,247,158,254,181,44,105}) ,_uQsBzdrD6[_NZk1BI({3,255,81,57,2,174,5,156,203,9,16,39,17,237,88,57,2},{112,143,52,92,102,239,102,255,174,101,85,73})] ,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({231,90,75,12,244,47,247,73,75,5,213,0,245,72,66,12,244},{148,42,46,105,144,110})] =_UPCEbv end)_c2Blmsip:slider(_NZk1BI({18,67,54,6,4,114,1,65,33,6},{115,32,85,99,104,82}) ,5,200,_uQsBzdrD6[_NZk1BI({75,158,144,206,63,247,131,68,127,140,106,143,129,206},{56,238,245,171,91,182,224,39,26,224})] ,5,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({146,227,69,60,168,22,61,130,246,76,11,173,35,59},{225,147,32,89,204,87,94})] =_UPCEbv end,_NZk1BI({56,217,78,68,105,200,10,68,50,206,48,5},{29,189,110,55}) )_c2Blmsip:separator( )_c2Blmsip:checkbox(_NZk1BI({178,147,227,231,125,37,211,16,151,136,237},{254,252,148,199,26,87,178,102}) ,_uQsBzdrD6[_NZk1BI({124,59,39,179,106,230,116,121,32,41,177,118,230,96,124,49,52},{16,84,80,244,24,135,2})] ,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({249,107,20,13,77,121,227,109,23,51,122,118,244,102,15,47,91},{149,4,99,74,63,24})] =_UPCEbv end)_c2Blmsip:slider(_NZk1BI({202,229,13,138,101,62,212,183,31,159,109,38,200},{173,151,108,252,12,74}) ,0.1,1,_uQsBzdrD6[_NZk1BI({150,84,214,27,225,154,48,38,142,66,242,63,242,151,35},{250,59,161,92,147,251,70,79})] ,0.05,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({114,11,117,8,108,5,116,38,106,29,81,44,127,8,103},{30,100,2,79})] =_UPCEbv end,_NZk1BI({146,17,13,197,142},{183,63,63,163,246,8,133,179,169,206,174,153}) )_c2Blmsip:checkbox(_NZk1BI({96,220,39,203,195,10,213,61,207,140,2,222,61,214,147,11},{34,180,72,187,227}) ,_uQsBzdrD6[_NZk1BI({92,109,113,223,71,80,100,124,195,103,90},{62,5,30,175,2})] ,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({185,251,93,2,35,181,242,80,30,3,191},{219,147,50,114,102})] =_UPCEbv end)_c2Blmsip:separator( )_D54wKYI=_c2Blmsip:checkbox(_NZk1BI({10,183,60},{76,219,69,20,206,94,236,139,244,58,174,54}) ,_uQsBzdrD6[_NZk1BI({131,75,223,133,22,147,165,210,128,68},{229,39,166,192,120,242,199,190,229,32,187})] ,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({149,183,246,94,79,193,228,190,11,151},{243,219,143,27,33,160,134,210,110})] =_UPCEbv end)_c2Blmsip:keybind(_NZk1BI({242,166,99,89,65,47,243},{148,202,26,121,42,74,138,88,128}) ,_uQsBzdrD6[_NZk1BI({30,144,136,247,157,119,89},{120,252,241,181,244,25,61})] ,function(_Tt55kwEkM)_uQsBzdrD6[_NZk1BI({156,172,214,169,102,165,158},{250,192,175,235,15,203})] =_Tt55kwEkM end)_c2Blmsip:slider(_NZk1BI({123,205,59,202,110,209,39,143,121},{29,161,66,234}) ,10,200,_uQsBzdrD6[_NZk1BI({232,65,60,251,227,203,227,191},{142,45,69,168,147,174,134,219,158,23,15})] ,5,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({114,164,167,87,192,98,81,112},{20,200,222,4,176,7,52})] =_UPCEbv end,_NZk1BI({87,94,176,200,240,7,94,227,148,247},{114,58,144,187,132}) )end local function _Fg7risTx7(_gZEnwq0j)local _d1W0JktI1=_gZEnwq0j:tab(_NZk1BI({122,93,98,80,93},{54,40,3,119,46,11,71,204,62}) )_3xt6k=_d1W0JktI1:textbox(_NZk1BI({37,11,122,184,237,68,29,131,20,108,72},{86,104,8,209,157,48,61,237,117,1,45}) ,_y8FBb,function(_UPCEbv)_y8FBb=_dxYgD(_UPCEbv)end)_d1W0JktI1:button(_NZk1BI({173,142,95,104,157,159,19,99,155,147,71,45,141,138,69,104,154,203,95,120,159},{254,235,51,13}) ,function( )local _hXWUK4G=_tAt9mBPo( )if#_hXWUK4G==0 then _AewBPEPJ(_NZk1BI({85,161,11,204,247,148,116,95,238,71,202,247,197,98,27,183,78,203},{59,206,43,191,150,226,17}) )return end local _X8wZLLJ=table[_NZk1BI({191,1,22,159},{217,104,120,251,10,6,98,206,149,249})] (_hXWUK4G,_y8FBb)or 0 _3xt6k[_NZk1BI({140,85,100},{255,48,16,154,177,226,15})] (_hXWUK4G[_X8wZLLJ% #_hXWUK4G+1] )_AewBPEPJ(_NZk1BI({1,203,139,153,85,89,91,204,9,42},{114,174,231,252,54,45,62,168,51,10,123}) .._y8FBb)end)_5cJ2axXd=_d1W0JktI1:codeBox(_NZk1BI({},{220,15,52,72,35,207,24}) ,140)_d1W0JktI1:button(_NZk1BI({140,177,142},{222,196,224,129,204,240,21}) ,_SVWbd)_d1W0JktI1:button(_NZk1BI({222,111,130,255},{141,14,244,154,29,150,127,236,9,33}) ,_X4gUC6zR)_d1W0JktI1:button(_NZk1BI({238,211,161,164},{162,188,192,192}) ,_FwBvYx)_d1W0JktI1:button(_NZk1BI({243,228,112,188,85,16},{183,129,28,217,33,117,65,28,75,21,119}) ,_Z3tm6I5nb)_d1W0JktI1:separator( )_d1W0JktI1:checkbox(_NZk1BI({97,174,107,165,76,85,181,63,190,86,73,168,63,185,93,82,178,111,190,30,79,181,63,166,81,65,191},{32,219,31,202,62}) ,_uQsBzdrD6[_NZk1BI({87,39,184,218,140,79,61,171,238,151,126,60,184,249,149,94,54},{59,82,217,155,249})] ,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({200,88,220,49,50,208,66,207,5,41,225,67,220,18,43,193,73},{164,45,189,112,71})] =_UPCEbv end)_d1W0JktI1:button(_NZk1BI({16,244,214,141,116,70,247,216,239,210,32,227,147,204,116,3,250,200,248,201,55,242,221},{69,135,179,173,7,35,155,189,140,166}) ,function( )_uQsBzdrD6[_NZk1BI({193,168,85,137,84,217,178,70,189,79,227,188,89,173},{173,221,52,200,33})] =_y8FBb _AewBPEPJ(_NZk1BI({243,60,204,167,96,107,145,139,100,107,12,177,178},{146,73,184,200,18,30,255,171,23,14,120,139}) .._y8FBb)end)_iI2wSf=_d1W0JktI1:label(_TAqposOR,true)end local function _oVfi9(_gZEnwq0j)local _K5m6ZrL1t=_gZEnwq0j:tab(_NZk1BI({253,180,193,167,47,208},{169,221,172,206,65,183}) )_K5m6ZrL1t:slider(_NZk1BI({170,29,10,50,3,83,157,182,88,15,52,27,91,139},{216,120,107,81,119,58,242}) ,0,300,_uQsBzdrD6[_NZk1BI({21,32,122,73,127,14,42,117,110,110,11,36,98},{103,69,27,42,11})] ,5,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({63,123,157,126,237,80,34,112,184,120,245,88,52},{77,30,252,29,153,57})] =_UPCEbv end,_NZk1BI({39,94,198,250,109},{2,58,230,151,30,68,15,114,137,195,60}) )_K5m6ZrL1t:slider(_NZk1BI({93,53,52,192,170,209,81,9,182,82,61,50,212,175},{62,89,93,163,193,241,50,102,217}) ,20,500,_uQsBzdrD6[_NZk1BI({69,182,142,233,36,222,221,73,176,8,229,182,72},{38,218,231,138,79,157,178,38,220,108,138,193})] ,10,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({92,155,208,181,12,157,52,80,155,221,185,16,176},{63,247,185,214,103,222,91})] =_UPCEbv end,_NZk1BI({85,119,114,236,3},{112,19,82,129}) )_K5m6ZrL1t:slider(_NZk1BI({167,212,109,154,225,210,106,163,222,96,141,164,128,107,170,215,96,135},{207,187,1,254,193,160,15}) ,0,500,_uQsBzdrD6[_NZk1BI({213,162,74,164,67,213,115,170,54,143,102},{189,205,38,192,17,176,31,207,87,252,3,110})] ,10,function(_UPCEbv)_uQsBzdrD6[_NZk1BI({225,92,80,173,190,37,246,242,140,250,86},{137,51,60,201,236,64,154,151,237})] =_UPCEbv end,_NZk1BI({151,170,239,238,166},{178,206,207,131,213,152,203,208,127,11}) )end local function _S6HyMFw(_gZEnwq0j)local _3H0xkL=_gZEnwq0j:tab(_NZk1BI({195,159,254,240,40,40,67,27},{144,250,138,132,65,70,36,104,189,96}) )local _iBqZH=_3H0xkL:collapsingHeader(_NZk1BI({97,243,25,135,20,78,250},{34,156,119,225,125,41,137}) ,true)_xGA5ppFZq=_iBqZH:textbox(_NZk1BI({247,230,67,120,32,243,169,67,127,36,241},{148,137,45,30,73}) ,_wkxY3xf,function(_UPCEbv)_wkxY3xf=_dxYgD(_UPCEbv)end)_iBqZH:button(_NZk1BI({9,10,146,18,6,46,79,144,18,29,46,79,141,22,19,63,11,222,20,10,52,9,151,16},{90,111,254,119,101}) ,function( )local _hXWUK4G=_iHd3kEDDh( )if#_hXWUK4G==0 then _U9b9Guu(_NZk1BI({1,23,47,8,136,248,221,125,62,31,196,1,30,102,28,154,174,193,124,106},{111,120,15,123,233,142,184,25,30,124,171}) )return end local _X8wZLLJ=table[_NZk1BI({212,52,78,83},{178,93,32,55,158,178,77,21})] (_hXWUK4G,_wkxY3xf)or 0 _xGA5ppFZq[_NZk1BI({114,16,7},{1,117,115,81,35,123,248,52,63})] (_hXWUK4G[_X8wZLLJ% #_hXWUK4G+1] )_U9b9Guu(_NZk1BI({45,129,176,254,61,144,185,255,100,196},{94,228,220,155}) .._wkxY3xf)end)_iBqZH:button(_NZk1BI({188,132,169,66,61,8,39,242,181,85,30},{239,229,223,39,29,107,72,156,211,60,121}) ,_DPxsw9b)_iBqZH:button(_NZk1BI({47,74,0,2,15,53,12,75,7,15,72},{99,37,97,102,47,86}) ,_7fqyhOL)_iBqZH:button(_NZk1BI({196,143,133,54,214,127,132,195,170,196,238,136,231},{128,234,233,83,162,26,164,160,197,170,136,225}) ,_Log6l38t6)_CwXuw=_iBqZH:label(_qh3NcCT,true)local _AVBM7SCk=_3H0xkL:collapsingHeader(_NZk1BI({145,149,186,11,53,34,133,87,162},{214,192,243,43,102,86,252,59,199,252,224}) ,true)for _kMMLKOp2,_B6vkzFho in ipairs(_rvyfkHK)do _AVBM7SCk:button(_B6vkzFho,function( )if _uQsBzdrD6[_NZk1BI({151,86,162,235,244,137,79,174},{240,35,203,184,128})] ==_B6vkzFho then return end _uQsBzdrD6[_NZk1BI({239,226,141,200,92,241,251,129},{136,151,228,155,40})] =_B6vkzFho task[_NZk1BI({28,91,226,195,212},{120,62,132,166,166,249,72,153,119,49,184,224})] (_2iLwVB28)end)end local _PAbpMT=_3H0xkL:collapsingHeader(_NZk1BI({146,123,146,8,59,68},{198,19,247,101,94,55,254,248,243,63,145,139}) ,true)for _kMMLKOp2,_B6vkzFho in ipairs(_uvHkXZ[_NZk1BI({12,68,8,176,29,99,31,185,29,94},{120,44,109,221})] )do _PAbpMT:button(_B6vkzFho,function( )_Yk645VYJg:setTheme(_B6vkzFho)end)end local _cmfX8z2R=_3H0xkL:collapsingHeader(_NZk1BI({236,186,91,133},{164,223,55,245,236,238,204,190}) ,false)_cmfX8z2R:label(_NZk1BI({21,249,191,198,101,124,51,171,189,196,123,35,97,234,164,204,113,57,53,227,179,129,96,118,53},{65,139,214,161,2,25}) ,true)_cmfX8z2R:label(_NZk1BI({91,165,198,174,79,206,197,102,64,243,178,52,167,218,191,78,154,140,121,5,250,250,113,163,193,187,73,154,205,64,20,165,197,38,255,217,187,67,147},{20,208,178,222,58,186,229,13,37,138,136}) ,true)_cmfX8z2R:label(_NZk1BI({211,87,222,185,182,230,74,213,176,243,175,30,239,176,255,246,85,140,168,247,229,77,128,252,222,250,82,200,252,253,240,91,220,175,182,252,74,140,184,249,226,80},{149,62,172,220,150}) ,true)_cmfX8z2R:label(_NZk1BI({176,74,151,30,110,9,169,240,37,189,239,157,5,159,31,34,26,181,166,96,187,238,153,70,158,90,47,29,184,249,50,252,232,153,87,156,31,58,91,160,243,51,168},{248,37,251,122,78,123,204,156,64,220,156}) ,true)_cmfX8z2R:label(_NZk1BI({40,162,110,255,66,74,16,241,35,183,70,67,13,235,119,176,9,92,6,173,119,255,72,70,4},{105,203,3,223,41,47}) ,true)_cmfX8z2R:label(_NZk1BI({5,154,151,22,202,76,89,73,39,159,159,87,211,76,68,83,100,128,149,80,213,9,65,0,41,211,155,90,214,72,89,26,100,156,148},{68,243,250,54,161,41,32,105}) ,true)_cmfX8z2R:label(_NZk1BI({102,58,118,122,122,220,84,58,104,46,33,143,80,54,122,49,59,206,82,39,116,119,119,206,83,48,115,118,59,195,72,60,112,122,122,216,70,42,59,46,116,143,67,33,116,42},{39,83,27,90,27,175}) ,true)_cmfX8z2R:label(_NZk1BI({165,113,197,242,84,63,141,130,114,223,160,65,41,142,135,109,197,237,94,41,145,142,62,129,239,70,50,194,156,118,140,236,84,124,145,131,113,138,244,88,50,133},{235,30,229,128,49,92,226}) ,true)_cmfX8z2R:label(_NZk1BI({164,27,183,93,154,40,131,81,254,97,153,32,146,75,170,82,154,107,215,4,170,91,157,53,132,75,173,86,157,103,142,4,171,19,139,55,158,5},{247,107,222,51,248,71}) ,true)_cmfX8z2R:label(_NZk1BI({203,49,192,18,138,115,158,250,43,218,15,128,105,206,200,54,219,12,138,115,154,254,59,133,64,141,50,131,250,43,200,64,158,38,130,243,60,205,64,140,50,141,244},{159,89,169,96,238,83,238}) ,true)_cmfX8z2R:label(_NZk1BI({174,142,180,162,30,132,203,162,242,26,147,209,241,241,27,146,156,162,162,7,149,142,241,241,3,148,133,241,237,29,221,146,190,247,83,148,133,241,246,27,148,153,181,162,3,152,153,162,237,29},{253,235,209,130,115}) ,true)_cmfX8z2R:label(_NZk1BI({59,236,210,102,49,52,88,21,246,210,51,49,21,81,29,252,134,125,112,37,28,90,234,206,102,126,51,67,90,239,207,122,120,37,92,31,185,195,103,116,42,89,31,234,134,96,127,103,66,27,247,193,108},{122,153,166,9,17,71,48}) ,true)_cmfX8z2R:label(_NZk1BI({216,238,222,240,190,166,251,245,211,236,247,166,253,233,218,247,164,233,229,244,208,160,240,231,249,231,218,244,170,166,216,233,211,229,234,242,177,160,205,229,224,239,249,229,220,244,247,166,233,245,211,236,225,242},{139,128,191,128,132,134}) ,true)_cmfX8z2R:label(_NZk1BI({115,132,188,75,37,34,17,133,162,70,35,51,67,203,240,117,33,49,84,209,164,70,34,122,17,146,184,70,45,37,28,146,191,75,47,36,84,149,240,75,41,56,84,209,164,72,96,34,89,148,240,79,41,34},{49,241,208,39,64,86}) ,true)_cmfX8z2R:label(_NZk1BI({42,182,215,9,65,218,215,11,171,207,95,3,255,209,30,175,223,69,87,201,220,64,227,201,0,80,220,209,30,166,200,69,76,198,158,8,170,200,4,65,196,219},{108,195,187,101,35,168,190}) ,true)_cmfX8z2R:label(_NZk1BI({73,143,161,29,203,32,223,147,23,221,118,155,228,12,206,120,211,228,59,233,104,158,169,29,143,120,144,171,11,219,54,223,147,25,195,113,172,180,29,202,126,223,177,22,219,117,138,167,16,202,126},{26,255,196,120,175}) ,true)_cmfX8z2R:label(_NZk1BI({112,15,248,165,98,177,243,80,24,242,175,96,238,161,66,28,254,165,106,244,243,80,1,235,179,46,161,241,17,13,242,178,108,187,243,95,9,183,224,98,189,234,84,76,249,168,97,164},{49,108,155,192,14,212,129}) ,true)_cmfX8z2R:label(_NZk1BI({100,54,31,180,208,135,10,105,65,45,17,174,151,162,4,109,68,61,72,224,214,151,71,63,91,58,9,248,210,134,75,72,71,43,3,231,199,148,8,122,6,30,26,245,193,156,31,102,8,61,7,227,217},{40,89,104,148,183,245,107,31}) ,true)_cmfX8z2R:label(_NZk1BI({126,253,13,215,6,181,53,200,78,249,6,135,72,244,0,139,28,244,23,211,83,181,16,194,17,255,23,202,76,230,66,208,84,252,14,194,28,198,18,198,95,240,66,206,79,181,10,194,80,241},{60,149,98,167}) ,true)_cmfX8z2R:label(_NZk1BI({248,80,39,163,122,140,209,78,50,253,122,175,223,94,114,185,13,154,237,120,126,178,122,136,206,93,61,252,122,174,206,16,126,213,63,189,202,127,42,235,54,251,218,83,41,247},{190,60,94,153,90,219}) ,true)_cmfX8z2R:label(_NZk1BI({115,148,93,185,235,230,204,88,164,46,185,235,247,193,64,168,122,254,203,178,193,85,163,56,185,241,255,242,65,168,52,237,217,240,198,20,174,102,185,217,252,149,124,151,92,185,203,251,209,81,163,117,235,152,225,222,93,175},{52,193,20,153,184,146,181}) ,true)_cmfX8z2R:label(_NZk1BI({68,41,219,240,234,25,15,89,54,56,123,223,224,237,2,67,71,59,97,48,205,181,248,3,26,94,127,99,50,211,181,234,4,10,82,114,100,41,209,248,185,25,6,82,114,108,62,223,231,252,30,26,23,55,108,62,211,236},{2,91,190,149,153,109,110,55,82}) ,true)_cmfX8z2R:label(_NZk1BI({102,41,73,198,120,215,254,210,84,51,76,221,124,142,241,232,90,49,76,193,49,213,191,160,84,51,79,222,116,148,184,238,70,41,77,211,117,148,190,230,21,46,88,219,127,218,184,238,82,125,77,196,116,198,168,160,83,47,73,223,116},{53,93,40,178,17,180,209,128}) ,true)_cmfX8z2R:label(_NZk1BI({235,249,53,90,155,140,153,193,251,193,116,67,137,212,149,164,219,244,49,26,156,222,203,235,221,246,60,23,128,223,222,236,196,248,51,95,156,154,153,214,239,211,116,28,200,194,203,229,198,226,36,86,154,211,215,231,209},{168,145,84,55,232,182,185,132}) ,true)_cmfX8z2R:label(_NZk1BI({193,84,103,122,178,83,102,45,255,69,123,104,254,90,50,45,241,84,105,96,225,28,103,99,178,69,103,120,178,72,103,98,190,28,103,99,254,69,40,123,251,79,97,111,254,89,40,100,252,28,124,101,251,78,108,45,226,89,122,126,253,82},{146,60,8,13}) ,true)_cmfX8z2R:label(_NZk1BI({192,193,177,82,210,177,85,44,4,200,178,244,237,198,252,28,156,248,107,57,16,141,230,232,233,132,163,76,129,255,105,36,13,202,178,226,227,192,169,28,155,254,39,57,11,200,178,232,233,197,180,28,155,248,115,62,67,193,253,247,233,214},{140,164,208,60,232,145,7,77,99,173,146,128}) ,true)_cmfX8z2R:label(_NZk1BI({145,50,226,176,169,149,162,106,21,216,247,175,63,235,178,191,212,163,99,67,129,136,230,32,230,179,164,128,191,45,91,153,214,161,54,250,175,235,150,169,101,70,150,192,230,36,239,176,167,135},{198,83,142,220,203,244,204,13,47,248,164}) ,true)_cmfX8z2R:label(_NZk1BI({184,186,9,14,165,71,251,124,166,157,187,13,6,166,28,168,127,177,212,174,72,90,181,15,178,123,160,216,239,58,92,184,93,178,127,244,154,160,31,5,246,18,169,43,135,149,185,13,6,154,18,186,111,251,176,170,4,76,162,24,251,98,160},{244,207,104,41,214,125,219,11,212}) ,true)_cmfX8z2R:label(_NZk1BI({174,158,158,163,29,154,133,208,236,29,154,133,153,236,27,135,142,202,175,7,128,152,143,162,79,156,138,156,169,11,207,135,159,173,79,142,140,139,165,1,207,133,143,180,27,207,159,131,161,10,207,159,130,165,28,207,135,133,173,11,156},{239,235,234,204,111}) ,true)_cmfX8z2R:label(_NZk1BI({26,183,98,151,152,231,109,18,214,248,60,172,120,152,159,231,109,8,130,202,59,244,44,130,144,246,123,91,214,223,49,189,97,148,209,171,62,77,128,206,43,161,44,130,148,244,106,65,152,204},{89,216,12,241,241,128,30,40,246,171}) ,true)_cmfX8z2R:label(_NZk1BI({133,120,155,250,230,202,54,179,116,151,168,246,143,54,179,118,142,178,178,152,39,183,113,137,168,243,158,54,164,124,152,253,230,143,49,249,99,155,228,231,143,49,246,98,146,237,252,202,44,185,53,168,231,240,134,45,174,53,142,237,243,135},{214,21,250,136,146,234,66}) ,true)_cmfX8z2R:label(_NZk1BI({148,63,127,112,26,213,250,130,193,176,45,106,188,126,102,126,67,155,191,130,197,176,108,112,188,63,127,59,91,129,239,143,205,164,41,108,249,63,99,127,26,209,237,134,223,174,108,106,182,126,121,116,93,198,243,134},{217,94,13,27,58,161,159,227,172,221,76,30}) ,true)_cmfX8z2R:label(_NZk1BI({24,186,151,210,145,214,168,79,41,165,222,213,139,144,179,16,104,172,139,209,149,133,252,94,45,169,147,156,129,151,168,75,104,188,145,156,145,158,185,10,43,167,144,207,138,154,185},{72,200,254,188,229,246,220,42}) ,true)_cmfX8z2R:label(_NZk1BI({110,248,243,201,3,195,233,253,90,229,174,129,4,248,238,227,28,190,180,201,30,244,228,180,81,244,250,212},{60,145,148,161,119,144,129,148}) ,true)end local function _AABvRPapH( )_Yk645VYJg=_uvHkXZ[_NZk1BI({232,172,14},{134,201,121,152,81,70,79})] (_NZk1BI({232,153,30,69,229,205,245,156,169,24,86},{188,235,119,34,130,168,135}) ,_uQsBzdrD6[_NZk1BI({38,5,83,164,247,136,27,22},{65,112,58,247,131,241,119,115,49,110,218})]or _NZk1BI({51,179,61,51,109},{122,222,122,70,4,36,44,202,163,227}) )_Yk645VYJg:menu(_NZk1BI({66,23,23,37},{15,114,121,80}) ,function( )return{ {text=_NZk1BI({252,116,205,95,154,4,249,166,76,168,82},{180,29,169,58,186,115,144,200,40,199,37,231}) ,callback=function( )_Yk645VYJg:toggle( )end} , {text=_NZk1BI({114,44,12,64,93,153},{39,66,96,47,60,253,129,65,243,223,149}) ,callback=_9oSNXD[_NZk1BI({20,98,88,195,148,107},{112,7,44,162,247,3,103,2})] } , }end)_Yk645VYJg:menu(_NZk1BI({18,13,229,254,208},{70,101,128,147,181,35,7,104,127,203}) ,function( )local _7aX5a76= { }for _kMMLKOp2,_B6vkzFho in ipairs(_uvHkXZ[_NZk1BI({152,240,247,99,120,163,158,252,247,124},{236,152,146,14,29,236})] )do table[_NZk1BI({84,30,19,175,179,141},{61,112,96,202,193,249,32,169,138})] (_7aX5a76, {text=_B6vkzFho,checked=_Yk645VYJg[_NZk1BI({95,13,11,177,150,101,4,3,185},{43,101,110,220,243})] ==_B6vkzFho,callback=function( )_Yk645VYJg:setTheme(_B6vkzFho)end, } )end return _7aX5a76 end)local _gZEnwq0j=_Yk645VYJg:tabBar( )_GHLeKN=_gZEnwq0j _K55zq(_gZEnwq0j)_rnBglmN(_gZEnwq0j)_BTbHUVW(_gZEnwq0j)_KyhJb(_gZEnwq0j)_fllZv(_gZEnwq0j)_AXvFs(_gZEnwq0j)_Fg7risTx7(_gZEnwq0j)_oVfi9(_gZEnwq0j)_S6HyMFw(_gZEnwq0j)end _2iLwVB28=function(_RiqAh)if not _Yk645VYJg then return end local _2jKE8oGw=_Yk645VYJg[_NZk1BI({6,225,166,171,144},{96,147,199,198,245,176,137,144,212,50,46})] [_NZk1BI({102,74,106,37,117,20,185,88},{54,37,25,76,1,125,214})]local _rcMuj=_GHLeKN and table[_NZk1BI({239,7,175,147},{137,110,193,247,124,123,213,43,199,169})] (_GHLeKN[_NZk1BI({179,80,134,144},{199,49,228,227,181,230,84,30,194,154,208})] ,_GHLeKN[_NZk1BI({73,241,41,129,47,30},{40,146,93,232,89,123,53,70})] )local _Cxi41k=_RiqAh or _Yk645VYJg[_NZk1BI({240,218,156,190,225,252,152,190,225},{132,178,249,211})]local _vAoLCRvG=_5cJ2axXd and _5cJ2axXd[_NZk1BI({129,56,227},{230,93,151,74,231,61,93,213,234,83})] ( )or nil _Yk645VYJg:destroy( )_AABvRPapH( )if _vAoLCRvG and _5cJ2axXd then _5cJ2axXd[_NZk1BI({6,84,26},{117,49,110,101,242})] (_vAoLCRvG)end _Yk645VYJg:setTheme(_Cxi41k)_Yk645VYJg[_NZk1BI({73,245,122,179,74},{47,135,27,222})] [_NZk1BI({212,95,185,11,163,187,244,234},{132,48,202,98,215,210,155})] =_2jKE8oGw if _rcMuj and _GHLeKN[_NZk1BI({152,57,31,193},{236,88,125,178,181,119,46,88})] [_rcMuj]then _GHLeKN:select(_GHLeKN[_NZk1BI({246,61,52,185},{130,92,86,202,183,100,22,241})] [_rcMuj] )end end local function _33YMGP( )for _J8RjL9WZ in pairs(_AaMcpbn75)do _faLYQdDc(_J8RjL9WZ)end for _J8RjL9WZ in pairs(_LxX8Yg)do _JckTLgtt(_J8RjL9WZ)end _1UaOrjITi( )if _NuA2v then pcall(function( )_NuA2v:Remove( )end)_NuA2v=nil end if _ghVnuuep then pcall(function( )_ghVnuuep:Remove( )end)_ghVnuuep=nil end end function _9oSNXD.detach( )_I4A7p6W( )pcall(_Ccwo35bm[_NZk1BI({42,119,44,88,250,125,57,204,51,214,74,94,17,125,43,67,199,109,26,206},{127,25,78,49,148,25,127,190,92,187,24,59})] ,_Ccwo35bm,_WjvUWBsP)pcall(_Ccwo35bm[_NZk1BI({64,155,227,58,123,145,199,33,122,152,211,54,123,145,228,33,70,129,228,35},{21,245,129,83})] ,_Ccwo35bm,_C0yTvbQsk)pcall(_Ccwo35bm[_NZk1BI({38,195,44,132,29,201,8,159,28,192,28,136,29,201,43,159,32,217,43,157},{115,173,78,237})] ,_Ccwo35bm,_Ybxpoih)pcall(_Ccwo35bm[_NZk1BI({53,179,245,137,247,21,250,166,138,76,50,184,249,132,252,3,239,160,128,81},{96,221,151,224,153,113,188,212,229,33})] ,_Ccwo35bm,_60LKK)_DdiVY( )_4rE9Hi7J( )_5wxiiw( )for _kMMLKOp2,_CwkZWUGH in ipairs(_h2juQM)do _CwkZWUGH:Disconnect( )end table[_NZk1BI({38,28,191,93,55},{69,112,218,60})] (_h2juQM)_33YMGP( )_fu0nH8( )_LNpCRpBz8( )if _ypJItjKib then _eUZiL[_NZk1BI({179,116,122,29,249,158,72},{244,6,27,107,144,234,49,226,25,202,197,254})] =_ypJItjKib _ypJItjKib=nil end if _Yk645VYJg then _Yk645VYJg:destroy( )_Yk645VYJg=nil end _3ej7JlX=nil _bY02hU=nil _D54wKYI=nil _xGA5ppFZq=nil _CwXuw=nil _3xt6k=nil _5cJ2axXd=nil _iI2wSf=nil _GHLeKN=nil _sNOCse8Py=nil _raTbC8Z5=false _78GbKhm=nil shared[_NZk1BI({242,172,5,137,239,195,172,46,129,252,232,191,1,139,235,199,178,0},{166,222,108,238,136})] =nil shared[_NZk1BI({73,98,25,43,92,179,71,95,127,4},{29,16,112,76,59,214,53})] =nil end function _9oSNXD.init( )_AABvRPapH( )_NuA2v=_ksQE8J(_NZk1BI({134,209,116,65,110,204},{197,184,6,34,2,169,47}) , {Thickness=1,NumSides=64,Filled=false,Color=Color3[_NZk1BI({189,248,217},{211,157,174,239,116,214,175})] (1,1,1) ,Transparency=1,Visible=false, } )_ghVnuuep=_ksQE8J(_NZk1BI({9,166,205,120,130,142},{74,207,191,27,238,235,94,223,168,229,75,25}) , {Thickness=1,NumSides=64,Filled=false,Color=Color3[_NZk1BI({69,161,234,238,79,14,20},{35,211,133,131,29,73,86,243,96,57})] (255,220,70) ,Transparency=1,Visible=false, } )pcall(_Ccwo35bm[_NZk1BI({46,128,92,4,148,123,177,163,253,22,188,91,3,158,122,133,130,230,30,158},{123,238,62,109,250,31,247,209,146})] ,_Ccwo35bm,_WjvUWBsP)pcall(_Ccwo35bm[_NZk1BI({242,111,94,126,14,45,250,213,110,81,69,5,39,216,194,115,111,99,5,57},{167,1,60,23,96,73,188})] ,_Ccwo35bm,_C0yTvbQsk)pcall(_Ccwo35bm[_NZk1BI({139,102,185,86,32,71,26,89,174,179,90,190,81,42,70,46,120,181,187,120},{222,8,219,63,78,35,92,43,193})] ,_Ccwo35bm,_Ybxpoih)pcall(_Ccwo35bm[_NZk1BI({72,207,33,231,115,197,5,252,114,204,17,235,115,197,38,252,78,213,38,254},{29,161,67,142})] ,_Ccwo35bm,_60LKK)local function _ybVcHil(_B6vkzFho,_Wu1eQAM,_jO2e4la1g)local _o8hiUTbl,_ZfS44jkQL=pcall(_Ccwo35bm[_NZk1BI({202,25,79,244,223,231,34,68,254,239,237,2,114,228,238,248},{136,112,33,144,139})] ,_Ccwo35bm,_B6vkzFho,_Wu1eQAM,_jO2e4la1g)if not _o8hiUTbl then warn(_NZk1BI({20,88,66,101,56,247,148,214,54,111,122,97,60,93,11},{82,57,43,9,93,147,180,162,89,79,24,8}) .._B6vkzFho.._NZk1BI({57,248},{3,216,182,65,187,172,125,53,152}) ..tostring(_ZfS44jkQL) )end return _o8hiUTbl end _ybVcHil(_C0yTvbQsk,_MNjaK,_DdiVY)_ybVcHil(_Ybxpoih,_MNjaK,_4rE9Hi7J)if not _ybVcHil(_WjvUWBsP,_Vfp0xL,_6dfb1)then table[_NZk1BI({133,181,49,218,197,146},{236,219,66,191,183,230,251,173,95})] (_h2juQM,_Ccwo35bm[_NZk1BI({221,147,74,215,40,191,132,29,159,119,255,147,64},{143,246,36,179,77,205,215,105,250,7})] :Connect(_6dfb1) )end _ybVcHil(_60LKK,_ncoHU4geM,_ETMi7H)shared[_NZk1BI({238,119,141,30,221,96,150,59,213,113,170,24,215,96,135,24,214,105},{186,5,228,121})] =_uGhrp table[_NZk1BI({80,158,9,52,28,142},{57,240,122,81,110,250,144,240,74,58})] (_h2juQM,_Ccwo35bm[_NZk1BI({53,62,233,211,143,3,46},{102,74,140,163,255})] :Connect(_4rE9Hi7J) )table[_NZk1BI({95,229,5,171,68,186},{54,139,118,206,54,206})] (_h2juQM,_Ccwo35bm[_NZk1BI({42,137,96,190,51,89,87,3,152},{98,236,1,204,71,59,50})] :Connect(_UpZ6dzwFp) )table[_NZk1BI({36,181,47,76,153,243},{77,219,92,41,235,135,16,185,91})] (_h2juQM,_VFDaDulS[_NZk1BI({80,103,21,169,66,121,6,190,169,199},{25,9,101,220,54,59,99,217,200,169})] :Connect(_7a4jU) )table[_NZk1BI({131,211,172,164,96,105},{234,189,223,193,18,29,23,207,119,123,125})] (_h2juQM,_VFDaDulS[_NZk1BI({67,90,101,97,126,113,123,112,111,80},{10,52,21,20})] :Connect(_J8WbyLpk) )table[_NZk1BI({197,115,119,221,29,253},{172,29,4,184,111,137})] (_h2juQM,_RHVyCXpk[_NZk1BI({40,56,69,169,32,44,184,155,214,101,44,17,58,67},{120,84,36,208,69,94,234,254,187,10,90})] :Connect(_JckTLgtt) )table[_NZk1BI({21,63,180,213,148,199},{124,81,199,176,230,179})] (_h2juQM,_RHVyCXpk[_NZk1BI({199,163,122,63,196,109,182,237,250,160,109,47,207,120},{151,207,27,70,161,31,228,136})] :Connect(_faLYQdDc) )if _uQsBzdrD6[_NZk1BI({72,36,180,164,81,37,186,151,81,63,144,139,69,51,185,128,64},{36,81,213,229})]and _uQsBzdrD6[_NZk1BI({174,134,213,141,27,90,173,129,193,162,32,79,175,150},{194,243,180,204,110,46})] ~=_NZk1BI({},{236,124,228,95,126,50,231,210,246})then task[_NZk1BI({2,77,128,12,71},{113,61,225,123,41,109,69,252})] (_2ve1dM,_uQsBzdrD6[_NZk1BI({136,132,94,50,10,46,8,150,132,81,61,30,55,2},{228,241,63,115,127,90,103})] )end print(_NZk1BI({64,173,113,121,28,100,42,82,74,65,52,179,119,127,31,100,60},{20,223,24,30,123,1,88,16,37,53}) )end local function _mhan5I(_CM7rXIOh)warn(_NZk1BI({152,154,211,174,157,47,217,107,106,254,146,212,171,140,34,152,115,108,164,158,148},{222,251,186,194,248,75,249,31,5}) )warn(_CM7rXIOh)warn(debug[_NZk1BI({171,49,244,240,145,167,190,32,254},{223,67,149,147,244,197})] ( ) )_9oSNXD[_NZk1BI({4,208,6,229,138,118},{96,181,114,132,233,30,218})] ( )end if shared[_NZk1BI({188,216,15,229,159,153,198,100,175,185},{232,170,102,130,248,252,180,38,192,205,44})]then pcall(shared[_NZk1BI({122,68,200,195,173,124,19,108,89,213},{46,54,161,164,202,25,97})] [_NZk1BI({99,223,27,149,230,174},{7,186,111,244,133,198,170,156})] )end shared[_NZk1BI({116,64,150,15,83,181,82,112,144,28},{32,50,255,104,52,208})] =_9oSNXD xpcall(_9oSNXD[_NZk1BI({97,143,150,51},{8,225,255,71,1,47,93,126,190,155,139})] ,_mhan5I)
+local function __cc20_block(key, counter, nonce)
+    local s = {
+        0x61707865, 0x3320646e, 0x79622d32, 0x6b206574,
+        key[1], key[2], key[3], key[4], key[5], key[6], key[7], key[8],
+        counter, nonce[1], nonce[2], nonce[3],
+    }
+    local w = {}
+    for idx = 1, 16 do w[idx] = s[idx] end
+    for _ = 1, 10 do
+        __cc20_qr(w, 1, 5, 9, 13); __cc20_qr(w, 2, 6, 10, 14)
+        __cc20_qr(w, 3, 7, 11, 15); __cc20_qr(w, 4, 8, 12, 16)
+        __cc20_qr(w, 1, 6, 11, 16); __cc20_qr(w, 2, 7, 12, 13)
+        __cc20_qr(w, 3, 8, 9, 14); __cc20_qr(w, 4, 5, 10, 15)
+    end
+    local out = {}
+    for idx = 1, 16 do out[idx] = bit32_band(w[idx] + s[idx], 0xFFFFFFFF) end
+    return out
+end
+local function __cc20d(cipher, nonce)
+    local needed = #cipher
+    local keystream = {}
+    local counter = 0
+    while #keystream < needed do
+        local blk = __cc20_block(__cc20k, counter, nonce)
+        for idx = 1, 16 do
+            local w = blk[idx]
+            keystream[#keystream + 1] = bit32_band(w, 0xFF)
+            keystream[#keystream + 1] = bit32_band(bit32_rshift(w, 8), 0xFF)
+            keystream[#keystream + 1] = bit32_band(bit32_rshift(w, 16), 0xFF)
+            keystream[#keystream + 1] = bit32_band(bit32_rshift(w, 24), 0xFF)
+        end
+        counter = counter + 1
+    end
+    local chars = {}
+    for idx = 1, needed do
+        chars[idx] = string.char(bit32_bxor(cipher[idx], keystream[idx]))
+    end
+    return table.concat(chars)
+end
+if not shared then
+return warn(__cc20d({225,35,253,244,176,44,123,164,187,133,80,92,32,73,4,66,2,63,132,222,214},{0xA92A1909,0xF5A726F2,0x5C370CBA}))
+end
+local TriggerBot={}
+local L={}
+local U={}
+local MENU_KEY=Enum.KeyCode.RightShift
+local MAX_WALL_STEPS=6
+local SEE_THROUGH_TRANSPARENCY=0.9
+local KEY_HOLD_TIME=0.05
+local AIM_DEADZONE=2
+local ASSIST_REACQUIRE_DELAY=0.4
+local FULLBRIGHT_AMBIENT=Color3.fromRGB(178,178,178)
+local FULLBRIGHT_CLOCK_TIME=14
+local DEFAULT_GRAVITY=196.2
+local BULLET_TRACER_LIFETIME=0.12
+local CONFIG_DIR=__cc20d({57,12,62,95,104,165,178,131,245,123},{0xFAA15526,0x7ED827C1,0x9AB3173F})
+local CONFIG_NAME_LENGTH=40
+local LUA_FOLDER=__cc20d({214,137,82,48,115,170,85,111,149,45,193,185,123,221},{0xD011131A,0x3491A65B,0x9CE8F0C3})
+local LUA_EXTENSION=__cc20d({239,213,209,71},{0x2CEF0393,0xC9E59A7D,0x9940A319})
+local TEAM_KEYS={__cc20d({144,96,248,230},{0x0B04493A,0xFA72DC97,0x656000C0}),__cc20d({63,79,44,42,155,191,8,80},{0x24D4436E,0xCE97FE77,0x7F3E5610}),__cc20d({199,237,230,90,104,188},{0x97D35A95,0x5CE6148B,0x512A9A54}),__cc20d({24,231,65,185,222,98},{0xD296D725,0xF4E2C1DE,0x38E561F7}),__cc20d({85,150,186,4,192,103,103,126,138},{0x5FD7E770,0x7B78EA63,0xF083E02C}),__cc20d({164,235,105,180},{0xB0D68D6E,0xA375A657,0x8AC12DE7}),__cc20d({168,139,163,238,45,53,47},{0x8855FE43,0x4ED7B9FB,0x1A826208}),__cc20d({199,29,46,241,6},{0x49FEA3F1,0xFCFB093E,0xAB307AE9}),__cc20d({97,245,163,57,233},{0xDEF9EFBD,0x20A851B4,0x78504D57})}
+local UPDATE_BIND_NAME=__cc20d({199,193,206,156,23,173,74,241,96,84,100,94,68,199,198,218},{0xEEDB0CB0,0x9493B54D,0x9F6EF60D})
+local UPDATE_RENDER_PRIORITY=Enum.RenderPriority.Camera.Value+1
+local SPIN_BIND_NAME=__cc20d({37,211,133,212,171,239,160,86,52,58,221,82,141,227,103,41,68,159,232,0,158},{0xC2CC263A,0xD9DB39C2,0x8B45B7C0})
+local CAMERA_RESTORE_BIND_NAME=__cc20d({207,182,45,73,147,177,93,73,235,97,66,31,59,244,144,85,60,171,91,247,96,73,148},{0xA5578089,0x1B2BDDBF,0x5357AE14})
+local CAMERA_APPLY_BIND_NAME=__cc20d({165,148,245,198,124,209,15,21,156,68,85,12,92,121,144,57,212,128,96,135,230},{0x261A2CBE,0xE0012374,0x628025C1})
+local RESTORE_RENDER_PRIORITY=Enum.RenderPriority.First.Value
+local CAMERA_APPLY_PRIORITY=Enum.RenderPriority.Last.Value
+local SILENT_WINDOW=0.25
+local SILENT_MIN_RANGE=60
+local SILENT_MIN_DOT=0.85
+local BODY_PART_NAMES={
+Head=true,Torso=true,UpperTorso=true,LowerTorso=true,
+[__cc20d({118,221,139,186,203,192,35,2},{0x2A3E3441,0xC0E8421D,0x3FDC683C})]=true,[__cc20d({111,109,255,71,8,147,254,16,138},{0x2DADFC03,0x99D0C886,0x251A7F25})]=true,[__cc20d({118,104,251,144,168,203,225,149},{0x54F3A67C,0xE5C26DE0,0xA08C2C17})]=true,[__cc20d({43,147,214,188,95,21,208,15,19},{0x828A0F86,0x35EA5953,0x95F370C7})]=true,
+LeftUpperArm=true,LeftLowerArm=true,LeftHand=true,
+RightUpperArm=true,RightLowerArm=true,RightHand=true,
+LeftUpperLeg=true,LeftLowerLeg=true,LeftFoot=true,
+RightUpperLeg=true,RightLowerLeg=true,RightFoot=true,
+}
+local playersService=game:GetService(__cc20d({153,17,110,113,225,40,18},{0x16B1F574,0x811EEB3F,0x39A2F43A}))
+local runService=game:GetService(__cc20d({218,194,176,3,93,148,203,175,204,230},{0xC1144AA3,0xDBE3CA7D,0xDB390E0B}))
+local userInputService=game:GetService(__cc20d({188,91,152,138,69,11,175,162,3,231,218,113,130,91,17,252},{0xEBD77B0D,0x66B62A3E,0xC958B482}))
+local coreGuiService=game:GetService(__cc20d({64,152,43,182,68,184,33},{0xADC473D9,0x85F21EA2,0xA5DDECA1}))
+local lightingService=game:GetService(__cc20d({134,193,101,149,111,4,34,185},{0x7BC8424A,0xCD979A97,0xAA7DF246}))
+local httpService=game:GetService(__cc20d({175,229,244,159,50,35,254,61,92,177,31},{0x7B48D1EE,0xAD3D1FD0,0xBD0F70C0}))
+local workspaceService=workspace
+local TweenService=game:GetService(__cc20d({203,156,122,99,237,36,104,36,159,173,254,42},{0x1160E7EC,0x0F9CCB3B,0x8893642A}))
+local Players=playersService
+local UIS=userInputService
+local HttpService=httpService
+local localPlayer=playersService.LocalPlayer
+local currentCamera=workspace.CurrentCamera
+local lastClick=0
+local pending=false
+local connections={}
+local window=nil
+local MODES={__cc20d({69,21,203,167,80,250},{0xA337825D,0xBFEBC6F0,0x8C7176A1}),__cc20d({23,80,233,53},{0x02252C54,0x34302FA0,0x4464DA6F}),__cc20d({115,1,129,140,54,155},{0x3073E39F,0xEF3D980D,0x3BB3CC42})}
+local FIRE_STYLES={__cc20d({45,83,36,156,186},{0xCCD114EE,0x3418B861,0x3F9B8469}),__cc20d({75,131,93,190},{0xFB1315A1,0x4CCDB273,0xBF42A05E})}
+local AIM_MODES={__cc20d({130,246,94,252,33,12},{0x4F3E6E67,0xE4EC14B5,0xB64F3B48}),__cc20d({177,97,171,147,113,22},{0x7AF574F9,0x27F78C9C,0x1A0A23B1})}
+local AIM_PARTS={__cc20d({134,162,214,198},{0x9D028DB8,0x654F11E4,0x9F0BFA02}),__cc20d({160,159,24,193,65},{0x227268C0,0x2F37B165,0x36472DAB})}
+local SPIN_MODES={__cc20d({127,160,80,142},{0x54E8056A,0x4DAE8E6D,0x6E63FC63}),__cc20d({61,157,168,118,161,183},{0x745926F6,0xEEB4C22B,0xC229C265}),__cc20d({135,71,118,93,79,66,150,173,3},{0x61513DE7,0x690B1A84,0x4B799207}),__cc20d({126,1,45,153,138,9},{0x84DCB5C4,0xD620D94D,0x69188B82}),__cc20d({24,35,128,245,218,229},{0xA895BA30,0x93250C61,0x91DC8487})}
+local RAGE_MODES={__cc20d({186,128,194,39},{0x16B6B8A5,0xC221F99B,0x1B6EB714}),__cc20d({165,112,68,140,8,178},{0xFC68ACFD,0x3FE83DD5,0xB470A20A})}
+local toggled=true
+local held=false
+local aimHeld=false
+local ignoreInputUntil=0
+local statusLabel=nil
+local holding=false
+local holdBind=nil
+local lastTargetSeen=0
+local botShotUntil=0
+local recoilStart=nil
+local recoilRemainder=Vector2.zero
+local spinAngle=0
+local spinRoot=nil
+local spinReal=nil
+local spinApplied=false
+local spinOffset=CFrame.identity
+local spinTargetAngle=0
+local spinRandomUntil=0
+local rageTarget=nil
+local rageEngaged=false
+local rageRemainder=Vector2.zero
+local lastRageShot=0
+local silentTarget=nil
+local silentUntil=0
+local silentHookFailed=false
+local cameraObject=nil
+local cameraReal=nil
+local viewRoot=nil
+local viewReal=nil
+local bodySaved={}
+local thirdPersonCheckbox=nil
+local flyCheckbox=nil
+local espObjects={}
+local fovCircle=nil
+local chamObjects={}
+local bulletTracers={}
+local assistTarget=nil
+local assistReleasedUntil=0
+local assistRemainder=Vector2.zero
+local assistCircle=nil
+local selectedLua=__cc20d({173,213,8,234,177,68,54},{0x102D07F8,0x040F8BC4,0xD2887B09})
+local luaMessage=__cc20d({},{0xF2E7514A,0xA88758CA,0xB9E760EA})
+local luaNameBox=nil
+local luaCodeBox=nil
+local luaStatusLabel=nil
+local manualTeammates={}
+local savedLighting=nil
+local savedAtmospheres={}
+local savedGravity=nil
+local currentSpeedBoost=0
+local ESP_COLORS={
+Red=Color3.fromRGB(255,60,60),
+Green=Color3.fromRGB(70,230,110),
+Blue=Color3.fromRGB(80,150,255),
+Yellow=Color3.fromRGB(255,220,70),
+Purple=Color3.fromRGB(180,110,255),
+White=Color3.fromRGB(255,255,255),
+}
+local ESP_COLOR_NAMES={__cc20d({0,47,137},{0xB90FBA32,0xD09E0A34,0xC546DC51}),__cc20d({128,202,57,22,245},{0x0C150105,0x6839DB98,0xB46952CD}),__cc20d({94,85,68,217},{0x4E0E5D4B,0xB89CBC1A,0xAE5EB0F3}),__cc20d({239,159,35,144,248,33},{0x69DECBB5,0xAF434919,0x056D2FBC}),__cc20d({202,190,48,18,129,108},{0x84B02C8A,0x27F29A24,0x8272B03E}),__cc20d({88,52,151,128,42},{0x50B49C6E,0x7F4AB394,0xDD6EDE4A})}
+local TEAM_COLOR=Color3.fromRGB(80,200,120)
+local Config={
+enabled=true,teamCheck=true,wallCheck=true,mode=__cc20d({125,103,112,97,154,119},{0x48FF6255,0x3D4F513A,0x921DF1FA}),
+fireStyle=__cc20d({34,138,16,93,244},{0x8FFBE959,0x0C89F823,0xA78F7661}),holdRelease=80,aimAt=__cc20d({60,131,254,66,87,36},{0xF0E6CC7F,0x5ECFB3EE,0x6EF22DBE}),
+bind={kind=__cc20d({199,154,115,33,224,41,158},{0x6988E706,0xD8F4D6E2,0xF77A78DD}),code=Enum.KeyCode.RightAlt},
+fireBind={kind=__cc20d({171,48,133,135,33,16,128,98,81,244,189,53,36},{0x62354447,0x00C39305,0x643EB680}),code=Enum.UserInputType.MouseButton1},
+maxDistance=500,reactionDelay=50,clickCooldown=120,
+aimEnabled=false,
+aimBind={kind=__cc20d({179,230,177,135,222,20,122,60,92,254,33,102,104},{0xEFC87DF8,0xDACEB8CD,0x2998FF5D}),code=Enum.UserInputType.MouseButton2},
+aimPart=__cc20d({118,126,229,117},{0x764900F5,0x39FBBBFC,0xCE6859BD}),aimFov=120,aimSmoothing=6,aimDistance=500,
+aimShowFov=true,aimVisibleCheck=true,
+assistEnabled=false,assistTeamCheck=true,assistRadius=80,
+assistBreakRadius=160,assistStrength=12,assistDistance=500,
+assistVisibleCheck=true,assistShowRadius=false,
+recoilEnabled=false,recoilManual=true,recoilBot=true,
+recoilY=4,recoilX=0,recoilRamp=100,
+spinEnabled=false,spinMode=__cc20d({32,41,146,85},{0x097ECD3B,0xF9528D35,0x4CAE11DC}),spinSpeed=1080,spinJitter=180,
+spinPauseOnShoot=true,spinShowLocal=true,spinLeanPitch=0,spinLeanRoll=0,
+spinStaticAngle=180,spinRandomInterval=400,spinAutoDirection=false,spinSmoothing=120,
+rageEnabled=false,rageMode=__cc20d({242,4,87,163},{0x5586FA40,0x7163F905,0xB4C3D9BB}),rageTeamCheck=true,rageWallCheck=true,
+rageWallbang=false,ragePart=__cc20d({199,194,149,123},{0x9A0ADBE8,0xC2C49F3B,0x0D9C72F9}),rageDistance=150,rageDelay=100,
+rageSnap=50,rageTolerance=12,rageBulletTracer=true,
+espEnabled=false,espBoxes=true,espNames=true,espHealth=true,
+espDistanceText=true,espTracers=false,espHideTeam=true,
+espColor=__cc20d({50,56,247},{0x20097D10,0x58DD6B2B,0xAE838B7C}),espDistance=1000,
+chamsEnabled=false,chamsHideTeam=true,chamsThroughWalls=true,
+chamsRed=255,chamsGreen=60,chamsBlue=60,chamsFillTransparency=0.5,
+chamsOutline=true,chamsOutlineTransparency=0.2,chamsDistance=1000,chamsShowSelf=true,
+fbEnabled=false,fbBrightness=2,fbDaytime=true,fbNoShadows=true,fbNoFog=true,
+thirdPersonEnabled=false,thirdPersonBind=nil,thirdPersonDistance=12,thirdPersonShowBody=true,
+speedEnabled=false,speedValue=30,speedAccelEnabled=false,speedAccelRate=40,
+flyEnabled=false,flyBind=nil,flySpeed=50,
+lowGravityEnabled=false,lowGravityScale=0.4,
+bhopEnabled=false,
+smartTeam=true,markBind=nil,
+luaAutorunEnabled=false,luaAutorunName=__cc20d({},{0x5AD004EE,0x814B38B7,0x4B3F082A}),
+}
+local rayParams=RaycastParams.new()
+local cameraRayParams=RaycastParams.new()
+local wallbangParams=RaycastParams.new()
+wallbangParams.FilterType=Enum.RaycastFilterType.Include
+cameraRayParams.FilterType=Enum.RaycastFilterType.Exclude
+local MOUSE_NAMES={
+[Enum.UserInputType.MouseButton1]=__cc20d({117,119},{0xC18F2B87,0x154C6D56,0x97EE22AC}),
+[Enum.UserInputType.MouseButton2]=__cc20d({253,177},{0x4F36C9FD,0x542EE6FC,0xFF1D1F84}),
+[Enum.UserInputType.MouseButton3]=__cc20d({11,178},{0x9ADCE698,0xDE39E5EA,0x21083976}),
+}
+L.toBind=function(input)
+if input.UserInputType==Enum.UserInputType.Keyboard and input.KeyCode~=Enum.KeyCode.Unknown then
+return{kind=__cc20d({46,118,208,69,221,169,127},{0x36330259,0xA098BF28,0x182495C0}),code=input.KeyCode}
+end
+if MOUSE_NAMES[input.UserInputType]then
+return{kind=__cc20d({247,138,143,144,90,0,15,234,90,151,63,64,85},{0xC046FAFF,0x16A85955,0xE8A9E9A9}),code=input.UserInputType}
+end
+return nil
+end
+L.bindName=function(bind)
+if not bind then return __cc20d({6,235,115,195},{0x7AF533C1,0x70935801,0xB57622F3})end
+if bind.kind==__cc20d({94,4,215,232,216,212,146,104,68,91,205,179,65},{0xF29415F6,0xDCC58648,0x0E80E0B7})then return MOUSE_NAMES[bind.code]end
+return bind.code.Name
+end
+L.matchesBind=function(bind,input)
+if not bind then return false end
+if bind.kind==__cc20d({178,61,143,155,53,140,46},{0xB2C878C8,0xCA5918AE,0xA297618A})then
+return input.UserInputType==Enum.UserInputType.Keyboard and input.KeyCode==bind.code
+end
+return input.UserInputType==bind.code
+end
+L.encodeBind=function(bind)
+if not bind then return false end
+return{kind=bind.kind,name=bind.code.Name}
+end
+L.decodeBind=function(data)
+if type(data)~=__cc20d({240,222,19,35,24},{0x95CFBA73,0x38E3DD83,0x77E504C0})or type(data.name)~=__cc20d({101,119,157,63,35,141},{0x4839A7D8,0x8260C032,0x9CADE514})then return nil end
+local enum=nil
+if data.kind==__cc20d({115,74,46,89,234,247,25},{0xE3CBE089,0x252CE756,0xA337D206})then enum=Enum.KeyCode
+elseif data.kind==__cc20d({176,7,174,148,84,84,0,184,222,220,248,170,156},{0x12694499,0x9707CC80,0x51649D92})then enum=Enum.UserInputType
+else return nil end
+local success,code=pcall(function()return enum[data.name]end)
+if not success or typeof(code)~=__cc20d({146,154,165,151,93,146,22,117},{0xE6BDD595,0xB59964A5,0xEF68A1FC})then return nil end
+return{kind=data.kind,code=code}
+end
+local T={
+bg=Color3.fromRGB(37,36,48),
+panel=Color3.fromRGB(44,43,57),
+field=Color3.fromRGB(30,29,40),
+line=Color3.fromRGB(58,57,73),
+text=Color3.fromRGB(238,237,243),
+sub=Color3.fromRGB(150,148,166),
+accent=Color3.fromRGB(255,124,106),
+accent2=Color3.fromRGB(255,178,122),
+green=Color3.fromRGB(132,222,152),
+yellow=Color3.fromRGB(255,208,120),
+blue=Color3.fromRGB(96,144,255),
+white=Color3.fromRGB(255,255,255),
+}
+local F={bold=Enum.Font.GothamBold,med=Enum.Font.GothamMedium,reg=Enum.Font.Gotham}
+U.new=function(class,props,parent)
+local inst=Instance.new(class)
+for k,v in pairs(props or{})do inst[k]=v end
+if parent then inst.Parent=parent end
+return inst
+end
+U.corner=function(inst,r)
+return U.new(__cc20d({125,178,56,166,62,226,38,218},{0xDD0EF0BD,0xD0006C8F,0xCF581DB2}),{CornerRadius=UDim.new(0,r)},inst)
+end
+U.stroke=function(inst,color,thick,trans)
+return U.new(__cc20d({109,229,168,162,175,72,52,229},{0xD1E2FF1D,0xAEF8EDDB,0x9B07C37D}),{
+Color=color or T.line,Thickness=thick or 1,Transparency=trans or 0,
+ApplyStrokeMode=Enum.ApplyStrokeMode.Border,
+},inst)
+end
+U.gradient=function(inst,c1,c2,rot)
+return U.new(__cc20d({90,83,183,3,64,216,183,49,12,86},{0x5ABCBBC5,0x97C947BF,0x18D167B4}),{Color=ColorSequence.new(c1,c2),Rotation=rot or 0},inst)
+end
+U.order=function(inst)
+local p=inst.Parent
+if p then
+local n=0
+for _,ch in ipairs(p:GetChildren())do
+if ch:IsA(__cc20d({112,90,156,104,93,64,131,127,193},{0x6557D65C,0x0D127EA2,0xB5CA6E49}))then n+=1 end
+end
+inst.LayoutOrder=n
+end
+return inst
+end
+U.raise=function(inst,z)
+for _,d in ipairs(inst:GetDescendants())do
+if d:IsA(__cc20d({155,110,86,214,244,149,140,18,132},{0x9F29C762,0x04A95A8F,0xA576376B}))then d.ZIndex=z end
+end
+end
+U.sublabel=function(parent,text)
+local l=U.new(__cc20d({202,28,85,53,25,245,109,180,78},{0x2E96928C,0x36D4DF9F,0x53E37D9E}),{
+Text=text,Font=F.reg,TextSize=12,TextColor3=T.sub,
+BackgroundTransparency=1,Size=UDim2.new(1,0,0,14),
+TextXAlignment=Enum.TextXAlignment.Left,TextTruncate=Enum.TextTruncate.AtEnd,
+},parent)
+return U.order(l)
+end
+U.chevron=function(parent,color,rotation,scale)
+local w=8*(scale or 1)
+local c=U.new(__cc20d({19,139,10,6,43},{0x69E36B7A,0xB13F83F9,0x76B74AE8}),{
+Size=UDim2.fromOffset(w,w),BackgroundTransparency=1,
+AnchorPoint=Vector2.new(0.5,0.5),
+},parent)
+local function bar(ox,rot)
+U.new(__cc20d({166,143,190,112,77},{0x91E9244F,0x4A26E566,0x7E385080}),{
+Size=UDim2.fromOffset(w*0.55,1.3),BackgroundColor3=color,
+BorderSizePixel=0,AnchorPoint=Vector2.new(0.5,0.5),
+Position=UDim2.new(0.5,ox,0.5,0),Rotation=rot,
+},c)
+end
+bar(-w*0.18,45)
+bar(w*0.18,-45)
+c.Rotation=rotation or 0
+return c
+end
+U.drawCheck=function(parent,color)
+local c=U.new(__cc20d({146,2,9,201,23},{0xE145CAA5,0x63A28217,0x10BDFAEB}),{Size=UDim2.fromScale(1,1),BackgroundTransparency=1},parent)
+U.new(__cc20d({118,56,0,58,22},{0xB1A3F4A8,0x1DE737DB,0x94179D9A}),{
+Size=UDim2.fromOffset(5,1.6),BackgroundColor3=color,BorderSizePixel=0,
+AnchorPoint=Vector2.new(0.5,0.5),Position=UDim2.new(0.5,-2.5,0.5,2),Rotation=45,
+},c)
+U.new(__cc20d({219,133,84,2,47},{0xB2985EAE,0xC30B10F0,0x7EE16833}),{
+Size=UDim2.fromOffset(9,1.6),BackgroundColor3=color,BorderSizePixel=0,
+AnchorPoint=Vector2.new(0.5,0.5),Position=UDim2.new(0.5,1.5,0.5,-1),Rotation=-50,
+},c)
+return c
+end
+local Flags,Defaults,Setters={},{},{}
+local function register(id,default,setter)
+Flags[id]=default
+Defaults[id]=default
+Setters[id]=setter
+end
+local gui=Instance.new(__cc20d({194,111,210,17,156,6,56,42,168},{0x3F9D1863,0xCE37781A,0x9FC4AEA4}))
+gui.Name=__cc20d({241,141,207,145,112,181,164,28,38,180,247,3,57},{0xE8AEF197,0x53441AB4,0x15866C3B})
+gui.ResetOnSpawn=false
+gui.IgnoreGuiInset=true
+gui.ZIndexBehavior=Enum.ZIndexBehavior.Global
+gui.DisplayOrder=999
+local parentOk=pcall(function()
+gui.Parent=(gethui and gethui())or coreGuiService
+end)
+if not parentOk then gui.Parent=Players.LocalPlayer:WaitForChild(__cc20d({85,7,135,22,53,171,179,36,104},{0xAC453706,0xC5892092,0xE2712EE8}))end
+local unloaded=false
+local W,H=620,640
+local shadow=U.new(__cc20d({3,0,180,196,78},{0x6EF0D1F4,0xF827E067,0xCED1DB5E}),{
+Size=UDim2.new(1,14,1,14),Position=UDim2.fromOffset(-7,-7),
+BackgroundColor3=Color3.new(0,0,0),BackgroundTransparency=0.75,
+BorderSizePixel=0,ZIndex=0,
+},nil)
+U.corner(shadow,18)
+local mainFrame=U.new(__cc20d({244,23,135,31,6},{0x741EB976,0x4E9DD8BE,0x07EF2D66}),{
+Size=UDim2.fromOffset(W,H),BackgroundColor3=T.bg,BorderSizePixel=0,ZIndex=1,
+},gui)
+U.corner(mainFrame,10)
+U.stroke(mainFrame,T.line,1,0.5)
+shadow.Parent=mainFrame
+local uiScale=U.new(__cc20d({90,151,208,217,210,17,105},{0x9AEC87D9,0xDC3534B6,0xAB4E5EA3}),{Scale=1},mainFrame)
+local header=U.new(__cc20d({106,172,8,215,10},{0x9528B633,0x71D74BF9,0x51738C3C}),{
+Size=UDim2.new(1,0,0,40),BackgroundColor3=T.accent,
+BorderSizePixel=0,ZIndex=2,ClipsDescendants=false,
+},mainFrame)
+U.corner(header,10)
+U.gradient(header,T.accent,T.accent2,0)
+local hcover=U.new(__cc20d({81,121,45,19,162},{0x8065C1C1,0x8B68B3FF,0xB17CAADF}),{
+Size=UDim2.new(1,0,0,12),Position=UDim2.new(0,0,0,28),
+BackgroundColor3=T.accent,BorderSizePixel=0,ZIndex=2,
+},header)
+U.gradient(hcover,T.accent,T.accent2,0)
+do
+local rng=Random.new(11)
+for i=1,30 do
+local x,y=rng:NextNumber(0.02,0.98),rng:NextNumber(0.12,0.84)
+if i%3==0 then
+local s=rng:NextInteger(5,9)
+local c=U.new(__cc20d({35,220,189,184,6},{0x7C29B402,0xDCD4FBA2,0x2A8C447E}),{
+Size=UDim2.fromOffset(s,s),Position=UDim2.new(x,0,y,0),
+BackgroundTransparency=1,ZIndex=2,
+},header)
+U.new(__cc20d({254,241,160,73,201},{0xA5A1870E,0x6A9755F3,0x2E7D2B6F}),{
+Size=UDim2.new(1,0,0.14,0),Position=UDim2.new(0,0,0.5,-0.5),
+BackgroundColor3=T.white,BackgroundTransparency=0.3,BorderSizePixel=0,
+},c)
+U.new(__cc20d({88,29,46,72,71},{0x4C4F9366,0xF98C9A01,0x3DE5B3B9}),{
+Size=UDim2.new(0.14,0,1,0),Position=UDim2.new(0.5,-0.5,0,0),
+BackgroundColor3=T.white,BackgroundTransparency=0.3,BorderSizePixel=0,
+},c)
+c.Rotation=rng:NextNumber(0,90)
+else
+local s=rng:NextInteger(2,4)
+local d=U.new(__cc20d({219,57,236,80,119},{0x2834053B,0x63FE02EC,0x47A36321}),{
+Size=UDim2.fromOffset(s,s),Position=UDim2.new(x,0,y,0),
+BackgroundColor3=T.white,BackgroundTransparency=rng:NextNumber(0.35,0.8),
+BorderSizePixel=0,ZIndex=2,
+},header)
+U.corner(d,s)
+end
+end
+for _=1,7 do
+U.new(__cc20d({79,100,160,152,28},{0x8F1004CB,0x8BC5ABCA,0x525291AB}),{
+Size=UDim2.fromOffset(rng:NextInteger(40,150),1),
+Position=UDim2.new(rng:NextNumber(0.02,0.85),0,rng:NextNumber(0.15,0.8),0),
+BackgroundColor3=T.white,BackgroundTransparency=0.86,
+BorderSizePixel=0,Rotation=-12,ZIndex=2,
+},header)
+end
+end
+local dragSurface=U.new(__cc20d({178,163,251,175,199,86,22,223,42,107},{0xE9DF7D81,0xF5E1B67A,0xB04082A2}),{
+Size=UDim2.fromScale(1,1),BackgroundTransparency=1,Text=__cc20d({},{0xE006D82F,0xDAA31DC6,0x3B32B880}),
+AutoButtonColor=false,ZIndex=3,
+},header)
+U.new(__cc20d({240,85,5,66,202,254,213,92,144},{0x0E29B10B,0xE187D196,0xC9B64438}),{
+Text=__cc20d({102,70,75,143,158,129},{0xCE75311B,0xBB156F39,0x9A0074B7}),Font=F.bold,TextSize=16,TextColor3=T.white,
+BackgroundTransparency=1,Position=UDim2.new(0,16,0,0),
+Size=UDim2.new(0,140,1,0),TextXAlignment=Enum.TextXAlignment.Left,ZIndex=5,
+},header)
+local iconHost=U.new(__cc20d({19,180,100,111,73},{0x0B7BB72C,0xE5F38911,0xE0650F62}),{
+Size=UDim2.new(0,340,1,0),Position=UDim2.new(1,-14,0,0),
+AnchorPoint=Vector2.new(1,0),BackgroundTransparency=1,ZIndex=5,
+},header)
+U.new(__cc20d({83,81,106,217,178,3,96,31,68,105,125,172},{0xFF61A522,0xB1630EF4,0x71E44FFD}),{
+FillDirection=Enum.FillDirection.Horizontal,
+HorizontalAlignment=Enum.HorizontalAlignment.Right,
+VerticalAlignment=Enum.VerticalAlignment.Center,
+Padding=UDim.new(0,3),SortOrder=Enum.SortOrder.LayoutOrder,
+},iconHost)
+local footer=U.new(__cc20d({233,95,2,239,86},{0x6DE5ACF3,0x459B5DF9,0x93A78306}),{
+Size=UDim2.new(1,0,0,50),Position=UDim2.new(0,0,1,-50),
+BackgroundTransparency=1,ZIndex=2,
+},mainFrame)
+U.new(__cc20d({251,133,43,79,66},{0x103F4DFA,0xB830CE2D,0x853DA81D}),{
+Size=UDim2.new(1,0,0,1),BackgroundColor3=T.line,
+BackgroundTransparency=0.5,BorderSizePixel=0,
+},footer)
+local avatar=U.new(__cc20d({166,210,206,254,212},{0xDDF92A0B,0x8B46D5D7,0x7DF28B0C}),{
+Size=UDim2.fromOffset(20,20),Position=UDim2.fromOffset(16,15),
+BackgroundColor3=T.accent,BorderSizePixel=0,
+},footer)
+U.corner(avatar,10)
+U.gradient(avatar,T.accent,T.accent2,30)
+U.new(__cc20d({60,118,89,54,255,194,112,101,193},{0x0593AC9B,0xB5D98F05,0x2F95770B}),{
+Text=__cc20d({198},{0x46AE68D0,0x00159F74,0xCD33788D}),Font=F.bold,TextSize=11,TextColor3=T.white,
+BackgroundTransparency=1,Size=UDim2.fromScale(1,1),
+},avatar)
+U.new(__cc20d({21,85,131,172,204,130,43,160,31},{0x6B341588,0x9D417E7F,0x0218C6C5}),{
+Text=__cc20d({62,48,73,45,186,173,33,150,219,59,24,149,134,29,123,118,175,58,195,177,246,27,158,230,156,108,1},{0x505BE51B,0x0960170D,0x6254754B}),RichText=true,Font=F.med,
+TextSize=12,TextColor3=T.text,BackgroundTransparency=1,
+Position=UDim2.fromOffset(44,15),Size=UDim2.new(0,220,0,20),
+TextXAlignment=Enum.TextXAlignment.Left,
+},footer)
+local contentHost=U.new(__cc20d({112,58,29,182,182},{0x0824FBA6,0xBBC2AFF4,0x2EDDDC54}),{
+Size=UDim2.new(1,-24,1,-98),Position=UDim2.new(0,12,0,48),
+BackgroundTransparency=1,ClipsDescendants=true,ZIndex=2,
+},mainFrame)
+local overlay=U.new(__cc20d({59,166,236,188,75},{0xE9C04CF2,0x7537515B,0xE0A5DD85}),{
+Size=UDim2.fromOffset(0,0),BackgroundTransparency=1,
+ClipsDescendants=false,ZIndex=400,
+},mainFrame)
+local activeList,activeField
+U.closeDropdown=function()
+if activeList then activeList:Destroy()end
+activeList,activeField=nil,nil
+end
+U.openList=function(field,options,onPick)
+U.closeDropdown()
+local sc=mainFrame.AbsoluteSize.X/W
+local rel=field.AbsolutePosition-mainFrame.AbsolutePosition
+local w=field.AbsoluteSize.X/sc
+local h=#options*21+8
+local x=rel.X/sc
+local y=rel.Y/sc+field.AbsoluteSize.Y/sc+2
+if y+h>H then y=rel.Y/sc-h-2 end
+local list=U.new(__cc20d({35,116,239,131,218},{0xDD363EEE,0xB123A50D,0x878FB227}),{
+Size=UDim2.fromOffset(w,h),Position=UDim2.fromOffset(x,y),
+BackgroundColor3=T.panel,BorderSizePixel=0,ZIndex=500,
+},overlay)
+U.corner(list,6)
+U.stroke(list,T.line,1,0.2)
+U.new(__cc20d({205,115,189,220,230,181,39,198,246},{0xD0D99FF0,0xBAB513DE,0xCB31EF03}),{PaddingTop=UDim.new(0,4),PaddingBottom=UDim.new(0,4)},list)
+U.new(__cc20d({243,57,57,168,229,31,122,241,239,45,11,74},{0x7F7FA72C,0x66CF6490,0x1DC86387}),{Padding=UDim.new(0,1),SortOrder=Enum.SortOrder.LayoutOrder},list)
+for i,opt in ipairs(options)do
+local o=U.new(__cc20d({216,160,238,156,239,198,178,46,233,94},{0x76B5D873,0x51F1A0D0,0xDD97E4C8}),{
+Size=UDim2.new(1,0,0,20),BackgroundTransparency=1,
+Text=opt,Font=F.med,TextSize=13,TextColor3=T.text,
+TextXAlignment=Enum.TextXAlignment.Left,AutoButtonColor=false,
+LayoutOrder=i,ZIndex=501,
+},list)
+U.new(__cc20d({174,204,120,205,216,21,29,141,84},{0x85A894E1,0x896D4683,0xD7A4A528}),{PaddingLeft=UDim.new(0,8)},o)
+o.MouseEnter:Connect(function()o.BackgroundTransparency=0.9 end)
+o.MouseLeave:Connect(function()o.BackgroundTransparency=1 end)
+o.MouseButton1Click:Connect(function()
+onPick(opt)
+U.closeDropdown()
+end)
+end
+activeList,activeField=list,field
+end
+UIS.InputBegan:Connect(function(input)
+if not activeList or input.UserInputType~=Enum.UserInputType.MouseButton1 then return end
+local p=input.Position
+local ap,as=activeList.AbsolutePosition,activeList.AbsoluteSize
+if p.X>=ap.X and p.X<=ap.X+as.X and p.Y>=ap.Y and p.Y<=ap.Y+as.Y then return end
+local fp,fs=activeField.AbsolutePosition,activeField.AbsoluteSize
+if p.X>=fp.X and p.X<=fp.X+fs.X and p.Y>=fp.Y and p.Y<=fp.Y+fs.Y then return end
+U.closeDropdown()
+end)
+local activeCapture=nil
+UIS.InputBegan:Connect(function(input)
+if not activeCapture then return end
+local cap=activeCapture
+activeCapture=nil
+cap(input)
+end)
+U.checkbox=function(parent,id,label,default,opts)
+opts=opts or{}
+local row=U.new(__cc20d({200,105,82,166,251},{0xFD0B001B,0x44E6D57D,0xFDA2DFCC}),{Size=UDim2.new(1,0,0,22),BackgroundTransparency=1},parent)
+U.order(row)
+local box=U.new(__cc20d({211,15,150,244,135,132,227,219,121,193},{0xDC69FBA5,0x756AD607,0xB426A39A}),{
+Size=UDim2.fromOffset(16,16),Position=UDim2.new(0,0,0.5,-8),
+BackgroundColor3=T.field,Text=__cc20d({},{0x2B607AFA,0x0B172DA6,0x8D792CA9}),AutoButtonColor=false,
+},row)
+U.corner(box,4)
+local st=U.stroke(box,T.line,1,0.2)
+local check=U.drawCheck(box,T.white)
+local lbl=U.new(__cc20d({184,158,144,58,233,202,154,90,137},{0x2F18A539,0x911CD70E,0x8EFD0394}),{
+Text=label,Font=F.med,TextSize=13,TextColor3=T.text,
+BackgroundTransparency=1,Position=UDim2.new(0,24,0,0),
+Size=UDim2.new(1,-24,1,0),
+TextXAlignment=Enum.TextXAlignment.Left,TextTruncate=Enum.TextTruncate.AtEnd,
+},row)
+local value=default and true or false
+local function paint()
+box.BackgroundColor3=value and T.accent or T.field
+st.Transparency=value and 1 or 0.25
+check.Visible=value
+end
+local function set(v)
+value=v and true or false
+Flags[id]=value
+paint()
+if opts.onChange then opts.onChange(value)end
+end
+register(id,value,set)
+paint()
+local function flip()set(not value)end
+box.MouseButton1Click:Connect(flip)
+lbl.InputBegan:Connect(function(input)
+if input.UserInputType==Enum.UserInputType.MouseButton1 then flip()end
+end)
+return set,row
+end
+U.switch=function(parent,id,label,default,opts)
+opts=opts or{}
+local row=U.new(__cc20d({35,117,136,234,65},{0x33F25BF0,0xCFDE5C10,0xA35E7765}),{Size=UDim2.new(1,0,0,22),BackgroundTransparency=1},parent)
+U.order(row)
+local lbl=U.new(__cc20d({132,1,223,188,174,57,228,198,44},{0xCE80AEB5,0xC4689D3C,0x5F51CEAE}),{
+Text=label,Font=F.med,TextSize=13,TextColor3=T.text,
+BackgroundTransparency=1,Size=UDim2.new(1,-48,1,0),
+TextXAlignment=Enum.TextXAlignment.Left,TextTruncate=Enum.TextTruncate.AtEnd,
+},row)
+local track=U.new(__cc20d({192,5,69,201,75,215,233,219,30,53},{0xA4EE660E,0x98B1B5CD,0xD44B54BF}),{
+Size=UDim2.fromOffset(26,14),Position=UDim2.new(1,-26,0.5,-7),
+BackgroundColor3=T.field,Text=__cc20d({},{0x40642222,0xBCC93C0A,0xBE766A9F}),AutoButtonColor=false,
+},row)
+U.corner(track,7)
+U.stroke(track,T.line,1,0.4)
+local knob=U.new(__cc20d({13,185,95,47,250},{0x6C8E4EA3,0x837CD2D9,0x88116DC8}),{
+Size=UDim2.fromOffset(10,10),Position=UDim2.new(0,2,0.5,-5),
+BackgroundColor3=T.white,BorderSizePixel=0,
+},track)
+U.corner(knob,5)
+local value=default and true or false
+local function paint()
+track.BackgroundColor3=value and T.accent or T.field
+TweenService:Create(knob,TweenInfo.new(0.12),{Position=UDim2.new(0,value and 14 or 2,0.5,-5)}):Play()
+end
+local function set(v)
+value=v and true or false
+Flags[id]=value
+paint()
+if opts.onChange then opts.onChange(value)end
+end
+register(id,value,set)
+paint()
+local function flip()set(not value)end
+track.MouseButton1Click:Connect(flip)
+lbl.InputBegan:Connect(function(input)
+if input.UserInputType==Enum.UserInputType.MouseButton1 then flip()end
+end)
+return set
+end
+U.slider=function(parent,id,label,min,max,default,opts)
+opts=opts or{}
+local fmt=opts.format or function(v)return tostring(math.floor(v+0.5))..(opts.unit or __cc20d({},{0xECF951F9,0xFCC3ABA6,0x3A417EE3}))end
+local step=opts.step or 1
+local row=U.new(__cc20d({40,0,191,165,251},{0x871E369B,0x23EC3575,0x7F6BCCE8}),{Size=UDim2.new(1,0,0,36),BackgroundTransparency=1},parent)
+U.order(row)
+U.new(__cc20d({17,180,153,161,224,79,189,240,191},{0x35ABF4D4,0x1170CAF7,0xEC21A416}),{
+Text=label,Font=F.med,TextSize=13,TextColor3=T.text,
+BackgroundTransparency=1,Size=UDim2.new(1,-80,0,16),
+TextXAlignment=Enum.TextXAlignment.Left,
+},row)
+local val=U.new(__cc20d({243,122,81,196,183,179,51,25,126},{0xDF6EF7E6,0x2BEDACFC,0x8F04B6DC}),{
+Text=__cc20d({},{0xC7D4DBF3,0x490D2E26,0xC433A064}),Font=F.bold,TextSize=12,TextColor3=T.text,
+BackgroundTransparency=1,Position=UDim2.new(1,-100,0,0),
+Size=UDim2.new(0,100,0,16),TextXAlignment=Enum.TextXAlignment.Right,
+},row)
+local hit=U.new(__cc20d({121,222,181,105,82,163,239,30,113,102},{0xAAAD7514,0x4B2717E1,0x1691B90A}),{
+Size=UDim2.new(1,0,0,12),Position=UDim2.new(0,0,0,22),
+BackgroundTransparency=1,Text=__cc20d({},{0xA523186D,0xD0221B49,0x6EFAD275}),AutoButtonColor=false,
+},row)
+local track=U.new(__cc20d({57,42,207,66,83},{0x376FAA37,0xFC36C492,0xA3EE18A5}),{
+Size=UDim2.new(1,0,0,4),Position=UDim2.new(0,0,0.5,-2),
+BackgroundColor3=T.field,BorderSizePixel=0,
+},hit)
+U.corner(track,2)
+local fillWrap=U.new(__cc20d({188,26,179,151,89},{0xE0707EA9,0x18542534,0x01DDF83C}),{
+Size=UDim2.new(0,0,0,8),Position=UDim2.new(0,0,0.5,-4),
+BackgroundColor3=T.accent,BackgroundTransparency=0.82,BorderSizePixel=0,
+},hit)
+U.corner(fillWrap,4)
+local fill=U.new(__cc20d({250,36,89,228,149},{0xBE64F0A6,0x57ABF1C4,0x369A546E}),{
+Size=UDim2.new(1,0,0,4),Position=UDim2.new(0,0,0.5,-2),
+BackgroundColor3=T.accent,BorderSizePixel=0,
+},fillWrap)
+U.corner(fill,2)
+U.gradient(fill,T.accent,T.accent2,0)
+local value=default
+local function paint()
+local pct=(max==min)and 0 or(value-min)/(max-min)
+fillWrap.Size=UDim2.new(pct,0,0,8)
+val.Text=fmt(value)
+end
+local function set(v)
+v=math.clamp(tonumber(v)or min,min,max)
+v=math.floor(v/step+0.5)*step
+value=v
+Flags[id]=v
+paint()
+if opts.onChange then opts.onChange(v)end
+end
+register(id,value,set)
+paint()
+local dragging=false
+local function fromX(px)
+local rel=math.clamp((px-hit.AbsolutePosition.X)/hit.AbsoluteSize.X,0,1)
+set(min+rel*(max-min))
+end
+hit.InputBegan:Connect(function(input)
+if input.UserInputType==Enum.UserInputType.MouseButton1 then
+dragging=true
+fromX(input.Position.X)
+end
+end)
+UIS.InputChanged:Connect(function(input)
+if dragging and input.UserInputType==Enum.UserInputType.MouseMovement then
+fromX(input.Position.X)
+end
+end)
+UIS.InputEnded:Connect(function(input)
+if input.UserInputType==Enum.UserInputType.MouseButton1 then dragging=false end
+end)
+return set
+end
+U.dropdown=function(parent,id,label,options,default,opts)
+opts=opts or{}
+local compact=opts.compact
+local wrap=U.new(__cc20d({43,56,38,235,201},{0xADBCA5D6,0x668F9049,0x51C85546}),{
+Size=opts.width or UDim2.new(1,0,0,compact and 26 or 46),
+BackgroundTransparency=1,
+},parent)
+U.order(wrap)
+if not compact and label then
+U.new(__cc20d({250,248,1,204,25,209,123,98,108},{0x6439701B,0xB873E38B,0x3F8E69B2}),{
+Text=label,Font=F.reg,TextSize=12,TextColor3=T.sub,
+BackgroundTransparency=1,Size=UDim2.new(1,0,0,14),
+TextXAlignment=Enum.TextXAlignment.Left,
+},wrap)
+end
+local field=U.new(__cc20d({19,39,215,160,38,62,92,201,45,94},{0x0D13AD05,0xB59F89FD,0x498F13A6}),{
+Size=UDim2.new(1,0,0,26),Position=UDim2.new(0,0,0,compact and 0 or 18),
+BackgroundColor3=T.field,Text=__cc20d({},{0x90F8B911,0x3664FB8A,0x40151117}),AutoButtonColor=false,
+},wrap)
+U.corner(field,5)
+U.stroke(field,T.line,1,0.4)
+local txt=U.new(__cc20d({161,149,127,69,163,141,60,17,72},{0xBC9C484D,0xD4C593FD,0xF4B59749}),{
+Text=default or __cc20d({},{0xEF3D4B02,0xF6026B95,0x21E91545}),Font=F.med,TextSize=13,TextColor3=T.text,
+BackgroundTransparency=1,Position=UDim2.new(0,9,0,0),
+Size=UDim2.new(1,-28,1,0),
+TextXAlignment=Enum.TextXAlignment.Left,TextTruncate=Enum.TextTruncate.AtEnd,
+},field)
+local ch=U.chevron(field,T.sub,0,0.85)
+ch.Position=UDim2.new(1,-14,0.5,0)
+local value=default
+local function set(v)
+if not table.find(options,v)then return end
+value=v
+txt.Text=v
+Flags[id]=v
+if opts.onChange then opts.onChange(v)end
+end
+register(id,value,set)
+field.MouseButton1Click:Connect(function()
+if activeList and activeField==field then
+U.closeDropdown()
+return
+end
+U.openList(field,options,set)
+end)
+return wrap
+end
+U.keyfield=function(parent,id,label,default,opts)
+opts=opts or{}
+local row=U.new(__cc20d({37,31,210,115,102},{0x7FEDA4B7,0x3C5F4E8A,0x9CBAC8B2}),{Size=UDim2.new(1,0,0,26),BackgroundTransparency=1},parent)
+U.order(row)
+U.new(__cc20d({234,85,140,230,181,18,235,224,21},{0xA4E3E837,0x12491F15,0x74C227C4}),{
+Text=label,Font=F.med,TextSize=13,TextColor3=T.text,
+BackgroundTransparency=1,Size=UDim2.new(1,-110,1,0),
+TextXAlignment=Enum.TextXAlignment.Left,
+},row)
+local field=U.new(__cc20d({39,14,140,177,231,246,141,242,36,224},{0xD74335AE,0x31994BF2,0x19B74818}),{
+Size=UDim2.new(0,100,0,24),Position=UDim2.new(1,-100,0.5,-12),
+BackgroundColor3=T.field,Text=__cc20d({},{0x6A5FF042,0x062019E7,0x1FC21E70}),Font=F.med,TextSize=12,
+TextColor3=T.text,AutoButtonColor=false,
+},row)
+U.corner(field,5)
+U.stroke(field,T.line,1,0.4)
+local value=default
+local function render()
+field.Text=value and L.bindName(value)or __cc20d({69,206,11,2},{0x55FBCB37,0x819602B5,0x4DD93FBC})
+end
+local function set(encoded)
+value=L.decodeBind(encoded)
+Flags[id]=L.encodeBind(value)
+render()
+if opts.onChange then opts.onChange(value)end
+end
+register(id,L.encodeBind(default),set)
+render()
+field.MouseButton1Click:Connect(function()
+field.Text=__cc20d({227,199,179},{0xDEF52038,0x753DA336,0x298D5672})
+activeCapture=function(input)
+if input.KeyCode==Enum.KeyCode.Escape then
+render()
+return
+end
+if input.KeyCode==Enum.KeyCode.Backspace then
+set(false)
+return
+end
+local b=L.toBind(input)
+if b then
+set(L.encodeBind(b))
+else
+render()
+end
+end
+end)
+return{get=function()return value end,set=set}
+end
+U.card=function(parent,title)
+local c=U.new(__cc20d({112,55,146,107,88},{0x76A00B32,0x7873352D,0xE83F8867}),{
+Size=UDim2.new(1,0,0,0),AutomaticSize=Enum.AutomaticSize.Y,
+BackgroundColor3=T.panel,BorderSizePixel=0,
+},parent)
+U.order(c)
+U.corner(c,8)
+U.new(__cc20d({58,122,108,200,196,141,235,149,145},{0x37A5858B,0xD5FB5BBB,0x23824C5F}),{
+PaddingTop=UDim.new(0,10),PaddingBottom=UDim.new(0,12),
+PaddingLeft=UDim.new(0,12),PaddingRight=UDim.new(0,12),
+},c)
+U.new(__cc20d({47,135,91,160,201,139,114,11,246,145,157,155},{0x2EC1B0E4,0x3E28D168,0x20CDAC59}),{Padding=UDim.new(0,8),SortOrder=Enum.SortOrder.LayoutOrder},c)
+U.new(__cc20d({1,16,159,143,31,95,78,213,17},{0xACDDAACC,0x64A8F4F9,0xA152C409}),{
+Text=title,Font=F.bold,TextSize=14,TextColor3=T.text,
+BackgroundTransparency=1,Size=UDim2.new(1,0,0,18),
+TextXAlignment=Enum.TextXAlignment.Center,
+},c)
+return c
+end
+U.textbox=function(parent,default,placeholder)
+local f=U.new(__cc20d({45,159,53,144,248,9,121},{0x3220F236,0x7B8B6CD5,0x0C34BD1C}),{
+Size=UDim2.new(1,0,0,26),BackgroundColor3=T.field,
+Text=default or __cc20d({},{0x9B498998,0xC59E7EF3,0xF13E9689}),Font=F.med,TextSize=13,TextColor3=T.text,
+PlaceholderText=placeholder or __cc20d({236,17,30,243},{0x2456D61F,0x68DDC242,0x172ADE1D}),ClearTextOnFocus=false,
+TextXAlignment=Enum.TextXAlignment.Left,
+},parent)
+U.order(f)
+U.corner(f,5)
+U.stroke(f,T.line,1,0.4)
+U.new(__cc20d({167,221,178,248,55,72,137,231,207},{0x9EA8EC38,0x4C63E24E,0x61EBAB6B}),{PaddingLeft=UDim.new(0,8),PaddingRight=UDim.new(0,8)},f)
+return f
+end
+U.codebox=function(parent,default,height)
+local f=U.new(__cc20d({113,155,32,84,163,40,0},{0x41A168BF,0xE70E64CC,0xA63595A1}),{
+Size=UDim2.new(1,0,0,height),BackgroundColor3=T.field,
+Text=default or __cc20d({},{0xECBFBB6B,0x2DB162C5,0x16F53EEC}),Font=F.med,TextSize=12,TextColor3=T.text,
+PlaceholderText=__cc20d({200,9,216,129,58,54,50,16,187,84,124,146,42,45,32,45,62,97,233,25,124,57,235,102,158,171,42,234,109,104,214},{0x2ADBC0CD,0x36078DB6,0x192E3439}),ClearTextOnFocus=false,
+MultiLine=true,TextWrapped=true,
+TextXAlignment=Enum.TextXAlignment.Left,TextYAlignment=Enum.TextYAlignment.Top,
+},parent)
+U.order(f)
+U.corner(f,5)
+U.stroke(f,T.line,1,0.4)
+U.new(__cc20d({140,94,142,242,55,69,34,209,93},{0x0BB850C1,0x38805285,0xC2EC589F}),{
+PaddingLeft=UDim.new(0,6),PaddingRight=UDim.new(0,6),
+PaddingTop=UDim.new(0,4),PaddingBottom=UDim.new(0,4),
+},f)
+return f
+end
+U.button=function(parent,text,primary,size)
+local b=U.new(__cc20d({148,15,226,29,117,82,9,185,188,248},{0xEDEA6FBD,0x1FDF8838,0x26C984CB}),{
+Size=size or UDim2.new(1,0,0,26),BackgroundColor3=primary and T.accent or T.field,
+Text=text,Font=F.bold,TextSize=12,
+TextColor3=primary and T.white or T.text,AutoButtonColor=false,
+},parent)
+U.corner(b,5)
+if not primary then U.stroke(b,T.line,1,0.4)end
+b.MouseEnter:Connect(function()
+b.BackgroundColor3=primary and Color3.fromRGB(255,140,124)or Color3.fromRGB(45,44,58)
+end)
+b.MouseLeave:Connect(function()
+b.BackgroundColor3=primary and T.accent or T.field
+end)
+return b
+end
+U.columns=function(parent)
+local host=U.new(__cc20d({173,217,146,128,191},{0x6FD0F7B5,0x93268ED2,0x626C2F48}),{
+Size=UDim2.new(1,0,0,0),AutomaticSize=Enum.AutomaticSize.Y,
+BackgroundTransparency=1,
+},parent)
+U.order(host)
+local l=U.new(__cc20d({210,100,50,17,144},{0x3A471F3B,0x8DD99C6E,0x5F36A748}),{
+Size=UDim2.new(0.5,-6,0,0),AutomaticSize=Enum.AutomaticSize.Y,
+BackgroundTransparency=1,
+},host)
+U.new(__cc20d({3,184,237,221,66,255,207,186,153,134,134,236},{0xF5E3BE62,0xF72763AE,0xC90C6B80}),{Padding=UDim.new(0,10),SortOrder=Enum.SortOrder.LayoutOrder},l)
+local r=U.new(__cc20d({250,139,84,35,118},{0x94FC92B5,0x58B33820,0xD569DC93}),{
+Size=UDim2.new(0.5,-6,0,0),AutomaticSize=Enum.AutomaticSize.Y,
+BackgroundTransparency=1,Position=UDim2.new(0.5,6,0,0),
+},host)
+U.new(__cc20d({46,161,81,107,251,19,165,245,145,119,141,114},{0x1DC0F05C,0xD9EB6D14,0x54BEA56E}),{Padding=UDim.new(0,10),SortOrder=Enum.SortOrder.LayoutOrder},r)
+return l,r
+end
+U.page=function()
+local s=U.new(__cc20d({27,252,155,177,49,70,23,68,181,222,44,31,105,198},{0x582082B1,0xC97E9C49,0xA2B2680B}),{
+Size=UDim2.new(1,0,1,0),BackgroundTransparency=1,
+BorderSizePixel=0,ScrollBarThickness=3,
+ScrollBarImageColor3=T.accent,ScrollBarImageTransparency=0.4,
+CanvasSize=UDim2.new(0,0,0,0),AutomaticCanvasSize=Enum.AutomaticSize.Y,
+ScrollingDirection=Enum.ScrollingDirection.Y,Visible=false,
+},contentHost)
+local root=U.new(__cc20d({158,109,174,31,65},{0x3C926258,0x48ACF06C,0x26A00AF9}),{
+Size=UDim2.new(1,-8,0,0),AutomaticSize=Enum.AutomaticSize.Y,
+BackgroundTransparency=1,Position=UDim2.new(0,4,0,0),
+},s)
+U.new(__cc20d({167,225,176,185,144,40,203,5,189,249,73,23},{0x608CBFEB,0x86AC2C13,0xFAFA014B}),{Padding=UDim.new(0,10),SortOrder=Enum.SortOrder.LayoutOrder},root)
+return s,root
+end
+U.drawMouse=function(p,c)
+local body=U.new(__cc20d({185,125,169,99,120},{0x4AA725FC,0x65D1A89E,0xBE6CA166}),{
+Size=UDim2.fromOffset(10,15),Position=UDim2.new(0.5,-5,0.5,-8),
+BackgroundTransparency=1,
+},p)
+U.corner(body,5)
+U.stroke(body,c,1.4)
+U.new(__cc20d({33,107,2,157,138},{0x1F802B65,0x09E4D89A,0x2B663293}),{
+Size=UDim2.fromOffset(1,4),Position=UDim2.new(0.5,-0.5,0,2),
+BackgroundColor3=c,BorderSizePixel=0,
+},body)
+end
+U.drawCrosshair=function(p,c)
+local ring=U.new(__cc20d({125,172,211,130,252},{0x4C704353,0x60C760F6,0x15B1AFD2}),{
+Size=UDim2.fromOffset(13,13),Position=UDim2.new(0.5,-6.5,0.5,-6.5),
+BackgroundTransparency=1,
+},p)
+U.corner(ring,7)
+U.stroke(ring,c,1.3)
+U.new(__cc20d({246,244,168,250,220},{0x32B81573,0x1AC2AB3A,0x91ADE313}),{
+Size=UDim2.fromOffset(2,2),Position=UDim2.new(0.5,-1,0.5,-1),
+BackgroundColor3=c,BorderSizePixel=0,
+},p)
+local ticks={
+{UDim2.new(0.5,-0.5,0.5,-11),UDim2.fromOffset(1,3)},
+{UDim2.new(0.5,-0.5,0.5,8),UDim2.fromOffset(1,3)},
+{UDim2.new(0.5,-11,0.5,-0.5),UDim2.fromOffset(3,1)},
+{UDim2.new(0.5,8,0.5,-0.5),UDim2.fromOffset(3,1)},
+}
+for _,t in ipairs(ticks)do
+U.new(__cc20d({3,31,0,38,160},{0xDD9F44C9,0xAF2DFBB2,0x0B61F7AC}),{Position=t[1],Size=t[2],BackgroundColor3=c,BorderSizePixel=0},p)
+end
+end
+U.drawEye=function(p,c)
+local e=U.new(__cc20d({219,22,133,223,198},{0xF9CF9699,0xE8CA3919,0x01E742B0}),{
+Size=UDim2.fromOffset(15,9),Position=UDim2.new(0.5,-7.5,0.5,-4.5),
+BackgroundTransparency=1,
+},p)
+U.corner(e,5)
+U.stroke(e,c,1.3)
+local pupil=U.new(__cc20d({165,67,13,193,47},{0x36863B84,0xCB5F2BEC,0x97D93F87}),{
+Size=UDim2.fromOffset(4,4),Position=UDim2.new(0.5,-2,0.5,-2),
+BackgroundColor3=c,BorderSizePixel=0,
+},e)
+U.corner(pupil,2)
+end
+U.drawChevrons=function(p,c)
+for i=0,1 do
+local ch=U.chevron(p,c,-90,0.9)
+ch.Position=UDim2.new(0.5,-3+i*7,0.5,0)
+end
+end
+U.drawTarget=function(p,c)
+local ring=U.new(__cc20d({146,117,207,45,2},{0xF058A0CA,0x0A3F8B17,0xDB4C66A5}),{
+Size=UDim2.fromOffset(13,13),Position=UDim2.new(0.5,-6.5,0.5,-6.5),
+BackgroundTransparency=1,
+},p)
+U.corner(ring,7)
+U.stroke(ring,c,1.3)
+local dot=U.new(__cc20d({72,92,82,145,67},{0x887B1CE6,0xADFDBBEE,0x8F736AEA}),{
+Size=UDim2.fromOffset(3,3),Position=UDim2.new(0.5,-1.5,0.5,-1.5),
+BackgroundColor3=c,BorderSizePixel=0,
+},p)
+U.corner(dot,2)
+end
+U.drawGear=function(p,c)
+local ring=U.new(__cc20d({220,30,254,137,130},{0x48C4E297,0xF40140CA,0x723E74B7}),{
+Size=UDim2.fromOffset(11,11),Position=UDim2.new(0.5,-5.5,0.5,-5.5),
+BackgroundTransparency=1,
+},p)
+U.corner(ring,6)
+U.stroke(ring,c,1.3)
+local dot=U.new(__cc20d({163,243,190,253,75},{0x0163CAD1,0x1640D879,0x850161F1}),{
+Size=UDim2.fromOffset(3,3),Position=UDim2.new(0.5,-1.5,0.5,-1.5),
+BackgroundColor3=c,BorderSizePixel=0,
+},p)
+U.corner(dot,2)
+U.new(__cc20d({47,58,93,228,183},{0x5F4CC21E,0xC2035700,0xE7429234}),{Size=UDim2.fromOffset(2,3),Position=UDim2.new(0.5,-1,0.5,-9),BackgroundColor3=c,BorderSizePixel=0},p)
+U.new(__cc20d({219,108,151,63,57},{0xE87A6091,0xDCC0B3CB,0x62536674}),{Size=UDim2.fromOffset(2,3),Position=UDim2.new(0.5,-1,0.5,6),BackgroundColor3=c,BorderSizePixel=0},p)
+U.new(__cc20d({213,87,232,13,106},{0x09098918,0x39D9B4C3,0x31A5E8D9}),{Size=UDim2.fromOffset(3,2),Position=UDim2.new(0.5,-9,0.5,-1),BackgroundColor3=c,BorderSizePixel=0},p)
+U.new(__cc20d({33,0,34,213,25},{0x84D8E478,0x2B97FBE7,0x037D1369}),{Size=UDim2.fromOffset(3,2),Position=UDim2.new(0.5,6,0.5,-1),BackgroundColor3=c,BorderSizePixel=0},p)
+end
+U.drawSliders=function(p,c)
+for i=0,2 do
+local y=8+i*6
+U.new(__cc20d({255,77,190,23,175},{0xBC8C3F62,0x7FE5F6A4,0x89D5FCA8}),{
+Size=UDim2.fromOffset(16,1.4),Position=UDim2.new(0.5,-8,0.5,y-14),
+BackgroundColor3=c,BorderSizePixel=0,
+},p)
+local k=U.new(__cc20d({114,114,74,20,35},{0xE8651A4B,0xDC9AF600,0xF64E39DE}),{
+Size=UDim2.fromOffset(4,4),Position=UDim2.new(0.5,-8+(i*5),0.5,y-15.3),
+BackgroundColor3=c,BorderSizePixel=0,
+},p)
+U.corner(k,2)
+end
+end
+local dragging,dragStart,startPos
+dragSurface.InputBegan:Connect(function(input)
+if unloaded then return end
+if input.UserInputType==Enum.UserInputType.MouseButton1 then
+dragging=true
+dragStart=input.Position
+startPos=mainFrame.Position
+end
+end)
+UIS.InputChanged:Connect(function(input)
+if dragging and input.UserInputType==Enum.UserInputType.MouseMovement then
+local d=input.Position-dragStart
+mainFrame.Position=UDim2.fromOffset(startPos.X.Offset+d.X,startPos.Y.Offset+d.Y)
+end
+end)
+UIS.InputEnded:Connect(function(input)
+if input.UserInputType==Enum.UserInputType.MouseButton1 then dragging=false end
+end)
+U.fit=function()
+if unloaded then return end
+local cam=workspace.CurrentCamera
+local vp=cam and cam.ViewportSize or Vector2.new(1280,720)
+local s=math.clamp(math.min((vp.X-40)/W,(vp.Y-60)/H),0.5,1)
+uiScale.Scale=s
+mainFrame.Position=UDim2.fromOffset(math.floor((vp.X-W*s)/2),math.floor((vp.Y-H*s)/2))
+end
+U.fit()
+if workspace.CurrentCamera then
+workspace.CurrentCamera:GetPropertyChangedSignal(__cc20d({35,199,94,247,60,207,73,120,127,39,227,71},{0x7238A5E9,0xC0E60049,0x1FA00ED9})):Connect(U.fit)
+end
+local mainPage,mainRoot=U.page()
+local aimPage,aimRoot=U.page()
+local recoilPage,recoilRoot=U.page()
+local ragePage,rageRoot=U.page()
+local espPage,espRoot=U.page()
+local worldPage,worldRoot=U.page()
+local luaPage,luaRoot=U.page()
+local timingPage,timingRoot=U.page()
+local settingsPage,settingsRoot=U.page()
+local Tabs={
+{draw=U.drawCrosshair,page=mainPage},
+{draw=U.drawEye,page=aimPage},
+{draw=U.drawChevrons,page=recoilPage},
+{draw=U.drawMouse,page=ragePage},
+{draw=U.drawTarget,page=espPage},
+{draw=U.drawGear,page=worldPage},
+{draw=U.drawSliders,page=luaPage},
+{draw=U.drawTarget,page=timingPage},
+{draw=U.drawGear,page=settingsPage},
+}
+local paints={}
+U.selectTab=function(idx)
+for j,tab in ipairs(Tabs)do
+tab.page.Visible=(j==idx)
+if paints[j]then paints[j](j==idx)end
+end
+end
+U.tabButton=function(draw)
+local btn=U.new(__cc20d({210,35,222,194,197,155,229,31,111,196},{0xC7125FD9,0x2D3BDD83,0x4827DAFB}),{
+Size=UDim2.fromOffset(28,28),BackgroundTransparency=1,Text=__cc20d({},{0x0E3A2C0C,0x60F97E5E,0x8E79BC09}),
+AutoButtonColor=false,ZIndex=5,
+},iconHost)
+U.order(btn)
+local icon=U.new(__cc20d({246,239,121,185,225},{0x970098F9,0x92B9D266,0x32511A64}),{Size=UDim2.fromScale(1,1),BackgroundTransparency=1},btn)
+local dot=U.new(__cc20d({121,154,194,62,141},{0x49455956,0x509F1983,0x20DD19C4}),{
+Size=UDim2.fromOffset(3,3),Position=UDim2.new(0.5,-1.5,1,-4),
+BackgroundColor3=T.white,BackgroundTransparency=0.15,
+BorderSizePixel=0,Visible=false,
+},btn)
+U.corner(dot,2)
+local function paint(active)
+for _,ch in ipairs(icon:GetChildren())do ch:Destroy()end
+draw(icon,active and T.white or Color3.fromRGB(255,222,212))
+U.raise(icon,6)
+icon.ZIndex=6
+dot.ZIndex=6
+dot.Visible=active
+end
+return btn,paint
+end
+for i,tab in ipairs(Tabs)do
+local btn,paint=U.tabButton(tab.draw)
+paints[i]=paint
+btn.MouseButton1Click:Connect(function()U.selectTab(i)end)
+end
+window=setmetatable({},{__index=function()return nil end})
+window.frame=mainFrame
+window.screenGui=gui
+function window:isMouseOver()
+if not gui.Enabled then return false end
+local mouse=UIS:GetMouseLocation()
+local function within(obj)
+local ap,as=obj.AbsolutePosition,obj.AbsoluteSize
+return mouse.X>=ap.X and mouse.X<=ap.X+as.X and mouse.Y>=ap.Y and mouse.Y<=ap.Y+as.Y
+end
+if within(mainFrame)then return true end
+if activeList and within(activeList)then return true end
+return false
+end
+function window:toggle()gui.Enabled=not gui.Enabled end
+function window:destroy()
+unloaded=true
+pcall(function()gui:Destroy()end)
+end
+function window:handleCapture(input)
+if not activeCapture then return false end
+local cap=activeCapture
+activeCapture=nil
+cap(input)
+return true
+end
+U.selectTab(1)
+L.ensureConfigDir=function()
+if type(isfolder)==__cc20d({185,103,175,202,168,46,57,102},{0x711B8FAB,0xE30418E4,0x312DB14C})and type(makefolder)==__cc20d({147,232,110,35,202,252,186,74},{0x961722C5,0x9C64598C,0x16647385})then
+local ok,exists=pcall(isfolder,CONFIG_DIR)
+if ok and not exists then pcall(makefolder,CONFIG_DIR)end
+end
+end
+L.sanitizeName=function(name)
+local cleaned=tostring(name or __cc20d({},{0xEF70BDE1,0x62CAF9E0,0x65B14E5F})):gsub(__cc20d({247,247,21,109,1,55,6,159,15},{0x87CF7CD8,0x740D6DB4,0x1ED8ABAB}),__cc20d({},{0xA0060C67,0x0694017A,0x3F2E549E}))
+cleaned=cleaned:match(__cc20d({138,245,44,126,27,167,60,146,86,178,201,182},{0x86E2623D,0x43045F51,0x1CAAD952}))
+return cleaned:sub(1,CONFIG_NAME_LENGTH)
+end
+L.saveConfig=function(name)
+if type(writefile)~=__cc20d({251,196,225,232,187,158,228,198},{0xF6FB6898,0x82FA066E,0xA60DC249})then return false,__cc20d({192,56,213,174,132,179,248,252,22,25,106,120,48,113,220,41,19},{0xC0E59009,0x90C2E901,0x918BAB59})end
+L.ensureConfigDir()
+local ok,data=pcall(function()return HttpService:JSONEncode(Flags)end)
+if not ok then return false,__cc20d({121,81,168,193,210,242,117,87,132,177,251,13,233},{0x167BADC5,0xD6521E2A,0xF582D3CA})end
+local wok=pcall(writefile,CONFIG_DIR..__cc20d({142},{0xFFAD7BA7,0xE93F7947,0x5ED42150})..name..__cc20d({255,0,107,142,36},{0xE75B2846,0x2BC0FE5D,0xAC0AD87F}),data)
+return wok,wok and __cc20d({170,31,173,58,59,23},{0x16277815,0xAA0BEDE4,0xB101D083})..name or __cc20d({20,51,2,252,48,227,225,177,203,35,221,131},{0x4F1BD5A2,0x620A2A41,0xD4D6FD9C})
+end
+L.loadConfigFile=function(name)
+if type(readfile)~=__cc20d({179,137,151,62,203,128,57,32},{0x6DE9A03C,0x7BE83C71,0xE2ED4C92})then return false,__cc20d({4,59,222,48,169,224,147,58,59,109,128,144,18,193,130,185,16},{0xA4FD2067,0xFFB53EC1,0x03088C0A})end
+local path=CONFIG_DIR..__cc20d({67},{0x35C237B5,0x28122A52,0x6CE24E19})..name..__cc20d({38,169,13,202,250},{0xE668CCBD,0x15E97F22,0xE991B90D})
+if type(isfile)==__cc20d({64,210,235,171,156,133,239,7},{0x786114E1,0x54D354F7,0xFD89E24F})then
+local ok,exists=pcall(isfile,path)
+if ok and not exists then return false,__cc20d({206,238,164,44,88,34,68,100,40},{0x61DDA3C2,0xDBCF44F6,0xC4DEF7E4})end
+end
+local ok,data=pcall(readfile,path)
+if not ok or type(data)~=__cc20d({134,50,215,219,111,138},{0xE32DEC20,0xE7E4D5A0,0x6CC5376C})then return false,__cc20d({217,85,40,219,149,165,141,74,154,183,33},{0xD94C4EBD,0xD2BCCBDA,0x5E49D938})end
+local dok,decoded=pcall(function()return HttpService:JSONDecode(data)end)
+if not dok or type(decoded)~=__cc20d({218,109,203,98,101},{0x51C86D3F,0x806213CB,0xB91ED536})then return false,__cc20d({230,63,235,153,18,42,76,227},{0x30D4EF5E,0x8F248DFB,0xFB087B82})end
+for id,def in pairs(Defaults)do
+if decoded[id]==nil then pcall(Setters[id],def)end
+end
+for id,v in pairs(decoded)do
+local setter=Setters[id]
+if setter then pcall(setter,v)end
+end
+L.stopHold()
+held=false
+aimHeld=false
+assistTarget=nil
+return true,__cc20d({244,254,84,113,197,89,161},{0x69587478,0xDDFF88DE,0xAB801D39})..name
+end
+L.deleteConfigFile=function(name)
+if type(delfile)~=__cc20d({125,21,165,79,245,19,117,129},{0xF6689F21,0xD09D1738,0x472D33F2})then return false,__cc20d({24,67,134,73,194,105,255,136,79,91,38,66,32,230,95,34,107},{0x39B16F48,0x1E7EB19D,0x26FDD888})end
+local ok=pcall(delfile,CONFIG_DIR..__cc20d({208},{0x91CA7044,0xBB6E7B37,0xF5EEA324})..name..__cc20d({181,205,250,40,53},{0x06BF316B,0x8AD4F238,0x5925B33B}))
+return ok,ok and __cc20d({123,18,189,38,230,16,185,215},{0xDC05009E,0xDEA871C5,0x95B7B295})..name or __cc20d({170,94,146,148,112,26,190,109,163,237,224,233,125},{0x9B0651B7,0xE4F197C8,0x628AA914})
+end
+local VIRTUAL_KEYS={
+Space=0x20,Return=0x0D,Tab=0x09,Backspace=0x08,Escape=0x1B,
+LeftShift=0xA0,RightShift=0xA1,LeftControl=0xA2,RightControl=0xA3,
+LeftAlt=0xA4,RightAlt=0xA5,
+Left=0x25,Up=0x26,Right=0x27,Down=0x28,
+Zero=0x30,One=0x31,Two=0x32,Three=0x33,Four=0x34,
+Five=0x35,Six=0x36,Seven=0x37,Eight=0x38,Nine=0x39,
+}
+for index=1,12 do VIRTUAL_KEYS[__cc20d({172},{0xB3B25EA3,0x63E556DE,0xA5AC5C21})..index]=0x6F+index end
+L.toVirtualKey=function(code)
+local name=code.Name
+if VIRTUAL_KEYS[name]then return VIRTUAL_KEYS[name]end
+if#name==1 then return string.byte(name:upper())end
+return nil
+end
+L.isMouseBind=function(bind)return bind~=nil and bind.kind==__cc20d({54,49,129,20,100,187,63,109,63,105,197,89,21},{0xAF7733C2,0xE1442CBF,0xDFDF8C57})end
+L.pressOutput=function(bind)
+if bind and bind.kind==__cc20d({205,47,196,28,191,217,93},{0xAF77F5EC,0x87A64EF6,0x074CF088})then
+keypress(L.toVirtualKey(bind.code)or bind.code)
+elseif bind and bind.code==Enum.UserInputType.MouseButton2 then
+mouse2press()
+else
+mouse1press()
+end
+end
+L.releaseOutput=function(bind)
+if bind and bind.kind==__cc20d({66,79,173,252,133,5,249},{0x8E3D3F93,0x33AF2794,0xE15F2895})then
+keyrelease(L.toVirtualKey(bind.code)or bind.code)
+elseif bind and bind.code==Enum.UserInputType.MouseButton2 then
+mouse2release()
+else
+mouse1release()
+end
+end
+L.getAimPoint=function()
+if Config.aimAt==__cc20d({62,48,6,120,243,162},{0xDA633D37,0x2A9A666A,0xC9896367})then return currentCamera.ViewportSize/2 end
+return userInputService:GetMouseLocation()
+end
+L.readTeamValue=function(player)
+local character=player.Character
+local stats=player:FindFirstChild(__cc20d({214,249,202,232,205,27,238,204,221,174,12},{0x6C8C2119,0xBD46AED8,0xAB73F369}))
+for _,name in ipairs(TEAM_KEYS)do
+local value=player:GetAttribute(name)
+if value==nil and character then value=character:GetAttribute(name)end
+if value==nil then
+local object=player:FindFirstChild(name)or(stats and stats:FindFirstChild(name))
+if object and object:IsA(__cc20d({208,168,148,41,209,73,118,221,77},{0x88BF9E98,0x9502A67B,0xE1514EE3}))then value=object.Value end
+end
+if value~=nil then return value end
+end
+return nil
+end
+L.isTeammate=function(player)
+if manualTeammates[player.UserId]then return true end
+if player.Team~=nil and localPlayer.Team~=nil then return player.Team==localPlayer.Team end
+if not Config.smartTeam then return false end
+local mine=L.readTeamValue(localPlayer)
+return mine~=nil and L.readTeamValue(player)==mine
+end
+L.toggleManualTeammate=function()
+local point=L.getAimPoint()
+local closest,closestDistance=nil,200
+for _,player in ipairs(playersService:GetPlayers())do
+if player==localPlayer then continue end
+local character=player.Character
+local root=character and character:FindFirstChild(__cc20d({21,135,78,154,114,219,40,149,155,252,242,110,131,205,66,110},{0x2AA310B9,0x8215B03F,0x1DADC423}))
+if not root then continue end
+local screen,onScreen=currentCamera:WorldToViewportPoint(root.Position)
+if not onScreen then continue end
+local distance=(Vector2.new(screen.X,screen.Y)-point).Magnitude
+if distance<closestDistance then closest,closestDistance=player,distance end
+end
+if not closest then
+warn(__cc20d({196,140,90,143,62,177,154,178,134,236,111,94,93,162,233,102,3,173,119,235,169,141,71,20,183,184,218,35,12},{0x9373F527,0xA6B7C6AF,0x2A114BCE}))
+return
+end
+local marked=not manualTeammates[closest.UserId]
+manualTeammates[closest.UserId]=marked or nil
+print(closest.Name..(marked and __cc20d({103,23,215,53,100,76,247,102,194,67,100,47,22,237,64,105,19,100,252},{0x89B733B3,0xE5D20DAA,0xBEBD8709})or __cc20d({53,84,73,95,229,28,118,187,10},{0xB22996F3,0x2CADF07F,0xAD720590})))
+end
+L.printTeamInfo=function()
+for _,player in ipairs(playersService:GetPlayers())do
+print(string.format(__cc20d({1,57,110,114,72,167,54,10,89,58,23,150,126,239,121,24,72,32,1,23,64,168,29,52,244,48,229,56,214},{0x5838A3E5,0xB7724CE5,0x71256832}),player.Name,tostring(player.Team),tostring(player.TeamColor)))
+for key,value in pairs(player:GetAttributes())do print(__cc20d({223,106,30,6,219,146,48,251,16,130,8,98,123},{0xCEDF106A,0x9E96E94E,0x227D9CAE}),key,value)end
+if player.Character then
+for key,value in pairs(player.Character:GetAttributes())do print(__cc20d({110,0,105,55,161,47,45,124,166,38,28,179,73,156,250,157},{0xA6A9AC27,0x12EB4CB5,0x479A76EA}),key,value)end
+end
+for _,child in ipairs(player:GetChildren())do
+if child:IsA(__cc20d({76,199,189,149,88,98,25,4,153},{0xFC8B6FA3,0x481438AD,0x6329C921}))then print(__cc20d({76,81,154,27,200,96,233},{0x68C816F2,0xD30DACFF,0x335A0C56}),child.Name,child.Value)end
+end
+local stats=player:FindFirstChild(__cc20d({135,126,201,206,135,241,203,30,100,26,81},{0x38F90F91,0x8EDA13F7,0xC1B86713}))
+if stats then
+for _,child in ipairs(stats:GetChildren())do
+if child:IsA(__cc20d({153,51,3,216,156,33,225,189,42},{0xF22D8DC7,0xAE638572,0xD3BB69DC}))then print(__cc20d({45,4,26,158,39,253,12,212,141,7,25,28},{0x0040AD85,0xCB233EF9,0x2E53FAE5}),child.Name,child.Value)end
+end
+end
+end
+end
+L.getEnemyCharacters=function()
+local characters={}
+for _,player in ipairs(playersService:GetPlayers())do
+if player~=localPlayer and player.Character then table.insert(characters,player.Character)end
+end
+return characters
+end
+L.castAimRay=function(origin,direction)
+local character=localPlayer.Character
+if not character then return nil end
+if not Config.wallCheck then
+rayParams.FilterType=Enum.RaycastFilterType.Include
+rayParams.FilterDescendantsInstances=L.getEnemyCharacters()
+return workspace:Raycast(origin,direction,rayParams)
+end
+rayParams.FilterType=Enum.RaycastFilterType.Exclude
+local ignore={character}
+local result=nil
+for _=1,MAX_WALL_STEPS do
+rayParams.FilterDescendantsInstances=ignore
+result=workspace:Raycast(origin,direction,rayParams)
+if not result then return nil end
+local part=result.Instance
+local model=part:FindFirstAncestorOfClass(__cc20d({204,138,23,55,31},{0x3BCB301F,0x5FDA52EB,0x8FA3CCFA}))
+local isPlayerPart=model~=nil and playersService:GetPlayerFromCharacter(model)~=nil
+if isPlayerPart or part.Transparency<SEE_THROUGH_TRANSPARENCY then return result end
+table.insert(ignore,part)
+end
+return nil
+end
+L.getTargetPlayer=function()
+if not localPlayer.Character then return nil end
+local point=L.getAimPoint()
+local ray=currentCamera:ViewportPointToRay(point.X,point.Y)
+local result=L.castAimRay(ray.Origin,ray.Direction*Config.maxDistance)
+if not result then return nil end
+local model=result.Instance:FindFirstAncestorOfClass(__cc20d({194,48,184,192,119},{0xDBAFEFD3,0x619C0598,0x3664A46D}))
+if not model then return nil end
+local player=playersService:GetPlayerFromCharacter(model)
+if not player or player==localPlayer then return nil end
+local humanoid=model:FindFirstChildOfClass(__cc20d({183,76,190,148,42,234,159,7},{0xB8F3C2F1,0x096AA53B,0xE134AE99}))
+if not humanoid or humanoid.Health<=0 then return nil end
+if Config.teamCheck and L.isTeammate(player)then return nil end
+return player
+end
+L.isActive=function()
+if Config.mode==__cc20d({197,2,164,186,185,35},{0xE1F23638,0x5BE00B79,0x04EEB205})then return true end
+if Config.mode==__cc20d({60,81,150,247},{0x185C067F,0x1426F3B9,0x0840CEE9})then return held end
+return toggled
+end
+L.fire=function()
+local bind=Config.fireBind
+ignoreInputUntil=os.clock()+0.15+KEY_HOLD_TIME
+if L.isMouseBind(bind)then botShotUntil=os.clock()+0.15 end
+if bind and bind.kind==__cc20d({60,209,76,164,197,227,141},{0x039CFC9B,0xAD8EEBAD,0xA672C6F6})then
+local virtualKey=L.toVirtualKey(bind.code)
+local keyArgument=virtualKey or bind.code
+keypress(keyArgument)
+task.wait(KEY_HOLD_TIME)
+keyrelease(keyArgument)
+elseif bind and bind.code==Enum.UserInputType.MouseButton2 then
+mouse2click()
+else
+mouse1click()
+end
+end
+L.startHold=function()
+if holding then return end
+holdBind=Config.fireBind
+holding=true
+ignoreInputUntil=os.clock()+0.3
+L.pressOutput(holdBind)
+end
+L.stopHold=function()
+if not holding then return end
+holding=false
+ignoreInputUntil=os.clock()+0.3
+L.releaseOutput(holdBind)
+holdBind=nil
+lastClick=os.clock()
+end
+L.getAimPart=function(character)
+local root=character:FindFirstChild(__cc20d({157,84,216,87,6,222,153,194,75,29,2,82,67,11,26,109},{0x49CEFACF,0x46356CD3,0xE070F3D7}))
+if Config.aimPart==__cc20d({207,27,242,189},{0x5217C1EC,0x0F8147DB,0x9549296A})then return character:FindFirstChild(__cc20d({127,0,60,122},{0x727A9593,0xB4F16CC0,0x7D2891E6}))or root end
+return character:FindFirstChild(__cc20d({174,127,44,2,143,24,209,43,173,147},{0x4A22A638,0xEDF85D74,0x12277E5E}))or character:FindFirstChild(__cc20d({53,145,81,51,61},{0xFD97FF59,0x7C69DDE5,0x2A5E70D4}))or root
+end
+L.isPartVisible=function(part,character)
+local origin=currentCamera.CFrame.Position
+local direction=part.Position-origin
+local ignore={localPlayer.Character}
+rayParams.FilterType=Enum.RaycastFilterType.Exclude
+for _=1,MAX_WALL_STEPS do
+rayParams.FilterDescendantsInstances=ignore
+local result=workspace:Raycast(origin,direction,rayParams)
+if not result then return true end
+local hit=result.Instance
+if hit:IsDescendantOf(character)then return true end
+if hit.Transparency<SEE_THROUGH_TRANSPARENCY then return false end
+table.insert(ignore,hit)
+end
+return false
+end
+L.getAimTarget=function()
+if not localPlayer.Character then return nil end
+local point=L.getAimPoint()
+local cameraPosition=currentCamera.CFrame.Position
+local closestPart,closestDistance=nil,Config.aimFov
+for _,player in ipairs(playersService:GetPlayers())do
+if player==localPlayer then continue end
+if Config.teamCheck and L.isTeammate(player)then continue end
+local character=player.Character
+local humanoid=character and character:FindFirstChildOfClass(__cc20d({130,33,12,240,133,206,139,116},{0xD67E3D2A,0x976C7060,0xEDB478C6}))
+if not humanoid or humanoid.Health<=0 then continue end
+local part=L.getAimPart(character)
+if not part then continue end
+if(part.Position-cameraPosition).Magnitude>Config.aimDistance then continue end
+local screen,onScreen=currentCamera:WorldToViewportPoint(part.Position)
+if not onScreen then continue end
+local distance=(Vector2.new(screen.X,screen.Y)-point).Magnitude
+if distance>=closestDistance then continue end
+if Config.aimVisibleCheck and not L.isPartVisible(part,character)then continue end
+closestPart,closestDistance=part,distance
+end
+return closestPart
+end
+L.updateAim=function()
+if not Config.aimEnabled or rageEngaged then return end
+if Config.aimBind and not aimHeld then return end
+if not isrbxactive()then return end
+if window and window:isMouseOver()then return end
+local part=L.getAimTarget()
+if not part then return end
+local screen=currentCamera:WorldToViewportPoint(part.Position)
+local delta=Vector2.new(screen.X,screen.Y)-L.getAimPoint()
+if delta.Magnitude<AIM_DEADZONE then return end
+local step=delta/Config.aimSmoothing
+mousemoverel(math.round(step.X),math.round(step.Y))
+end
+L.getAssistPart=function(player,radius)
+local character=player.Character
+local humanoid=character and character:FindFirstChildOfClass(__cc20d({239,242,253,187,12,33,33,24},{0xDAAD1D19,0x49FC734F,0xA0FF3B35}))
+if not humanoid or humanoid.Health<=0 then return nil end
+if Config.assistTeamCheck and L.isTeammate(player)then return nil end
+local part=L.getAimPart(character)
+if not part then return nil end
+if(part.Position-currentCamera.CFrame.Position).Magnitude>Config.assistDistance then return nil end
+local screen,onScreen=currentCamera:WorldToViewportPoint(part.Position)
+if not onScreen then return nil end
+local distance=(Vector2.new(screen.X,screen.Y)-L.getAimPoint()).Magnitude
+if distance>radius then return nil end
+if Config.assistVisibleCheck and not L.isPartVisible(part,character)then return nil end
+return part,distance
+end
+L.releaseAssist=function()
+assistTarget=nil
+assistRemainder=Vector2.zero
+assistReleasedUntil=os.clock()+ASSIST_REACQUIRE_DELAY
+end
+L.updateAssist=function()
+if not Config.assistEnabled or rageEngaged or not localPlayer.Character or not isrbxactive()then
+assistTarget=nil
+return
+end
+if Config.aimEnabled and(not Config.aimBind or aimHeld)then
+assistTarget=nil
+return
+end
+if window and window:isMouseOver()then
+assistTarget=nil
+return
+end
+local part,distance
+if assistTarget then
+part,distance=L.getAssistPart(assistTarget,Config.assistBreakRadius)
+if not part then
+L.releaseAssist()
+return
+end
+end
+if not assistTarget then
+if os.clock()<assistReleasedUntil then return end
+local best=Config.assistRadius
+for _,player in ipairs(playersService:GetPlayers())do
+if player==localPlayer then continue end
+local candidate,candidateDistance=L.getAssistPart(player,best)
+if candidate and candidateDistance<best then
+assistTarget,part,distance,best=player,candidate,candidateDistance,candidateDistance
+end
+end
+if not assistTarget then return end
+end
+local screen=currentCamera:WorldToViewportPoint(part.Position)
+local delta=Vector2.new(screen.X,screen.Y)-L.getAimPoint()
+if delta.Magnitude<AIM_DEADZONE then return end
+local falloff=1-math.clamp(distance/Config.assistBreakRadius,0,1)*0.5
+local move=delta*(Config.assistStrength/100)*falloff+assistRemainder
+local moveX,moveY=math.round(move.X),math.round(move.Y)
+assistRemainder=move-Vector2.new(moveX,moveY)
+if moveX~=0 or moveY~=0 then mousemoverel(moveX,moveY)end
+end
+L.updateFov=function()
+if fovCircle then
+local visible=Config.aimEnabled and Config.aimShowFov
+fovCircle.Visible=visible
+if visible then
+fovCircle.Position=L.getAimPoint()
+fovCircle.Radius=Config.aimFov
+end
+end
+if assistCircle then
+assistCircle.Visible=Config.assistEnabled and Config.assistShowRadius
+if assistCircle.Visible then
+assistCircle.Position=L.getAimPoint()
+assistCircle.Radius=Config.assistRadius
+end
+end
+end
+L.isShooting=function()
+if Config.recoilManual and userInputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton1)then return true end
+if Config.recoilBot then
+if holding and L.isMouseBind(holdBind)then return true end
+if os.clock()<botShotUntil then return true end
+end
+return false
+end
+L.updateRecoil=function(deltaTime)
+if not Config.recoilEnabled or not isrbxactive()then
+recoilStart=nil
+recoilRemainder=Vector2.zero
+return
+end
+if window and window:isMouseOver()then
+recoilStart=nil
+return
+end
+if not L.isShooting()then
+recoilStart=nil
+recoilRemainder=Vector2.zero
+return
+end
+local now=os.clock()
+recoilStart=recoilStart or now
+local ramp=1
+if Config.recoilRamp>0 then
+ramp=math.clamp((now-recoilStart)*1000/Config.recoilRamp,0,1)
+end
+local move=Vector2.new(Config.recoilX,Config.recoilY)*(deltaTime*60)*ramp+recoilRemainder
+local moveX,moveY=math.round(move.X),math.round(move.Y)
+recoilRemainder=move-Vector2.new(moveX,moveY)
+if moveX~=0 or moveY~=0 then mousemoverel(moveX,moveY)end
+end
+L.isFiringNow=function()
+if userInputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton1)then return true end
+return holding or os.clock()<botShotUntil
+end
+L.angleDelta=function(from,to)return((to-from+540)%360)-180 end
+L.getFreestandOffset=function(root,real)
+local closest,closestDistance=nil,math.huge
+for _,player in ipairs(playersService:GetPlayers())do
+if player==localPlayer or L.isTeammate(player)then continue end
+local character=player.Character
+local enemyRoot=character and character:FindFirstChild(__cc20d({64,245,52,90,79,216,74,246,11,175,242,115,121,112,169,238},{0xF67F6B7B,0xA942AEC1,0xE9FB702C}))
+local humanoid=character and character:FindFirstChildOfClass(__cc20d({96,243,225,42,194,187,26,38},{0x0AFD6CFC,0x656D1F30,0xFB6DD259}))
+if not(enemyRoot and humanoid)or humanoid.Health<=0 then continue end
+local distance=(enemyRoot.Position-root.Position).Magnitude
+if distance<closestDistance then closest,closestDistance=enemyRoot,distance end
+end
+if not closest then return 0 end
+local toEnemy=closest.Position-root.Position
+local bearing=math.deg(math.atan2(toEnemy.X,toEnemy.Z))
+local _,realYaw=real:ToOrientation()
+return L.angleDelta(math.deg(realYaw),bearing+90)
+end
+L.restoreSpin=function()
+if spinRoot and spinReal and spinRoot.Parent then spinRoot.CFrame=spinReal end
+spinRoot=nil
+spinReal=nil
+end
+L.applySpin=function(deltaTime)
+L.restoreSpin()
+spinApplied=false
+if not Config.spinEnabled then return end
+local character=localPlayer.Character
+local root=character and character:FindFirstChild(__cc20d({169,3,224,14,106,41,176,95,147,180,233,180,42,246,12,110},{0xEEE5D997,0xD6793CDB,0xB2EFD860}))
+local humanoid=character and character:FindFirstChildOfClass(__cc20d({57,106,124,2,231,58,204,239},{0x49E1DE4E,0xF5A8BD43,0xDBC1F815}))
+if not(root and humanoid)or humanoid.Health<=0 or humanoid.Sit then return end
+if Config.spinPauseOnShoot and L.isFiringNow()then return end
+local real=root.CFrame
+if Config.spinMode==__cc20d({210,130,117,43},{0xBF7F78A5,0xFC6C194C,0x077C3D2F})then
+spinAngle=(spinAngle+Config.spinSpeed*deltaTime)%360
+elseif Config.spinMode==__cc20d({155,56,109,68,148,83},{0x23459FA5,0x332BA5AF,0x7940F953})then
+spinAngle=math.random(-Config.spinJitter,Config.spinJitter)
+elseif Config.spinMode==__cc20d({94,23,32,214,2,26,85,155,7},{0xBF3DA082,0xE29F4E8F,0xD1FAA82A})then
+spinAngle=180
+else
+local target
+if Config.spinAutoDirection then
+target=L.getFreestandOffset(root,real)
+elseif Config.spinMode==__cc20d({153,99,27,10,75,83},{0x32040294,0x5A367798,0x247259CE})then
+local now=os.clock()
+if now>=spinRandomUntil then
+spinTargetAngle=math.random(-Config.spinJitter,Config.spinJitter)
+spinRandomUntil=now+Config.spinRandomInterval/1000
+end
+target=spinTargetAngle
+else
+target=Config.spinStaticAngle
+end
+if Config.spinSmoothing>0 then
+local rate=math.clamp(deltaTime*1000/Config.spinSmoothing,0,1)
+spinAngle+=L.angleDelta(spinAngle,target)*rate
+else
+spinAngle=target
+end
+spinAngle=L.angleDelta(0,spinAngle)
+end
+spinRoot=root
+spinReal=real
+spinApplied=true
+spinOffset=CFrame.Angles(0,math.rad(spinAngle),0)
+*CFrame.Angles(math.rad(Config.spinLeanPitch),0,math.rad(Config.spinLeanRoll))
+root.CFrame=spinReal*spinOffset
+end
+L.spawnBulletTracer=function(originWorld,hitWorld)
+if not Config.rageBulletTracer then return end
+local originScreen=currentCamera:WorldToViewportPoint(originWorld)
+local hitScreen=currentCamera:WorldToViewportPoint(hitWorld)
+if originScreen.Z<=0 and hitScreen.Z<=0 then return end
+local line=Drawing.new(__cc20d({87,113,62,163},{0x0F92EAD4,0xBDD1DB6F,0x61FCA673}))
+line.Thickness=2
+line.Transparency=1
+line.ZIndex=5
+line.Color=Color3.fromRGB(Config.chamsRed,Config.chamsGreen,Config.chamsBlue)
+line.From=Vector2.new(originScreen.X,originScreen.Y)
+line.To=Vector2.new(hitScreen.X,hitScreen.Y)
+line.Visible=true
+table.insert(bulletTracers,{line=line,expire=os.clock()+BULLET_TRACER_LIFETIME})
+end
+L.updateBulletTracers=function()
+for index=#bulletTracers,1,-1 do
+local entry=bulletTracers[index]
+if os.clock()>=entry.expire then
+pcall(function()entry.line:Remove()end)
+table.remove(bulletTracers,index)
+end
+end
+end
+L.clearBulletTracers=function()
+for _,entry in ipairs(bulletTracers)do
+pcall(function()entry.line:Remove()end)
+end
+table.clear(bulletTracers)
+end
+L.getRagePart=function(character)
+local root=character:FindFirstChild(__cc20d({118,208,236,45,239,218,93,229,29,16,35,62,159,42,52,191},{0x01085B40,0x2E87368A,0x01EEF2B5}))
+if Config.ragePart==__cc20d({140,125,102,147},{0xE0011615,0xD9CA5A73,0xC450A15E})then return character:FindFirstChild(__cc20d({73,215,33,118},{0x8215BF71,0x0D772574,0x39030C26}))or root end
+return character:FindFirstChild(__cc20d({223,29,65,134,135,154,81,122,216,236},{0x301662A7,0x67962EA8,0x0E8915F7}))or character:FindFirstChild(__cc20d({97,150,32,69,69},{0x899098F9,0x50BB18EA,0x2400BEA3}))or root
+end
+L.getRageTarget=function()
+local cameraPosition=currentCamera.CFrame.Position
+local closestPart,closestDistance=nil,Config.rageDistance
+for _,player in ipairs(playersService:GetPlayers())do
+if player==localPlayer then continue end
+if Config.rageTeamCheck and L.isTeammate(player)then continue end
+local character=player.Character
+local humanoid=character and character:FindFirstChildOfClass(__cc20d({182,3,246,231,38,195,97,167},{0xDF816260,0xB8DAADD0,0x13EEAD96}))
+if not humanoid or humanoid.Health<=0 then continue end
+local part=L.getRagePart(character)
+if not part then continue end
+local distance=(part.Position-cameraPosition).Magnitude
+if distance>=closestDistance then continue end
+if Config.rageMode==__cc20d({31,146,226,143},{0x9A583DBE,0x164122BC,0x1A2CDF50})then
+local _,onScreen=currentCamera:WorldToViewportPoint(part.Position)
+if not onScreen then continue end
+end
+local wallbang=Config.rageWallbang and Config.rageMode==__cc20d({133,5,144,93,150,16},{0xAEFF60C3,0x8A4E3280,0xA041F8EA})
+if Config.rageWallCheck and not wallbang and not L.isPartVisible(part,character)then continue end
+closestPart,closestDistance=part,distance
+end
+return closestPart
+end
+L.ensureSilentHook=function()
+if shared.TriggerBotHooked or silentHookFailed then return end
+local installed,hookError=pcall(function()
+local oldNamecall
+oldNamecall=hookmetamethod(game,__cc20d({28,140,184,72,59,54,63,92,24,236},{0x68AC09D3,0xBB0A1C67,0x235D75B5}),newcclosure(function(self,...)
+local method=getnamecallmethod()
+local handler=shared.TriggerBotNamecall
+if handler then return handler(oldNamecall,method,self,...)end
+return oldNamecall(self,...)
+end))
+end)
+if installed then
+shared.TriggerBotHooked=true
+else
+silentHookFailed=true
+warn(__cc20d({83,197,109,216,59,246,183,138,62,50,2,152,223,190,63,162,25,255,165,196,246,211,144,67},{0xB4AC8C24,0xBFAA3B88,0x6C0B4543})..tostring(hookError))
+end
+end
+L.updateRage=function()
+rageTarget=nil
+rageEngaged=false
+silentTarget=nil
+local character=localPlayer.Character
+local humanoid=character and character:FindFirstChildOfClass(__cc20d({209,192,24,179,209,115,1,247},{0x605DAE12,0xDD5EBB47,0xF15B1435}))
+if not Config.rageEnabled or not humanoid or humanoid.Health<=0 or not isrbxactive()then
+rageRemainder=Vector2.zero
+return
+end
+if window and window:isMouseOver()then return end
+local part=L.getRageTarget()
+if not part then
+rageRemainder=Vector2.zero
+return
+end
+rageTarget=part
+local now=os.clock()
+local ready=(now-lastRageShot)*1000>=Config.rageDelay
+if Config.rageMode==__cc20d({31,93,225,29,247,253},{0x1B4A3C52,0xD77CEB32,0xB60A45CB})then
+L.ensureSilentHook()
+silentTarget=part
+if ready then
+lastRageShot=now
+silentUntil=now+SILENT_WINDOW
+task.spawn(L.fire)
+end
+return
+end
+rageEngaged=true
+local screen=currentCamera:WorldToViewportPoint(part.Position)
+local delta=Vector2.new(screen.X,screen.Y)-L.getAimPoint()
+if delta.Magnitude>Config.rageTolerance then
+local move=delta*(Config.rageSnap/100)+rageRemainder
+local moveX,moveY=math.round(move.X),math.round(move.Y)
+rageRemainder=move-Vector2.new(moveX,moveY)
+if moveX~=0 or moveY~=0 then mousemoverel(moveX,moveY)end
+return
+end
+if ready then
+lastRageShot=now
+L.spawnBulletTracer(currentCamera.CFrame.Position,part.Position)
+task.spawn(L.fire)
+end
+end
+L.onNamecall=function(oldNamecall,method,self,...)
+if method~=__cc20d({119,21,0,128,102,174,240},{0xF83FE0D5,0xC493DB6F,0x300BC74A})or not silentTarget or os.clock()>silentUntil or self~=workspace then
+return oldNamecall(self,...)
+end
+if checkcaller()then return oldNamecall(self,...)end
+local origin,direction,params=...
+if typeof(origin)~=__cc20d({93,174,44,81,189,99,242},{0x33F53E4B,0x99A4AF6A,0xB55282C9})or typeof(direction)~=__cc20d({39,86,183,71,230,124,79},{0xFA2623F1,0x164F520D,0x2927A9FF})then
+return oldNamecall(self,...)
+end
+local range=direction.Magnitude
+if range<SILENT_MIN_RANGE then return oldNamecall(self,...)end
+local unit=direction.Unit
+local look=currentCamera.CFrame.LookVector
+local dot=unit.X*look.X+unit.Y*look.Y+unit.Z*look.Z
+if dot<SILENT_MIN_DOT then return oldNamecall(self,...)end
+local targetPosition=silentTarget.Position
+local redirected=(targetPosition-origin).Unit*range
+L.spawnBulletTracer(origin,targetPosition)
+if Config.rageWallbang then
+local character=silentTarget:FindFirstAncestorOfClass(__cc20d({212,204,41,47,67},{0x704F10EB,0x9B826FA2,0x394529EF}))
+if character then
+wallbangParams.FilterDescendantsInstances={character}
+if typeof(params)==__cc20d({145,101,194,55,251,127,125,139,26,35,133,201,2},{0x31933A72,0xDFFAE9E8,0xBA4C206F})then
+wallbangParams.IgnoreWater=params.IgnoreWater
+wallbangParams.CollisionGroup=params.CollisionGroup
+wallbangParams.RespectCanCollide=params.RespectCanCollide
+end
+params=wallbangParams
+end
+end
+setnamecallmethod(method)
+if params~=nil then return oldNamecall(self,origin,redirected,params)end
+return oldNamecall(self,origin,redirected)
+end
+L.restoreBody=function()
+for part,saved in pairs(bodySaved)do
+pcall(function()
+part.LocalTransparencyModifier=saved.modifier
+part.Transparency=saved.transparency
+end)
+end
+table.clear(bodySaved)
+end
+L.restoreCamera=function()
+if cameraObject and cameraReal then cameraObject.CFrame=cameraReal end
+cameraObject=nil
+cameraReal=nil
+if viewRoot and viewReal and viewRoot.Parent then viewRoot.CFrame=viewReal end
+viewRoot=nil
+viewReal=nil
+L.restoreBody()
+end
+L.revealBody=function(character)
+for _,descendant in ipairs(character:GetDescendants())do
+if not descendant:IsA(__cc20d({8,134,173,119,189,201,90,132},{0x2A3909F0,0xD9D003BB,0xD99E1D40}))or not BODY_PART_NAMES[descendant.Name]then continue end
+bodySaved[descendant]={modifier=descendant.LocalTransparencyModifier,transparency=descendant.Transparency}
+descendant.LocalTransparencyModifier=0
+if descendant.Transparency>SEE_THROUGH_TRANSPARENCY then descendant.Transparency=0 end
+end
+end
+L.applyCamera=function()
+L.restoreCamera()
+local character=localPlayer.Character
+if not Config.thirdPersonEnabled or not character then return end
+local camera=workspace.CurrentCamera
+if not camera then return end
+local real=camera.CFrame
+local distance=Config.thirdPersonDistance
+cameraRayParams.FilterDescendantsInstances={character}
+local result=workspace:Raycast(real.Position,-real.LookVector*(distance+0.5),cameraRayParams)
+if result then distance=math.max(result.Distance-0.5,0)end
+cameraObject=camera
+cameraReal=real
+camera.CFrame=real*CFrame.new(0,0,distance)
+if Config.thirdPersonShowBody then L.revealBody(character)end
+if Config.spinShowLocal and spinApplied then
+local root=character:FindFirstChild(__cc20d({58,38,16,39,103,239,170,113,252,205,167,243,105,203,33,193},{0x41324681,0x7A0B10B8,0xE9F49275}))
+if root then
+viewRoot=root
+viewReal=root.CFrame
+root.CFrame=viewReal*spinOffset
+end
+end
+end
+L.saveLighting=function()
+savedLighting={
+Brightness=lightingService.Brightness,ClockTime=lightingService.ClockTime,
+FogStart=lightingService.FogStart,FogEnd=lightingService.FogEnd,
+GlobalShadows=lightingService.GlobalShadows,Ambient=lightingService.Ambient,
+OutdoorAmbient=lightingService.OutdoorAmbient,ExposureCompensation=lightingService.ExposureCompensation,
+}
+end
+L.restoreLighting=function()
+if savedLighting then
+for property,value in pairs(savedLighting)do
+pcall(function()lightingService[property]=value end)
+end
+savedLighting=nil
+end
+for atmosphere,density in pairs(savedAtmospheres)do
+pcall(function()atmosphere.Density=density end)
+end
+table.clear(savedAtmospheres)
+end
+L.setLighting=function(property,value)
+if lightingService[property]~=value then lightingService[property]=value end
+end
+L.updateFullbright=function()
+if not Config.fbEnabled then
+if savedLighting or next(savedAtmospheres)then L.restoreLighting()end
+return
+end
+if not savedLighting then L.saveLighting()end
+L.setLighting(__cc20d({76,51,141,110,91,154,13,29,24,255},{0x4E6C7161,0x325CCC9C,0x3B978EB8}),Config.fbBrightness)
+L.setLighting(__cc20d({135,99,103,141,162,62,86},{0xF4F56911,0x39EC1ADC,0x1B564E20}),FULLBRIGHT_AMBIENT)
+L.setLighting(__cc20d({86,11,68,186,175,193,233,245,204,247,196,133,100,221},{0x0F07D9A6,0x68E86E5C,0xF7812239}),FULLBRIGHT_AMBIENT)
+L.setLighting(__cc20d({41,79,213,52,94,139,163,223,191,242,113,36,54,133,224,176,100,188,237,70},{0x1086D107,0xBFEA58A5,0x9874F565}),0)
+if Config.fbDaytime then L.setLighting(__cc20d({91,107,64,34,184,210,45,211,126},{0x049F7EC2,0x6CEE187B,0xEC1EAC80}),FULLBRIGHT_CLOCK_TIME)end
+if Config.fbNoShadows then L.setLighting(__cc20d({40,66,143,143,103,4,45,44,69,199,165,69,60},{0x0012359A,0xB07FFF66,0x64C330B4}),false)end
+if Config.fbNoFog then
+L.setLighting(__cc20d({235,248,175,170,240,88,137,235},{0xD432165C,0x2D764CC7,0x424B58F8}),1e9)
+L.setLighting(__cc20d({253,252,83,141,165,151},{0x915675B9,0xFAC984BF,0xD74A5060}),1e9)
+for _,child in ipairs(lightingService:GetChildren())do
+if child:IsA(__cc20d({94,222,145,195,164,114,57,92,214,137},{0x9A2328AD,0xC7283CD7,0x75B05634}))then
+if savedAtmospheres[child]==nil then savedAtmospheres[child]=child.Density end
+if child.Density~=0 then child.Density=0 end
+end
+end
+else
+for atmosphere,density in pairs(savedAtmospheres)do
+pcall(function()atmosphere.Density=density end)
+end
+table.clear(savedAtmospheres)
+if savedLighting then
+L.setLighting(__cc20d({204,68,125,54,144,121,12,1},{0x17F50F12,0x60E10686,0x0E3C3B74}),savedLighting.FogStart)
+L.setLighting(__cc20d({211,154,140,162,202,193},{0x22F439FE,0x7B0C5282,0x5E20F607}),savedLighting.FogEnd)
+end
+end
+if savedLighting then
+if not Config.fbNoShadows then L.setLighting(__cc20d({168,213,150,247,98,171,140,195,126,1,46,198,203},{0x7E63C6A0,0xDCDA2E74,0xAF352959}),savedLighting.GlobalShadows)end
+if not Config.fbDaytime then L.setLighting(__cc20d({74,135,152,246,139,211,22,5,200},{0xAF7F9209,0xD7AF088D,0x5E7F5C0E}),savedLighting.ClockTime)end
+end
+end
+L.updateLowGravity=function()
+if not Config.lowGravityEnabled then
+if savedGravity then
+workspaceService.Gravity=savedGravity
+savedGravity=nil
+end
+return
+end
+if not savedGravity then savedGravity=workspaceService.Gravity end
+local target=savedGravity*Config.lowGravityScale
+if workspaceService.Gravity~=target then workspaceService.Gravity=target end
+end
+L.updateBhop=function()
+if not Config.bhopEnabled then return end
+local character=localPlayer.Character
+local humanoid=character and character:FindFirstChildOfClass(__cc20d({165,97,163,222,217,28,47,5},{0xF28C4239,0x77C14D02,0xBBC2679B}))
+if not humanoid or humanoid.Health<=0 then return end
+if not isrbxactive()or userInputService:GetFocusedTextBox()then return end
+if window and window:isMouseOver()then return end
+if humanoid.FloorMaterial~=Enum.Material.Air and userInputService:IsKeyDown(Enum.KeyCode.Space)then
+humanoid.Jump=true
+end
+end
+L.updateSpeed=function(deltaTime)
+if Config.flyEnabled then return end
+local character=localPlayer.Character
+local root=character and character:FindFirstChild(__cc20d({5,141,4,112,143,70,194,242,38,97,63,121,199,26,97,98},{0xE55B43CB,0x265CAD66,0x4A8F6A6F}))
+local humanoid=character and character:FindFirstChildOfClass(__cc20d({114,226,231,213,12,92,54,0},{0x3474CCF9,0xB25775CE,0x4CFCC931}))
+if not(root and humanoid)or humanoid.Health<=0 or humanoid.Sit then
+currentSpeedBoost=0
+return
+end
+if not Config.speedEnabled then
+currentSpeedBoost=0
+return
+end
+if not isrbxactive()or(window and window:isMouseOver())then return end
+local direction=humanoid.MoveDirection
+if direction.Magnitude<0.1 then
+currentSpeedBoost=0
+return
+end
+local targetExtra=math.max(Config.speedValue-humanoid.WalkSpeed,0)
+if not Config.speedAccelEnabled then
+root.CFrame+=direction*targetExtra*deltaTime
+return
+end
+local airborne=humanoid.FloorMaterial==Enum.Material.Air
+if airborne then
+currentSpeedBoost=math.min(currentSpeedBoost+Config.speedAccelRate*deltaTime,targetExtra)
+end
+root.CFrame+=direction*math.min(currentSpeedBoost,targetExtra)*deltaTime
+end
+L.updateFly=function(deltaTime)
+if not Config.flyEnabled then return end
+local character=localPlayer.Character
+local root=character and character:FindFirstChild(__cc20d({37,120,149,247,193,193,74,125,87,96,214,178,202,85,248,46},{0x8E5B5A74,0x4A552114,0x21A2D011}))
+local humanoid=character and character:FindFirstChildOfClass(__cc20d({222,14,226,216,146,0,21,179},{0xFE47BE1C,0xEB7D75E0,0xBFA57E95}))
+if not(root and humanoid)or humanoid.Health<=0 or humanoid.Sit then return end
+if not isrbxactive()or userInputService:GetFocusedTextBox()then return end
+local cframe=currentCamera.CFrame
+local move=Vector3.zero
+if userInputService:IsKeyDown(Enum.KeyCode.W)then move+=cframe.LookVector end
+if userInputService:IsKeyDown(Enum.KeyCode.S)then move-=cframe.LookVector end
+if userInputService:IsKeyDown(Enum.KeyCode.D)then move+=cframe.RightVector end
+if userInputService:IsKeyDown(Enum.KeyCode.A)then move-=cframe.RightVector end
+if userInputService:IsKeyDown(Enum.KeyCode.Space)then move+=Vector3.yAxis end
+if userInputService:IsKeyDown(Enum.KeyCode.LeftControl)then move-=Vector3.yAxis end
+root.AssemblyLinearVelocity=Vector3.zero
+if move.Magnitude<0.01 then return end
+root.CFrame+=move.Unit*Config.flySpeed*deltaTime
+end
+L.removeChams=function(player)
+local highlight=chamObjects[player]
+if not highlight then return end
+pcall(function()highlight:Destroy()end)
+chamObjects[player]=nil
+end
+L.updateChamsPlayer=function(player,isSelf)
+local character=player.Character
+local humanoid=character and character:FindFirstChildOfClass(__cc20d({57,194,111,26,198,196,8,208},{0xE137898F,0xE2248FED,0x3D87945C}))
+local root=character and character:FindFirstChild(__cc20d({129,163,114,247,216,250,19,95,14,0,177,112,62,96,39,123},{0xB6BE0D31,0x71DB5619,0x5EEB0348}))
+if not(humanoid and root)or humanoid.Health<=0 then
+L.removeChams(player)
+return
+end
+local teammate=not isSelf and L.isTeammate(player)
+if teammate and Config.chamsHideTeam then
+L.removeChams(player)
+return
+end
+if(root.Position-currentCamera.CFrame.Position).Magnitude>Config.chamsDistance then
+L.removeChams(player)
+return
+end
+local highlight=chamObjects[player]
+if not highlight or highlight.Adornee~=character then
+L.removeChams(player)
+highlight=Instance.new(__cc20d({91,133,210,110,27,151,157,164,106},{0xA79572AC,0x7532E565,0x58EC1448}))
+highlight.Adornee=character
+highlight.Parent=gethui and gethui()or coreGuiService
+chamObjects[player]=highlight
+end
+local color=teammate and TEAM_COLOR or Color3.fromRGB(Config.chamsRed,Config.chamsGreen,Config.chamsBlue)
+highlight.FillColor=color
+highlight.FillTransparency=Config.chamsFillTransparency
+highlight.OutlineColor=color
+highlight.OutlineTransparency=Config.chamsOutline and Config.chamsOutlineTransparency or 1
+highlight.DepthMode=Config.chamsThroughWalls and Enum.HighlightDepthMode.AlwaysOnTop or Enum.HighlightDepthMode.Occluded
+end
+L.updateChams=function()
+if not Config.chamsEnabled then
+for player in pairs(chamObjects)do L.removeChams(player)end
+return
+end
+for _,player in ipairs(playersService:GetPlayers())do
+if player==localPlayer then
+if Config.chamsShowSelf and Config.thirdPersonEnabled then
+L.updateChamsPlayer(player,true)
+else
+L.removeChams(player)
+end
+else
+L.updateChamsPlayer(player)
+end
+end
+end
+L.newDrawing=function(className,properties)
+local object=Drawing.new(className)
+for key,value in pairs(properties)do object[key]=value end
+return object
+end
+L.createEsp=function()
+return{
+boxOutline=L.newDrawing(__cc20d({44,6,123,235,74,30},{0xFA809DC3,0x5FA2FCED,0xA5F1FB42}),{Thickness=3,Filled=false,Color=Color3.new(0,0,0),Transparency=1,ZIndex=1,Visible=false}),
+box=L.newDrawing(__cc20d({116,248,96,205,27,42},{0xBB3D8AD5,0xD189F1D8,0x7F5A0C11}),{Thickness=1,Filled=false,Transparency=1,ZIndex=2,Visible=false}),
+healthBack=L.newDrawing(__cc20d({118,232,84,112,237,65},{0x0396AEFA,0xEDD1C249,0xA6A2DF98}),{Thickness=1,Filled=true,Color=Color3.new(0,0,0),Transparency=1,ZIndex=1,Visible=false}),
+healthFill=L.newDrawing(__cc20d({233,47,110,85,77,253},{0xDB36B9AE,0xC2FCDAFC,0x5396A5B6}),{Thickness=1,Filled=true,Transparency=1,ZIndex=2,Visible=false}),
+name=L.newDrawing(__cc20d({40,211,42,221},{0x97A2D438,0xFB6E77B8,0x5E2B19B2}),{Size=13,Center=true,Outline=true,Font=Drawing.Fonts.Plex,Transparency=1,ZIndex=3,Visible=false}),
+distance=L.newDrawing(__cc20d({159,3,114,60},{0xA4C329AE,0x22A5A90E,0x64726B12}),{Size=13,Center=true,Outline=true,Font=Drawing.Fonts.Plex,Transparency=1,ZIndex=3,Visible=false}),
+tracer=L.newDrawing(__cc20d({101,222,98,60},{0x4C4889EB,0xB59F288E,0xA765D165}),{Thickness=1,Transparency=1,ZIndex=1,Visible=false}),
+}
+end
+L.hideEsp=function(esp)
+for _,object in pairs(esp)do object.Visible=false end
+end
+L.removeEsp=function(player)
+local esp=espObjects[player]
+if not esp then return end
+for _,object in pairs(esp)do pcall(function()object:Remove()end)end
+espObjects[player]=nil
+end
+L.updateEspPlayer=function(player,esp)
+local character=player.Character
+local humanoid=character and character:FindFirstChildOfClass(__cc20d({9,28,222,19,57,219,148,107},{0x501E5E41,0xC1D452C9,0x328E30FD}))
+local root=character and character:FindFirstChild(__cc20d({228,54,158,224,157,58,229,205,204,163,202,119,15,3,36,130},{0x5BB296D2,0xA553B928,0xF7412F04}))
+if not(humanoid and root and humanoid.Health>0)then
+L.hideEsp(esp)
+return
+end
+local teammate=L.isTeammate(player)
+if teammate and Config.espHideTeam then
+L.hideEsp(esp)
+return
+end
+local distance=(root.Position-currentCamera.CFrame.Position).Magnitude
+if distance>Config.espDistance then
+L.hideEsp(esp)
+return
+end
+local top=currentCamera:WorldToViewportPoint(root.Position+Vector3.new(0,2.6,0))
+local bottom=currentCamera:WorldToViewportPoint(root.Position-Vector3.new(0,3.2,0))
+if top.Z<=0 or bottom.Z<=0 then
+L.hideEsp(esp)
+return
+end
+local color=teammate and TEAM_COLOR or ESP_COLORS[Config.espColor]
+local height=math.abs(bottom.Y-top.Y)
+local width=height*0.55
+local centerX=top.X
+local position=Vector2.new(math.floor(centerX-width/2),math.floor(top.Y))
+local size=Vector2.new(math.floor(width),math.floor(height))
+esp.box.Visible=Config.espBoxes
+esp.boxOutline.Visible=Config.espBoxes
+esp.box.Color=color
+esp.box.Position=position
+esp.box.Size=size
+esp.boxOutline.Position=position
+esp.boxOutline.Size=size
+local ratio=humanoid.MaxHealth>0 and math.clamp(humanoid.Health/humanoid.MaxHealth,0,1)or 0
+local fillHeight=math.floor(size.Y*ratio)
+esp.healthBack.Visible=Config.espHealth
+esp.healthFill.Visible=Config.espHealth
+esp.healthBack.Position=Vector2.new(position.X-6,position.Y-1)
+esp.healthBack.Size=Vector2.new(4,size.Y+2)
+esp.healthFill.Position=Vector2.new(position.X-5,position.Y+size.Y-fillHeight)
+esp.healthFill.Size=Vector2.new(2,fillHeight)
+esp.healthFill.Color=Color3.fromRGB(255,50,50):Lerp(Color3.fromRGB(50,255,90),ratio)
+esp.name.Visible=Config.espNames
+esp.name.Text=player.Name
+esp.name.Color=color
+esp.name.Position=Vector2.new(centerX,position.Y-16)
+esp.distance.Visible=Config.espDistanceText
+esp.distance.Text=string.format(__cc20d({143,237,74,225},{0xE49097B0,0xFDFAA6FA,0x504208E3}),distance)
+esp.distance.Color=color
+esp.distance.Position=Vector2.new(centerX,position.Y+size.Y+2)
+local viewport=currentCamera.ViewportSize
+esp.tracer.Visible=Config.espTracers
+esp.tracer.Color=color
+esp.tracer.From=Vector2.new(viewport.X/2,viewport.Y)
+esp.tracer.To=Vector2.new(centerX,position.Y+size.Y)
+end
+L.updateEsp=function()
+if not Config.espEnabled then
+for _,esp in pairs(espObjects)do L.hideEsp(esp)end
+return
+end
+for _,player in ipairs(playersService:GetPlayers())do
+if player==localPlayer then continue end
+local esp=espObjects[player]
+if not esp then
+esp=L.createEsp()
+espObjects[player]=esp
+end
+L.updateEspPlayer(player,esp)
+end
+end
+L.updateTrigger=function()
+local allowed=Config.enabled and L.isActive()and isrbxactive()and not(window and window:isMouseOver())
+if Config.fireStyle==__cc20d({149,155,238,211},{0x019C11FA,0x92C0583D,0xA61B06A2})then
+local now=os.clock()
+if allowed and L.getTargetPlayer()then
+lastTargetSeen=now
+if not holding and not pending then
+pending=true
+task.delay(Config.reactionDelay/1000,function()
+pending=false
+if Config.fireStyle==__cc20d({21,234,215,110},{0xC1849DB8,0x9112C8D5,0x423F5ECA})
+and Config.enabled
+and L.isActive()
+and not(window and window:isMouseOver())
+and L.getTargetPlayer()
+then
+lastTargetSeen=os.clock()
+L.startHold()
+end
+end)
+end
+elseif holding and(not allowed or now-lastTargetSeen>Config.holdRelease/1000)then
+L.stopHold()
+end
+return
+end
+if holding then L.stopHold()end
+if not allowed or pending then return end
+if(os.clock()-lastClick)*1000<Config.clickCooldown then return end
+if not L.getTargetPlayer()then return end
+pending=true
+task.delay(Config.reactionDelay/1000,function()
+pending=false
+if Config.enabled and L.isActive()and not(window and window:isMouseOver())and L.getTargetPlayer()then
+lastClick=os.clock()
+L.fire()
+end
+end)
+end
+L.onRenderStep=function(deltaTime)
+if statusLabel then
+local status=__cc20d({10,42,66,60,111,5,238,162},{0x86190EFD,0xD25B3135,0x77FAF065})..((Config.enabled and L.isActive())and __cc20d({66,45,157,170,38,159},{0x181011A5,0xED3CE62C,0x8942FCF5})or __cc20d({142,32,164,214},{0x62F64C27,0x22DDB233,0xC3CFB1BC}))
+if holding then status=status..__cc20d({218,159,175,111,236,205,8,134,176,145},{0x8DDE0D00,0x29CE9A2C,0x968720ED})end
+if statusLabel.Text~=status then statusLabel.Text=status end
+end
+L.updateEsp()
+L.updateChams()
+L.updateFov()
+L.updateRage()
+L.updateBulletTracers()
+L.updateAim()
+L.updateAssist()
+L.updateTrigger()
+L.updateRecoil(deltaTime)
+L.updateFullbright()
+L.updateLowGravity()
+L.updateBhop()
+L.updateSpeed(deltaTime)
+L.updateFly(deltaTime)
+end
+L.onInputBegan=function(input,processed)
+if not window then return end
+if window:handleCapture(input)then return end
+if processed then return end
+if os.clock()<ignoreInputUntil and L.matchesBind(Config.fireBind,input)then return end
+if input.KeyCode==MENU_KEY then
+window:toggle()
+return
+end
+if L.matchesBind(Config.aimBind,input)then aimHeld=true end
+if thirdPersonCheckbox and L.matchesBind(Config.thirdPersonBind,input)then
+thirdPersonCheckbox.set(not thirdPersonCheckbox.get())
+end
+if flyCheckbox and L.matchesBind(Config.flyBind,input)then
+flyCheckbox.set(not flyCheckbox.get())
+end
+if L.matchesBind(Config.markBind,input)then
+L.toggleManualTeammate()
+end
+if L.matchesBind(Config.bind,input)then
+if Config.mode==__cc20d({74,195,244,231,87,46},{0x1F2BE021,0x7BDCDF59,0x6EF9963F})then
+toggled=not toggled
+elseif Config.mode==__cc20d({47,218,159,44},{0x66AF6BB9,0xC9343D6E,0x4E748163})then
+held=true
+end
+end
+end
+L.onInputEnded=function(input)
+if L.matchesBind(Config.aimBind,input)then aimHeld=false end
+if os.clock()<ignoreInputUntil and L.matchesBind(Config.fireBind,input)then return end
+if L.matchesBind(Config.bind,input)then held=false end
+end
+L.setLuaStatus=function(text)
+luaMessage=text
+if luaStatusLabel then luaStatusLabel.Text=text end
+end
+L.luaPath=function(name)return LUA_FOLDER..__cc20d({169},{0xCAFE67DF,0xB6554928,0x34EA2622})..name..LUA_EXTENSION end
+L.listLuaScripts=function()
+local names={}
+pcall(function()
+if not isfolder(LUA_FOLDER)then return end
+for _,path in ipairs(listfiles(LUA_FOLDER))do
+local name=path:match(__cc20d({238,90,163,209,213,119,222,217,131,216,29,82,180,155},{0x4F89EEB7,0x035BAB83,0xCA83327A}))
+if name then table.insert(names,name)end
+end
+end)
+table.sort(names,function(a,b)return a:lower()<b:lower()end)
+return names
+end
+L.saveLua=function()
+local name=L.sanitizeName(selectedLua)
+if name==__cc20d({},{0x53F60743,0x85CC4354,0x1FDE0151})then
+L.setLuaStatus(__cc20d({172,154,138,57,111,222,57,48,244,10,37,115,192,76,104,22,242,107,52,177,223,170,127,25,191},{0x41A27CAB,0x073D7F6E,0xCF500DD2}))
+return
+end
+local code=luaCodeBox and luaCodeBox.Text or __cc20d({},{0xB16A36A4,0xD740AA5F,0x13CC576B})
+local success,saveError=pcall(function()
+if not isfolder(LUA_FOLDER)then makefolder(LUA_FOLDER)end
+writefile(L.luaPath(name),code)
+end)
+if not success then
+L.setLuaStatus(__cc20d({142,172,252,84,27,194,6,251,129,131,96,245,117},{0x39FB359B,0x07A020AA,0xC3596FC3})..tostring(saveError))
+return
+end
+selectedLua=name
+if luaNameBox then luaNameBox.Text=name end
+L.setLuaStatus(__cc20d({13,100,183,83,124,206,145},{0xAB519680,0xAE3541CE,0xE623DFA1})..name)
+end
+L.loadLua=function()
+local name=L.sanitizeName(selectedLua)
+if name==__cc20d({},{0x6F8FB0B9,0x04CBD329,0x02DBE151})or not isfile(L.luaPath(name))then
+L.setLuaStatus(__cc20d({124,238,10,164,128,15,206,124,185,114,7,213,130,22,57,247,120,144},{0xAF62A5A5,0x96147C4E,0x3A497B21})..name)
+return
+end
+local success,code=pcall(readfile,L.luaPath(name))
+if not success then
+L.setLuaStatus(__cc20d({198,24,180,242,54,100,93,147,185,11,162,159,58},{0xFBD3D0AF,0xA66764B2,0x9D4CF862})..tostring(code))
+return
+end
+if luaCodeBox then luaCodeBox.Text=code end
+selectedLua=name
+L.setLuaStatus(__cc20d({16,113,78,138,210,3,94,118},{0x60953ACE,0x251EC0AA,0xE3622A6C})..name)
+end
+L.deleteLua=function()
+local name=L.sanitizeName(selectedLua)
+if name==__cc20d({},{0xAF690EBB,0x7B01131D,0x8D79D6AA})or not isfile(L.luaPath(name))then
+L.setLuaStatus(__cc20d({119,189,165,251,120,170,165,27,207,134,167,143,211,236,199,83,133,30},{0x499EC321,0x11DA04C8,0x500B1B19})..name)
+return
+end
+local success,deleteError=pcall(delfile,L.luaPath(name))
+if success then
+L.setLuaStatus(__cc20d({69,135,32,10,204,140,128,230,238},{0xCE91073D,0x6003BB2D,0xD45F9315})..name)
+else
+L.setLuaStatus(__cc20d({43,185,1,106,57,14,177,123,85,112,123,65,85,236,80},{0x622040A4,0xA6E3CFEF,0xFE21E503})..tostring(deleteError))
+end
+end
+L.runLua=function()
+local code=luaCodeBox and luaCodeBox.Text or __cc20d({},{0xAA804BB7,0x5AD71682,0x7ABC155B})
+local fn,compileError=loadstring(code)
+if not fn then
+L.setLuaStatus(__cc20d({234,156,212,186,167,64,22,155,252,25,90,250,236,26,31},{0xEA3B2283,0xCB35B777,0xDF73055B})..tostring(compileError))
+return
+end
+local success,runError=pcall(fn)
+if success then
+L.setLuaStatus(__cc20d({242,19,38,73,116},{0xD9F743C6,0xD76BAA03,0x4A6C2BD0})..selectedLua)
+else
+L.setLuaStatus(__cc20d({10,176,22,174,69,224,168,187,237,133,118},{0x8D607993,0x18CD7C04,0x5CCF06A7})..tostring(runError))
+end
+end
+L.runLuaFile=function(name)
+local path=L.luaPath(L.sanitizeName(name))
+if not isfile(path)then return end
+local success,code=pcall(readfile,path)
+if not success then return end
+local fn,compileError=loadstring(code)
+if not fn then
+warn(__cc20d({119,75,0,147,30,178,33,238,201,212,88,25,92,4,63,209,243,224,216,237,180,23,198,149,83,155,24},{0x2AF2D92B,0x8752D293,0x2B6225E7})..tostring(compileError))
+return
+end
+local ran,runError=pcall(fn)
+if not ran then warn(__cc20d({62,153,138,243,215,246,174,153,189,74,252,40,245,97,128,167,125,182,171},{0x879FCF29,0x3CE7483D,0x91C47369})..tostring(runError))end
+end
+do
+local ml,mr=U.columns(mainRoot)
+local general=U.card(ml,__cc20d({84,254,46,120,114,230,184},{0x36FF8581,0x43BF4CDF,0xD831B62C}))
+U.checkbox(general,__cc20d({54,195,81,109,34,222,108,186,55,180,75,185},{0xA87974B1,0x7891F241,0x55167E9F}),__cc20d({45,228,167,30,133,146,166},{0x185912AB,0xC74663C5,0xB3E3D58D}),Config.enabled,{onChange=function(v)Config.enabled=v end})
+U.checkbox(general,__cc20d({154,235,161,22,185,182,88,74,15,18,42,172,18,6},{0xF2C9779B,0x0BFB4D96,0xD26DFFD9}),__cc20d({21,209,89,83,177,89,130,220,102,164},{0xC55D5960,0xB0DB848C,0x62D9107B}),Config.teamCheck,{onChange=function(v)Config.teamCheck=v end})
+U.checkbox(general,__cc20d({6,46,154,196,238,60,162,150,238,214,142,139,169,235},{0xD7F7225D,0x30FE2065,0x9A2FB493}),__cc20d({181,5,97,41,233,216,25,116,140,32},{0x6386A473,0xA0229C5D,0x6E78494D}),Config.wallCheck,{onChange=function(v)Config.wallCheck=v end})
+U.checkbox(general,__cc20d({148,60,40,83,58,165,218,220,42,176,133,51,238,92},{0x5069E1A0,0xCB0223B3,0x316359D1}),__cc20d({34,188,3,237,234,60,154,248,64,81,242,176,4,59,244,40,215},{0xE71C829B,0x5870905D,0x4BECECD8}),Config.smartTeam,{onChange=function(v)Config.smartTeam=v end})
+U.keyfield(general,__cc20d({232,209,50,92,221,226,118,190,167,25,89,0,110},{0xA3875B55,0x88C320B5,0x8941AD23}),__cc20d({165,94,55,115,151,111,1,62,52,182,199,36,13,16,73,60,25},{0x99173D68,0x13CE7A8E,0xB874DDA0}),Config.markBind,{onChange=function(v)Config.markBind=v end})
+U.button(general,__cc20d({35,146,131,251,223,135,241,204,219,26,205,233,183,121,11,65,236,194,123,112,210,89},{0xA9E1C012,0xE9E193CE,0xB6B7AD4D}),false).MouseButton1Click:Connect(function()
+table.clear(manualTeammates)
+end)
+U.button(general,__cc20d({60,50,214,33,212,207,49,149,39,86,187,30,225,99,182},{0xD8590C8D,0xA3BE3688,0x3CDD1B1D}),false).MouseButton1Click:Connect(L.printTeamInfo)
+local trig=U.card(mr,__cc20d({68,11,228,27,243,234,161},{0x353069F2,0xC62FF896,0xA7356D32}))
+U.keyfield(trig,__cc20d({100,6,53,137,29,66,172,49,155},{0x950266E1,0x0C38506F,0x127C75AF}),__cc20d({115,150,143,4,204,148,99,77,46,25,226},{0xC98D3DA0,0x84786681,0x27DE43CB}),Config.bind,{onChange=function(v)Config.bind=v;held=false end})
+U.dropdown(trig,__cc20d({66,247,168,254,93,84,223,198,42},{0x7A96877E,0x17E972AB,0xAC56B11C}),__cc20d({215,148,59,127},{0x0B07DF6A,0x2A6D0B2D,0x95202F2E}),MODES,Config.mode,{onChange=function(v)Config.mode=v;held=false end})
+statusLabel=U.new(__cc20d({28,139,60,199,12,156,49,14,89},{0x4D7868B0,0xC818564D,0xD1E8C035}),{
+Text=__cc20d({119,184,124,187,196,145,69,182,41,144,126,11},{0x7218DE13,0x1645F014,0xC24003BB}),Font=F.reg,TextSize=11,TextColor3=T.sub,
+BackgroundTransparency=1,Size=UDim2.new(1,0,0,14),
+TextXAlignment=Enum.TextXAlignment.Left,
+},trig)
+U.order(statusLabel)
+U.keyfield(trig,__cc20d({81,242,139,232,108,34,49,180,39,20,46,253,66},{0xA9F78AAE,0x08CBA276,0x008C9212}),__cc20d({119,54,30,129,253,228,166,140,13,210},{0x75A81721,0xF6A4C216,0xC7D4E942}),Config.fireBind,{
+onChange=function(v)
+Config.fireBind=v or{kind=__cc20d({30,213,117,115,227,120,205,214,179,211,91,76,20},{0x83E1892B,0x8B540B89,0x71EE56D7}),code=Enum.UserInputType.MouseButton1}
+L.stopHold()
+end,
+})
+U.dropdown(trig,__cc20d({29,51,152,70,253,16,210,58,17,85,76,179,8,105},{0x2A80E11A,0xFBC8533E,0xA9C40FDA}),__cc20d({113,56,170,226,116,28,186,181,155,97},{0x066B15B2,0x65E9F881,0xB8E97A7B}),FIRE_STYLES,Config.fireStyle,{onChange=function(v)Config.fireStyle=v;L.stopHold()end})
+U.dropdown(trig,__cc20d({132,106,213,236,75,129,17,238,240,148},{0x3AAECDEF,0x83268CE3,0x1B8FF2C1}),__cc20d({214,156,168,226,166,201},{0x2C6A273B,0x3891B617,0x63EC3B1D}),AIM_MODES,Config.aimAt,{onChange=function(v)Config.aimAt=v end})
+U.slider(trig,__cc20d({64,67,86,226,183,122,109,192,72,201,10,23},{0x046EF4F3,0x9970D8B7,0xD8E4D2B5}),__cc20d({240,165,206,131,139,11,30,19,69,172,55,202},{0x3621B5BC,0xBD899B7D,0x32E85EA8}),50,2000,Config.maxDistance,{unit=__cc20d({168,248,5,156,102,37},{0x4551A7BC,0x8CB15D31,0x672704A4}),step=10,onChange=function(v)Config.maxDistance=v end})
+end
+do
+local soft=U.card(aimRoot,__cc20d({102,46,221,234,170,122,223,3},{0x80EDA355,0x27EAE22A,0xD5E49169}))
+U.checkbox(soft,__cc20d({79,232,116,182,158,229,179,136,105,55,208},{0xC17CB552,0x73D92B6B,0xD1011EFE}),__cc20d({157,201,162,219,171,37,137},{0x23005CEB,0xF58490FA,0x9D61DF2E}),Config.aimEnabled,{onChange=function(v)Config.aimEnabled=v end})
+U.checkbox(soft,__cc20d({41,242,151,205,237,72,208,48,247,35,58},{0x0539176B,0xF0307EA1,0xF7872AEC}),__cc20d({220,0,125,247,169,5,8,20,13,149,184,174,147},{0x34708BAC,0x28E426EF,0x00A536F6}),Config.aimVisibleCheck,{onChange=function(v)Config.aimVisibleCheck=v end})
+U.checkbox(soft,__cc20d({125,79,177,40,252,23,118,184,99,69,5},{0x6EC628BF,0xEA461FF1,0xDC2A3606}),__cc20d({122,211,59,188,140,220,243,71},{0xCB8A5AB5,0x05084E96,0x5AFB32F4}),Config.aimShowFov,{onChange=function(v)Config.aimShowFov=v end})
+U.keyfield(soft,__cc20d({137,122,45,228,193,33,181,159},{0x72A0E61D,0x9B488EB3,0x530A2F36}),__cc20d({39,18,125,53,123,207,109},{0x40ECDDA2,0x155A1F3E,0xCF6FE7B9}),Config.aimBind,{onChange=function(v)Config.aimBind=v;aimHeld=false end})
+U.dropdown(soft,__cc20d({117,79,120,135,209,167,163,83},{0x38FCDC10,0x343C6DD5,0x08994F9F}),__cc20d({169,0,87,186,5,27},{0xC54A3044,0xF44427E1,0x79AB8E88}),AIM_PARTS,Config.aimPart,{onChange=function(v)Config.aimPart=v end})
+U.slider(soft,__cc20d({229,116,108,130,80,85,71},{0x96FD8BEF,0x01CE5EC6,0xEDE766C6}),__cc20d({20,151,10,37,209,63,126,90,15,18},{0x2273651B,0xB6B00502,0x9B0F8FC2}),20,600,Config.aimFov,{unit=__cc20d({63,88,91},{0x8DA80D14,0x27B5F768,0xD941D2C5}),step=5,onChange=function(v)Config.aimFov=v end})
+U.slider(soft,__cc20d({172,240,35,159,50,140,248,131,241,109},{0x283E9632,0x2CA51558,0xF33A6D63}),__cc20d({127,154,136,168,235,150,87,232,80},{0xE63E6226,0x1596FC74,0xB619C46E}),1,30,Config.aimSmoothing,{onChange=function(v)Config.aimSmoothing=v end})
+U.slider(soft,__cc20d({149,122,36,221,168,21,6,208},{0x410344D0,0x9BA1368F,0x4F42BC56}),__cc20d({127,68,208,165,26,85,110,171,113,166,16,13},{0xCF8CC5E9,0xFB9352DD,0x83899C06}),50,2000,Config.aimDistance,{unit=__cc20d({20,13,56,253,69,141},{0x7F062EC4,0xED1507F1,0x3AA91F40}),step=10,onChange=function(v)Config.aimDistance=v end})
+local assist=U.card(aimRoot,__cc20d({202,50,153,85,221,235,132,229,102,160},{0xC727B3BA,0x304063CF,0xBDEC5872}))
+U.checkbox(assist,__cc20d({19,223,84,199,60,128,170,108,56,113,82,134,98,39},{0x59E6F66F,0x12FC3DFF,0x329677C4}),__cc20d({26,123,64,86,204,46,43},{0xC7DEFD85,0x6159EB77,0x672CA07B}),Config.assistEnabled,{onChange=function(v)Config.assistEnabled=v;if not v then assistTarget=nil end end})
+U.checkbox(assist,__cc20d({35,25,29,104,119,106,99,64,24,182,81,133,130,76,56,131},{0xC3932980,0x0A412284,0x1D923485}),__cc20d({16,153,8,160,232,131,46,19,10,122},{0x8F7C5943,0x54F30D3A,0x28C67398}),Config.assistTeamCheck,{onChange=function(v)Config.assistTeamCheck=v end})
+U.checkbox(assist,__cc20d({195,72,163,147,165,164,66,112,139,51,247,140,53,112},{0x48AA747F,0x254C0153,0x68587771}),__cc20d({189,171,208,111,25,92,70,178,44,37,129,163,160},{0x72B0C024,0x8ED48EE6,0x6F7A7855}),Config.assistVisibleCheck,{onChange=function(v)Config.assistVisibleCheck=v end})
+U.checkbox(assist,__cc20d({118,25,16,39,136,132,16,154,72,238,199,68,27,143,79,141,21},{0x769C8557,0x94DF79B5,0xA028C9E2}),__cc20d({148,41,143,152,78,187,85,157,104,155,164},{0xEDB93E61,0xF54EE9D3,0x97306005}),Config.assistShowRadius,{onChange=function(v)Config.assistShowRadius=v end})
+U.slider(assist,__cc20d({222,1,236,163,246,138,196,192,190,223,157,227,9,71,100},{0xB3062D60,0x8501373C,0xE0AED509}),__cc20d({197,162,24,252,137,130,77,111},{0x60944D4D,0x2E8F0016,0xB266A334}),1,40,Config.assistStrength,{unit=__cc20d({241},{0x960555D9,0xA2A1F639,0x25766A7B}),onChange=function(v)Config.assistStrength=v end})
+U.slider(assist,__cc20d({205,83,14,117,49,169,255,153,13,179,31,113,139,89},{0x1509BA62,0x1E6CCF4A,0xE78CCF98}),__cc20d({78,163,224,130,94,102,75,151,170,55,82,200,174,206},{0x9FC263E7,0xED542964,0xE716DF7F}),20,300,Config.assistRadius,{unit=__cc20d({98,165,170},{0x4D403E97,0x93975EE0,0xD1E79DE1}),step=5,onChange=function(v)Config.assistRadius=v end})
+U.slider(assist,__cc20d({184,186,27,133,64,143,101,121,155,112,249,217},{0x6B842F4C,0xA5ADD462,0xD7B5D30A}),__cc20d({235,135,192,188,68,27,107,116,33,30,171,195},{0xC2742F72,0x1E1CC381,0x8B627855}),40,500,Config.assistBreakRadius,{unit=__cc20d({44,194,29},{0xBCBAF63F,0xE1E486D3,0x4B7E6149}),step=5,onChange=function(v)Config.assistBreakRadius=v end})
+U.slider(assist,__cc20d({171,80,153,66,13,229,37,129,133,82,47},{0x19213995,0x38955258,0x72F46B90}),__cc20d({208,181,89,127,180,116,153,127,98,79,117,179,224,242,125},{0x62EE2F85,0x5E715D9E,0x06FEE9F6}),50,2000,Config.assistDistance,{unit=__cc20d({93,65,220,223,238,172},{0xA0F93FA4,0xF3CF7CFE,0x4980029E}),step=10,onChange=function(v)Config.assistDistance=v end})
+end
+do
+local c=U.card(recoilRoot,__cc20d({60,157,47,119,215,231,96,144,210},{0xF9A3D5F3,0x91675CC9,0x87ADB0A1}))
+U.checkbox(c,__cc20d({248,81,87,15,248,77,98,228,50,199,40,3,57,131},{0x70D812D9,0x9A98F56F,0x36625DCA}),__cc20d({10,171,186,253,157,34,138},{0xABAF33C7,0x90984FE2,0x3C7EE76D}),Config.recoilEnabled,{onChange=function(v)Config.recoilEnabled=v end})
+U.checkbox(c,__cc20d({205,96,165,246,92,174,155,230,7,102,221,21,223},{0x023DDB50,0xEE588F3E,0x701E8686}),__cc20d({26,227,153,238,3,34,224,132,220,254,212,230,144,87,132,46,171,47},{0xEEC85BB2,0x0F08AC7C,0x2E6EBB26}),Config.recoilManual,{onChange=function(v)Config.recoilManual=v end})
+U.checkbox(c,__cc20d({33,149,156,29,164,162,92,204,71,132},{0xF9113C54,0x27F30453,0x6CB24E11}),__cc20d({132,166,174,52,219,122,50,126,219,103,164,212,180,198,202,13,228},{0xC4F94D6F,0x199BD228,0x65908AAC}),Config.recoilBot,{onChange=function(v)Config.recoilBot=v end})
+U.slider(c,__cc20d({126,176,194,131,154,232,208,73},{0x5BBCCF7B,0xD82EC3C5,0x58F7B440}),__cc20d({24,97,220,138,186,1,17,50,102},{0x56B096D4,0x7A2BDFB0,0xC3F8A82D}),0,30,Config.recoilY,{step=0.5,format=function(v)return string.format(__cc20d({103,36,211,40,65,27,51},{0xEB5666E8,0x2BF9D487,0x76415FD9}),v)end,onChange=function(v)Config.recoilY=v end})
+U.slider(c,__cc20d({8,111,104,110,106,205,43,167},{0x674B8D5B,0x75ACD105,0xEE7CCC6C}),__cc20d({1,167,176,184,159,110,80,129,143,111,191,102,126},{0xAE175C84,0xEB7A96B6,0x1FD2C0BB}),-10,10,Config.recoilX,{step=0.5,format=function(v)return string.format(__cc20d({130,206,229,94,187,238,72},{0x31A28DF4,0x41BDDA89,0xAA417A24}),v)end,onChange=function(v)Config.recoilX=v end})
+U.slider(c,__cc20d({171,238,179,240,137,68,196,212,190,49,245},{0x22D5DCE3,0x690DDE8F,0x3D3479E6}),__cc20d({87,64,172,126,27,247,204},{0x4A515033,0x55915E46,0x69DDD6AC}),0,1000,Config.recoilRamp,{unit=__cc20d({26,151,155},{0x22E2E5C4,0x51E03D0C,0xDB666794}),step=25,onChange=function(v)Config.recoilRamp=v end})
+end
+do
+local spin=U.card(rageRoot,__cc20d({215,193,13,50,14,47,142},{0xA1DADA02,0x56421D7B,0x50CD6FC2}))
+U.checkbox(spin,__cc20d({211,49,235,125,25,105,46,216,9,49,69,134,137,238,108,44,64},{0x4E6FCE05,0x393638C8,0xDC0B93AE}),__cc20d({1,168,188,157,25,165,73},{0x6D7023A8,0x8FDA20B8,0x9778B4F1}),Config.spinEnabled,{onChange=function(v)Config.spinEnabled=v end})
+U.checkbox(spin,__cc20d({196,228,181,47,214,67,25,42,178,135,6,72,66,86,96,78,203,80,177,84,171,215},{0x8B782BB0,0x5EDBDF7D,0xD5AEA29E}),__cc20d({208,130,227,238,239,221,215,180,0,247,67,143,205,233,16,179,214,186,207,64,59,144,12,161},{0xA8467F12,0xBE5BACE9,0xEDAB35E5}),Config.spinPauseOnShoot,{onChange=function(v)Config.spinPauseOnShoot=v end})
+U.checkbox(spin,__cc20d({193,109,231,206,170,72,170,47,172,255,45,59,12,155,179,180,56,24,71},{0xE4297DAB,0x3D6A7983,0x87722303}),__cc20d({26,165,108,143,233,254,84,50,100,82,70,248,190,172,75,155,229,90,209,90,77,90,56,50,221,249},{0xC99A76E5,0xDA0D19E0,0xE4BE926D}),Config.spinShowLocal,{onChange=function(v)Config.spinShowLocal=v end})
+U.dropdown(spin,__cc20d({137,18,133,80,177,20,21,238,104,208,105,225,190,66},{0x7E1C38EA,0x649E3558,0x929B18A2}),__cc20d({150,146,193,7},{0x6114C065,0xD05A0BFE,0x36B6721A}),SPIN_MODES,Config.spinMode,{onChange=function(v)Config.spinMode=v end})
+U.checkbox(spin,__cc20d({145,111,157,111,5,202,146,182,124,146,252,141,57,1},{0xEB7C295D,0xD9ED3AAD,0xE22ED733}),__cc20d({226,102,212,103,230,203,183,233,75,199,52,86,255,90,230,18,10,211,60,135,40,215,84,10,99,47},{0xF6D1438E,0xBA70FC8F,0x062BDEB5}),Config.spinAutoDirection,{onChange=function(v)Config.spinAutoDirection=v end})
+U.slider(spin,__cc20d({147,4,78,5,29,68,83,235,96,172,61,124,57,139,33},{0x3835EAD9,0xD08C35D3,0x033402D5}),__cc20d({251,196,50,20,132,123,29,15,153,34},{0xC7409D22,0x29F60F80,0x2DF2FF04}),60,3600,Config.spinSpeed,{unit=__cc20d({244,149,145,177,34,84},{0x73E05998,0xA1D32165,0xDE883742}),step=60,onChange=function(v)Config.spinSpeed=v end})
+U.slider(spin,__cc20d({243,160,122,194,222,160,144,2,15,16,135,176,146,108,148,216},{0x958AAD93,0x352ADA92,0xED2F7951}),__cc20d({52,238,176,202,67,65,162,60,199,216,17,244},{0x49843C06,0xF2D3648D,0x23A61B43}),10,180,Config.spinJitter,{unit=__cc20d({207,140,27,151},{0x16B271CC,0x0506DBD7,0x05A5214C}),step=10,onChange=function(v)Config.spinJitter=v end})
+U.slider(spin,__cc20d({233,133,177,101,234,251,208,244,67,172,131,117,22,30,240,4},{0x132A0750,0x064CF4CF,0x3BAF7369}),__cc20d({214,208,88,177,222,49,117,199,31,18,181,55},{0x53BCC6E2,0x8FE9E786,0xC5AAD993}),-180,180,Config.spinStaticAngle,{unit=__cc20d({178,181,85,17},{0xD2468990,0xA9529929,0x446043A8}),step=5,onChange=function(v)Config.spinStaticAngle=v end})
+U.slider(spin,__cc20d({250,41,208,35,18,254,175,81,79,175,204,140,204,250,243,162},{0x9F142877,0xD9CFB606,0x0AEDC04D}),__cc20d({85,151,11,60,103,143,148,238,205,171,60,176,250,113,170,43},{0x9A59A942,0x8D10DC10,0x9BE78024}),100,2000,Config.spinRandomInterval,{unit=__cc20d({228,252,111},{0xA6920FAC,0x4612A03C,0x44D5DE79}),step=50,onChange=function(v)Config.spinRandomInterval=v end})
+U.slider(spin,__cc20d({35,98,116,77,33,18,96,26,22,86,173,62,35,8,57,198},{0xEA2DA8A5,0x62927D6F,0xC6F35479}),__cc20d({122,143,205,148,210,33,49,114,12,42,97,113,16,237},{0xE054F170,0x205AD176,0xB51C0AE7}),0,500,Config.spinSmoothing,{unit=__cc20d({115,190,151},{0x3C1D8746,0x5D313EFF,0x76BBBAF2}),step=10,onChange=function(v)Config.spinSmoothing=v end})
+U.slider(spin,__cc20d({46,174,232,76,66,185,25,20,86,186,149,31,91,15,248,24,33,143,114},{0x69E7FE48,0x27604443,0x96BE9A46}),__cc20d({103,187,12,164,88,198,60,111,198,121,160,94,151,27,246,21,168},{0xFF1F10B8,0xDD18D153,0xB8256109}),-90,90,Config.spinLeanPitch,{unit=__cc20d({57,101,180,216},{0xDAE18633,0xBF5B3309,0x90473043}),step=5,onChange=function(v)Config.spinLeanPitch=v end})
+U.slider(spin,__cc20d({202,210,127,22,63,92,54,12,182,228,244,106,63,164,183,229,6,22},{0xC2AE2A77,0x0CF0404F,0xBBE0C4B7}),__cc20d({22,58,198,243,232,43,55,216,86,218,174,32,30},{0xEC36A3B2,0x005BCEB5,0x9985F004}),-90,90,Config.spinLeanRoll,{unit=__cc20d({242,6,94,76},{0x7AD3B987,0xECAAC922,0x315770C1}),step=5,onChange=function(v)Config.spinLeanRoll=v end})
+local auto=U.card(rageRoot,__cc20d({8,216,55,15,62,93,198,203,172,205},{0xD01667B0,0x2AF58634,0xE0A9672B}))
+U.checkbox(auto,__cc20d({8,61,253,97,227,178,46,107,203,160,214,10,151,218,159,29,250},{0xF18D2118,0xD8705401,0xA0EE67B2}),__cc20d({32,60,31,153,25,165,138},{0x608C3A0A,0x7366459D,0x12D2F820}),Config.rageEnabled,{onChange=function(v)
+Config.rageEnabled=v
+if not v then rageEngaged=false;silentTarget=nil end
+end})
+U.dropdown(auto,__cc20d({108,228,186,128,245,25,23,6,139,85,43,200,0,68},{0x33BD8C4B,0x7382E59F,0x9A677A80}),__cc20d({242,98,62,106,146,139,116,147,153,0},{0xFEF0C76C,0xA3CBCA44,0x9467D465}),RAGE_MODES,Config.rageMode,{onChange=function(v)Config.rageMode=v end})
+U.checkbox(auto,__cc20d({57,252,85,75,99,14,44,6,212,238,240,37,82,102,83,203,146,42,105},{0xB4CA3784,0xA16365F8,0x99B5E699}),__cc20d({12,11,36,216,19,212,125,58,99,102},{0x9EE15824,0x20361780,0x0685E976}),Config.rageTeamCheck,{onChange=function(v)Config.rageTeamCheck=v end})
+U.checkbox(auto,__cc20d({142,207,114,244,182,146,239,62,224,160,139,77,106,175,115,40,119,86,223},{0x14802BD4,0x1245F6B8,0x2ABD7361}),__cc20d({11,215,237,140,236,163,25,9,93,66},{0xDA86CD66,0x095797A9,0xAA7CBD75}),Config.rageWallCheck,{onChange=function(v)Config.rageWallCheck=v end})
+U.checkbox(auto,__cc20d({180,38,112,41,120,180,213,243,164,137,250,43,120,169,155,2,223,166},{0x2FDBEA70,0xDD872C50,0x23769D02}),__cc20d({155,217,39,56,62,55,54,124,222,77,71,137,71,10,83,63,226,140,197,176,246,193},{0xADBDE864,0x6F265A37,0x2A0DEB94}),Config.rageWallbang,{onChange=function(v)Config.rageWallbang=v end})
+U.checkbox(auto,__cc20d({56,23,65,208,153,74,210,26,249,217,46,213,238,164,170,207},{0x3D1F597E,0xF5C738BA,0x6DA14001}),__cc20d({67,38,15,153,33,253,21,181,234,120,16,138,68},{0x45FBB5A0,0x22DAEFD4,0xEA0A6462}),Config.rageBulletTracer,{onChange=function(v)Config.rageBulletTracer=v end})
+U.dropdown(auto,__cc20d({47,240,94,233,231,54,156,237,190,74,215,44,91,108},{0x2F92FFA3,0xA08D10BF,0xF3B6C692}),__cc20d({95,146,229,115,149,47},{0x5BC5B9E5,0x339D49F8,0x4F79B244}),AIM_PARTS,Config.ragePart,{onChange=function(v)Config.ragePart=v end})
+U.slider(auto,__cc20d({249,246,253,4,49,5,85,124,64,133,32,204,1,144,208},{0xE8F81F6C,0xB22EA7A1,0x8B04E159}),__cc20d({234,29,10,207,12},{0xE527507C,0x36433E53,0xD0A1A699}),10,1000,Config.rageDistance,{unit=__cc20d({202,188,104,90,234,67},{0xA9F10055,0x3E58CF6F,0x0B839E68}),step=10,onChange=function(v)Config.rageDistance=v end})
+U.slider(auto,__cc20d({119,246,118,243,178,232,29,71,237,8,73,100,202,18,92},{0x30576F30,0x55424375,0xC1210CED}),__cc20d({179,123,255,5,193,10,19,218,212,13},{0x466C08E2,0x83604008,0x876EE7A6}),30,500,Config.rageDelay,{unit=__cc20d({200,11,247},{0xD862A18C,0x8E63E362,0x4FEF9EE4}),step=10,onChange=function(v)Config.rageDelay=v end})
+U.slider(auto,__cc20d({215,65,164,74,184,100,20,241,73,203,160,169,223,181},{0x2B206FF1,0xD26227B0,0xA935ED03}),__cc20d({173,231,209,25,91,133,161,225,35,6},{0xB0C4BB33,0x1DF138F8,0xA5455F31}),10,100,Config.rageSnap,{unit=__cc20d({53},{0xFA21C3E9,0xA3CAFEE2,0xABDC86BD}),step=5,onChange=function(v)Config.rageSnap=v end})
+U.slider(auto,__cc20d({146,178,188,103,27,47,46,79,176,119,147,249,203},{0xF632F855,0x2C4F4ECA,0x0D90FEDE}),__cc20d({76,86,181,125,59,142,68,212,103,235,87,180,38,46},{0xCC62F39B,0x22A535A7,0x24280351}),2,60,Config.rageTolerance,{unit=__cc20d({187,95,102},{0x2DCE9939,0x72CDA4B6,0x5461ED25}),onChange=function(v)Config.rageTolerance=v end})
+end
+do
+local espc=U.card(espRoot,__cc20d({175,46,64},{0x90ACDE46,0x6EC5AE0B,0x1DED5ADA}))
+U.checkbox(espc,__cc20d({173,250,172,161,126,114,243,58,249,34,28},{0xC102C04B,0xDBB33C7E,0x05326521}),__cc20d({198,199,73,98,83,186,42},{0x51B90327,0x173A4199,0x6ECCDEFE}),Config.espEnabled,{onChange=function(v)Config.espEnabled=v end})
+U.checkbox(espc,__cc20d({250,182,157,157,121,239,68,119,180},{0x0C626D0B,0xADF8EE0E,0x6D074F06}),__cc20d({155,148,7,243,156},{0x9226F646,0x38A9B529,0x771532A1}),Config.espBoxes,{onChange=function(v)Config.espBoxes=v end})
+U.checkbox(espc,__cc20d({163,232,203,137,44,204,59,227,202},{0x09701EF7,0x09E1B0D6,0x6E295735}),__cc20d({96,31,169,249,182},{0x6D2A148D,0x21154A95,0x08EC2223}),Config.espNames,{onChange=function(v)Config.espNames=v end})
+U.checkbox(espc,__cc20d({200,15,167,202,173,68,218,108,128,178},{0xC36F5706,0xD021BF6B,0x09A2466E}),__cc20d({91,49,144,114,21,86},{0xB0FBA21C,0x94F3EB93,0xC74027D2}),Config.espHealth,{onChange=function(v)Config.espHealth=v end})
+U.checkbox(espc,__cc20d({179,31,101,231,85,217,172,45,55,143,86,170},{0x28472EDE,0x53523637,0x11CE6C3E}),__cc20d({145,95,50,142,76,206,15,72},{0x2E118717,0x46DFDD5F,0xB35D99C5}),Config.espDistanceText,{onChange=function(v)Config.espDistanceText=v end})
+U.checkbox(espc,__cc20d({124,6,37,225,93,177,87,138,4,213,83},{0x6C5195FE,0x720473FE,0xF0DE6934}),__cc20d({181,74,254,248,43,214,223},{0x63DAF50A,0x3E53961E,0x3EC2F8B1}),Config.espTracers,{onChange=function(v)Config.espTracers=v end})
+U.checkbox(espc,__cc20d({23,52,25,35,141,157,151,205,154,213,209,184},{0x07F78F82,0x7660C2AB,0x5D96581B}),__cc20d({42,193,127,107,203,79,100,89,143,173,152,106,103,71},{0x04F6A689,0xF7AD0E9C,0x20A2DF9B}),Config.espHideTeam,{onChange=function(v)Config.espHideTeam=v end})
+U.dropdown(espc,__cc20d({14,15,59,63,100,172,78,31,92},{0x479FCDA6,0x6FBC1D5F,0x539F3C95}),__cc20d({137,51,178,108,27},{0xC630A07C,0x914B602E,0xABDCD2D6}),ESP_COLOR_NAMES,Config.espColor,{onChange=function(v)Config.espColor=v end})
+U.slider(espc,__cc20d({12,120,22,62,219,126,250,5},{0x00F8306A,0xF86570B9,0x2B86A86E}),__cc20d({105,188,188,223,82,122,181,6},{0xD3440AB8,0xCA54E2E9,0x3010B12F}),50,3000,Config.espDistance,{unit=__cc20d({22,172,63,174,178,188},{0xD63CEAA1,0xAFC7286F,0x817863B7}),step=50,onChange=function(v)Config.espDistance=v end})
+local chams=U.card(espRoot,__cc20d({48,155,101,115,39},{0xB7DA54B8,0x0463C0C5,0xDB011CE3}))
+U.checkbox(chams,__cc20d({63,246,140,0,206,187,155,47,202,115,35,89,126},{0xDA83DDA6,0x0362620F,0xA2097975}),__cc20d({206,88,103,211,87,234,136},{0x1C832C8C,0x2EEF2380,0xF34EE924}),Config.chamsEnabled,{onChange=function(v)Config.chamsEnabled=v end})
+U.checkbox(chams,__cc20d({249,49,86,136,242,13,69,196,162,47,88,185,131,206},{0xFAA76E1F,0xEF45A2EE,0xA8B171B3}),__cc20d({35,250,72,20,16,24,10,163,137,248,227,195,59,150},{0x3D80BE7D,0x6E5AFF76,0xF41BC54F}),Config.chamsHideTeam,{onChange=function(v)Config.chamsHideTeam=v end})
+U.checkbox(chams,__cc20d({200,21,74,19,187,60,234,42,88,56,6,36,233,123,42,84,103,90},{0x5EA5A3CC,0xBCE347A5,0xA659AE87}),__cc20d({77,222,238,200,112,2,231,254,86,152,97,43,38},{0xC7F41FC1,0xACC183D5,0x43E3626A}),Config.chamsThroughWalls,{onChange=function(v)Config.chamsThroughWalls=v end})
+U.checkbox(chams,__cc20d({159,89,56,116,14,234,210,204,213,124,87,110,66},{0x96910112,0x2DBBFAB5,0x8F67F555}),__cc20d({5,126,41,197,101,39,62},{0x7A701EB8,0x615A8032,0xC7F51442}),Config.chamsOutline,{onChange=function(v)Config.chamsOutline=v end})
+U.checkbox(chams,__cc20d({150,108,192,36,134,148,56,106,165,171,191,57,140,106},{0x09070A6A,0x463119D7,0x1B79BD33}),__cc20d({180,10,199,212,18,103,58,100,253,61,39,71,150,174,73,41,54,178,192,161,9,164,195,223,181,222,14},{0xAF57DF02,0x60AB5E97,0xFA6B0BA4}),Config.chamsShowSelf,{onChange=function(v)Config.chamsShowSelf=v end})
+U.slider(chams,__cc20d({138,206,179,207,84,205,227,84,121},{0xD7BAF756,0xEFF1C52E,0xFA6434AF}),__cc20d({251,151,180},{0xA5DD54AA,0x97EBACB2,0x08DE3EBE}),0,255,Config.chamsRed,{step=5,onChange=function(v)Config.chamsRed=v end})
+U.slider(chams,__cc20d({114,170,176,179,203,137,22,174,234,84,79},{0x70D15F71,0xDCA01823,0x0F70A525}),__cc20d({100,214,214,25,217},{0xD39633D7,0x072B64FC,0xB2A866F0}),0,255,Config.chamsGreen,{step=5,onChange=function(v)Config.chamsGreen=v end})
+U.slider(chams,__cc20d({83,99,22,71,140,17,85,35,28,148},{0x299BF3A3,0x17D51444,0xED683BB2}),__cc20d({119,153,54,64},{0x23125580,0x59B95F0B,0xCFC0418F}),0,255,Config.chamsBlue,{step=5,onChange=function(v)Config.chamsBlue=v end})
+U.slider(chams,__cc20d({50,97,197,223,29,238,114,18,4,84},{0x3A3B3E83,0x276D24A9,0x129DCD12}),__cc20d({237,61,253,154,180,168,255,96,59,239,80,124,36,125,47,254,226},{0xD0047D27,0x13FC15EE,0x7ECFC2EB}),0,1,Config.chamsFillTransparency,{step=0.05,format=function(v)return string.format(__cc20d({117,99,14,129},{0x106C8C33,0xF4436E6F,0x267AA285}),v)end,onChange=function(v)Config.chamsFillTransparency=v end})
+U.slider(chams,__cc20d({77,132,148,30,167,150,253,207,97,243,55,16,194,159,14,13,28,86},{0x7ADE2C64,0x5D8AC6E3,0x659ED4D2}),__cc20d({240,215,52,99,111,184,126,166,99,70,191,15,102,209,4,122,21,246,119,212},{0x3AB28BCB,0xFF22C296,0x30DAB3F0}),0,1,Config.chamsOutlineTransparency,{step=0.05,format=function(v)return string.format(__cc20d({7,227,13,11},{0x88640C1C,0x555C9737,0x511816B3}),v)end,onChange=function(v)Config.chamsOutlineTransparency=v end})
+U.slider(chams,__cc20d({75,136,32,178,199,40,196,73,237,153},{0xE09ED646,0xC6C5143E,0x6FBC1C1B}),__cc20d({58,147,176,186,84,65,173,188},{0x23288442,0x0AB8500F,0xEEBF633C}),50,3000,Config.chamsDistance,{unit=__cc20d({150,249,11,231,90,163},{0xE3796CA5,0x931E759C,0xCDECE95A}),step=50,onChange=function(v)Config.chamsDistance=v end})
+end
+do
+local light=U.card(worldRoot,__cc20d({9,133,79,136,128,106,239,252},{0xCED89454,0x76B608E2,0x9AD15F1A}))
+U.checkbox(light,__cc20d({148,95,4,180,196,31,48,229},{0xF6950764,0x694EEBE0,0xE1D278BE}),__cc20d({55,215,227,15,165,3,68,5,243,170},{0x3E09C2E0,0x28FDEE41,0x09A384D4}),Config.fbEnabled,{onChange=function(v)Config.fbEnabled=v end})
+U.checkbox(light,__cc20d({37,242,170,251,148,95,57,150,21,182,130},{0xA563C898,0x8160512E,0xDB71A646}),__cc20d({176,67,122,113,55,80,13,42,90,164,129,42,55},{0xA3CEFFB3,0x75BB14F6,0xEC516D1D}),Config.fbDaytime,{onChange=function(v)Config.fbDaytime=v end})
+U.checkbox(light,__cc20d({152,86,22,86,139,59,113,90,183,132,190,35,88,94,140,32},{0x2665CE02,0xBFBD56D2,0x53D2C209}),__cc20d({214,246,185,237,1,12,41,195,10,47,202,220,145,22},{0x3E0D0243,0x5B6B7A14,0x3A50D1C7}),Config.fbNoShadows,{onChange=function(v)Config.fbNoShadows=v end})
+U.checkbox(light,__cc20d({90,130,247,10,202,213,49,145,104,147,3,131,144},{0x305ED243,0xE29858D6,0x16955012}),__cc20d({6,108,45,121,50,102,227,159,90,138},{0x892CFBB8,0x62A1BBEB,0xC705C76F}),Config.fbNoFog,{onChange=function(v)Config.fbNoFog=v end})
+U.slider(light,__cc20d({136,174,145,75,66,213,240,46,201,48,52,187,150,222},{0xE7839C34,0x032157F8,0xF9860CAE}),__cc20d({240,146,118,229,72,13,146,21,148,39},{0x60362CC8,0xF2113992,0x0F90F2C6}),0,5,Config.fbBrightness,{step=0.25,format=function(v)return string.format(__cc20d({78,229,226,171},{0x05D01132,0xF334FBAD,0xC9AC9E3A}),v)end,onChange=function(v)Config.fbBrightness=v end})
+local move=U.card(worldRoot,__cc20d({184,158,17,139,237,171,26,150},{0x4CE61742,0x65D5930F,0x351E8DF9}))
+local tpSet=select(1,U.checkbox(move,__cc20d({34,142,40,211,101,9,66,214},{0x97512CE0,0xF224A3B8,0xC54CCE19}),__cc20d({141,247,20,135,126,85,151,8,243,247,182,129},{0xFBDEEBED,0x9C3556E8,0x86EF9472}),Config.thirdPersonEnabled,{onChange=function(v)Config.thirdPersonEnabled=v end}))
+thirdPersonCheckbox={get=function()return Config.thirdPersonEnabled end,set=tpSet}
+U.keyfield(move,__cc20d({188,152,5,36,172,120,204,178,130,100,57,39},{0xAD1A936A,0x55262F1C,0x8D4F0BC3}),__cc20d({10,18,25,1,186,114,240,47,54,24,37,158,139,186,122,24},{0x5158F30B,0x7723B28C,0xB843B3DD}),Config.thirdPersonBind,{onChange=function(v)Config.thirdPersonBind=v end})
+U.checkbox(move,__cc20d({134,136,235,82,216,100,237,224,60,130,123,18},{0xF880A595,0x44738B56,0x3FB8D5A8}),__cc20d({190,27,161,108,148,3,139,171,92,26,46,110},{0x1A1BC555,0x30080AFD,0x33842AC6}),Config.thirdPersonShowBody,{onChange=function(v)Config.thirdPersonShowBody=v end})
+U.slider(move,__cc20d({4,110,199,121,177,170,45,79,137,208,35,163},{0x7A730C36,0xF89E1B83,0xA4B4E373}),__cc20d({126,134,68,123,131,244,14,102,185,94,200,156,182,189,156},{0xF454D9B6,0x6FF16AAA,0x7A5E6052}),2,40,Config.thirdPersonDistance,{unit=__cc20d({125,48,21,37,15,141},{0x1C882E67,0x8B080529,0x87FFA2D1}),onChange=function(v)Config.thirdPersonDistance=v end})
+U.checkbox(move,__cc20d({159,7,45,70,68,253,182,174,166,174,192},{0x65B582F6,0xC8861622,0x35338114}),__cc20d({179,197,94,203,135},{0xDA5EF405,0x5B6A6CA4,0x0A24F624}),Config.speedEnabled,{onChange=function(v)Config.speedEnabled=v end})
+U.slider(move,__cc20d({166,44,182,89,117,224,252,99,94,198,197,32,188,72},{0xCE439181,0xD67F5B1F,0x06410F73}),__cc20d({78,3,213,193,193,118,108,125,199,88},{0x8DA085D6,0x0D401976,0x5BAE5620}),16,100,Config.speedValue,{unit=__cc20d({148,255,111,29,118,92,4,201},{0xD4CFADB3,0x84F325DC,0xA7E62E15}),onChange=function(v)Config.speedValue=v end})
+U.checkbox(move,__cc20d({172,114,216,39,242,4,61,173,200,105,207,198,54,163,214,22},{0x65765E6E,0xD7D3C6DF,0x54321A8B}),__cc20d({64,220,74,98,139,223,165,134,76,27,133,177,193,114,102,32,80,229,67,254,57,52,36,207,151},{0xECB30680,0xE9F6B2EB,0xB550A12F}),Config.speedAccelEnabled,{onChange=function(v)Config.speedAccelEnabled=v end})
+U.slider(move,__cc20d({233,169,120,113,214,130,237,16,110,223,118,31,157,255,110,237,172,181,217,248},{0x3305E985,0xEB3A8926,0x46952558}),__cc20d({12,37,34,45,68,226,208,177,56,101},{0x568A9434,0x1D8D6BB0,0x553DD0B2}),5,200,Config.speedAccelRate,{step=5,onChange=function(v)Config.speedAccelRate=v end})
+U.checkbox(move,__cc20d({51,9,229,93,161,39,122,220,46,245,78,25,155},{0x83C87953,0x8E6E7017,0x3366FEC3}),__cc20d({62,253,84,1,212,120,168,246,7,40,149},{0x4DA1E090,0x7D411FED,0x4D7A72D6}),Config.lowGravityEnabled,{onChange=function(v)Config.lowGravityEnabled=v end})
+U.slider(move,__cc20d({248,196,198,58,90,32,64,177,122,202,20,122,182,162,188,245,6,185},{0xB8012931,0xA04C01A8,0x583A491E}),__cc20d({47,243,209,115,79,53,123,81,27,234,129,233,120},{0xEC4B385A,0x00D5E233,0x0118F346}),0.1,1,Config.lowGravityScale,{step=0.05,format=function(v)return string.format(__cc20d({193,254,175,203,162},{0x66D96C20,0xC94475C3,0x44639CA8}),v)end,onChange=function(v)Config.lowGravityScale=v end})
+U.checkbox(move,__cc20d({125,203,134,247,203,194,172,32,147,110},{0x4C752628,0x0ACE25E0,0x60E9C73A}),__cc20d({177,176,188,227,59,166,14,176,236,4,19,179,196,39,61,15},{0xF28E08B4,0x429303D5,0xCD90F0B4}),Config.bhopEnabled,{onChange=function(v)Config.bhopEnabled=v end})
+local flySet=U.checkbox(move,__cc20d({102,248,212,167,195,59,188,73,13},{0xBD9B9071,0x60F524F1,0xF187351B}),__cc20d({111,135,130},{0x605A9B71,0xABEC1B86,0x140CE2CB}),Config.flyEnabled,{onChange=function(v)Config.flyEnabled=v end})
+flyCheckbox={get=function()return Config.flyEnabled end,set=flySet}
+U.keyfield(move,__cc20d({79,157,20,161,145,161,119,109,165,105,240,119,126},{0xCB1522A5,0x8F5EDF9B,0x65838624}),__cc20d({222,213,50,226,209,137,20},{0x7E05F76B,0x37C531B6,0xE3F4AD8B}),Config.flyBind,{onChange=function(v)Config.flyBind=v end})
+U.slider(move,__cc20d({143,112,87,208,158,70,92,44,235,124,115,160,108,174},{0x98B0667C,0x7237DC10,0xC56376BC}),__cc20d({179,25,101,79,211,227,85,248,97},{0xFDE0A046,0x1AAA1526,0xC1FAEBAA}),10,200,Config.flySpeed,{unit=__cc20d({66,243,132,196,159,76,143,252},{0x3D75B1B9,0x53120205,0x65008B85}),onChange=function(v)Config.flySpeed=v end})
+end
+do
+luaNameBox=U.textbox(luaRoot,selectedLua,__cc20d({108,127,71,72,149,124,222,124,49,106,151},{0x457DB8D6,0x5CD5045E,0x8B1D44C1}))
+luaNameBox.FocusLost:Connect(function()
+selectedLua=L.sanitizeName(luaNameBox.Text)
+luaNameBox.Text=selectedLua
+end)
+U.button(luaRoot,__cc20d({23,217,156,22,26,185,15,76,63,63,97,153,61,157,223,241,38,30,43,96,123},{0xE43FD029,0xC4FD28C3,0x2856C20A}),false).MouseButton1Click:Connect(function()
+local names=L.listLuaScripts()
+if#names==0 then
+L.setLuaStatus(__cc20d({247,192,37,158,179,172,115,127,247,37,228,236,238,198,107,4,99,98},{0x34860094,0x941510BA,0xD05A75BF}))
+return
+end
+local index=table.find(names,selectedLua)or 0
+selectedLua=names[index%#names+1]
+luaNameBox.Text=selectedLua
+L.setLuaStatus(__cc20d({22,12,176,195,224,34,133,39,165,85},{0x5D335E8D,0x94015EA0,0x5C72B852})..selectedLua)
+end)
+luaCodeBox=U.codebox(luaRoot,__cc20d({},{0x1FFF4241,0xF7322FA6,0x31054BE9}),140)
+local row=U.new(__cc20d({4,204,146,30,223},{0xA96388F2,0xD7023DC7,0xE6691044}),{Size=UDim2.new(1,0,0,26),BackgroundTransparency=1},luaRoot)
+U.order(row)
+U.new(__cc20d({31,254,102,136,166,164,88,148,92,250,104,241},{0xE576938D,0xEADF3055,0x3C928A93}),{FillDirection=Enum.FillDirection.Horizontal,Padding=UDim.new(0,6),SortOrder=Enum.SortOrder.LayoutOrder},row)
+U.button(row,__cc20d({21,188,65},{0x8A92FF1C,0x56CDFE65,0x16C2573F}),true,UDim2.new(0.25,-5,1,0)).MouseButton1Click:Connect(L.runLua)
+U.button(row,__cc20d({89,154,255,3},{0xB8E2CEB3,0x1648DA0B,0x36029E11}),false,UDim2.new(0.25,-5,1,0)).MouseButton1Click:Connect(L.saveLua)
+U.button(row,__cc20d({204,37,185,133},{0x0D9E4CF0,0x9D883EF2,0xA1E3DD5F}),false,UDim2.new(0.25,-5,1,0)).MouseButton1Click:Connect(L.loadLua)
+U.button(row,__cc20d({236,32,26,9,199,147},{0x6579FA67,0xC4064E61,0x987458EA}),false,UDim2.new(0.25,-5,1,0)).MouseButton1Click:Connect(L.deleteLua)
+U.checkbox(luaRoot,__cc20d({212,102,206,236,73,38,80,31,160,47,87},{0xB8EC2C71,0xEBF4C830,0x469EB9EC}),__cc20d({95,7,188,46,107,227,181,255,238,2,226,30,80,248,79,103,182,12,55,80,109,16,123,8,162,185,190},{0x8601DFA4,0xF5C0F460,0xE6954E45}),Config.luaAutorunEnabled,{onChange=function(v)Config.luaAutorunEnabled=v end})
+U.button(luaRoot,__cc20d({247,253,94,35,106,116,139,82,142,100,22,229,160,149,106,85,0,165,125,234,98,116,147},{0x2862F689,0x1BB8AF30,0xB538BF6F}),false).MouseButton1Click:Connect(function()
+Config.luaAutorunName=selectedLua
+L.setLuaStatus(__cc20d({147,190,108,53,25,99,68,235,240,251,166,165,100},{0x4A978ADC,0xE6475451,0x9224288F})..selectedLua)
+end)
+luaStatusLabel=U.sublabel(luaRoot,luaMessage)
+end
+do
+U.slider(timingRoot,__cc20d({19,125,78,62,76,23,241,95,0,58,225,154,224,13,167},{0xB4373BCE,0xBE7DB9E4,0xEBCC8695}),__cc20d({93,86,238,68,230,107,101,197,189,70,207,188,8,87},{0xE7F6B8BB,0x262CB243,0x0E0312C3}),0,300,Config.reactionDelay,{unit=__cc20d({139,196,171},{0x6FB62EB1,0xCB2C7493,0x9BA84260}),step=5,onChange=function(v)Config.reactionDelay=v end})
+U.slider(timingRoot,__cc20d({221,166,211,167,222,174,116,159,143,127,26,220,224,254,211},{0xAE6CCFB2,0xC07C138A,0x61353784}),__cc20d({114,56,17,70,39,192,84,195,205,166,186,241,182,194},{0x19B60211,0xDFF63B4B,0x655E6E5E}),20,500,Config.clickCooldown,{unit=__cc20d({214,75,228},{0x6F262FB6,0xDB724A9F,0x74BC0719}),step=10,onChange=function(v)Config.clickCooldown=v end})
+U.slider(timingRoot,__cc20d({87,170,111,114,168,141,45,89,146,35,146,140,95,9,19,215,194,213},{0x5560FA5A,0x0BFDB55A,0xF2C95140}),__cc20d({202,4,225,253,25,11,100,44,239,171,139,77,248,46,62,152,143,166},{0x065F30C8,0xAE960AC3,0x928D42AB}),0,500,Config.holdRelease,{unit=__cc20d({191,112,143},{0xB39EDA80,0xA9F360E3,0x6D1853E5}),step=10,onChange=function(v)Config.holdRelease=v end})
+end
+do
+local cl,cr=U.columns(settingsRoot)
+local ccard=U.card(cl,__cc20d({118,95,50,224,88,196},{0x766590EF,0x3AB216A3,0x71CDAB73}))
+U.sublabel(ccard,__cc20d({111,160,83,165,149,203,62,235,52,2,79},{0x3CB109D6,0xFD689797,0x5C2099D2}))
+local nameBox=U.textbox(ccard,__cc20d({220,184,231,205,7,254,234},{0x50633725,0xF00DF4BD,0x4B9830ED}))
+local row1=U.new(__cc20d({7,152,41,78,151},{0xDC1C1B13,0xB0F50462,0x3921CB80}),{Size=UDim2.new(1,0,0,26),BackgroundTransparency=1},ccard)
+U.order(row1)
+U.new(__cc20d({230,198,161,61,11,38,248,9,35,58,235,41},{0x7EAD330A,0x47A4AEBA,0x1E6793A2}),{FillDirection=Enum.FillDirection.Horizontal,Padding=UDim.new(0,8),SortOrder=Enum.SortOrder.LayoutOrder},row1)
+local saveBtn=U.button(row1,__cc20d({74,244,177,137},{0x2D559E01,0x67B6F1A3,0x31A6A558}),true,UDim2.new(0.5,-4,1,0))
+local loadBtn=U.button(row1,__cc20d({48,195,135,18},{0x59737FBB,0x2084F93B,0x2DD5B7B7}),false,UDim2.new(0.5,-4,1,0))
+saveBtn.LayoutOrder=1
+loadBtn.LayoutOrder=2
+local row2=U.new(__cc20d({69,121,160,120,241},{0x30F08769,0xA4B487F3,0xA8B74BCB}),{Size=UDim2.new(1,0,0,26),BackgroundTransparency=1},ccard)
+U.order(row2)
+U.new(__cc20d({223,78,39,184,210,150,187,229,99,165,100,122},{0x0CEA17BD,0xD8B0D3C9,0xE28811A0}),{FillDirection=Enum.FillDirection.Horizontal,Padding=UDim.new(0,8),SortOrder=Enum.SortOrder.LayoutOrder},row2)
+local delBtn=U.button(row2,__cc20d({161,18,185,131,50,80},{0x985CD4E2,0x34B9335B,0xB5EBDFC9}),false,UDim2.new(0.5,-4,1,0))
+local resetBtn=U.button(row2,__cc20d({175,50,219,170,22},{0xA6E724C1,0x8F8DCA2B,0x2A1EF9F7}),false,UDim2.new(0.5,-4,1,0))
+delBtn.LayoutOrder=1
+resetBtn.LayoutOrder=2
+local unloadBtn=U.button(ccard,__cc20d({120,198,2,65,8,228},{0x944725DD,0x8CC7BB98,0x8BEA0C72}),false,UDim2.new(1,0,0,26))
+local status=U.new(__cc20d({113,58,183,130,149,149,79,203,110},{0xC3B110BF,0x4497ACFE,0x9C9DB74B}),{
+Text=__cc20d({147,24,131,36,129},{0x49F4644B,0xAA3206DE,0xD9FE88C9}),Font=F.reg,TextSize=11,TextColor3=T.sub,
+BackgroundTransparency=1,Size=UDim2.new(1,0,0,14),
+TextXAlignment=Enum.TextXAlignment.Left,
+},ccard)
+U.order(status)
+local function cfgName()
+local n=nameBox.Text
+if n==__cc20d({},{0xE43EFD31,0x48F29BF3,0xBF26C4B4})then n=__cc20d({75,147,160,248,13,253,186},{0x1507312F,0x03B62320,0xE25DAD29})end
+return n
+end
+saveBtn.MouseButton1Click:Connect(function()
+local ok,msg=L.saveConfig(cfgName())
+status.Text=msg
+status.TextColor3=ok and T.green or T.accent
+end)
+loadBtn.MouseButton1Click:Connect(function()
+local ok,msg=L.loadConfigFile(cfgName())
+status.Text=msg
+status.TextColor3=ok and T.green or T.accent
+end)
+delBtn.MouseButton1Click:Connect(function()
+local ok,msg=L.deleteConfigFile(cfgName())
+status.Text=msg
+status.TextColor3=ok and T.green or T.accent
+end)
+resetBtn.MouseButton1Click:Connect(function()
+for id,setter in pairs(Setters)do pcall(setter,Defaults[id])end
+L.stopHold()
+held=false
+aimHeld=false
+assistTarget=nil
+status.Text=__cc20d({250,4,15,99,249},{0x2EEFE8B3,0x5D7BBD56,0x9DD7A098})
+status.TextColor3=T.sub
+end)
+unloadBtn.MouseButton1Click:Connect(function()
+TriggerBot.detach()
+end)
+local help=U.card(cr,__cc20d({225,88,74,178},{0x542D5623,0x466577AF,0x21603F73}))
+for _,txt in ipairs({
+__cc20d({130,162,201,44,111,167,24,41,79,34,33,116,135,184,167,112,222,116,37,231,139,1,158,204,253,255,123,107},{0x90C8ABEF,0x47963B1E,0x3F11E623}),
+__cc20d({187,219,199,54,221,53,254,157,163,254,19,197,118,39,111,4,244,255,207,17,185,27,243,105,208,143,58,231,28,114,212,252,119,184,211,54,202,182,24,252,45,69,132,183,79,82,66,41,58,165,192,6,21},{0x79F14DFE,0x2EAB2CA1,0x72325062}),
+__cc20d({2,209,184,146,13,131,224,175,59,211,145,123,118,17,174,129,220,143,181,129,186,227,101,77,164,217,8,85,131,89,188,215,219,28,184,20,140,217,229,186,241,251,255,236},{0xF4B0BC73,0x3C171418,0xE9819BF7}),
+__cc20d({108,219,64,22,62,213,125,82,179,64,96,135,45,65,97,186,2,83,4,52,179,238,156,70,192,150,38,178,182,141,216,200,12,56,51,103,118,212,191,179,249,193,218,50,198,170,18,123,64,40,142},{0x5358BA17,0xAD6AA9AC,0x8FDE7A21}),
+__cc20d({105,130,42,189,131,7,157,179,224,151,63,169,182,207,91,241,229,10,25,202,160,63,243,197,156,59,86,209,151,24,100,153,214,207,239,125,60},{0x8C4436CD,0x84216506,0x6589314D}),
+})do
+U.sublabel(help,txt)
+end
+end
+L.clearDrawings=function()
+for player in pairs(chamObjects)do L.removeChams(player)end
+for player in pairs(espObjects)do L.removeEsp(player)end
+L.clearBulletTracers()
+if fovCircle then
+pcall(function()fovCircle:Remove()end)
+fovCircle=nil
+end
+if assistCircle then
+pcall(function()assistCircle:Remove()end)
+assistCircle=nil
+end
+end
+function TriggerBot.detach()
+L.stopHold()
+pcall(runService.UnbindFromRenderStep,runService,UPDATE_BIND_NAME)
+pcall(runService.UnbindFromRenderStep,runService,SPIN_BIND_NAME)
+pcall(runService.UnbindFromRenderStep,runService,CAMERA_RESTORE_BIND_NAME)
+pcall(runService.UnbindFromRenderStep,runService,CAMERA_APPLY_BIND_NAME)
+L.restoreSpin()
+L.restoreCamera()
+L.restoreBody()
+for _,connection in ipairs(connections)do connection:Disconnect()end
+table.clear(connections)
+L.clearDrawings()
+L.restoreLighting()
+if savedGravity then
+workspaceService.Gravity=savedGravity
+savedGravity=nil
+end
+if window then
+window:destroy()
+window=nil
+end
+statusLabel=nil
+thirdPersonCheckbox=nil
+flyCheckbox=nil
+luaNameBox=nil
+luaCodeBox=nil
+luaStatusLabel=nil
+assistTarget=nil
+rageEngaged=false
+silentTarget=nil
+shared.TriggerBotNamecall=nil
+shared.TriggerBot=nil
+end
+function TriggerBot.init()
+fovCircle=L.newDrawing(__cc20d({250,227,133,9,62,106},{0x9CE8EFED,0x38D41857,0x561917F3}),{Thickness=1,NumSides=64,Filled=false,Color=Color3.new(1,1,1),Transparency=1,Visible=false})
+assistCircle=L.newDrawing(__cc20d({84,64,184,110,122,75},{0xF1556B97,0x6E097254,0x7260940E}),{Thickness=1,NumSides=64,Filled=false,Color=Color3.fromRGB(255,220,70),Transparency=1,Visible=false})
+pcall(runService.UnbindFromRenderStep,runService,UPDATE_BIND_NAME)
+pcall(runService.UnbindFromRenderStep,runService,SPIN_BIND_NAME)
+pcall(runService.UnbindFromRenderStep,runService,CAMERA_RESTORE_BIND_NAME)
+pcall(runService.UnbindFromRenderStep,runService,CAMERA_APPLY_BIND_NAME)
+local function bindStep(name,priority,callback)
+local success,bindError=pcall(runService.BindToRenderStep,runService,name,priority,callback)
+if not success then warn(__cc20d({82,224,177,84,243,95,106,62,97,236,137,171,151,127,70},{0x59108E84,0x9CCA4690,0xCF79F480})..name..__cc20d({102,55},{0xBBDE8F06,0xADBC6A98,0xF2D2BF09})..tostring(bindError))end
+return success
+end
+bindStep(SPIN_BIND_NAME,RESTORE_RENDER_PRIORITY,L.restoreSpin)
+bindStep(CAMERA_RESTORE_BIND_NAME,RESTORE_RENDER_PRIORITY,L.restoreCamera)
+if not bindStep(UPDATE_BIND_NAME,UPDATE_RENDER_PRIORITY,L.onRenderStep)then
+table.insert(connections,runService.RenderStepped:Connect(L.onRenderStep))
+end
+bindStep(CAMERA_APPLY_BIND_NAME,CAMERA_APPLY_PRIORITY,L.applyCamera)
+shared.TriggerBotNamecall=L.onNamecall
+table.insert(connections,runService.Stepped:Connect(L.restoreCamera))
+table.insert(connections,runService.Heartbeat:Connect(L.applySpin))
+table.insert(connections,userInputService.InputBegan:Connect(L.onInputBegan))
+table.insert(connections,userInputService.InputEnded:Connect(L.onInputEnded))
+table.insert(connections,playersService.PlayerRemoving:Connect(L.removeEsp))
+table.insert(connections,playersService.PlayerRemoving:Connect(L.removeChams))
+if Config.luaAutorunEnabled and Config.luaAutorunName~=__cc20d({},{0xDF7ACED4,0x415FB300,0xA689BB93})then
+task.spawn(L.runLuaFile,Config.luaAutorunName)
+end
+print(__cc20d({77,11,250,56,172,7,55,191,233,227,143,127,251,254,4,143,125},{0x172F4513,0xDEFE695B,0x14B6B4D5}))
+end
+local function onInitializeError(error)
+warn(__cc20d({255,87,212,198,130,36,248,48,135,227,108,143,167,97,104,244,188,45,158,114,75},{0xDAEC7322,0x61CDD3D5,0x9C4306CB}))
+warn(error)
+warn(debug.traceback())
+TriggerBot.detach()
+end
+if shared.TriggerBot then
+pcall(shared.TriggerBot.detach)
+end
+shared.TriggerBot=TriggerBot
+xpcall(TriggerBot.init,onInitializeError)
